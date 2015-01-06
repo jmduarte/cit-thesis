@@ -1,4 +1,4 @@
 cit-thesis
 ==========
 
-Caltech Thesis
+Caltech PhD Thesis
