@@ -266,7 +266,7 @@
 \university{California Institute of Technology}     % Default is Caltech
 
 \newcommand{\unilogo}{\gdef\@unilogo}
-\unilogo{cit_logo}                                  % Caltech logo
+\unilogo{cit_logo_bw}                                  % Caltech logo
 
 \newcommand{\address}{\gdef\@address}
 \address{Pasadena, California}                      % Default is Caltech
@@ -328,7 +328,7 @@
            \else
               {\normalsize (Submitted \@date)\par}
            \fi
-        \fi
+        \fix
      \fi
    \end{center}
    \vspace*{.5in}

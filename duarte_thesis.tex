@@ -1,8 +1,22 @@
-\documentclass{cit_thesis}
-
+\documentclass[draftfoot,12pt]{cit_thesis}
+%\usepackage{hyperref}
+\usepackage{pennames}
+\usepackage{ptdr-definitions}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amsthm} % Theorem Formatting
+\usepackage{amssymb}	% Math symbols such as \mathbb
+\newcommand{\CLs}{\ensuremath{\mathrm{CL}_\mathrm{s}}\xspace}
+\newcommand{\MR}{\ensuremath{M_\mathrm{R}}\xspace}
+\newcommand{\MRz}{\ensuremath{M_\mathrm{R}^0}\xspace}
+\newcommand{\Rtwo}{\ensuremath{\mathrm{R}^2}\xspace}
+\newcommand{\Rtwoz}{\ensuremath{\mathrm{R}^2_0}\xspace}
+\newcommand{\R}{\ensuremath{\mathrm{R}}\xspace}
+\newcommand{\MRT}{\ensuremath{M_\mathrm{T}^\mathrm{R}}\xspace}
+\providecommand{\cPV}{\ensuremath{\cmsSymbolFace{V}}\xspace}
 \begin{document}
 \author{Javier M. G. Duarte}
-\title{Searches for Supersymmetry with the CMS Detector}
+\title{Naturalness Confronts Nature: Searches for Supersymmetry with the CMS Detector}
 \maketitle                  % title page and (if not a technical report)                                                                                           
 \include{dedication}
 \include{acknowledgments}
@@ -13,8 +27,11 @@
 \include{introduction}
 \include{theory}
 \include{cms}
+\include{kinematic}
 \include{analysis8TeV}
 \include{analysis13TeV}
 \include{conclusion}
 
+\bibliography{duarte_thesis}{}
+\bibliographystyle{unsrt}
 \end{document}
