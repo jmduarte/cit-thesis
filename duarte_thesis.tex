@@ -1,5 +1,12 @@
 \documentclass[draftfoot,12pt]{cit_thesis}
-%\usepackage{hyperref}
+\usepackage{feynmp}
+\unitlength=1mm 
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\DeclareGraphicsRule{.2}{mps}{*}{}
+\DeclareGraphicsRule{.3}{mps}{*}{}
+\DeclareGraphicsRule{.4}{mps}{*}{}
+\DeclareGraphicsRule{.5}{mps}{*}{}
+\DeclareGraphicsRule{.6}{mps}{*}{}
 \usepackage{pennames}
 \usepackage{ptdr-definitions}
 \usepackage{multirow}
@@ -14,6 +21,18 @@
 \newcommand{\R}{\ensuremath{\mathrm{R}}\xspace}
 \newcommand{\MRT}{\ensuremath{M_\mathrm{T}^\mathrm{R}}\xspace}
 \providecommand{\cPV}{\ensuremath{\cmsSymbolFace{V}}\xspace}
+\usepackage{tikz}
+\usepackage{ifthen}
+\usetikzlibrary{fadings}
+\definecolor{x0p00y0p00}{rgb}{0.6,1,0.18}
+\definecolor{x1p00y0p00}{rgb}{0,0,1}
+\definecolor{x0p00y1p00}{rgb}{1,0,0}
+\definecolor{x0p50y0p00}{rgb}{0,0.5,0.6}
+\definecolor{x0p00y0p50}{rgb}{1,0.5,0}
+\definecolor{x0p50y0p50}{rgb}{0.6,0,0.6}
+\definecolor{x0p25y0p25}{rgb}{0.6,0.6,0.6}
+\definecolor{x0p25y0p50}{rgb}{0.8,0.7,0.6}
+\definecolor{x0p50y0p25}{rgb}{0.6,0.7,0.8}
 \begin{document}
 \author{Javier M. G. Duarte}
 \title{Naturalness Confronts Nature: Searches for Supersymmetry with the CMS Detector}
@@ -26,10 +45,10 @@
 
 \include{introduction}
 \include{theory}
-\include{cms}
 \include{kinematic}
-\include{analysis8TeV}
+\include{cms}
 \include{hlt13TeV}
+\include{analysis8TeV}
 \include{analysis13TeV}
 \include{conclusion}
 

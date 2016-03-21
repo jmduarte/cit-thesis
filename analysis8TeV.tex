@@ -211,6 +211,7 @@ the $\geq$2 \PQb-tag and the $\geq$4 jet sample is found to be
 negligible. The remainder of the background in each box originates
 from $\ttbar$ events.
 
+\subsection{Empirical Razor Function}
 Based on the study of the data collected at $\sqrt{s}=7\TeV$ and the
 corresponding MC samples~\cite{razorPRL,razorPRD}, the two-dimensional
 probability density function
@@ -223,16 +224,99 @@ found to be well described by the empirical function
 \label{eq:razFun}
 \end{equation}
 where $b$, $n$, $\MRz$, and $\Rtwoz$ are free
-parameters of the background model. For $n=1$, this function recovers
-the two-dimensional exponential function used for previous
-studies~\cite{razorPRL,razorPRD}. The shape of the empirical function
-is determined through a \textsc{RooFit}-based extended and unbinned
+parameters of the background model. 
+
+For $n=1$, this function recovers the two-dimensional exponential function used for previous
+studies~\cite{razorPRL,razorPRD}. The original motivation is detailed
+in the cited papers, but a quick summary follows. There is an observed
+correlation between the two razor variables such that after a baseline
+selection $\MR>\MR^{\mathrm{min}}$ and $\Rtwo>\Rtwo_{\mathrm{min}}$, the distributions of the SM backgrounds
+exhibit an exponential behavior in $\Rtwo$ ($\MR$) when integrated over
+$(\MR)$, ($\Rtwo$):
+\begin{align}
+ \int^{\infty}_{\Rtwo_{\mathrm{min}}} P_\mathrm{SM}(\MR,\Rtwo)
+  \mathrm{d}\Rtwo &\propto e^{-(r_0 + r_1\Rtwo_{\mathrm{min}})M_R}~,\\
+ \int^{\infty}_{\MR^{\mathrm{min}}} P_\mathrm{SM}(\MR,\Rtwo)
+  \mathrm{d}\MR &\propto  e^{-(m_0+ m_1\MR^{\mathrm{min}})\Rtwo}~,
+\label{eq:2dcorrelation}
+\end{align}
+where $r_0$, $r_1$, $m_0$, and $m_1$ are interrelated exponential parameters.
+This behavior for QCD multijets background is illustrated in
+Fig.~\ref{fig:qcdfit}. The empricial function in Eqn.~\ref{eq:razFun} with
+$n=1$ perfectly replicates this behavior and the exponential parameters can be identified with
+the empirical function's parameters, namely $r_0 = - b\Rtwoz$, $m_0 = - b\MRz$, and $r_1=m_1=b$.
+
+\begin{figure}[tb!]
+\centering
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/qcd-mr-prd.pdf}
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/qcd-rsq-prd.pdf}\\
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/qcd-slopeMR-prd.pdf}
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/qcd-slopeR-prd.pdf}
+\caption{QCD multijet events collected by CMS at $\sqrt{s}=7\TeV$
+  demonstrate the two-dimensional correlation between $\MR$ and
+  $\Rtwo$ that motivates the original functional form.\label{fig:qcdfit}}
+\end{figure}
+
+To account for the possibility of non-exponential tails of the SM
+backgrounds, the $\sqrt{s}=7\TeV$ search invoked two copies of the
+empirical function with $n=1$ to model each SM background. 
+For the $\sqrt{s}=8\TeV$ search, we take a different approach by using
+only one instance of the function, but allowing the $n$ parameter to deviate
+from $1$. Fig.~\ref{fig:twoexp} illustrates the similarity between using two exponential components and using one
+instance of the generalized function.
+
+\begin{figure}[tb!]
+\centering
+\includegraphics[width=0.8\textwidth,clip=true,viewport= 0 70 600 410]{figs/analysis8TeV/twoexp.pdf}
+\caption{Two exponential components with $n=1$ and their sum are shown in blue compared with
+  a single modified exponential with $n=3$ in black.\label{fig:twoexp}}
+\end{figure}
+
+
+One of the benefits of this functional form is that it is analytically
+integrable. By providing the analytical integral to \textsc{RooFit},
+we avoid using \textsc{RooFit}'s multi-dimensional numerical
+integration, which is costly in terms of function evaluations and may be inaccurate~\cite{Anderson:2007}~\cite{Press:1992:NRC:148286}.
+In particular, the one-dimensional and two-dimensional integrals of
+the function are
+\begin{align}
+ \int^{\Rtwo_{\mathrm{max}}}_{\Rtwo_{\mathrm{min}}} f(\MR,\Rtwo)
+  \mathrm{d}\Rtwo &=  
+\exp\left(-bn(\MR-\MRz)^{1/n}(\Rtwo_{\mathrm{max}}-\Rtwoz)^{1/n}\right))~~~~~~~~~~~~~~~~~~~~\nonumber\\
+&\times\exp\left(-bn(\MR-\MRz)^{1/n}(\Rtwo_{\mathrm{min}}-\Rtwoz)^{1/n}\right) \nonumber\\
+&\times\bigg(\exp\left(-b n (\MR-\MRz)^{1/n}
+   (\Rtwo_{\mathrm{max}}-\Rtwoz)^{1/n}\right) (\Rtwo_{\mathrm{min}}-\Rtwoz)\nonumber\\
+& -\exp\left(-b n (\MR-\MRz)^{1/n} (\Rtwo_{\mathrm{min}}-\Rtwoz)^{1/n}\right)
+   (\Rtwo_{\mathrm{max}}-\Rtwoz)\bigg)~,
+\end{align}
+and
+\begin{align}
+ \int^{\MR^{\mathrm{max}}}_{\MR^{\mathrm{min}}}
+  \int^{\Rtwo_{\mathrm{max}}}_{\Rtwo_{\mathrm{min}}} f(\MR,\Rtwo)
+  \mathrm{d}\Rtwo \mathrm{d}\MR &=  n (b n)^{-n} \bigg(\Gamma \left(n,b n (\MRz-\MR^{\mathrm{max}})^{1/n}
+   (\Rtwoz-\Rtwo_{\mathrm{max}})^{1/n}\right)\nonumber\\
+&- \Gamma \left(n,b n
+   (\MR^{\mathrm{min}}-\MRz)^{1/n}
+   (\Rtwo_{\mathrm{max}}-\Rtwoz)^{1/n}\right)\nonumber\\
+&-\Gamma \left(n,b n
+   (\MR^{\mathrm{max}}-\MRz)^{1/n}
+   (\Rtwo_{\mathrm{min}}-\Rtwoz)^{1/n}\right)\nonumber\\
+&+\Gamma \left(n,b n
+   (\MR^{\mathrm{min}}-\MRz)^{1/n}
+   (\Rtwo_{\mathrm{min}}-\Rtwoz)^{1/n}\right) \bigg)~,
+\label{eq:razFunIntegrals}
+\end{align}
+respectively, where $\Gamma(a,x)$ is the incpmplete gamma function:
+\begin{equation}
+ \Gamma(a,x)=\int_{x}^{\infty}t^{a-1}e^{-t}\mathrm{d}t~.
+\end{equation}
+
+The shape of the empirical function is determined through a \textsc{RooFit}-based extended and unbinned
 maximum likelihood fit to the data~\cite{Verkerke:2003ir}. Two kinds
 of fit are performed: (i)~a sideband-only fit, which is extrapolated
 to the signal region in order to test for the presence of a signal
 (discussed in the remainder of this section), and (ii)~a simultaneous
-fit
-to the signal and sideband regions, performed both under the
+fit to the signal and sideband regions, performed both under the
 background-only and background-plus-signal hypotheses, which is used
 for the interpretation of the results (Section~\ref{sec:limit}). In both cases, the empirical function is
 found to adequately describe the SM background in each of the boxes,

@@ -1,2 +1,100 @@
 \chapter{Topological High Level Trigger Development at $\sqrt{s}=13$\TeV}
 \label{ch:hlt13TeV}
+
+To target a broad range of new physics possibilities, we designed four different
+types of triggers:
+\begin{itemize}
+\item Dijet razor trigger with hyperbolic \MR and \Rtwo requirements targetting the squark pair production topology;
+\item Quadjet razor trigger with hyperbolic \MR and \Rtwo requirements targetting the gluino pair
+  prudction topology;
+\item High-\Rtwo trigger targetting dijet+invisible topologies with
+  large transverse momentum imbalance; and
+\item Razor $\PH(\PQb\bar\PQb)$ trigger targetting production of
+  $\PH$+jet+invisible with some transverse momentum imbalance.
+\end{itemize}
+
+\section{Design}
+
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.8\textwidth,clip=true,viewport=0 110 1024
+500]{figs/hlt13TeV/HLTDijetDesign.pdf}\\
+(a)\\
+\includegraphics[width=0.8\textwidth,clip=true,viewport=0 110 1024
+500]{figs/hlt13TeV/HLTQuadjetDesign.pdf}\\
+(b)\\
+\includegraphics[width=0.8\textwidth,clip=true,viewport=0 220 1024
+500]{figs/hlt13TeV/HLTR2Design.pdf}\\
+(c)\\
+\includegraphics[width=0.8\textwidth,clip=true,viewport=0 110 1024
+500]{figs/hlt13TeV/HLTRazorHbbDesign.pdf}\\
+(d)
+\caption{\label{fig:HLTdesign} Flow of the \textsc{EDProducer} steps (in purple)
+  and \textsc{EDFilter} steps (in blue) in
+  the razor triggers.}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.49\textwidth]{figs/hlt13TeV/HLTRsqMR.pdf}
+\caption{\label{fig:hyperbolic} Hyperbolic and baseline thresholds in
+  \Rtwo and \MR used in the dijet and quadjet razor triggers.}
+\end{figure}
+
+\section{HLT Rate and Timing estimates}
+
+\begin{table*}[ht!]
+\centering
+ \caption{Rates for 0\unit{T} triggers.
+ \label{tab:rates0T}}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l|l|l}
+\multirow{2}{*}{Trigger path} &  Data rate (run 260039) & MC rate (Spring '15) \\
+ &  $4\times 10^{33}$ \unit{cm$^{-2}$ s$^{-1}$}, 17 PU &  \\\hline
+HLT\_Rsq0p25\_Calo & 3.7 Hz & \\
+HLT\_RsqMR240\_Rsq0p09\_MR200\_4jet\_Calo & 5.6 Hz & \\
+HLT\_RsqMR240\_Rsq0p09\_MR200\_Calo & 18.2 Hz & 
+\end{tabular}}
+\end{table*}
+
+\begin{table*}[ht!]
+\centering
+ \caption{Rates for 3.8\unit{T} triggers.
+ \label{tab:rates38T}}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l|l|l}
+\multirow{2}{*}{Trigger path} &  Data rate (run 260627) & MC rate (Spring '15) \\
+ &  $5\times 10^{33}$ \unit{cm$^{-2}$ s$^{-1}$}, 17 PU &  \\\hline
+HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_DoublePFBTagCSV0p7\_0p4\_Mbb60\_200& 16.0 Hz & \\
+HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_DoublePFBTagCSV0p7\_Mbb60\_200 & 8.0 Hz & \\
+HLT\_Rsq0p25 & 0.7 Hz & \\
+HLT\_Rsq0p30 & 0.4 Hz & \\
+HLT\_RsqMR240\_Rsq0p09\_MR200\_4jet & 1.2 Hz & \\
+HLT\_RsqMR240\_Rsq0p09\_MR200 & 7.7 Hz & \\
+HLT\_RsqMR270\_Rsq0p09\_MR200\_4jet & 0.5 Hz & \\
+HLT\_RsqMR270\_Rsq0p09\_MR200 & 2.3 Hz & 
+\end{tabular}}
+\end{table*}
+
+
+\section{Pileup dependence}
+The triggers have an expected dependence on pileup.
+
+Nominally, the dependence is expected to be linear.
+
+
+\begin{figure}[ht!]
+\begin{tabular}{cc}
+\centering 
+\includegraphics[width=0.49\textwidth]{figs/hlt13TeV/linear/HLT_RsqMR240_Rsq0p09_MR200_instLumi_vs_rawRate.pdf}
+  & \includegraphics[width=0.49\textwidth]{figs/hlt13TeV/linear/HLT_RsqMR240_Rsq0p09_MR200_4jet_instLumi_vs_rawRate.pdf}\\
+(a) & (b)\\
+\includegraphics[width=0.49\textwidth]{figs/hlt13TeV/linear/HLT_Rsq0p25_instLumi_vs_rawRate.pdf}
+  &\includegraphics[width=0.49\textwidth]{figs/hlt13TeV/nonlinear/HLT_Rsq0p02_MR300_TriPFJet80_60_40_DoublePFBTagCSV0p7_0p4_Mbb60_200_instLumi_vs_rawRate.pdf}\\
+(c) & (d)
+\end{tabular}
+\caption{\label{fig:HLTpileup} Pileup dependence of the razor triggers.}
+\end{figure}
+
+
