@@ -324,13 +324,13 @@ for each \PQb-tagged jet multiplicity value.
 
 The SM background-only likelihood function for the two-lepton boxes is written as:
 \begin{equation}
-\mathcal{L}(\text{data}|\Theta) = \frac{\re^{-N_\mathrm{SM}}}{N!} \prod_{i=1}^{N} N_\mathrm{SM}
+\mathcal{L}(\text{data}|\boldsymbol\theta) = \frac{\re^{-N_\mathrm{SM}}}{N!} \prod_{i=1}^{N} N_\mathrm{SM}
  P_\mathrm{SM}({\MR}_{(i)},{\Rtwo}_{(i)}),
 \label{eq:Lik1btag}
 \end{equation}
 where $P_\mathrm{SM}(\MR,\Rtwo)$ is the empirical function in
 Eq.~(\ref{eq:razFun}) normalized to unity, $N_{SM}$ is the
-corresponding normalization factor, $\Theta$ is the set of
+corresponding normalization factor, $\boldsymbol\theta$ is the set of
 background shape and normalization parameters, and the product runs
 over the $N$ events in the data set. The same form of the
 likelihood is used for the other boxes, for each \PQb-tagged jet
@@ -542,3 +542,316 @@ mass spectrum.
   background-only pseudo-experiments as described in
   Section~\ref{sec:bmodel}.\label{fig:FFsigma0p02}}
 \end{figure}
+
+
+\section{Limit-setting procedure}
+\label{sec:limit}
+
+
+We interpret the results of the searches by determining the 95\%
+confidence level (\CL) upper limits on the production cross sections of
+the SUSY models presented in Section~\ref{sec:sms}, using the LHC
+\CLs procedure~\cite{LHCCLs} and a global likelihood
+determined by combining the likelihoods of the different search boxes
+and sidebands.  To reduce computational requirements, a binned
+likelihood is used, 
+\begin{equation}
+\mathcal L(\mu,\boldsymbol{\theta})=\prod_{i=1}^{n_b} \mathrm{Poisson}(x_i|s_i(\mu,\boldsymbol{\theta})+b_i(\boldsymbol{\theta}))\cdot \mathrm{Constraint}(\boldsymbol{\theta}|\boldsymbol{\bar\theta},\boldsymbol{\delta\theta})~,
+\end{equation}
+where $\mu$ is the signal strength (parameter of interest),
+$\boldsymbol{\theta}$ is the vector of nuisance parameters, $x_i$ is
+the data yield in the $i$th bin, $s_i(\mu,\boldsymbol{\theta})$ the
+corresponding signal yield, $b_i(\boldsymbol{\theta})$ the
+corresponding background yield, and the product runs over $n_b$, the
+number of bins. This then is used to define the test statistic
+following the LHC \CLs procedure,
+\begin{equation}
+\tilde q_{\mu} = -2\log\frac{\mathcal L(\mu,\boldsymbol{\hat\theta}_{\mu})}{\mathcal L(\hat\mu, \boldsymbol{\hat\theta})} ~,~~  0\leq\hat\mu\leq\mu~.
+\end{equation}
+
+For the razor search boxes, the signal contribution is modeled by a
+template function, for a given signal hypothesis in a specific box and
+a given \PQb-tagged jet multiplicity. The template function, normalized
+to unit probability, is multiplied by the expected signal yield in
+each bin ($\sigma_\mathrm{NLO+NLL} L
+\epsilon^{\text{box}}_{\PQb\text{-tag}}$). Here $\sigma_\mathrm{NLO+NLL}$ is
+the SUSY signal cross section, $L$ is the integrated luminosity
+corresponding to the size of the data set, and
+$\epsilon^{\text{box}}_{\PQb\text{-tag}}$ is the signal selection
+efficiency for a given box and, in case of the single-lepton and
+hadronic boxes, for a given \PQb-tagged jet multiplicity.
+
+Each systematic uncertainty is incorporated in the likelihood with a
+dedicated nuisance parameter, whose value is not known a priori but
+rather must be estimated from the data. The set of nuisance parameters
+may be divided into three distinct classes (though their statistical
+treatment is the same): those related to the signal normalization,
+those related to the signal shape, and those related to the background
+normalization and shape.
+
+We consider the following systematic uncertainties associated with the
+signal normalization, with the size of the uncertainty indicated in
+parentheses:
+\begin{itemize}
+\item integrated luminosity (2.6\%)~\cite{CMS:2013gfa};
+\item trigger efficiency (5\%);
+ \item lepton reconstruction and identification efficiencies (3\%
+  per lepton), measured from an inclusive $\cPZ\to \ell^+\ell^-$ event
+  sample ($\ell=\Pe,\Pgm$) as a function of the lepton $\pt$ and $\eta$
+  values~\cite{Chatrchyan:2013iaa,Chatrchyan:2013mxa}.
+\end{itemize}
+
+In addition, four signal-shape systematic uncertainties are considered, whose
+sizes vary with $\Rtwo$, $\MR$, and the \PQb-tagged jet
+multiplicity:
+\begin{itemize}
+\item The uncertainty in the jet \PQb-tagging and mistagging efficiencies
+  (up to 20\% depending on the signal model), evaluated for each
+  ($\MR$, $\Rtwo$) and \PQb-tagged jet multiplicity
+  bin. The uncertainty is evaluated by propagating the uncertainty in
+  data-to-simulation scale factors~\cite{btag8TeV}.
+\item the uncertainty in the modeling of the parton distribution
+  functions (PDFs) (up to 10\% depending on the signal model),
+  evaluated for each bin in the ($\MR$, $\Rtwo$) plane
+  and for each box and \PQb-tag multiplicity following the
+  PDF4LHC~\cite{Bourilkov:2006cj,Alekhin:2011sk,Botje:2011sn}
+  prescription, using the CTEQ-6.6~\cite{Nadolsky:2008zw} and
+  MRST-2006-NNLO~\cite{Martin:2007bv} PDF sets.
+\item The uncertainty in the jet energy scale and resolution (up to
+  5\% depending on the signal model), evaluated from a set of data
+  control samples and MC simulations~\cite{JME-JINST}.
+\item The uncertainty in the modeling of the associated jet production
+  by the \MADGRAPH simulation (up to 20\% depending on the
+  signal model), studied using $\cPZ$+jets and $\ttbar$ data events
+  and parameterized by an MC-to-data scale factor as a function of the
+  magnitude of the vector sum of the $\pt$ values of the two produced
+  SUSY particles~\cite{1LepMVA}.
+\end{itemize}
+The impact of each of these uncertainties on the SUSY signal shape is
+taken into account by varying each effect up or down by one standard
+deviation.
+
+The uncertainty in the knowledge of the background distributions
+is taken into account by maximizing the likelihood with respect to the background shape and
+normalization parameters using the data in the two
+sidebands and the signal-sensitive region. The background parameterization
+is able to accommodate several sources of
+systematic uncertainties defined below:
+\begin{itemize}
+\item dependence of the background shape on the \PQb-tag multiplicity;
+\item dependence of the background shape on the lepton and jet
+ multiplicities;
+\item deviation of the two-dimensional shape from an exponentially falling
+ distribution, through the background empirical function parameter $n$,
+ which modifies the tail in \MR and $\Rtwo$;
+\item shape bias induced by the dependence of the \PQb-tagging efficiency and
+ mistag rate on the jet $\pt$;
+\item deviation of the \PQb-tagging and mistagging efficiencies from the
+ MC prediction, through independent normalization factors in each
+ \PQb-tagged jet multiplicity bin.
+\end{itemize}
+
+
+
+The combination of razor and exclusive single-lepton~\cite{1LepMVA}
+searches is performed using the same procedure, taking into account
+the systematic uncertainties associated with the five following
+effects:
+\begin{itemize}
+\item the PDFs;
+\item the jet energy scale correction;
+\item the integrated luminosity;
+\item the b-jet tagging efficiency;
+\item the associated jet production.
+\end{itemize}
+The uncertainties in the background predictions are taken to be
+uncorrelated, being derived from independent data control samples with
+different techniques. We verified that the correlation model for the
+systematics has a negligible impact on the combination, since similar
+results are obtained when neglecting any correlation between the
+systematic uncertainties of the two searches.
+
+\section{Interpretation}
+\label{sec:interp}
+
+The results of this search are interpreted in the context of the natural
+SUSY simplified models presented in Section~\ref{sec:sms}.
+
+\subsection{Limits on gluino pair production}
+\label{sec:interp:gluino}
+
+Derived limits on gluino pair production in the T1bbbb, T1tbbb,
+T1ttbb, T1tttb, and T1tttt scenarios are presented in
+Fig.~\ref{fig:gluino2D}.  A comparison of the simplified natural SUSY
+gluino-gluino exclusions, obtained for the different decay-mode
+combinations of third generation quarks, is shown in
+Fig.~\ref{fig:gluinogluinoSUMMARY}. The limits corresponding to
+gluino-gluino topologies with mixed branching fractions lie within the
+band defined by the T1bbbb and the T1tttt contours. As an example,
+gluino masses smaller than 1175\GeV for T1tttt and 1310\GeV for T1bbbb
+are excluded, for an LSP mass of 100\GeV. For any LSP mass value, a
+larger number of top quarks in the decay topology corresponds to a
+weaker limit, mainly due to a reduced total signal efficiency with
+respect to the four-bottom-quark final state and a worse \MR and
+$\Rtwo$ resolution for events with higher jet multiplicity in the
+final state. Given this fact and the inclusive nature of the analysis,
+the T1tttt limit can be considered to represent a conservative
+estimate of a branching-fraction-independent limit, generically valid
+for gluino-gluino production within the context of the natural SUSY
+spectrum shown in Fig.~\ref{fig:spectrum}.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.4\textwidth]{figs/analysis8TeV/T1bbbbHybridNew0LXSEC.pdf}
+\includegraphics[width=0.4\textwidth]{figs/analysis8TeV/T1tbbbHybridNew0Lp1Lp2LXSEC.pdf}
+\includegraphics[width=0.4\textwidth]{figs/analysis8TeV/T1ttbbHybridNew0Lp1Lp2LXSEC.pdf}
+\includegraphics[width=0.4\textwidth]{figs/analysis8TeV/T1tttbHybridNew0Lp1Lp2LXSEC.pdf}
+\includegraphics[width=0.4\textwidth]{figs/analysis8TeV/T1ttttHybridNew0Lp1Lp2LXSEC.pdf}
+\caption{Interpretation of the inclusive search with razor variables
+  in the context of gluino pair production models: (upper left) T1bbbb, (upper right)
+  T1tbbb, (middle left) T1ttbb, (middle right) T1tttb, and (bottom) T1tttt. The limit for T1bbbb
+  is derived using only the hadronic boxes, while the limits for the
+  remaining models are derived using all nine boxes. The color coding
+  indicates the observed 95\% \CL upper limit on the signal cross
+  section. The dashed and solid lines represent the expected and
+  observed exclusion contours at a 95\% \CL, respectively. The dashed
+  contours around the expected limit and the solid contours around the
+  observed one represent the one standard deviation theoretical
+  uncertainties in
+  the cross section and the combination of the statistical and
+  experimental systematic uncertainties,
+  respectively.\label{fig:gluino2D}}
+\end{figure*}
+
+\begin{figure}[tb!]
+\centering
+\includegraphics[width=\cmsFigWidth]{figs/analysis8TeV/T1HybridNew0Lp1Lp2LBARE.pdf}
+\caption{Gluino mass limit at a 95\% \CL, obtained for different gluino
+  pair production models with the inclusive razor analysis in the
+  context of the natural SUSY spectrum of
+  Fig.~\ref{fig:spectrum}.\label{fig:gluinogluinoSUMMARY}}
+
+\end{figure}
+
+
+
+\subsection{Limits on top-squark pair production}
+\label{sec:interp:stop}
+
+Derived limits on squark pair production from the razor variables in
+the T2bW$^{\ast}$, T2tb, and T2tt scenarios are presented in
+Fig.~\ref{fig:squark2D} and compared in
+Fig.~\ref{fig:stopSUMMARY}. As in the
+case of the gluino interpretation, the expected limit from the razor
+search improves as the number of top quarks in the decay topology
+decreases.
+For an LSP mass of 100\GeV, top-squark mass values larger than
+400\GeV and smaller than 650\GeV are excluded in all three
+top-squark branching fraction scenarios.
+
+Within the considered scenarios, a top-squark decay
+to a chargino (neutralino) is topologically similar to a bottom-squark
+decay to a neutralino (chargino). In the limit of degenerate charginos
+and neutralinos, the decay products of the chargino are
+generically too soft to be detected and this correspondence is
+exact. However, for large mass differences between the squarks and the
+chargino, the chargino decay products may be boosted enough to become
+observable, breaking the correspondence. For the models
+with the intermediate decay to charginos, there is a migration
+of reconstructed events from the low-background 2b-Jet box to the
+high-background MultiJet box and a consequently weaker
+limit with respect to the simplified model without decays to charginos.
+
+\begin{figure*}[tb!]
+\centering
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/T2bwHybridNew0LXSEC.pdf}
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/T2tbHybridNew0Lp1Lp2LXSEC.pdf}
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/T2ttHybridNew0Lp1Lp2LXSEC.pdf}
+\caption{Interpretation of the inclusive search with razor variables
+  in the context of top-squark pair production models: (\cmsUpperLeft)
+  T2bW$^{\ast}$, (\cmsUpperRight) T2tb, and (bottom) T2tt.  The limit for T2bW$^{\ast}$
+  is derived using only the hadronic boxes, while the limits for the
+  remaining models are derived using all nine boxes. The meaning of
+  the color coding and the displayed contours is explained in the
+  caption of Fig.~\ref{fig:gluino2D}.\label{fig:squark2D}}
+\end{figure*}
+
+\begin{figure}[tb!]
+\centering
+ \includegraphics[width=\cmsFigWidth]{figs/analysis8TeV/T2HybridNew0Lp1Lp2LBARE.pdf}
+ \caption{Top-squark mass limit at a 95\% \CL, obtained for different
+   squark pair production models with the inclusive razor analysis in the
+   context of the natural SUSY spectrum of
+   Fig.~\ref{fig:spectrum}.\label{fig:stopSUMMARY}}
+
+\end{figure}
+
+A stronger limit on top-squark pair production is derived by combining
+the hadronic boxes of the razor search with the results of the
+exclusive single-lepton analysis~\cite{1LepMVA}. The exclusive
+single-lepton search is conservatively assumed to only have
+sensitivity when both top squarks decay to a top quark and a
+neutralino. Figure~\ref{fig:combinedLimit} (\cmsLeft) presents the combined result obtained for the scenario where the top
+squark only decays to a top quark and the lightest neutralino. For an
+LSP mass of 100\GeV, the combination improves the constraint on the
+top-squark mass from 660 to 730\GeV. This result provides the
+most stringent limit on this specific simplified model.
+
+
+Figure~\ref{fig:combinedLimit} (\cmsRight) presents a more generic limit on the
+top-squark mass. We consider two decay modes for the top squark, as
+indicated in Fig.~\ref{fig:spectrum}. We scan the relative branching
+fractions, assuming that no other decay mode is allowed. The largest
+excluded cross section (that is, the worst upper limit) is found for
+each choice of the top-squark and neutralino mass. A
+branching-fraction-independent limit is derived by comparing the
+worst-case exclusion to the corresponding top-squark pair production
+cross section. In this manner, top squarks decaying to the two
+considered decay modes are excluded at a 95\% confidence level for
+mass values $>$400\GeV and $<$645\GeV, assuming a neutralino mass of
+100\GeV. Unlike other simplified model interpretations, this
+interpretation is not based on a specific choice of branching
+fractions. While a residual model dependence is present because only
+two decay modes are considered, this result is more general than
+previous constraints.
+
+\begin{figure}[tb!]
+\centering
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/T2ttCOMBINED.pdf}
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/T2briCOMBINED.pdf}
+\caption{Top-squark mass limit at a 95\% \CL, obtained combining the
+  result of the hadronic razor boxes with the result of
+  Ref.~\cite{1LepMVA} for (\cmsLeft) T2tt and (\cmsRight) independent of
+  the branching fraction choice. The meaning of
+  the color coding and the displayed contours is explained in the
+  caption of Fig.~\ref{fig:gluino2D}.\label{fig:combinedLimit}}
+\end{figure}
+
+\section{Summary}
+\label{sec:conclusion}
+We present a search for supersymmetric particles using proton-proton
+collision data collected by CMS in 2012 at $\sqrt{s} = 8\TeV$. The data set
+size corresponds to an integrated luminosity of 19.3\fbinv. We
+consider events with at least two jets, at least one of which is
+identified as a \PQb-tagged jet, and study the event distribution in the
+razor variables ($\MR$, $\Rtwo$). The data are
+classified according to the muon, electron, jet, and \PQb-tagged jet
+multiplicities.  No significant excess is observed with respect to the
+standard model background expectations, derived from a fit to the data
+distribution in low-$\MR$ and low-$\Rtwo$ sidebands.
+
+The inclusive razor search is translated into 95\% confidence level
+exclusion limits on the masses of the gluino and the top squark, in the
+context of simplified ``natural'' SUSY models.  For a neutralino mass
+of 100\GeV and depending on the branching fractions, the pair
+production of gluinos and top squarks in multi-bottom, multi-top, and
+mixed top-plus-bottom quark topologies is excluded for gluino masses
+up to 1310\GeV and top-squark masses up to 660\GeV.  Using the
+combined likelihood of the hadronic boxes of the razor search and the
+single-lepton channels of the exclusive top-squark
+search~\cite{1LepMVA}, the exclusion bound on the top-squark mass is
+extended to 730\GeV for a top squark decaying to a top quark and to a
+neutralino of mass 100\GeV.  Again assuming the neutralino mass to be 100\GeV, top
+squarks decaying to the two considered decay modes are excluded at a
+95\% confidence level for mass values between 400 and 645\GeV,
+independent of the branching fractions.
