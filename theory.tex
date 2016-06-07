@@ -32,9 +32,7 @@ three-component generation indices $e_i=(e,\mu,\tau),
 \nu_i=(\nu_e,\nu_{\mu},\nu_{\tau}), u_i=(u,c,t),
 d_i=(d,s,b)$. 
 
-The electric charge is given by $Q = T_{3L}+Y$.
-
-Tab.~\ref{tab:representations} summarizes the
+The electric charge is given by $Q = T_{3L}+Y$. Tab.~\ref{tab:representations} summarizes the
 representations in which the fields transform under the SM
 gauge group. The SM Langrangian
 excluding Higgs and Yukawa terms is then,
@@ -50,6 +48,7 @@ excluding Higgs and Yukawa terms is then,
 & +\mathcal L_{\mathrm{Higgs}} +\mathcal L_{\mathrm{Yukawa}} &  \mathrm{(Higgs~and~Yukawa~terms)}
 \label{eqn:lsm}
 \end{align}
+where $D_{\mu}$ is the gauge covariant derivative.
 
 \begin{figure}
 \centering
@@ -77,30 +76,108 @@ $h$ & $\mathbf{1}$ & $\mathbf{2}$ & $1/2$
 \section{Electroweak Symmetry Breaking}
 A central feature of gauge theories is that the gauge bosons are
 massless due to the fact that the gauge symmetry forbids explicit mass
-terms in the Lagrangian. In the SM, the mechanism of electroweak symmetry breaking
+terms in the Lagrangian. In 1964, it was proposed that spontaneous symmetry breaking in gauge
+theories could be achieved through the introduction of a scalar
+field~\cite{PhysRevLett.13.321,HIGGS1964132,PhysRevLett.13.508,PhysRevLett.13.585,PhysRev.145.1156,PhysRev.155.1554}. In
+the SM, the mechanism of electroweak symmetry breaking
 is a framework to keep the structure of gauge symmetry and
 interactions at high energy, and still generate the observed masses
-of the $\PW$ and $\PZ$ gauge bosons. The SM scalar potential is:
-\begin{equation}
-V(\Phi) = -m_h^2\Phi^{\dagger}\Phi + \lambda(\Phi^{\dagger}\Phi)^2~,
-\end{equation}
-where the Higgs field $\Phi$ is a self-interacting
+of the $\PW$ and $\PZ$ gauge
+bosons~\cite{PhysRevLett.19.1264,GLASHOW1961579,Salam:1968rm}. The SM
+Higgs part of the Lagrangian is: 
+\begin{align}
+\mathcal L_{\mathrm{Higgs}} &= (D_{\mu}\Phi)^{\dagger}(D^{\mu}\Phi) -
+V(\Phi)~;& V(\Phi) &= -\mu^2\Phi^{\dagger}\Phi +
+\lambda(\Phi^{\dagger}\Phi)^2~,
+\label{eqn:Lhiggs}
+\end{align}
+where the field $\Phi$ is a self-interacting
 $\mathrm{SU(2)}_{\mathrm{L}}$ complex doublet with weak hypercharge $Y=1/2$:
 \begin{equation}
-\Phi = \frac{1}{\sqrt{2}}\left(\begin{matrix} \sqrt{2}\phi^{+}\\\phi^0+ia^0\end{matrix} \right)~.
+\Phi = \left(\begin{matrix} \phi^{+}\\\phi^0\end{matrix} \right)~.
 \end{equation}
-If the quadratic term is negative, that is $m_h^2$ is positive, then
-the minimum of the potential will occur at a value of of the Higgs
-field that is not $\mathrm{SU(2)}_{\mathrm{L}}\times\mathrm{U(1)}_Y$ invariant.
-We say the electroweak symmetry
-$\mathrm{SU(2)}_{\mathrm{L}}\times\mathrm{U(1)}_Y$ is spontaneously
-broken to $\mathrm{U(1)}_{\mathrm{EM}}$. Spontaneous symmetry breaking
+If the quadratic term is negative, that is $\mu^2>0$, then the
+potential will have a ``Mexican hat'' shape, illustrated in
+\ref{fig:mexicanhat}, and the minimum of the potential will occur at a value of the field that is not $\mathrm{SU(2)}_{\mathrm{L}}\times\mathrm{U(1)}_Y$
+invariant. Due to this, the complex scalar doublet field acquires a nonzero vacuum
+expectation value (\emph{vev}), corresponding to the minimum of the potential,
+\begin{align}
+\langle\Phi\rangle_0&\equiv \langle 0|\Phi|0\rangle =
+\frac{1}{\sqrt{2}}U(x)\left(\begin{matrix} 0\\v\end{matrix} \right)~;&v &= \sqrt{\frac{\mu^2}{\lambda}};
+\end{align}
+where $U(x)$ is a unitary transformation that rotates the field
+to the other degenerate solutions. Since the vev is still symmetric under a $\mathrm{U(1)}$ subgroup of the full
+electroweak symmetry, we say the electroweak symmetry
+$\mathrm{SU(2)}_{\mathrm{L}}\times\mathrm{U(1)}_Y$ is \emph{spontaneously
+broken} to $\mathrm{U(1)}_{\mathrm{EM}}$. Spontaneous symmetry breaking
 is the phenomenon in which the equations of the dynamics are
 exactly symmetric, but they admit solutions that are not.
 
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{figs/theory/MexicanHat.pdf}
+\caption{\label{fig:mexicanhat} The shape of the ``mexican hat''
+  potential. The minimum of the potential occurs at
+a field value that is not 0.}
+\end{figure}
+
+This mechanism is responsible for generating the masses of the gauge
+bosons in the standard model, as can be seen by evaluating the 
+covariant derivative in Eqn.~\ref{eqn:Lhiggs},
 \begin{equation}
-\mathcal L_{\mathrm{Higgs}} = (D_{\mu}\Phi)^{\dagger}(D^{\mu}\Phi) - V(\Phi)
+D_{\mu}\Phi = (\partial_{\mu} - i g_2 \frac{\sigma_a}{2}W^a_{\mu} -
+ig_1\frac{1}{2}B_{\mu})\Phi ~,
 \end{equation}
+on the vacuum Higgs field. In this case, the kinetic term is:
+\begin{align}
+|D_{\mu}\Phi|^2 &= \frac{1}{2} \left|\left (\begin{matrix}\partial_{\mu}
+    -\frac{i}{2}(g_2W_{\mu}^3 + g_1B_{\mu})&
+    -\frac{ig_2}{2}(W_{\mu}^1-iW_{\mu}^2)\\ 
+-\frac{ig_2}{2}(W_{\mu}^1+iW^2_{\mu})&\partial_{\mu}
+    +\frac{i}{2}(g_2W_{\mu}^3 - g_1B_{\mu})
+  \end{matrix}\right)
+                                       \left(\begin{matrix}0\\v\end{matrix}\right)\right |^2 \nonumber\\
+& = \frac{1}{8} \left ( g_2^2v^2|W_{\mu}^1+iW^2_{\mu}|^2 +
+  v^2|g_2W^3_{\mu}-g_1B_{\mu}|^2 \right ) \nonumber\\
+& = m_W^2W_{\mu}^+W^{-\mu} +
+\frac{1}{2}m_Z^2Z_{\mu}Z^{\mu}~ + \frac{1}{2}m_{\gamma}^2A_{\mu}A^{\mu},
+\end{align}
+where we can identify three field combinations, $W_{\mu}^{\pm}$ and
+$Z_{\mu}$, which have bilinear mass terms, and a fourth $A_{\mu}$,
+which does not:
+\begin{align}
+W_{\mu}^{\pm} &= \frac{1}{\sqrt{2}}(W_{\mu}^1\mp iW^2_{\mu})~, &m_W &= \frac{1}{2}vg_2~,\\
+Z_{\mu} &= \frac{g_2W_{\mu}^3 - g_1B_{\mu}}{\sqrt{g_1^2+g_2^2}}~,&m_Z &= \frac{1}{2}v\sqrt{g_1^2+g_1^2}~,\\
+A_{\mu} &= \frac{g_2W_{\mu}^3 + g_1B_{\mu}}{\sqrt{g_1^2+g_2^2}}~,&m_{\gamma} &= 0.
+\end{align}
+The $\PW$ and $\PZ$ bosons have acquired mass, while the photon
+$\Pgg$ remains massless.
+
+Another consequence of this symmetry breaking mechanism is the
+emergence of a physical scalar boson. If we expand the field around
+its potential minimum
+\begin{align}
+\Phi(x)&=
+\frac{1}{\sqrt{2}}U(x)\left(\begin{matrix} 0\\v+H(x)\end{matrix} \right)
+\end{align}
+and write out the terms associated to this field, we find
+\begin{equation}
+\mathcal L_{\mathrm{Higgs}} \supset \frac{1}{2}(\partial^{\mu}H)^2 -
+\lambda v^2 H^2 - \lambda v H^3 - \frac{\lambda}{4}H^4~.
+\end{equation}
+which means this scalar boson, typically called the
+\emph{Higgs boson}, is self-interacting and has a mass squared of $m^2_{h^0} =
+2\lambda v^2$ at tree-level.
+
+\subsection{Fermion Masses}
+As proposed by Weinberg~\cite{PhysRevLett.19.1264}, fermions acquire
+mass through interaction with the $\Phi$ field, which has a nonzero
+vev.
+
+\begin{equation}
+\mathcal L_{\mathrm{Yukawa}} =
+\end{equation}
+
 \section{Higgs Mass and Naturalness}
 The leading quantum correction to the Higgs mass squared parameter is due to
 the large Yukawa coupling coupling to the top quark, which gives the
@@ -180,8 +257,8 @@ supersymmetry is given in \ref{eqn:n1susy},
 \subsection{Minimal Supersymmetric Standard Model}
 The K\"{a}hler potential and super potential for chiral superfields
 \begin{equation}
-\mathcal L = \int d^4\theta K(\Phi,\Phi^{\dagger}) + \left (\int
-  d^2\theta W(\Phi) + \mathrm{h.c.} \right)
+\mathcal L = \int \mathrm{d}^4\theta K(\Phi,\Phi^{\dagger}) + \left (\int
+ \mathrm{d}^2\theta W(\Phi) + \mathrm{h.c.} \right)
 \label{eqn:mssmlag}
 \end{equation}
 

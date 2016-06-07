@@ -556,17 +556,22 @@ determined by combining the likelihoods of the different search boxes
 and sidebands.  To reduce computational requirements, a binned
 likelihood is used, 
 \begin{equation}
-\mathcal L(\mu,\boldsymbol{\theta})=\prod_{i=1}^{n_b} \mathrm{Poisson}(x_i|s_i(\mu,\boldsymbol{\theta})+b_i(\boldsymbol{\theta}))\cdot \mathrm{Constraint}(\boldsymbol{\theta}|\boldsymbol{\bar\theta},\boldsymbol{\delta\theta})~,
+\mathcal L(\mathrm{data}|\mu,\boldsymbol{\theta})=\prod_{i=1}^{n_b} \mathrm{Poisson}(x_i|s_i(\mu,\boldsymbol{\theta})+b_i(\boldsymbol{\theta}))\cdot \mathrm{Constraint}(\boldsymbol{\theta}|\boldsymbol{\bar\theta},\boldsymbol{\delta\theta})~,
 \end{equation}
 where $\mu$ is the signal strength (parameter of interest),
 $\boldsymbol{\theta}$ is the vector of nuisance parameters, $x_i$ is
 the data yield in the $i$th bin, $s_i(\mu,\boldsymbol{\theta})$ the
 corresponding signal yield, $b_i(\boldsymbol{\theta})$ the
-corresponding background yield, and the product runs over $n_b$, the
+corresponding background yield, computed as
+\begin{equation}
+b_i(\boldsymbol{\theta}) = N_{\mathrm{SM}} \int^{\MR^{\mathrm{max},i}}_{\MR^{\mathrm{min},i}}
+  \int^{\Rtwo_{\mathrm{max},i}}_{\Rtwo_{\mathrm{min},i}} P_{\mathrm{SM}}(\MR,\Rtwo)  \mathrm{d}\Rtwo \mathrm{d}\MR ~,
+\end{equation}
+and the product runs over $n_b$, the
 number of bins. This then is used to define the test statistic
 following the LHC \CLs procedure,
 \begin{equation}
-\tilde q_{\mu} = -2\log\frac{\mathcal L(\mu,\boldsymbol{\hat\theta}_{\mu})}{\mathcal L(\hat\mu, \boldsymbol{\hat\theta})} ~,~~  0\leq\hat\mu\leq\mu~.
+\tilde q_{\mu} = -2\log\frac{\mathcal L(\mathrm{data}|\mu,\boldsymbol{\hat\theta}_{\mu})}{\mathcal L(\mathrm{data}|\hat\mu, \boldsymbol{\hat\theta})} ~,~~  0\leq\hat\mu\leq\mu~.
 \end{equation}
 
 For the razor search boxes, the signal contribution is modeled by a

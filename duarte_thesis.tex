@@ -1,4 +1,5 @@
-\documentclass[draftfoot,12pt]{cit_thesis}
+%\documentclass[draftfoot,12pt]{cit_thesis}
+\documentclass[12pt]{caltech_thesis}
 \usepackage{feynmp}
 \unitlength=1mm 
 \DeclareGraphicsRule{.1}{mps}{*}{}
@@ -13,6 +14,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm} % Theorem Formatting
 \usepackage{amssymb}	% Math symbols such as \mathbb
+\usepackage{mathrsfs}
 \newlength\cmsFigWidth
 \setlength\cmsFigWidth{0.85\columnwidth}
 \newcommand{\cmsLeft}{top}
@@ -28,6 +30,7 @@
 \newcommand{\R}{\ensuremath{\mathrm{R}}\xspace}
 \newcommand{\MRT}{\ensuremath{M_\mathrm{T}^\mathrm{R}}\xspace}
 \providecommand{\cPV}{\ensuremath{\cmsSymbolFace{V}}\xspace}
+
 \usepackage{tikz}
 \usepackage{ifthen}
 \usetikzlibrary{fadings}
@@ -40,15 +43,58 @@
 \definecolor{x0p25y0p25}{rgb}{0.6,0.6,0.6}
 \definecolor{x0p25y0p50}{rgb}{0.8,0.7,0.6}
 \definecolor{x0p50y0p25}{rgb}{0.6,0.7,0.8}
+
+\usepackage{palatino}%    Choose default roman font.  Others are times, pslatex, newcent, bookman, chancery
+\usepackage{mathpazo}%  Matching math fonts (see http://www.math.uiuc.edu/~hartke/computer/latex/survey/survey.html)
+\usepackage{helvet}%      Choose default sans serif
+%\usepackage{sectsty}%     Change style of headings (should precede section redefinitions below)
+%\allsectionsfont{\sffamily}% Set sans serif for all headings
+
+\usepackage[hyphens]{url}
+\usepackage[colorlinks=true,linktocpage=true,urlcolor=blue,linkcolor=blue,citecolor=purple]{hyperref}
+\usepackage{lipsum}
+\usepackage{graphicx}
+
+\usepackage{todonotes}
+
+% Must use biblatex to produce the Published Contents and Contributions, per-chapter bibliography (if desired), etc.
+\usepackage[
+    backend=biber,natbib,
+    style=numeric
+]{biblatex}
+
+% Name of your .bib file(s)
+\addbibresource{duarte_thesis.bib}
+
 \begin{document}
 \author{Javier M. G. Duarte}
-\title{Naturalness Confronts Nature: Searches for Supersymmetry with the CMS Detector}
-\maketitle                  % title page and (if not a technical report)                                                                                           
+\title{Naturalness Confronts Nature: Searches for Supersymmetry with
+  the CMS Detector}
+
+
+\degreeaward{Doctor of Philosophy}                 % Degree to be awarded
+\university{California Institute of Technology}    % Institution name
+\address{Pasadena, California}                     % Institution address
+\unilogo{caltech.png}                                 % Institution logo
+\copyyear{2016}  % Year (of graduation) on diploma
+\defenddate{August 11, 2016}          % Date of defense
+
+\orcid{0000-0002-5076-7096}
+
+\rightsstatement{All rights reserved.}
+
+\maketitle[logo]                  % title page and (if not a technical
+                            % report)                                                                                           
 \include{dedication}
 \include{acknowledgments}
 \include{abstract}
+
 \tableofcontents
-\mainmatter                                 
+\listoffigures
+\listoftables
+\printnomenclature
+
+\mainmatter
 
 \include{introduction}
 \include{theory}
@@ -59,6 +105,12 @@
 \include{analysis13TeV}
 \include{conclusion}
 
-\bibliography{duarte_thesis}{}
-\bibliographystyle{unsrt}
+%\bibliography{duarte_thesis}{}
+%\bibliographystyle{unsrt}
+
+
+\printbibliography[heading=bibintoc]
+
+\printindex
+
 \end{document}
