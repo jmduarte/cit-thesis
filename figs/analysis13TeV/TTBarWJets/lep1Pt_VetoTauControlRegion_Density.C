@@ -1,0 +1,480 @@
+{
+//=========Macro generated from canvas: VetoTauControlRegionc/VetoTauControlRegionc
+//=========  (Tue Apr  5 17:27:46 2016) by ROOT version5.34/18
+   TCanvas *VetoTauControlRegionc = new TCanvas("VetoTauControlRegionc", "VetoTauControlRegionc",1,1,800,576);
+   VetoTauControlRegionc->SetHighLightColor(2);
+   VetoTauControlRegionc->Range(0,0,1,1);
+   VetoTauControlRegionc->SetFillColor(0);
+   VetoTauControlRegionc->SetBorderMode(0);
+   VetoTauControlRegionc->SetBorderSize(2);
+   VetoTauControlRegionc->SetFrameBorderMode(0);
+  
+// ------------>Primitives in pad: lep1.Pt()_VetoTauControlRegionpad1
+   TPad *lep1.Pt()_VetoTauControlRegionpad1 = new TPad("lep1.Pt()_VetoTauControlRegionpad1", "lep1.Pt()_VetoTauControlRegionpad1",0,0.4,1,1);
+   lep1.Pt()_VetoTauControlRegionpad1->Draw();
+   lep1.Pt()_VetoTauControlRegionpad1->cd();
+   lep1.Pt()_VetoTauControlRegionpad1->Range(1.088659,-2.104667,3.212371,1.295825);
+   lep1.Pt()_VetoTauControlRegionpad1->SetFillColor(0);
+   lep1.Pt()_VetoTauControlRegionpad1->SetBorderMode(0);
+   lep1.Pt()_VetoTauControlRegionpad1->SetBorderSize(2);
+   lep1.Pt()_VetoTauControlRegionpad1->SetLogx();
+   lep1.Pt()_VetoTauControlRegionpad1->SetLogy();
+   lep1.Pt()_VetoTauControlRegionpad1->SetBottomMargin(0.013);
+   lep1.Pt()_VetoTauControlRegionpad1->SetFrameBorderMode(0);
+   lep1.Pt()_VetoTauControlRegionpad1->SetFrameBorderMode(0);
+   
+   THStack *thstacklep1.Pt() = new THStack();
+   thstacklep1.Pt()->SetName("thstacklep1.Pt()");
+   thstacklep1.Pt()->SetTitle("");
+   Double_t xAxis1[5] = {20, 30, 40, 100, 1000}; 
+   
+   TH1F *thstacklep1.Pt()_stack_2 = new TH1F("thstacklep1.Pt()_stack_2","",4, xAxis1);
+   thstacklep1.Pt()_stack_2->SetMinimum(0.008700413);
+   thstacklep1.Pt()_stack_2->SetMaximum(9.031831);
+   thstacklep1.Pt()_stack_2->SetDirectory(0);
+   thstacklep1.Pt()_stack_2->SetStats(0);
+
+   Int_t ci;   // for color index setting
+   ci = TColor::GetColor("#000099");
+   thstacklep1.Pt()_stack_2->SetLineColor(ci);
+   thstacklep1.Pt()_stack_2->GetXaxis()->SetTitle("Tau p_{T} [GeV]");
+   thstacklep1.Pt()_stack_2->GetXaxis()->SetMoreLogLabels();
+   thstacklep1.Pt()_stack_2->GetXaxis()->SetNoExponent();
+   thstacklep1.Pt()_stack_2->GetXaxis()->SetLabelFont(42);
+   thstacklep1.Pt()_stack_2->GetXaxis()->SetLabelSize(0.035);
+   thstacklep1.Pt()_stack_2->GetXaxis()->SetTitleSize(0.06);
+   thstacklep1.Pt()_stack_2->GetXaxis()->SetTitleFont(42);
+   thstacklep1.Pt()_stack_2->GetYaxis()->SetTitle("Events / GeV");
+   thstacklep1.Pt()_stack_2->GetYaxis()->SetLabelFont(42);
+   thstacklep1.Pt()_stack_2->GetYaxis()->SetLabelSize(0.06);
+   thstacklep1.Pt()_stack_2->GetYaxis()->SetTitleSize(0.06);
+   thstacklep1.Pt()_stack_2->GetYaxis()->SetTitleOffset(0.6);
+   thstacklep1.Pt()_stack_2->GetYaxis()->SetTitleFont(42);
+   thstacklep1.Pt()_stack_2->GetZaxis()->SetLabelFont(42);
+   thstacklep1.Pt()_stack_2->GetZaxis()->SetLabelSize(0.035);
+   thstacklep1.Pt()_stack_2->GetZaxis()->SetTitleSize(0.035);
+   thstacklep1.Pt()_stack_2->GetZaxis()->SetTitleFont(42);
+   thstacklep1.Pt()->SetHistogram(thstacklep1.Pt()_stack_2);
+   
+   Double_t xAxis2[5] = {20, 30, 40, 100, 1000}; 
+   
+   TH1F *VetoTauControlRegionlep1.Pt()OtherClone = new TH1F("VetoTauControlRegionlep1.Pt()OtherClone","lepton p_{T} [GeV]",4, xAxis2);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinContent(1,0.4420855);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinContent(2,0.2095544);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinContent(3,0.1137669);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinContent(4,0.004300236);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinError(1,0.08279287);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinError(2,0.04350708);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinError(3,0.01623998);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinError(4,0.0009622174);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetEntries(2373);
+
+   ci = TColor::GetColor("#006699");
+   VetoTauControlRegionlep1.Pt()OtherClone->SetFillColor(ci);
+
+   ci = TColor::GetColor("#000099");
+   VetoTauControlRegionlep1.Pt()OtherClone->SetLineColor(ci);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetTitle("lepton p_{T} [GeV]");
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetZaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetZaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetZaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetZaxis()->SetTitleFont(42);
+   thstacklep1.Pt()->Add(VetoTauControlRegionlep1.Pt()OtherClone,"");
+   Double_t xAxis3[5] = {20, 30, 40, 100, 1000}; 
+   
+   TH1F *VetoTauControlRegionlep1.Pt()ZInvClone = new TH1F("VetoTauControlRegionlep1.Pt()ZInvClone","lepton p_{T} [GeV]",4, xAxis3);
+   VetoTauControlRegionlep1.Pt()ZInvClone->SetBinContent(1,0.1506154);
+   VetoTauControlRegionlep1.Pt()ZInvClone->SetBinContent(2,0.04054669);
+   VetoTauControlRegionlep1.Pt()ZInvClone->SetBinContent(3,0.001338036);
+   VetoTauControlRegionlep1.Pt()ZInvClone->SetBinContent(4,2.611782e-05);
+   VetoTauControlRegionlep1.Pt()ZInvClone->SetBinError(1,0.03085265);
+   VetoTauControlRegionlep1.Pt()ZInvClone->SetBinError(2,0.01418683);
+   VetoTauControlRegionlep1.Pt()ZInvClone->SetBinError(3,0.000788636);
+   VetoTauControlRegionlep1.Pt()ZInvClone->SetBinError(4,1.536368e-05);
+   VetoTauControlRegionlep1.Pt()ZInvClone->SetEntries(132);
+
+   ci = TColor::GetColor("#00cccc");
+   VetoTauControlRegionlep1.Pt()ZInvClone->SetFillColor(ci);
+
+   ci = TColor::GetColor("#000099");
+   VetoTauControlRegionlep1.Pt()ZInvClone->SetLineColor(ci);
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetXaxis()->SetTitle("lepton p_{T} [GeV]");
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetXaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetXaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetXaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetXaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetYaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetYaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetYaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetYaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetZaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetZaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetZaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()ZInvClone->GetZaxis()->SetTitleFont(42);
+   thstacklep1.Pt()->Add(VetoTauControlRegionlep1.Pt()ZInvClone,"");
+   Double_t xAxis4[5] = {20, 30, 40, 100, 1000}; 
+   
+   TH1F *VetoTauControlRegionlep1.Pt()QCDClone = new TH1F("VetoTauControlRegionlep1.Pt()QCDClone","lepton p_{T} [GeV]",4, xAxis4);
+   VetoTauControlRegionlep1.Pt()QCDClone->SetBinContent(1,0.8183125);
+   VetoTauControlRegionlep1.Pt()QCDClone->SetBinContent(2,0.2063118);
+   VetoTauControlRegionlep1.Pt()QCDClone->SetBinContent(3,0.0001875278);
+   VetoTauControlRegionlep1.Pt()QCDClone->SetBinError(1,0.7713959);
+   VetoTauControlRegionlep1.Pt()QCDClone->SetBinError(2,0.1707311);
+   VetoTauControlRegionlep1.Pt()QCDClone->SetBinError(3,0.0001875278);
+   VetoTauControlRegionlep1.Pt()QCDClone->SetEntries(12);
+
+   ci = TColor::GetColor("#ff00ff");
+   VetoTauControlRegionlep1.Pt()QCDClone->SetFillColor(ci);
+
+   ci = TColor::GetColor("#000099");
+   VetoTauControlRegionlep1.Pt()QCDClone->SetLineColor(ci);
+   VetoTauControlRegionlep1.Pt()QCDClone->GetXaxis()->SetTitle("lepton p_{T} [GeV]");
+   VetoTauControlRegionlep1.Pt()QCDClone->GetXaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()QCDClone->GetXaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()QCDClone->GetXaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()QCDClone->GetXaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()QCDClone->GetYaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()QCDClone->GetYaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()QCDClone->GetYaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()QCDClone->GetYaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()QCDClone->GetZaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()QCDClone->GetZaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()QCDClone->GetZaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()QCDClone->GetZaxis()->SetTitleFont(42);
+   thstacklep1.Pt()->Add(VetoTauControlRegionlep1.Pt()QCDClone,"");
+   Double_t xAxis5[5] = {20, 30, 40, 100, 1000}; 
+   
+   TH1F *VetoTauControlRegionlep1.Pt()WJetsClone = new TH1F("VetoTauControlRegionlep1.Pt()WJetsClone","lepton p_{T} [GeV]",4, xAxis5);
+   VetoTauControlRegionlep1.Pt()WJetsClone->SetBinContent(1,1.58484);
+   VetoTauControlRegionlep1.Pt()WJetsClone->SetBinContent(2,1.161275);
+   VetoTauControlRegionlep1.Pt()WJetsClone->SetBinContent(3,0.4665849);
+   VetoTauControlRegionlep1.Pt()WJetsClone->SetBinContent(4,0.01074116);
+   VetoTauControlRegionlep1.Pt()WJetsClone->SetBinError(1,0.1766219);
+   VetoTauControlRegionlep1.Pt()WJetsClone->SetBinError(2,0.1293907);
+   VetoTauControlRegionlep1.Pt()WJetsClone->SetBinError(3,0.03458146);
+   VetoTauControlRegionlep1.Pt()WJetsClone->SetBinError(4,0.001098413);
+   VetoTauControlRegionlep1.Pt()WJetsClone->SetEntries(3346);
+
+   ci = TColor::GetColor("#cc0000");
+   VetoTauControlRegionlep1.Pt()WJetsClone->SetFillColor(ci);
+
+   ci = TColor::GetColor("#000099");
+   VetoTauControlRegionlep1.Pt()WJetsClone->SetLineColor(ci);
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetXaxis()->SetTitle("lepton p_{T} [GeV]");
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetXaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetXaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetXaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetXaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetYaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetYaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetYaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetYaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetZaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetZaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetZaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()WJetsClone->GetZaxis()->SetTitleFont(42);
+   thstacklep1.Pt()->Add(VetoTauControlRegionlep1.Pt()WJetsClone,"");
+   Double_t xAxis6[5] = {20, 30, 40, 100, 1000}; 
+   
+   TH1F *VetoTauControlRegionlep1.Pt()TTJetsClone = new TH1F("VetoTauControlRegionlep1.Pt()TTJetsClone","lepton p_{T} [GeV]",4, xAxis6);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->SetBinContent(1,3.03375);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->SetBinContent(2,1.935975);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->SetBinContent(3,0.6625097);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->SetBinContent(4,0.006633117);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->SetBinError(1,0.0575708);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->SetBinError(2,0.04588616);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->SetBinError(3,0.01100578);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->SetBinError(4,0.0002762196);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->SetEntries(22864);
+
+   ci = TColor::GetColor("#009900");
+   VetoTauControlRegionlep1.Pt()TTJetsClone->SetFillColor(ci);
+
+   ci = TColor::GetColor("#000099");
+   VetoTauControlRegionlep1.Pt()TTJetsClone->SetLineColor(ci);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetXaxis()->SetTitle("lepton p_{T} [GeV]");
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetXaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetXaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetXaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetXaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetYaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetYaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetYaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetYaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetZaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetZaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetZaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()TTJetsClone->GetZaxis()->SetTitleFont(42);
+   thstacklep1.Pt()->Add(VetoTauControlRegionlep1.Pt()TTJetsClone,"");
+   thstacklep1.Pt()->Draw("hist");
+   Double_t xAxis7[5] = {20, 30, 40, 100, 1000}; 
+   
+   TH1F *VetoTauControlRegionlep1.Pt()OtherClone = new TH1F("VetoTauControlRegionlep1.Pt()OtherClone","lepton p_{T} [GeV]",4, xAxis7);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinContent(1,6.029603);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinContent(2,3.553663);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinContent(3,1.244387);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinContent(4,0.02170064);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinError(1,0.7983532);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinError(2,0.2238096);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinError(3,0.0397668);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinError(4,0.001486239);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetEntries(28727);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetStats(0);
+
+   ci = TColor::GetColor("#666666");
+   VetoTauControlRegionlep1.Pt()OtherClone->SetFillColor(ci);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#000099");
+   VetoTauControlRegionlep1.Pt()OtherClone->SetLineColor(ci);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetTitle("lepton p_{T} [GeV]");
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetMoreLogLabels();
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetNoExponent();
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetZaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetZaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetZaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetZaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->Draw("e2same");
+   Double_t xAxis8[5] = {20, 30, 40, 100, 1000}; 
+   
+   TH1F *VetoTauControlRegionlep1.Pt()DataobsData = new TH1F("VetoTauControlRegionlep1.Pt()DataobsData","",4, xAxis8);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinContent(1,4.7);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinContent(2,4.1);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinContent(3,1.083333);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinContent(4,0.02222222);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinError(1,0.6855655);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinError(2,0.6403124);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinError(3,0.134371);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinError(4,0.00496904);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetEntries(177);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetStats(0);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetMarkerStyle(20);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetXaxis()->SetTitle("lepton p_{T} [GeV]");
+   VetoTauControlRegionlep1.Pt()DataobsData->GetXaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetXaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetXaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetXaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetYaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetYaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetYaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetYaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetZaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetZaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetZaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetZaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()DataobsData->Draw("pesame");
+   
+   TLegend *leg = new TLegend(0.7,0.4,0.89,0.85,NULL,"brNDC");
+   leg->SetBorderSize(0);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   TLegendEntry *entry=leg->AddEntry("VetoTauControlRegionlep1.Pt()DataobsData","Data","lpf");
+   entry->SetFillStyle(1001);
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(20);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("VetoTauControlRegionlep1.Pt()TTJetsClone","t#bar{t}+Jets","f");
+
+   ci = TColor::GetColor("#009900");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#000099");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("VetoTauControlRegionlep1.Pt()WJetsClone","W+Jets","f");
+
+   ci = TColor::GetColor("#cc0000");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#000099");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("VetoTauControlRegionlep1.Pt()QCDClone","QCD","f");
+
+   ci = TColor::GetColor("#ff00ff");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#000099");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("VetoTauControlRegionlep1.Pt()ZInvClone","Z #rightarrow #nu #nu","f");
+
+   ci = TColor::GetColor("#00cccc");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#000099");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("VetoTauControlRegionlep1.Pt()OtherClone","Other","f");
+
+   ci = TColor::GetColor("#006699");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#000099");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   TLatex *   tex = new TLatex(0.9,0.92,"2.3 fb^{-1} (13 TeV)");
+tex->SetNDC();
+   tex->SetTextAlign(31);
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.06);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.1,0.92,"CMS");
+tex->SetNDC();
+   tex->SetTextFont(61);
+   tex->SetTextSize(0.075);
+   tex->SetLineWidth(2);
+   tex->Draw();
+   lep1.Pt()_VetoTauControlRegionpad1->Modified();
+   VetoTauControlRegionc->cd();
+  
+// ------------>Primitives in pad: lep1.Pt()_VetoTauControlRegionpad2
+   lep1.Pt()_VetoTauControlRegionpad2 = new TPad("lep1.Pt()_VetoTauControlRegionpad2", "lep1.Pt()_VetoTauControlRegionpad2",0,0,1,0.4);
+   lep1.Pt()_VetoTauControlRegionpad2->Draw();
+   lep1.Pt()_VetoTauControlRegionpad2->cd();
+   lep1.Pt()_VetoTauControlRegionpad2->Range(1.088659,0.1478873,3.212371,1.556338);
+   lep1.Pt()_VetoTauControlRegionpad2->SetFillColor(0);
+   lep1.Pt()_VetoTauControlRegionpad2->SetBorderMode(0);
+   lep1.Pt()_VetoTauControlRegionpad2->SetBorderSize(2);
+   lep1.Pt()_VetoTauControlRegionpad2->SetLogx();
+   lep1.Pt()_VetoTauControlRegionpad2->SetGridy();
+   lep1.Pt()_VetoTauControlRegionpad2->SetTopMargin(0.04);
+   lep1.Pt()_VetoTauControlRegionpad2->SetBottomMargin(0.25);
+   lep1.Pt()_VetoTauControlRegionpad2->SetFrameBorderMode(0);
+   lep1.Pt()_VetoTauControlRegionpad2->SetFrameBorderMode(0);
+   Double_t xAxis9[5] = {20, 30, 40, 100, 1000}; 
+   
+   TH1F *VetoTauControlRegionlep1.Pt()OtherClone = new TH1F("VetoTauControlRegionlep1.Pt()OtherClone","",4, xAxis9);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinContent(1,1);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinContent(2,1);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinContent(3,1);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinContent(4,1);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinError(1,0.1324056);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinError(2,0.06297997);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinError(3,0.03195694);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetBinError(4,0.06848826);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetMinimum(0.5);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetMaximum(1.5);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetEntries(588.0276);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetStats(0);
+
+   ci = TColor::GetColor("#666666");
+   VetoTauControlRegionlep1.Pt()OtherClone->SetFillColor(ci);
+   VetoTauControlRegionlep1.Pt()OtherClone->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#000099");
+   VetoTauControlRegionlep1.Pt()OtherClone->SetLineColor(ci);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetTitle("Tau p_{T} [GeV]");
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetMoreLogLabels();
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetNoExponent();
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetLabelSize(0.1);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetTitleSize(0.1);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetTitleOffset(1.2);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetXaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetTitle("Data / pred.");
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetNdivisions(505);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetLabelSize(0.08);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetTitleSize(0.08);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetTitleOffset(0.4);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetYaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetZaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetZaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetZaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()OtherClone->GetZaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()OtherClone->Draw("e2");
+   Double_t xAxis10[5] = {20, 30, 40, 100, 1000}; 
+   
+   TH1F *VetoTauControlRegionlep1.Pt()DataobsData = new TH1F("VetoTauControlRegionlep1.Pt()DataobsData","",4, xAxis10);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinContent(1,0.7794874);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinContent(2,1.153739);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinContent(3,0.8705759);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinContent(4,1.024036);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinError(1,0.1136999);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinError(2,0.1801838);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinError(3,0.1079816);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetBinError(4,0.2289813);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetMinimum(0.5);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetMaximum(1.5);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetEntries(133.8281);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetStats(0);
+   VetoTauControlRegionlep1.Pt()DataobsData->SetMarkerStyle(20);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetXaxis()->SetTitle("Tau p_{T} [GeV]");
+   VetoTauControlRegionlep1.Pt()DataobsData->GetXaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetXaxis()->SetLabelSize(0.1);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetXaxis()->SetTitleSize(0.08);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetXaxis()->SetTitleOffset(1.5);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetXaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetYaxis()->SetTitle("Data / pred.");
+   VetoTauControlRegionlep1.Pt()DataobsData->GetYaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetYaxis()->SetLabelSize(0.08);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetYaxis()->SetTitleSize(0.08);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetYaxis()->SetTitleOffset(0.35);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetYaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetZaxis()->SetLabelFont(42);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetZaxis()->SetLabelSize(0.035);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetZaxis()->SetTitleSize(0.035);
+   VetoTauControlRegionlep1.Pt()DataobsData->GetZaxis()->SetTitleFont(42);
+   VetoTauControlRegionlep1.Pt()DataobsData->Draw("pesame");
+   lep1.Pt()_VetoTauControlRegionpad2->Modified();
+   VetoTauControlRegionc->cd();
+   VetoTauControlRegionc->Modified();
+   VetoTauControlRegionc->cd();
+   VetoTauControlRegionc->SetSelected(VetoTauControlRegionc);
+}
