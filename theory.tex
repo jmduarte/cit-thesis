@@ -18,7 +18,7 @@ $\mathrm{SU(3)}_{\mathrm{C}}$ &$\times$& $\mathrm{SU(2)}_{\mathrm{L}}$
 \end{tabular}
 \end{center}
 The eight spin-$1$ bosons, $G_{\mu}^{\alpha}$,
-associated with the factor $SU(3)_{\mathrm{C}}$ are the gluons. Any
+associated with the factor $\mathrm{SU(3)}_{\mathrm{C}}$ are the gluons. Any
 particle that transforms is said to carry color charge. The three spin-$1$
 bosons, $W^{a}_{\mu}$ are associated 
 
@@ -165,18 +165,27 @@ and write out the terms associated to this field, we find
 \mathcal L_{\mathrm{Higgs}} \supset \frac{1}{2}(\partial^{\mu}H)^2 -
 \lambda v^2 H^2 - \lambda v H^3 - \frac{\lambda}{4}H^4~.
 \end{equation}
-which means this scalar boson, typically called the
-\emph{Higgs boson}, is self-interacting and has a mass squared of $m^2_{h^0} =
+which means this scalar boson, called the \emph{Higgs boson}, is self-interacting and has a mass squared of $m^2_{h^0} =
 2\lambda v^2$ at tree-level.
 
 \subsection{Fermion Masses}
 As proposed by Weinberg~\cite{PhysRevLett.19.1264}, fermions acquire
 mass through interaction with the $\Phi$ field, which has a nonzero
-vev.
-
+vev. This is accomplished by adding Yukawa terms to the Lagrangian for
+each generation,
 \begin{equation}
-\mathcal L_{\mathrm{Yukawa}} =
+\mathcal L_{\mathrm{Yukawa}} = - \lambda_e \bar\ell_L\Phi e_R -
+\lambda_u\bar q_L\Phi u_R  - \lambda_d\bar q_L\tilde\Phi d_R + (\mathrm{h.c.})~,
 \end{equation}
+where the doublet $\tilde\Phi = i\sigma_2\Phi^{\ast}$ with hypercharge $Y=-1/2$ is
+needed to generate masses for the down-type quarks. Then we can
+identify the fermion masses as
+\begin{align}
+m_e &= \frac{\lambda_e v}{2}&m_u &= \frac{\lambda_e
+                                          v}{2}& m_d &= \frac{\lambda_dv}{2}~.
+\end{align}
+Neutrino masses can also be accommodated in the SM by adding similar terms.
+
 
 \section{Higgs Mass and Naturalness}
 The leading quantum correction to the Higgs mass squared parameter is due to
@@ -231,30 +240,75 @@ where $\Lambda_{\mathrm{UV}}$ is an ultraviolet momentum cutoff.
 \end{fmffile}
 
 \section{Supersymmetry}
-As shown by Coleman and Mandula, every local renormalizable quantum
-field theory in four-dimensional Minkowski spacetime with
-\begin{itemize}
-\item finite number of different one-particle states
-\item non-trivial interactions
-\item mass gap
-\end{itemize}
-can only have a symmetry \emph{Lie algebra} of the S matrix which is a
-direct product of the Poincar\'{e} group and an internal group.
+Supersymmetry (SUSY) is a proposed symmetry of spacetime that 
+introduces a bosonic (fermionic) partner for every fermion (boson) in the 
+standard model
+(SM)~\cite{Wess,Golfand,Volkov,Chamseddine,Kane,Fayet,Barbieri,Hall,Ramond}.
 
-However, this theorem has an infamous loophole in that it assumes the
-symmetry algebra of the S matrix contains only commutators, but not
-\emph{anticommutators} as a so-called \emph{Lie superalgrebra}
-does. In particular, the Lie superalgebra for $\mathcal N=1$
-supersymmetry is given in \ref{eqn:n1susy},
+Supersymmetric extensions of the SM are particularly compelling 
+because they yield solutions to the gauge hierarchy problem with no
+fine-tuning of fundamental parameters~\cite{Witten:1981nf,Dimopoulos:1981zb,Dine:1981za,Dimopoulos:1981au,Sakai:1981gr,Kaul:1981hi}, 
+exhibit gauge coupling unification~\cite{Dimopoulos:1981yj,Marciano:1981un,Einhorn:1981sx,Ibanez:1981yh,Amaldi:1991cn,Langacker:1995fk},
+and provide weakly interacting particle candidates for dark matter~\cite{Ellis:1983ew,Jungman:1995df}.
+For SUSY to provide a ``natural'' solution to the gauge hierarchy problem,
+the top squark, bottom squark, and gluino must have masses below a few
+TeV, making them accessible at the CERN LHC. 
 
-\begin{eqnarray}
-~\{ Q_{\alpha},\bar Q_{\dot{\beta}}\} &=& 2\sigma^m_{\alpha\dot\beta} P_m \nonumber\\
-~\{ Q_{\alpha},Q_{\beta}\} &=& \{ \bar Q_{\dot\alpha},\bar Q_{\dot\beta}\} = 0\nonumber\\
-~[ P_m, Q_{\alpha}] &=& [P_m,\bar Q_{\dot\alpha}] = 0
+An operator $Q$ that generates supersymmetry transformations is an
+anti-commuting spinor with
+\begin{equation}
+Q|\mathrm{boson}\rangle = |\mathrm{fermion}\rangle, ~~~~
+Q|\mathrm{fermion}\rangle = |\mathrm{boson}\rangle~.
+\end{equation}
+
+The group of symmetries of spacetime in four-dimensional quantum field
+theory is known as the Poincar\'{e} group. The generators of the
+Poincar\'{e} group consist of the energy-momentum vector $P_m$ and the
+Loretnz generators $M_{mn} = -M_{nm}$. The Poincar\'{e} algebra is
+\begin{align}
+~[P_m,P_n] &= 0 \nonumber\\
+~[P_m,M_{np}] &= i(\eta_{mn}P_p-\eta_{mp}P_n) \nonumber\\
+~[M_{mm},M_{pq}] &= i(\eta_{mp}M_{np} - \eta_{np}M_{mq} +
+                   \eta_{nq}M_{mp} - \eta_{mq}M_{np} )~.
+\label{eqn:poincare}
+\end{align}
+
+As shown by Coleman and Mandula~\cite{PhysRev.159.1251}, every local renormalizable quantum
+field theory in four-dimensional Minkowski spacetime with that
+satisfies a simple set of three assumptions (finite number of different
+one-particle states, non-trivial interactions, and a mass gap) can only have a symmetry \emph{Lie algebra} of the S matrix which is a
+direct product of the Poincar\'{e} group and an internal symmetry group $G$:
+$($Poincar\'{e}$)\times G$. In other words, spacetime and
+internal symmetries may only be combined in a trivial way. More explicitly, if $G$ has a Lie algebra $\mathcal
+G$ of the form
+\begin{equation}
+~[B_r,B_s] = f_{rs}{}^tB_t~,
+\end{equation}
+where $f_{rs}{}^t$ are structure functions, then the Coleman-Mandula theorem implies that
+\begin{equation}
+~[B_r,P_m] = [B_r,M_{mn}] = 0~.
+\end{equation}
+
+However, the CM theorem has a loophole in that it assumes the
+symmetry algebra of the $S$ matrix contains only \emph{commutation
+relations}. In fact, it is possible to generalize the idea of a symmetry algebra to include
+fermionic charges with \emph{anticommutation relations} in addition to the
+usual bosonic charges with commutation relations. 
+
+With this generalization, there is a non-trivial way to combine
+supersymmetry transformation generator $Q$ with the Poincar\'{e} group
+in a way that mixes the two
+symmetry. The simplest example is given by the super Lie algebra for $\mathcal N=1$
+supersymmetry,
+\begin{align}
+~\{ Q_{\alpha},\bar Q_{\dot{\beta}}\} &= 2\sigma^m_{\alpha\dot\beta} P_m \nonumber\\
+~\{ Q_{\alpha},Q_{\beta}\} &= \{ \bar Q_{\dot\alpha},\bar Q_{\dot\beta}\} = 0\nonumber\\
+~[ P_m, Q_{\alpha}] &= [P_m,\bar Q_{\dot\alpha}] = 0~.
 \label{eqn:n1susy}
-\end{eqnarray}
+\end{align}
 
-\subsection{Minimal Supersymmetric Standard Model}
+The simplest supersymmetric extension of the standard model is the
+Minimal Supersymmetric Standard Model (MSSM). 
 The K\"{a}hler potential and super potential for chiral superfields
 \begin{equation}
 \mathcal L = \int \mathrm{d}^4\theta K(\Phi,\Phi^{\dagger}) + \left (\int
@@ -300,8 +354,6 @@ From this we can write down the Lagrangian for the MSSM
 \label{eqn:Wrpv}
 \end{equation}
 
-
-
 The mass matrices for the neutralinos and charginos are given by
 \begin{equation}
 \mathbf{M}_N =\left (  \begin{matrix}
@@ -318,8 +370,7 @@ M_2 & \sqrt{2}m_Ws_{\beta}\\
  \sqrt{2}m_Wc_{\beta}& \mu
 \end{matrix}\right)~,
 \end{equation}
-respectively.
-When the lightest neutralino is Higgsino-like ($\mu \ll M_1, M_2$), the
+respectively. When the lightest neutralino is Higgsino-like ($\mu \ll M_1, M_2$), the
 mass eigenvalues of the lightest neutralino, second lightest neutralino and chargino are close to
 each other,
 \begin{align}
@@ -328,7 +379,7 @@ m_{\chiz_2} &= \mu + \frac{m_Z^2(1-s_{\beta})(\mu + M_1c_W^2+M_2s_W^2)}{2(\mu+M_
 m_{\chipm_1} &= \mu - \frac{m_W^2(\mu + M_2\sin 2\beta)}{M_2^2-\mu^2} + \cdots
 \end{align}
 
-Figure~\ref{fig:neutralinos} shows the mass differences
+Fig.~\ref{fig:neutralinos} shows the mass differences
 $m_{\chipm_1}-m_{\chiz_1}$ and $m_{\chiz_2}-m_{\chiz_1}$ as a function of the Wino mass $M_2$.
 
 
@@ -350,7 +401,7 @@ $m_{\chipm_1}-m_{\chiz_1}$ and $m_{\chiz_2}-m_{\chiz_1}$ as a function of the Wi
   considered in this paper, along with the assumed decay modes.}
 \end{figure}
 
-In Chapter~\ref{ch:analysis8TeV}, natural simplified SUSY scenarios are used to interpret
+In Ch.~\ref{ch:analysis8TeV} and Ch.~\ref{ch:analysis13TeV}, natural simplified SUSY scenarios are used to interpret
 results. The LSP is the lightest neutralino $\chiz_1$ while the NLSP
 is the lightest chargino $\chipm_1$.  They are both higgsinos and
 their mass splitting is taken to be 5\GeV. The NLSP decays to the LSP
@@ -376,23 +427,6 @@ decays to
 \begin{itemize}
 \item a first or second generation quark-antiquark ($\qqbar$) pair and the LSP.
 \end{itemize}
-%\begin{itemize}
-%\item \textbf{ T1bbbb}: pair-produced gluinos, each decaying with a 100\%
-% branching fraction to a bottom quark-antiquark ($\bbbar$) pair and the LSP;
-%\item \textbf{ T1tbbb}: pair-produced gluinos, each decaying with a
-% 50\% branching fraction to a $\bbbar$ pair and the LSP or to a
- %top quark (antiquark), a bottom antiquark (quark), and the NLSP;
-%\item \textbf{ T1ttbb}: pair-produced gluinos, decaying with a 100\%
-%  branching fraction to a top quark (antiquark), a bottom antiquark
-%  (quark), and the NLSP;
-%\item \textbf{ T1tttb}: pair-produced gluinos, each decaying with a
-% 50\% branching fraction to a top quark-antiquark ($\ttbar$) pair and the LSP or to a top
-% quark (antiquark), a bottom antiquark (quark), and the NLSP;
-%\item \textbf{ T1tttt}: pair-produced gluinos, each decaying with a 100\%
-% branching fraction to a $\ttbar$ pair and the LSP.
-%\end{itemize}
-The corresponding Feynman diagrams are shown in
-Fig.~\ref{fig:SMSGluinoTopology}.
 
 \begin{figure*}[thb!]
 \centering
@@ -408,9 +442,8 @@ Fig.~\ref{fig:SMSGluinoTopology}.
 \includegraphics[width=0.32\textwidth]{figs/theory/T2tt.pdf}
 \caption{Diagrams displaying the event topologies of gluino (upper 7
   diagrams) and top-squark (lower 3 diagrams) pair production
-  considered in this thesis.\label{fig:SMSGluinoTopology}}
+  considered in this thesis.\label{fig:SMSDiagrams}}
 \end{figure*}
-
 
 In addition, several simplified models are considered for
 the production of top-squark pairs, in which each top squark decays to
@@ -419,17 +452,9 @@ one of the following final state:
 \item a bottom quark and the NLSP;
 \item a top quark and the LSP.
 \end{itemize}
-%\begin{itemize}
-%\item \textbf{ T2bW$^{\ast}$}: pair-produced top squarks, each decaying
- % with a 100\% branching fraction to a bottom quark and the NLSP;
-%\item \textbf{ T2tb}: pair-produced top squarks, each decaying with a 50\%
-%  branching fraction to a top quark and the LSP or to a bottom quark and
-%  the NLSP;
-%\item \textbf{ T2tt}: pair-produced top squarks, each decaying with a
- % 100\% branching fraction to a top quark and the LSP.
-%\end{itemize}
+
 The corresponding Feynman diagrams are shown in
-Fig.~\ref{fig:SMSGluinoTopology}.
+Fig.~\ref{fig:SMSDiagrams}.
 
 \subsection{Technical Implentation in \PYTHIA}
 To simplify the treatment of the sparticle decays in \PYTHIA v6.4.26, we directly implement three-body decays of
