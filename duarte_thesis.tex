@@ -33,6 +33,20 @@
 \providecommand{\MATNLO}{{\MADGRAPH{}\_a\textsc{mc@nlo}}\xspace}
 \newcommand{\dPhiR}{\ensuremath{\Delta\phi_\mathrm{R}}\xspace}
 
+% avoids incorrect hyphenation, added Nov/08 by SSR
+\hyphenation{ALPGEN}
+\hyphenation{EVTGEN}
+\hyphenation{PYTHIA}
+\hyphenation{NNPDF}
+
+% special commands
+\newcommand{\met}{\ETm}
+\newcommand{\mgaga}{$m_{\gamma\gamma}$}
+\newcommand{\Rsq}{\Rtwo}
+\newcommand{\chizone}{\chiz_1}
+\newcommand{\chiztwo}{\chiz_2}
+\newcommand{\sbottom}{\tilde{b}}
+
 \usepackage{tikz}
 \usepackage{ifthen}
 \usetikzlibrary{fadings}
@@ -107,6 +121,8 @@
 \include{hlt13TeV}
 \include{analysis8TeV}
 \include{analysis13TeV}
+\include{pheno}
+\include{timing}
 \include{conclusion}
 
 %\bibliography{duarte_thesis}{}
