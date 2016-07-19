@@ -69,7 +69,7 @@ detector is performed in \textsc{DELPHES}~3.3.2~\cite{Delphes3}. The
 default description of CMS as provided in the release is used, except
 for a slight modification to the photon isolation and efficiency,
 described in the next section. Jet clustering is performed using
-\textsc{FastJet}~3.1.3~\cite{FastJet}. As in CMS, the anti-$k_T$ jet
+\textsc{FastJet}~3.1.3~\cite{fastjet}. As in CMS, the anti-$k_T$ jet
 clustering algorithm is used with jet-size parameter $R=0.5$~\cite{antikt}.
 
 \section{Emulation of the CMS search}
@@ -105,7 +105,7 @@ The emulated event selection is summarized as follows,
   least one photon has $\pt>40$~GeV and the diphoton mass
   $m_{\gamma\gamma}>100$~GeV. If the event contains more than one $\PH$ candidate,
   the one with the highest scalar sum $\pt$ of the two photons is selected. 
-\item Jets are reconstruted using the \textsc{FastJet}\cite{FastJet} implemtnation
+\item Jets are reconstruted using the \textsc{FastJet}\cite{fastjet} implemtnation
   of the anti-$k_T$\cite{antikt} algorithm with jet radius parameter $R=0.5$.
 \item Events with at least one jet with $\pt>30$ GeV and $|\eta|<3.0$
   are selected.

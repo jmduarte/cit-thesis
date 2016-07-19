@@ -1,12 +1,24 @@
 \section{The Standard Model of Particle Physics}
 
-The standard model (SM) of particle physics describes all of the known
-particles and their interactions through the fundamental forces
+The standard model (SM) of particle physics is a description of nature
+composed of two main ingredients:
+\begin{enumerate}[(a)]
+\item a list of known particles and their quantum properties, and
+\item an inventory of the interactions of these particles through the fundamental forces
 (except for gravity): the strong nuclear force, the weak nuclear force, and the electromagnetic
-force. These forces arise due to the exchange of spin-$1$
-bosons among the spin-$\frac{1}{2}$ fermions that make up matter. The SM is a renormalizable quantum field
-theory based on the gauge symmetry group $\mathrm{SU(3)}_{\mathrm{C}}\times \mathrm{SU(2)}_{\mathrm{L}}\times
-\mathrm{U(1)}_Y$. Each factor in the gauge group corresponds to a fundamental force, represented by a gauge field, whose excitations are
+force. 
+\end{enumerate}
+It is a renormalizable quantum field theory based on a gauge
+symmetry~\cite{tHooft:419894}. A fundamental consequence of relativity and quantum mechanics
+is that there are only two types of particles: those with integer
+spins, whose wave functions are symmetric under particle exchange, called \emph{bosons}, and those
+with half-integer spin, whose wave functions are anti-symmetric under
+particle exchange, called \emph{fermions}~\cite{PhysRev.58.716}. The forces in
+the SM arise due to the exchange of spin-$1$ bosons among the
+spin-$\frac{1}{2}$ fermions that make up matter. 
+
+Each factor in the gauge symmetry group $\mathrm{SU(3)}_{\mathrm{C}}\times
+\mathrm{SU(2)}_{\mathrm{L}}\times\mathrm{U(1)}_Y$ corresponds to a fundamental force, represented by a gauge field, whose excitations are
 the gauge bosons that act as force carriers:
 \begin{center}
 \begin{tabular}{ccccc}
@@ -17,25 +29,23 @@ $\mathrm{SU(3)}_{\mathrm{C}}$ &$\times$& $\mathrm{SU(2)}_{\mathrm{L}}$
  $\alpha=1,...,8$&&$a=1,2,3$&&
 \end{tabular}
 \end{center}
-The eight spin-$1$ bosons, $G_{\mu}^{\alpha}$,
-associated with the factor $\mathrm{SU(3)}_{\mathrm{C}}$ are the gluons. Any
-particle that transforms is said to carry color charge. The three spin-$1$
-bosons, $W^{a}_{\mu}$ are associated 
+There are eight bosons, called gluons, represented by the fields
+$G_{\mu}^{\alpha}$ and associated with the factor
+$\mathrm{SU(3)}_{\mathrm{C}}$. The three bosons represented by
+the fields  $W^{a}_{\mu}$ and associated with the factor
+$\mathrm{SU(2)}_{\mathrm{L}}$, and the boson represented by the field
+$B_{\mu}$ and associated with the factor $\mathrm{U(1)}_Y$ mix to form the
+$\PW^{\pm}$ boson, $\PZ$ boson, and the photon $\Pgg$.
 
 The matter fields are fermions, which fall into two
 categories: the quarks, $u$, $d$, $c$, $s$, $t$, and $b$, which participate in the
 strong interactions, and the leptons, $e$, $\mu$, $\tau$, $\nu_e$,
 $\nu_{\mu}$, and $\nu_{\tau}$, which do
-not. Fig.~\ref{fig:standardmodel} shows the particles in the SM. To simplify notation, it makes sense to consider the doublet of
-$q_L = \binom{u_L}{d_L}$ and $\ell_L = \binom{e_L}{\nu_L}$. All matter fields implicity have
-three-component generation indices $e_i=(e,\mu,\tau),
-\nu_i=(\nu_e,\nu_{\mu},\nu_{\tau}), u_i=(u,c,t),
-d_i=(d,s,b)$. 
+not. The fermions also naturally fit into three generations of matter,
+as displayed in Fig.~\ref{fig:standardmodel}. 
 
-The electric charge is given by $Q = T_{3L}+Y$. Tab.~\ref{tab:representations} summarizes the
-representations in which the fields transform under the SM
-gauge group. The SM Langrangian
-excluding Higgs and Yukawa terms is then,
+The second ingredient of the SM, an inventory of the interactions between the
+particles, is given by the Langrangian density, 
 \begin{align}
 \mathcal{L}_{\mathrm{SM}} &= -\frac{1}{4}B_{\mu\nu}B^{\mu\nu} -\frac{1}{4}W^{a}_{\mu\nu}W^{a\mu\nu} - \frac{1}{4}G^{\alpha}_{\mu\nu}G^{\alpha\mu\nu}
   & \mathrm{(gauge~terms)}\nonumber\\
@@ -48,7 +58,17 @@ excluding Higgs and Yukawa terms is then,
 & +\mathcal L_{\mathrm{Higgs}} +\mathcal L_{\mathrm{Yukawa}} &  \mathrm{(Higgs~and~Yukawa~terms)}
 \label{eqn:lsm}
 \end{align}
-where $D_{\mu}$ is the gauge covariant derivative.
+where $D_{\mu}$ is the gauge-covariant derivative, $q_L =
+\binom{u_L}{d_L}$ and $\ell_L = \binom{e_L}{\nu_L}$ are
+$\mathrm{SU(2)}_{\mathrm{L}}$ doublets, and the three-component
+generation indices are suppressed.
+%$e_i=(e,\mu,\tau), \nu_i=(\nu_e,\nu_{\mu},\nu_{\tau}), u_i=(u,c,t),
+%d_i=(d,s,b)$. 
+Tab.~\ref{tab:representations} summarizes another way to visualize the
+interactions of the particles, which are the representations in which the matter fields transform under the SM
+gauge group. The Higgs terms $\mathcal L_{\mathrm{Higgs}}$ are discussed in
+Sec.~\ref{sec:ewsb}, while the Yukawa terms $\mathcal
+L_{\mathrm{Yukawa}}$ are discussed in Sec.~\ref{sec:fermionmasses}.
 
 \begin{figure}
 \centering
@@ -59,7 +79,7 @@ where $D_{\mu}$ is the gauge covariant derivative.
 \begin{table}
 \centering
 \begin{tabular}{c|ccc}
-&$\mathrm{SU(3)}_{\mathrm{C}}$&$\mathrm{SU(2)}_{\mathrm{L}}$&$\mathrm{U(1)}_Y$ \\
+&$\mathrm{SU(3)}_{\mathrm{C}}$&$\mathrm{SU(2)}_{\mathrm{L}}$&$\mathrm{U(1)}_Y$ \\\hline
 $q$ & $\mathbf{3}$ & $\mathbf{2}$ & $1/6$\\
 $\bar u_R$ & $\mathbf{\bar 3}$ & $\mathbf{1}$ & $-2/3$\\
 $\bar d_R$ & $\mathbf{\bar 3}$ & $\mathbf{1}$ & $1/3$\\
@@ -68,38 +88,44 @@ $\bar e_R$ & $\mathbf{1}$ & $\mathbf{1}$ & $1$\\\hline
 $h$ & $\mathbf{1}$ & $\mathbf{2}$ & $1/2$
 \end{tabular}
 \caption{\label{tab:representations} Table summarizing the
-    representations in which the fields transform under the standard
-    model gauge group.}
+    representations in which the matter fields transform under the standard
+    model gauge group. $\mathbf{n}$ ($\mathbf{\bar n}$) is the
+    fundamental (antifundamental) representation
+    of $\mathrm{SU(n)}$. For the $\mathrm{U(1)}_Y$ factor, the
+    representations are labeled by the weak hypercharge $Y$. The electric charge is given by $Q = T_{3L}+Y$. }
 \end{table}
 
 
 \section{Electroweak Symmetry Breaking}
+\label{sec:ewsb}
 A central feature of gauge theories is that the gauge bosons are
 massless due to the fact that the gauge symmetry forbids explicit mass
-terms in the Lagrangian. In 1964, it was proposed that spontaneous symmetry breaking in gauge
-theories could be achieved through the introduction of a scalar
-field~\cite{PhysRevLett.13.321,HIGGS1964132,PhysRevLett.13.508,PhysRevLett.13.585,PhysRev.145.1156,PhysRev.155.1554}. In
-the SM, the mechanism of electroweak symmetry breaking
+terms in the Lagrangian. In 1964, it was proposed that
+\emph{spontaneous symmetry breaking} could be achieved in gauge
+theories through the introduction of a scalar
+field~\cite{PhysRevLett.13.321,HIGGS1964132,PhysRevLett.13.508,PhysRevLett.13.585,PhysRev.145.1156,PhysRev.155.1554}. Spontaneous symmetry breaking
+means the equations of the dynamics are exactly symmetric, but they
+admit solutions that are not. In the SM, the mechanism of electroweak symmetry breaking
 is a framework to keep the structure of gauge symmetry and
 interactions at high energy, and still generate the observed masses
-of the $\PW$ and $\PZ$ gauge
-bosons~\cite{PhysRevLett.19.1264,GLASHOW1961579,Salam:1968rm}. The SM
-Higgs part of the Lagrangian is: 
+of the $\PW^{\pm}$ and $\PZ$ gauge
+bosons~\cite{PhysRevLett.19.1264,GLASHOW1961579,Salam:1968rm}. 
+
+The part of the Lagrangian that accomplishes this is: 
 \begin{align}
 \mathcal L_{\mathrm{Higgs}} &= (D_{\mu}\Phi)^{\dagger}(D^{\mu}\Phi) -
 V(\Phi)~;& V(\Phi) &= -\mu^2\Phi^{\dagger}\Phi +
 \lambda(\Phi^{\dagger}\Phi)^2~,
 \label{eqn:Lhiggs}
 \end{align}
-where the field $\Phi$ is a self-interacting
-$\mathrm{SU(2)}_{\mathrm{L}}$ complex doublet with weak hypercharge $Y=1/2$:
+where the field $\Phi$ is a complex, spin-$0$, self-interacting
+$\mathrm{SU(2)}_{\mathrm{L}}$ doublet with weak hypercharge $Y=1/2$:
 \begin{equation}
 \Phi = \left(\begin{matrix} \phi^{+}\\\phi^0\end{matrix} \right)~.
 \end{equation}
-If the quadratic term is negative, that is $\mu^2>0$, then the
-potential will have a ``Mexican hat'' shape, illustrated in
+If $\mu^2>0$, then the potential will have a ``Mexican hat'' shape, illustrated in
 \ref{fig:mexicanhat}, and the minimum of the potential will occur at a value of the field that is not $\mathrm{SU(2)}_{\mathrm{L}}\times\mathrm{U(1)}_Y$
-invariant. Due to this, the complex scalar doublet field acquires a nonzero vacuum
+invariant. Due to this, $\Phi$ acquires a nonzero vacuum
 expectation value (\emph{vev}), corresponding to the minimum of the potential,
 \begin{align}
 \langle\Phi\rangle_0&\equiv \langle 0|\Phi|0\rangle =
@@ -109,16 +135,14 @@ where $U(x)$ is a unitary transformation that rotates the field
 to the other degenerate solutions. Since the vev is still symmetric under a $\mathrm{U(1)}$ subgroup of the full
 electroweak symmetry, we say the electroweak symmetry
 $\mathrm{SU(2)}_{\mathrm{L}}\times\mathrm{U(1)}_Y$ is \emph{spontaneously
-broken} to $\mathrm{U(1)}_{\mathrm{EM}}$. Spontaneous symmetry breaking
-is the phenomenon in which the equations of the dynamics are
-exactly symmetric, but they admit solutions that are not.
+broken} to $\mathrm{U(1)}_{\mathrm{EM}}$. 
 
 \begin{figure}
 \centering
 \includegraphics[width=0.7\textwidth]{figs/theory/MexicanHat.pdf}
-\caption{\label{fig:mexicanhat} The shape of the ``mexican hat''
+\caption{\label{fig:mexicanhat} The shape of the ``Mexican hat''
   potential. The minimum of the potential occurs at
-a field value that is not 0.}
+a field value that is not $0$.}
 \end{figure}
 
 This mechanism is responsible for generating the masses of the gauge
@@ -150,11 +174,11 @@ W_{\mu}^{\pm} &= \frac{1}{\sqrt{2}}(W_{\mu}^1\mp iW^2_{\mu})~, &m_W &= \frac{1}{
 Z_{\mu} &= \frac{g_2W_{\mu}^3 - g_1B_{\mu}}{\sqrt{g_1^2+g_2^2}}~,&m_Z &= \frac{1}{2}v\sqrt{g_1^2+g_1^2}~,\\
 A_{\mu} &= \frac{g_2W_{\mu}^3 + g_1B_{\mu}}{\sqrt{g_1^2+g_2^2}}~,&m_{\gamma} &= 0.
 \end{align}
-The $\PW$ and $\PZ$ bosons have acquired mass, while the photon
+The $\PW^{\pm}$ and $\PZ$ bosons have acquired mass, while the photon
 $\Pgg$ remains massless.
 
 Another consequence of this symmetry breaking mechanism is the
-emergence of a physical scalar boson. If we expand the field around
+emergence of a physical spin-$0$ boson. If we expand the field around
 its potential minimum
 \begin{align}
 \Phi(x)&=
@@ -168,7 +192,8 @@ and write out the terms associated to this field, we find
 which means this scalar boson, called the \emph{Higgs boson}, is self-interacting and has a mass squared of $m^2_{h^0} =
 2\lambda v^2$ at tree-level.
 
-\subsection{Fermion Masses}
+\section{Fermion Masses}
+\label{sec:fermionmasses}
 As proposed by Weinberg~\cite{PhysRevLett.19.1264}, fermions acquire
 mass through interaction with the $\Phi$ field, which has a nonzero
 vev. This is accomplished by adding Yukawa terms to the Lagrangian for
@@ -181,18 +206,23 @@ where the doublet $\tilde\Phi = i\sigma_2\Phi^{\ast}$ with hypercharge $Y=-1/2$ 
 needed to generate masses for the down-type quarks. Then we can
 identify the fermion masses as
 \begin{align}
-m_e &= \frac{\lambda_e v}{2}&m_u &= \frac{\lambda_e
+m_e &= \frac{\lambda_e v}{2}&m_u &= \frac{\lambda_u
                                           v}{2}& m_d &= \frac{\lambda_dv}{2}~.
 \end{align}
-Neutrino masses can also be accommodated in the SM by adding similar terms.
-
+%Neutrino masses can also be accommodated in the SM by adding similar
+%terms. 
+Besides giving masses to the fermions, the Yukawa terms have another important
+consequence: they allow the fermions to affect the
+observed mass of the Higgs boson through quantum corrections.
 
 \section{Higgs Mass and Naturalness}
+\label{sec:higgsnaturalness}
 The leading quantum correction to the Higgs mass squared parameter is due to
-the large Yukawa coupling coupling to the top quark, which gives the
-top quark its large mass,
+the large Yukawa coupling to the top quark, which gives the
+top quark its large mass. We can compute the top quark's contribution in the SM to leading order,
 \begin{fmffile}{higgs}
 \begin{align}
+m^2_{h^0} &= m^2_{h^0\mathrm{(bare)}} +\Delta(m^2_{h^0}) \\
 \Delta(m^2_{h^0}) &= \quad\parbox{20mm}{
 \begin{fmfgraph*}(20,20)
 \fmfkeep{fermion}
@@ -206,60 +236,49 @@ top quark its large mass,
 \end{fmfgraph*}} \quad + \quad\cdots\\
 &= -\frac{|\lambda_t|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 + \cdots~,
 \end{align}
-where $\Lambda_{\mathrm{UV}}$ is an ultraviolet momentum cutoff. This
-quadratic dependence on the $\Lambda_{\mathrm{UV}}$ means the Higgs
-mass parameter is sensitive to the physics in the
-ultraviolet. This sensitivity requires a large fine tuning to explain
-why $m^2_{h^0}$ remains small.
+where $\Lambda_{\mathrm{UV}}$ is an ultraviolet momentum cutoff,
+usually taken to be the grand unification scale $10^{16} \GeV$ or the Planck scale $10^{19} \GeV$. This
+quadratic dependence on $\Lambda_{\mathrm{UV}}$ means the Higgs
+mass parameter is sensitive to the physics in the ultraviolet. This sensitivity requires a large fine tuning of $m^2_{h^0\mathrm{(bare)}}$ to explain
+why $m^2_{h^0}$, measured to be $(125.09\pm0.24 \GeV)^2$, remains small. This undesirable situation is called the
+\emph{naturalness problem}. This conundrum of how a light fundamental
+scalar particle can exist in the presence of (presumably) new physics
+in the ultraviolet is one of the key motivations for new physics at
+the \TeV scale, especially \emph{supersymmetry}.
 
-\begin{align}
-\Delta(m^2_{h^0}) &= \quad\parbox{20mm}{\fmfreuse{fermion}} \quad + \quad
-\parbox{20mm}{
-\begin{fmfgraph*}(20,20)
-\fmfkeep{boson}
-\fmfleft{i} 
-\fmfright{o} 
-\fmf{dashes}{i,v}
-\fmf{dashes,right,tension=0.7,label=$\tilde t_{1,,2}$}{v,v}
-\fmf{dashes}{v,o}
-\fmfv{label=$h^0$,label.angle=90}{i}
-\end{fmfgraph*}}
- \quad + \quad
-\parbox{20mm}{
-\begin{fmfgraph*}(20,20)
-\fmfkeep{sunset}
-\fmfleft{i}
-\fmfright{o}
-\fmf{dashes}{i,v1}
-\fmf{dashes}{v2,o}
-\fmf{dashes,left,tension=.3,label=$\tilde t_{1,,2}$}{v1,v2}
-\fmf{dashes,left,tension=.3}{v2,v1}
-\fmfv{label=$h^0$,label.angle=90}{i}
-\end{fmfgraph*}} \quad + \quad\cdots\\
- &= -\frac{|\lambda_t|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 +
-  \sum_{i=1}^{2} \left ( \frac{\lambda_{\tilde
-  t_i}^2}{16\pi^2}\Lambda_{\mathrm{UV}}^2 - 2m_{\tilde
-  t_i}^2\log(\Lambda_{\mathrm{UV}}/m_{\tilde t_i}) \right )+ \cdots~,
-\end{align}
-\end{fmffile}
 
 \section{Supersymmetry}
+\label{sec:susy}
 Supersymmetry (SUSY) is a proposed symmetry of spacetime that 
-introduces a bosonic (fermionic) partner for every fermion (boson) in the 
-standard model
-(SM)~\cite{Wess,Golfand,Volkov,Chamseddine,Kane,Fayet,Barbieri,Hall,Ramond}.
+introduces a bosonic (fermionic) partner for every fermion
+(boson)~\cite{Wess,Golfand,Volkov,Chamseddine,Kane,Fayet,Barbieri,Hall,Ramond}. For
+many years, such a symmetry was thought to be impossible since in 1967,
+Colman and Mandula~\cite{PhysRev.159.1251} published their no-go theorem that says
+internal symmetries, those that act on internal degrees of
+freedom like spin, cannot be combined with spacetime symmetries in a
+nontrivial way. SUSY evades this theorem because it is based
+on \emph{super Lie algebras}, which may include anticommutation relations as
+well as the usual commutation relations.
 
 Supersymmetric extensions of the SM are particularly compelling 
-because they yield solutions to the gauge hierarchy problem with no
-fine-tuning of fundamental parameters~\cite{Witten:1981nf,Dimopoulos:1981zb,Dine:1981za,Dimopoulos:1981au,Sakai:1981gr,Kaul:1981hi}, 
-exhibit gauge coupling unification~\cite{Dimopoulos:1981yj,Marciano:1981un,Einhorn:1981sx,Ibanez:1981yh,Amaldi:1991cn,Langacker:1995fk},
-and provide weakly interacting particle candidates for dark matter~\cite{Ellis:1983ew,Jungman:1995df}.
+because they 
+\begin{enumerate}[(a)]
+\item yield a solution to the naturalness problem, alleviating
+the fine-tuning of fundamental
+parameters~\cite{Witten:1981nf,Dimopoulos:1981zb,Dine:1981za,Dimopoulos:1981au,Sakai:1981gr,Kaul:1981hi}, 
+\item 
 For SUSY to provide a ``natural'' solution to the gauge hierarchy problem,
 the top squark, bottom squark, and gluino must have masses below a few
 TeV, making them accessible at the CERN LHC. 
+\end{enumerate}
+ yield solutions to the naturalness problem, alleviating
+the fine-tuning of fundamental parameters~\cite{Witten:1981nf,Dimopoulos:1981zb,Dine:1981za,Dimopoulos:1981au,Sakai:1981gr,Kaul:1981hi}, 
+exhibit gauge coupling unification~\cite{Dimopoulos:1981yj,Marciano:1981un,Einhorn:1981sx,Ibanez:1981yh,Amaldi:1991cn,Langacker:1995fk},
+and provide weakly interacting particle candidates for dark matter~\cite{Ellis:1983ew,Jungman:1995df}.
 
-An operator $Q$ that generates supersymmetry transformations is an
-anti-commuting spinor with
+
+An operator $Q$ that generates SUSY transformations is an
+anti-commuting spinor whose main action is:
 \begin{equation}
 Q|\mathrm{boson}\rangle = |\mathrm{fermion}\rangle, ~~~~
 Q|\mathrm{fermion}\rangle = |\mathrm{boson}\rangle~.
@@ -311,19 +330,23 @@ supersymmetry,
 \label{eqn:n1susy}
 \end{align}
 
-The simplest supersymmetric extension of the standard model is the
-Minimal Supersymmetric Standard Model (MSSM). 
-The K\"{a}hler potential and super potential for chiral superfields
+The most economical supersymmetric extension of the standard model is the
+Minimal Supersymmetric Standard Model (MSSM). For supersymmetric
+theories, the Lagrangian can be written in terms of chiral
+superfields $\Phi_l(x,\theta,\bar\theta)$ that are functions of
+superspace including the Grassmanian variable $\theta$, a K\"{a}hler potential $K(\Phi_l,\Phi_l^{\dagger})$,
+which plays the role of the term, and a superpotential $W(\Phi_l)$, which
+describes the mass and interaction terms.
 \begin{equation}
-\mathcal L = \int \mathrm{d}^4\theta K(\Phi,\Phi^{\dagger}) + \left (\int
- \mathrm{d}^2\theta W(\Phi) + \mathrm{h.c.} \right)
+\mathcal L = \int \mathrm{d}^4\theta K(\Phi_l,\Phi_l^{\dagger}) + \left (\int
+ \mathrm{d}^2\theta W(\Phi_l) + \mathrm{h.c.} \right)
 \label{eqn:mssmlag}
 \end{equation}
 
 \begin{table}
 \centering
 \begin{tabular}{c|ccc}
-&$\mathrm{SU(3)}_{\mathrm{C}}$&$\mathrm{SU(2)}_{\mathrm{L}}$&$\mathrm{U(1)}_Y$ \\
+&$\mathrm{SU(3)}_{\mathrm{C}}$&$\mathrm{SU(2)}_{\mathrm{L}}$&$\mathrm{U(1)}_Y$ \\\hline
 $Q$ & $\mathbf{3}$ & $\mathbf{2}$ & $1/6$\\
 $U^c$ & $\mathbf{\bar 3}$ & $\mathbf{1}$ & $-2/3$\\
 $D^c$ & $\mathbf{\bar 3}$ & $\mathbf{1}$ & $1/3$\\
@@ -332,12 +355,12 @@ $E^c$ & $\mathbf{1}$ & $\mathbf{1}$ & $1$\\\hline
 $H_u$ & $\mathbf{1}$ & $\mathbf{2}$ & $1/2$\\
 $H_d$ & $\mathbf{1}$ & $\mathbf{2}$ & $-1/2$
 \end{tabular}
-\caption{\label{tab:representations} Table summarizing the
-    representations in which the superfields transform under the standard
+\caption{\label{tab:susyreps} Table summarizing the
+    representations in which the chiral superfields transform under the standard
     model gauge group.}
 \end{table}
 
-The R-parity conserving part of the superpotential is whown in Eqn.~\ref{eqn:Wrpc}
+The R-parity conserving part of the superpotential is shown in Eqn.~\ref{eqn:Wrpc}
 \begin{equation}
 W_{\mathrm{RPC}} = - y_u H_u Q U^c + y_dH_d Q D^c + y_e H_d L E^c +
 \mu H_uH_d
@@ -350,14 +373,9 @@ W_{\mathrm{RPV}} =\frac{1}{2}\lambda^{ijk}L_iL_jE_k^c +
 \frac{1}{2}\lambda^{\prime\prime ijk}U_i^cD_j^cD_k^c
 \label{eqn:Wrpv}
 \end{equation}
-From this we can write down the Lagrangian for the MSSM
-\begin{equation}
-\mathcal L_{\mathrm{MSSM}}=\frac{1}{2}\lambda^{ijk}L_iL_jE_k^c +
-\lambda^{\prime ijk} L_iQ_jD_k^c + \mu^{\prime i}H_uL_i +
-\frac{1}{2}\lambda^{\prime\prime ijk}U_i^cD_j^cD_k^c
-\label{eqn:Wrpv}
-\end{equation}
 
+\section{Elecroweak SUSY Sector}
+\label{sec:ewksusy}
 The mass matrices for the neutralinos and charginos are given by
 \begin{equation}
 \mathbf{M}_N =\left (  \begin{matrix}
@@ -374,7 +392,43 @@ M_2 & \sqrt{2}m_Ws_{\beta}\\
  \sqrt{2}m_Wc_{\beta}& \mu
 \end{matrix}\right)~,
 \end{equation}
-respectively. When the lightest neutralino is Higgsino-like ($\mu \ll M_1, M_2$), the
+respectively. 
+
+
+\section{SUSY and Naturalness}
+\label{sec:susynaturalness}
+\begin{align}
+\Delta(m^2_{h^0}) &= \quad\parbox{20mm}{\fmfreuse{fermion}} \quad + \quad
+\parbox{20mm}{
+\begin{fmfgraph*}(20,20)
+\fmfkeep{boson}
+\fmfleft{i} 
+\fmfright{o} 
+\fmf{dashes}{i,v}
+\fmf{dashes,right,tension=0.7,label=$\tilde t_{1,,2}$}{v,v}
+\fmf{dashes}{v,o}
+\fmfv{label=$h^0$,label.angle=90}{i}
+\end{fmfgraph*}}
+ \quad + \quad
+\parbox{20mm}{
+\begin{fmfgraph*}(20,20)
+\fmfkeep{sunset}
+\fmfleft{i}
+\fmfright{o}
+\fmf{dashes}{i,v1}
+\fmf{dashes}{v2,o}
+\fmf{dashes,left,tension=.3,label=$\tilde t_{1,,2}$}{v1,v2}
+\fmf{dashes,left,tension=.3}{v2,v1}
+\fmfv{label=$h^0$,label.angle=90}{i}
+\end{fmfgraph*}} \quad + \quad\cdots\\
+ &= -\frac{|\lambda_t|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 +
+  \sum_{i=1}^{2} \left ( \frac{\lambda_{\tilde
+  t_i}^2}{16\pi^2}\Lambda_{\mathrm{UV}}^2 - 2m_{\tilde
+  t_i}^2\log(\Lambda_{\mathrm{UV}}/m_{\tilde t_i}) \right )+ \cdots~,
+\end{align}
+\end{fmffile}
+
+When the lightest neutralino is Higgsino-like ($\mu \ll M_1, M_2$), the
 mass eigenvalues of the lightest neutralino, second lightest neutralino and chargino are close to
 each other,
 \begin{align}
