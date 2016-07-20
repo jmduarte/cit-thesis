@@ -199,15 +199,15 @@ mass through interaction with the $\Phi$ field, which has a nonzero
 vev. This is accomplished by adding Yukawa terms to the Lagrangian for
 each generation,
 \begin{equation}
-\mathcal L_{\mathrm{Yukawa}} = - \lambda_e \bar\ell_L\Phi e_R -
-\lambda_u\bar q_L\Phi u_R  - \lambda_d\bar q_L\tilde\Phi d_R + (\mathrm{h.c.})~,
+\mathcal L_{\mathrm{Yukawa}} = - y_e \bar\ell_L\Phi e_R -
+y_u\bar q_L\Phi u_R  - y_d\bar q_L\tilde\Phi d_R + (\mathrm{h.c.})~,
 \end{equation}
 where the doublet $\tilde\Phi = i\sigma_2\Phi^{\ast}$ with hypercharge $Y=-1/2$ is
 needed to generate masses for the down-type quarks. Then we can
 identify the fermion masses as
 \begin{align}
-m_e &= \frac{\lambda_e v}{2}&m_u &= \frac{\lambda_u
-                                          v}{2}& m_d &= \frac{\lambda_dv}{2}~.
+m_e &= \frac{y_e v}{2}&m_u &= \frac{y_u
+                                          v}{2}& m_d &= \frac{y_dv}{2}~.
 \end{align}
 %Neutrino masses can also be accommodated in the SM by adding similar
 %terms. 
@@ -219,7 +219,9 @@ observed mass of the Higgs boson through quantum corrections.
 \label{sec:higgsnaturalness}
 The leading quantum correction to the Higgs mass squared parameter is due to
 the large Yukawa coupling to the top quark, which gives the
-top quark its large mass. We can compute the top quark's contribution in the SM to leading order,
+top quark its large mass. In an effective field theory approach, where
+momenta of virtual particles are cut off at the scale
+$\Lambda_{\mathrm{UV}}$, we can compute the top quark's contribution in the SM to leading order,
 \begin{fmffile}{higgs}
 \begin{align}
 m^2_{h^0} &= m^2_{h^0\mathrm{(bare)}} +\Delta(m^2_{h^0}) \\
@@ -234,7 +236,7 @@ m^2_{h^0} &= m^2_{h^0\mathrm{(bare)}} +\Delta(m^2_{h^0}) \\
 \fmf{plain,left,tension=.3}{v2,v1}
 \fmfv{label=$h^0$,label.angle=90}{i}
 \end{fmfgraph*}} \quad + \quad\cdots\\
-&= -\frac{|\lambda_t|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 + \cdots~,
+&= -\frac{3|y_t|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 + \cdots~,
 \end{align}
 where $\Lambda_{\mathrm{UV}}$ is an ultraviolet momentum cutoff,
 usually taken to be the grand unification scale $10^{16} \GeV$ or the Planck scale $10^{19} \GeV$. This
@@ -257,37 +259,26 @@ Colman and Mandula~\cite{PhysRev.159.1251} published their no-go theorem that sa
 internal symmetries, those that act on internal degrees of
 freedom like spin, cannot be combined with spacetime symmetries in a
 nontrivial way. SUSY evades this theorem because it is based
-on \emph{super Lie algebras}, which may include anticommutation relations as
-well as the usual commutation relations.
+on a \emph{super Lie algebra}, which may include fermionic symmetries
+and anticommutation relations as well as the usual bosonic symmetries
+and commutation relations.
 
-Supersymmetric extensions of the SM are particularly compelling 
+Supersymmetric extensions of the SM are compelling 
 because they 
 \begin{enumerate}[(a)]
 \item yield a solution to the naturalness problem, alleviating
 the fine-tuning of fundamental
-parameters~\cite{Witten:1981nf,Dimopoulos:1981zb,Dine:1981za,Dimopoulos:1981au,Sakai:1981gr,Kaul:1981hi}, 
-\item 
-For SUSY to provide a ``natural'' solution to the gauge hierarchy problem,
-the top squark, bottom squark, and gluino must have masses below a few
-TeV, making them accessible at the CERN LHC. 
+parameters~\cite{Witten:1981nf,Dimopoulos:1981zb,Dine:1981za,Dimopoulos:1981au,Sakai:1981gr,Kaul:1981hi},
+explained further in Sec.~\ref{sec:susynaturalness}.
+\item exhibit gauge coupling
+  unification~\cite{Dimopoulos:1981yj,Marciano:1981un,Einhorn:1981sx,Ibanez:1981yh,Amaldi:1991cn,Langacker:1995fk}, and
+\item provide a weakly interacting particle candidate for dark matter~\cite{Ellis:1983ew,Jungman:1995df}.
 \end{enumerate}
- yield solutions to the naturalness problem, alleviating
-the fine-tuning of fundamental parameters~\cite{Witten:1981nf,Dimopoulos:1981zb,Dine:1981za,Dimopoulos:1981au,Sakai:1981gr,Kaul:1981hi}, 
-exhibit gauge coupling unification~\cite{Dimopoulos:1981yj,Marciano:1981un,Einhorn:1981sx,Ibanez:1981yh,Amaldi:1991cn,Langacker:1995fk},
-and provide weakly interacting particle candidates for dark matter~\cite{Ellis:1983ew,Jungman:1995df}.
 
-
-An operator $Q$ that generates SUSY transformations is an
-anti-commuting spinor whose main action is:
-\begin{equation}
-Q|\mathrm{boson}\rangle = |\mathrm{fermion}\rangle, ~~~~
-Q|\mathrm{fermion}\rangle = |\mathrm{boson}\rangle~.
-\end{equation}
-
-The group of symmetries of spacetime in four-dimensional quantum field
-theory is known as the Poincar\'{e} group. The generators of the
-Poincar\'{e} group consist of the energy-momentum vector $P_m$ and the
-Loretnz generators $M_{mn} = -M_{nm}$. The Poincar\'{e} algebra is
+SUSY can be thought of as an extension of the usual group of spacetime
+symmetries, known as the Poincar\'{e} group. This group has
+generators related to translation symmetry, $P_m$, and Loretnz
+symmetry, $M_{mn} = -M_{nm}$, which form a Lie algebra:
 \begin{align}
 ~[P_m,P_n] &= 0 \nonumber\\
 ~[P_m,M_{np}] &= i(\eta_{mn}P_p-\eta_{mp}P_n) \nonumber\\
@@ -296,53 +287,47 @@ Loretnz generators $M_{mn} = -M_{nm}$. The Poincar\'{e} algebra is
 \label{eqn:poincare}
 \end{align}
 
-As shown by Coleman and Mandula~\cite{PhysRev.159.1251}, every local renormalizable quantum
-field theory in four-dimensional Minkowski spacetime with that
-satisfies a simple set of three assumptions (finite number of different
-one-particle states, non-trivial interactions, and a mass gap) can only have a symmetry \emph{Lie algebra} of the S matrix which is a
-direct product of the Poincar\'{e} group and an internal symmetry group $G$:
-$($Poincar\'{e}$)\times G$. In other words, spacetime and
-internal symmetries may only be combined in a trivial way. More explicitly, if $G$ has a Lie algebra $\mathcal
-G$ of the form
+As shown by Coleman and Mandula~\cite{PhysRev.159.1251}, the only way
+to extend this symmetry with a new internal symmetry group $G$ with bosonic
+generators $B_r$ and Lie algebra,
 \begin{equation}
 ~[B_r,B_s] = f_{rs}{}^tB_t~,
 \end{equation}
-where $f_{rs}{}^t$ are structure functions, then the Coleman-Mandula theorem implies that
+with structure functions $f_{rs}{}^t$, is if the extended symmetry
+group is simply the direct product $($Poincar\'{e}$)\times G$ with a
+trivial Lie algerbra,
 \begin{equation}
 ~[B_r,P_m] = [B_r,M_{mn}] = 0~.
 \end{equation}
 
-However, the CM theorem has a loophole in that it assumes the
-symmetry algebra of the $S$ matrix contains only \emph{commutation
-relations}. In fact, it is possible to generalize the idea of a symmetry algebra to include
-fermionic charges with \emph{anticommutation relations} in addition to the
-usual bosonic charges with commutation relations. 
-
-With this generalization, there is a non-trivial way to combine
-supersymmetry transformation generator $Q$ with the Poincar\'{e} group
-in a way that mixes the two
-symmetry. The simplest example is given by the super Lie algebra for $\mathcal N=1$
-supersymmetry,
+However, SUSY exploits a loophole in the Coleman-Mandula theorem,
+which only considers bosonic symmetry generators, by incorpororating
+fermionic symmetry generators $Q$ that generate SUSY transformations,
+\begin{equation}
+Q|\mathrm{boson}\rangle = |\mathrm{fermion}\rangle, ~~~~
+Q|\mathrm{fermion}\rangle = |\mathrm{boson}\rangle~.
+\end{equation}
+Supersymmetries can be combined with the
+spacetime symmetries in a way that mixes the two symmetries, as
+exemplified by the super Lie algebra for $\mathcal N=1$
+SUSY,
 \begin{align}
 ~\{ Q_{\alpha},\bar Q_{\dot{\beta}}\} &= 2\sigma^m_{\alpha\dot\beta} P_m \nonumber\\
 ~\{ Q_{\alpha},Q_{\beta}\} &= \{ \bar Q_{\dot\alpha},\bar Q_{\dot\beta}\} = 0\nonumber\\
 ~[ P_m, Q_{\alpha}] &= [P_m,\bar Q_{\dot\alpha}] = 0~.
 \label{eqn:n1susy}
 \end{align}
+In other words, two SUSY generators can combine to generate a spacetime translation.
 
 The most economical supersymmetric extension of the standard model is the
 Minimal Supersymmetric Standard Model (MSSM). For supersymmetric
-theories, the Lagrangian can be written in terms of chiral
-superfields $\Phi_l(x,\theta,\bar\theta)$ that are functions of
-superspace including the Grassmanian variable $\theta$, a K\"{a}hler potential $K(\Phi_l,\Phi_l^{\dagger})$,
-which plays the role of the term, and a superpotential $W(\Phi_l)$, which
-describes the mass and interaction terms.
-\begin{equation}
-\mathcal L = \int \mathrm{d}^4\theta K(\Phi_l,\Phi_l^{\dagger}) + \left (\int
- \mathrm{d}^2\theta W(\Phi_l) + \mathrm{h.c.} \right)
-\label{eqn:mssmlag}
-\end{equation}
-
+theories, the Lagrangian can be written in terms of vector superfields
+$V(x,\theta,\bar\theta)$ and chiral superfields $\Phi_l(x,\theta,\bar\theta)$ that are functions of
+\emph{superspace}, an extension of spacetime that includes
+anticommuting Grassmanian variables $\theta$ and
+$\bar\theta$. Tab~\ref{tab:susyreps} shows the particles of the
+MSSM, described by chiral superfields $Q_i, U_i^c, L_i, E_i^c, H_u,
+H_d$, and the representations in which they transform under the MSSM gauge group.
 \begin{table}
 \centering
 \begin{tabular}{c|ccc}
@@ -356,27 +341,80 @@ $H_u$ & $\mathbf{1}$ & $\mathbf{2}$ & $1/2$\\
 $H_d$ & $\mathbf{1}$ & $\mathbf{2}$ & $-1/2$
 \end{tabular}
 \caption{\label{tab:susyreps} Table summarizing the
-    representations in which the chiral superfields transform under the standard
-    model gauge group.}
-\end{table}
+    representations in which the chiral superfields transform under
+    the MSSM gauge group. See Tab.~\ref{tab:representations} for a
+    description of the columns.}
+\end{table} 
 
-The R-parity conserving part of the superpotential is shown in Eqn.~\ref{eqn:Wrpc}
+The MSSM Lagrangian can be split into three terms, the K\"{a}hler potential $K(\Phi_l,\Phi_l^{\dagger},V)$,
+which describes the kinetic and gauge-covariant terms, a superpotential $W(\Phi_l)$, which
+describes the mass and interaction terms, and a gauge kinetic term $G(V)$,
+\begin{align}
+\mathcal L_{\mathrm{MSSM}} &= \int \mathrm{d}^4\theta
+K(\Phi_l,\Phi_l^{\dagger},V) + \left (\int
+ \mathrm{d}^2\theta W(\Phi_l) + \mathrm{h.c.} \right) + \left (\int
+\mathrm{d}^2\theta G(V) +
+\mathrm{h.c.}\right )\nonumber\\
+&= \int \mathrm{d}^4\theta
+\sum_{V}
+\Phi_{l}^{\dagger}e^{gV}\Phi_{l} + \left (\int
+ \mathrm{d}^2\theta W(\Phi_l) + \mathrm{h.c.} \right) + \left (\int
+\mathrm{d}^2\theta \frac{1}{4}\mathcal W^{\alpha}\mathcal W_{\alpha} +
+\mathrm{h.c.}\right )~,
+\label{eqn:mssmlag}
+\end{align}
+where $\mathcal W_{\alpha}$ is the vector superfield strength\footnote{The vector superfield strength is $\mathcal W_{\alpha} =
+  -\frac{1}{4} \bar{\mathcal{D}}^2(e^{-V}\mathcal{D}_{\alpha}
+  e^{V})$.} and the index $l$ runs over all the matter superfields
+$\Phi_l = Q_i, U_i^c, L_i, E_i^c, H_u, H_d$. The superpotential can be
+split into two components based on $R$-parity, a discrete $Z_2$
+symmetry often assumed in SUSY model building, defined for each
+particle as 
 \begin{equation}
-W_{\mathrm{RPC}} = - y_u H_u Q U^c + y_dH_d Q D^c + y_e H_d L E^c +
-\mu H_uH_d
+P_R = (-1)^{\mathrm{B}-\mathrm{L})+2s}
+\end{equation}
+where $\mathrm{B}$ is the baryon number, $\mathrm{L}$ is the lepton number, and $s$ is the spin
+of the particle. With this assignment, all SM particles have even
+$R$-parity ($P_R=+1$), while the superpartners have odd $R$-parity
+($P_R=-1$). The $R$-parity conserving terms in the superpotential are
+\begin{equation}
+W_{\mathrm{RPC}} = - U^c\mathbf{y_u} Q H_u + D^c\mathbf{y_d}QH_d  +
+E^c\mathbf{y_e} L H_d +
+\mu H_uH_d~,
 \label{eqn:Wrpc}
 \end{equation}
-while the R-partiy violating part is shown in \ref{eqn:Wrpv}
+and the $R$-parity violating terms are
 \begin{equation}
 W_{\mathrm{RPV}} =\frac{1}{2}\lambda^{ijk}L_iL_jE_k^c +
 \lambda^{\prime ijk} L_iQ_jD_k^c + \mu^{\prime i}H_uL_i +
-\frac{1}{2}\lambda^{\prime\prime ijk}U_i^cD_j^cD_k^c
+\frac{1}{2}\lambda^{\prime\prime ijk}U_i^cD_j^cD_k^c~.
 \label{eqn:Wrpv}
 \end{equation}
 
+If $R$-parity is conserved, there are three important phenomenological consequences:
+\begin{itemize}
+\item The lightest superparter, called the ``lightest
+  supersymmetric particle'' or LSP, must be stable. 
+\item Each superpartner other than the LSP must eventually decay into a
+  state that contains an odd number of LSPs (usually just one).
+\item In collider experiments, superpartners can only be produced in even numbers (usually two).
+\end{itemize}
+
 \section{Elecroweak SUSY Sector}
 \label{sec:ewksusy}
-The mass matrices for the neutralinos and charginos are given by
+The superpartners of the neutral gauge bosons (neutral gauginos), and
+the fermionic partners of the neutral Higgs bosons (neutral higgsinos),
+$\psi^0 =(\tilde B,\tilde W^0,\tilde H^0_d,\tilde H^0_u)$, mix to form the
+\emph{neutralinos} $\chiz_1, \chiz_2, \chiz_3, \chiz_4$. Similarly, the superpartners of the charged gauge bosons
+(charged gauginos) and the fermionic partners of the charged Higgs
+bosons (charged higgsinos), $\psi^{\pm}=(\tilde W^+,\tilde
+H_u^+,\tilde W^-, \tilde H_d^-)$ mix to form the charginos
+$\chipm_1, \chipm_2$. In this gauge-eigenstate basis, the neutralino
+and chargino mass terms in the Lagrangian are
+\begin{equation}
+\mathcal L_{\mathrm{MSSM}} \supset -\frac{1}{2}\psi^{0T}\mathbf{M}_N \psi^0 -\frac{1}{2}\psi^{\pm T}\mathbf{M}_C \psi^{\pm} + \mathrm{h.c.}
+\end{equation}
+with the neutralino mass matrix,
 \begin{equation}
 \mathbf{M}_N =\left (  \begin{matrix}
 M_1 & 0 & -m_Zs_Wc_{\beta} & m_Zs_Ws_{\beta} \\
@@ -385,18 +423,27 @@ M_1 & 0 & -m_Zs_Wc_{\beta} & m_Zs_Ws_{\beta} \\
 m_Zs_Ws_{\beta}& -m_zc_Ws_{\beta} & \mu & 0
 \end{matrix}\right)~,
 \end{equation}
-and 
+and the chargino mass matrix,
 \begin{equation}
 \mathbf{M}_C =\left (  \begin{matrix}
+0 & \mathbf{X}^T \\
+ \mathbf{X}& 0
+\end{matrix}\right), ~\mathrm{where} ~ \mathbf{X} = \left (  \begin{matrix}
 M_2 & \sqrt{2}m_Ws_{\beta}\\
  \sqrt{2}m_Wc_{\beta}& \mu
 \end{matrix}\right)~,
 \end{equation}
-respectively. 
-
+where $M_2$ and $M_1$ are the wino and bino mass terms, respectively.
+The eigenvalues of these matrices are the masses of the
+neutralinos and charginos.
 
 \section{SUSY and Naturalness}
 \label{sec:susynaturalness}
+
+For SUSY to provide a ``natural'' solution to the gauge hierarchy problem,
+the top squark, bottom squark, and gluino must have masses below a few
+TeV, making them accessible at the CERN LHC. 
+
 \begin{align}
 \Delta(m^2_{h^0}) &= \quad\parbox{20mm}{\fmfreuse{fermion}} \quad + \quad
 \parbox{20mm}{
@@ -421,10 +468,35 @@ respectively.
 \fmf{dashes,left,tension=.3}{v2,v1}
 \fmfv{label=$h^0$,label.angle=90}{i}
 \end{fmfgraph*}} \quad + \quad\cdots\\
- &= -\frac{|\lambda_t|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 +
-  \sum_{i=1}^{2} \left ( \frac{\lambda_{\tilde
-  t_i}^2}{16\pi^2}\Lambda_{\mathrm{UV}}^2 - 2m_{\tilde
-  t_i}^2\log(\Lambda_{\mathrm{UV}}/m_{\tilde t_i}) \right )+ \cdots~,
+ &= -\frac{3|y_t|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 +
+  \sum_{i=1}^{2} \left ( \frac{3|y_t|^2}{16\pi^2}\Lambda_{\mathrm{UV}}^2 - \frac{3|y_t|^2m_{\tilde
+  t_i}^2}{8\pi^2}\log\left (\frac{\Lambda_{\mathrm{UV}}}{m_{\tilde
+   t_i}}\right ) \right )+ \cdots \\
+ &= -\sum_{i=1}^{2} \left ( \frac{3|y_t|^2m_{\tilde
+  t_i}^2}{8\pi^2}\log\left (\frac{\Lambda_{\mathrm{UV}}}{m_{\tilde
+   t_i}}\right ) \right )+ \cdots~,
+\end{align}
+Naturalness therefore requires, very roughly, $m_{\tilde t_{i}}\lesssim
+400 \GeV$ \cite{Brust:2011tb}.
+
+Two-loop contribution from gluinos,
+\begin{align}
+\Delta(m^2_{\tilde t_i}) &=
+\parbox{20mm}{
+\begin{fmfgraph*}(20,20)
+\fmfkeep{gluinosunset}
+\fmfleft{i}
+\fmfright{o}
+\fmf{dashes}{i,v1}
+\fmf{dashes}{v2,o}
+\fmf{gluon,left,tension=.3,label=$\tilde g$}{v1,v2}
+\fmf{plain,left,tension=.3,label=$t$}{v2,v1}
+\fmfv{label=$\tilde t_{i}$,label.angle=90}{i}
+\fmffreeze
+\fmf{plain,left,tension=.3}{v1,v2}
+\end{fmfgraph*}}\\
+&= \frac{2g_s^2m_{\tilde g}^2}{3\pi^2}\log \left
+  (\frac{\Lambda_{\mathrm{UV}}}{m_{\tilde g}} \right)
 \end{align}
 \end{fmffile}
 
@@ -432,20 +504,20 @@ When the lightest neutralino is Higgsino-like ($\mu \ll M_1, M_2$), the
 mass eigenvalues of the lightest neutralino, second lightest neutralino and chargino are close to
 each other,
 \begin{align}
-m_{\chiz_1} &= \mu + \frac{m_Z^2(1+s_{\beta})(\mu - M_1c_W^2-M_2s_W^2)}{2(\mu-M_1)(\mu-M_2)} + \cdots\\
-m_{\chiz_2} &= \mu + \frac{m_Z^2(1-s_{\beta})(\mu + M_1c_W^2+M_2s_W^2)}{2(\mu+M_1)(\mu+M_2)} + \cdots\\
-m_{\chipm_1} &= \mu - \frac{m_W^2(\mu + M_2\sin 2\beta)}{M_2^2-\mu^2} + \cdots
+m_{\chiz_1} &= |\mu| + \frac{m_Z^2(1+s_{\beta})(\mu - M_1c_W^2-M_2s_W^2)}{2(\mu-M_1)(\mu-M_2)} + \cdots\\
+m_{\chiz_2} &= |\mu| + \frac{m_Z^2(1-s_{\beta})(\mu + M_1c_W^2+M_2s_W^2)}{2(\mu+M_1)(\mu+M_2)} + \cdots\\
+m_{\chipm_1} &= |\mu| - \frac{m_W^2(\mu + M_2\sin 2\beta)}{M_2^2-\mu^2} + \cdots
 \end{align}
 
 Fig.~\ref{fig:neutralinos} shows the mass differences
-$m_{\chipm_1}-m_{\chiz_1}$ and $m_{\chiz_2}-m_{\chiz_1}$ as a function of the Wino mass $M_2$.
+$m_{\chipm_1}-m_{\chiz_1}$ and $m_{\chiz_2}-m_{\chiz_1}$ as a function of the wino mass $M_2$.
 
 
 \begin{figure}[tb!]
 \centering
 \includegraphics[width=0.8\textwidth,clip=true,viewport= 0 30 610 450]{figs/theory/neutralinos.pdf}
 \caption{The mass difference between the lightest chargino and the
-  lightest neutralino as a function of the Wino mass $M_2$
+  lightest neutralino as a function of the wino mass $M_2$
   assuming $\tan\beta=10$, $\mu=200 \GeV$ and $M_1 = 3 \TeV$.\label{fig:neutralinos}}
 \end{figure}
 
