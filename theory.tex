@@ -237,6 +237,7 @@ m^2_{h^0} &= m^2_{h^0\mathrm{(bare)}} +\Delta(m^2_{h^0}) \\
 \fmfv{label=$h^0$,label.angle=90}{i}
 \end{fmfgraph*}} \quad + \quad\cdots\\
 &= -\frac{3|y_t|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 + \cdots~,
+\label{eqn:toploop}
 \end{align}
 where $\Lambda_{\mathrm{UV}}$ is an ultraviolet momentum cutoff,
 usually taken to be the grand unification scale $10^{16} \GeV$ or the Planck scale $10^{19} \GeV$. This
@@ -404,12 +405,11 @@ If $R$-parity is conserved, there are three important phenomenological consequen
 \label{sec:ewksusy}
 The superpartners of the neutral gauge bosons (neutral gauginos), and
 the fermionic partners of the neutral Higgs bosons (neutral higgsinos),
-$\psi^0 =(\tilde B,\tilde W^0,\tilde H^0_d,\tilde H^0_u)$, mix to form the
-\emph{neutralinos} $\chiz_1, \chiz_2, \chiz_3, \chiz_4$. Similarly, the superpartners of the charged gauge bosons
+$\psi^0 =(\PSB,\PSWz,\PSHdz,\PSHuz)$, mix to form the
+\emph{neutralinos} $(\chiz_1, \chiz_2, \chiz_3, \chiz_4)$. Similarly, the superpartners of the charged gauge bosons
 (charged gauginos) and the fermionic partners of the charged Higgs
-bosons (charged higgsinos), $\psi^{\pm}=(\tilde W^+,\tilde
-H_u^+,\tilde W^-, \tilde H_d^-)$ mix to form the charginos
-$\chipm_1, \chipm_2$. In this gauge-eigenstate basis, the neutralino
+bosons (charged higgsinos), $\psi^{\pm}=(\PSWp,\PSHup,\PSWm, \PSHdm)$ mix to form the charginos
+$(\chip_1, \chip_2, \chim_1, \chim_2)$. In this gauge-eigenstate basis, the neutralino
 and chargino mass terms in the Lagrangian are
 \begin{equation}
 \mathcal L_{\mathrm{MSSM}} \supset -\frac{1}{2}\psi^{0T}\mathbf{M}_N \psi^0 -\frac{1}{2}\psi^{\pm T}\mathbf{M}_C \psi^{\pm} + \mathrm{h.c.}
@@ -444,6 +444,43 @@ For SUSY to provide a ``natural'' solution to the gauge hierarchy problem,
 the top squark, bottom squark, and gluino must have masses below a few
 TeV, making them accessible at the CERN LHC. 
 
+To make this quantitative, we first need to define a measure of
+fine-tuning, such as 
+\begin{equation}
+\Delta = \frac{\Delta(m^2_{h^0})}{m^2_{h^0}}
+\end{equation}
+Other measures of fine-tuning are possible, such as those in...
+
+In the decoupling limit of the MSSM at tree-level, we have
+\begin{equation}
+m^2_{h^0} = 2(m_{H_u}^2 + |\mu|^2) =  m_Z^2\cos^2(2\beta)  ~.
+\end{equation}
+Due to this tree-level relation between $\mu$, which controls the
+masses of the higgsinos, and $m^2_{h^0}$, we expect the higgsinos to
+be light in order to keep $m^2_{h^0}$ small.
+
+When $\mu$ is small ($\mu \ll M_1, M_2$), the two lightest
+neutralinos and the lightest chargino are higgsino-like and their
+masses are close to each other,
+\begin{align}
+m_{\chiz_1} &= |\mu| + \frac{m_Z^2(1+s_{\beta})(\mu - M_1c_W^2-M_2s_W^2)}{2(\mu-M_1)(\mu-M_2)} + \cdots\\
+m_{\chiz_2} &= |\mu| + \frac{m_Z^2(1-s_{\beta})(\mu + M_1c_W^2+M_2s_W^2)}{2(\mu+M_1)(\mu+M_2)} + \cdots\\
+m_{\chipm_1} &= |\mu| - \frac{m_W^2(\mu + M_2\sin 2\beta)}{M_2^2-\mu^2} + \cdots~.
+\end{align}
+Fig.~\ref{fig:neutralinos} shows the mass differences
+$m_{\chipm_1}-m_{\chiz_1}$ and $m_{\chiz_2}-m_{\chiz_1}$ as a function of the wino mass $M_2$.
+
+\begin{figure}[tb!]
+\centering
+\includegraphics[width=0.8\textwidth,clip=true,viewport= 0 30 610 450]{figs/theory/neutralinos.pdf}
+\caption{The mass difference between the lightest chargino and the
+  lightest neutralino as a function of the wino mass $M_2$
+  assuming $\tan\beta=10$, $\mu=200 \GeV$ and $M_1 = 3 \TeV$.\label{fig:neutralinos}}
+\end{figure}
+
+There are additional considerations at loop level. In particular the
+top squark has a large radiative correction which partially cancels
+with the contribution from the top quark in Eqn.~\ref{eqn:toploop}:
 \begin{align}
 \Delta(m^2_{h^0}) &= \quad\parbox{20mm}{\fmfreuse{fermion}} \quad + \quad
 \parbox{20mm}{
@@ -477,11 +514,16 @@ TeV, making them accessible at the CERN LHC.
    t_i}}\right ) \right )+ \cdots~,
 \end{align}
 Naturalness therefore requires, very roughly, $m_{\tilde t_{i}}\lesssim
-400 \GeV$ \cite{Brust:2011tb}.
+400 \GeV$ if $\Lambda_{\mathrm{UV}}\approx
+10\TeV$~\cite{Brust:2011tb}. A more complete treatment takes into
+account top squark mixing, 
+\begin{equation}
+\Delta(m^2_{h^0}) = ...
+\end{equation}
 
 Two-loop contribution from gluinos,
 \begin{align}
-\Delta(m^2_{\tilde t_i}) &=
+\Delta(m^2_{\tilde t_i}) &= \quad 
 \parbox{20mm}{
 \begin{fmfgraph*}(20,20)
 \fmfkeep{gluinosunset}
@@ -494,32 +536,23 @@ Two-loop contribution from gluinos,
 \fmfv{label=$\tilde t_{i}$,label.angle=90}{i}
 \fmffreeze
 \fmf{plain,left,tension=.3}{v1,v2}
-\end{fmfgraph*}}\\
+\end{fmfgraph*}} + \quad \cdots\\
 &= \frac{2g_s^2m_{\tilde g}^2}{3\pi^2}\log \left
-  (\frac{\Lambda_{\mathrm{UV}}}{m_{\tilde g}} \right)
+  (\frac{\Lambda_{\mathrm{UV}}}{m_{\tilde g}} \right) + \cdots~,
 \end{align}
 \end{fmffile}
 
-When the lightest neutralino is Higgsino-like ($\mu \ll M_1, M_2$), the
-mass eigenvalues of the lightest neutralino, second lightest neutralino and chargino are close to
-each other,
-\begin{align}
-m_{\chiz_1} &= |\mu| + \frac{m_Z^2(1+s_{\beta})(\mu - M_1c_W^2-M_2s_W^2)}{2(\mu-M_1)(\mu-M_2)} + \cdots\\
-m_{\chiz_2} &= |\mu| + \frac{m_Z^2(1-s_{\beta})(\mu + M_1c_W^2+M_2s_W^2)}{2(\mu+M_1)(\mu+M_2)} + \cdots\\
-m_{\chipm_1} &= |\mu| - \frac{m_W^2(\mu + M_2\sin 2\beta)}{M_2^2-\mu^2} + \cdots
-\end{align}
 
-Fig.~\ref{fig:neutralinos} shows the mass differences
-$m_{\chipm_1}-m_{\chiz_1}$ and $m_{\chiz_2}-m_{\chiz_1}$ as a function of the wino mass $M_2$.
-
-
-\begin{figure}[tb!]
-\centering
-\includegraphics[width=0.8\textwidth,clip=true,viewport= 0 30 610 450]{figs/theory/neutralinos.pdf}
-\caption{The mass difference between the lightest chargino and the
-  lightest neutralino as a function of the wino mass $M_2$
-  assuming $\tan\beta=10$, $\mu=200 \GeV$ and $M_1 = 3 \TeV$.\label{fig:neutralinos}}
-\end{figure}
+Taking these factors into consideration, we have three conditions for natural
+SUSY~\cite{naturalSUSY}:
+\begin{enumerate}[(a)]
+\item quasi-degenerate higgsino-like chargino $\chipm_1$ and two
+  neutralinos $\chiz_1, \chiz_2$, below
+  $200 - 350 \GeV$, 
+\item two stops $\sTop_{1,2}$ and one (left-handed) $\sBot_1$ below
+  $500-700 \GeV$, and
+\item a gluino below $900 - 1500 \GeV$.
+\end{enumerate}
 
 \section{Simplified Natural Supersymmetry Models}
 \label{sec:sms}
