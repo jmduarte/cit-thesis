@@ -1,4 +1,5 @@
 ## Core latex/pdflatex auxiliary files:
+duarte_thesis.pdf
 *.aux
 *.lof
 *.log
@@ -43,6 +44,8 @@
 *.nav
 *.snm
 *.vrb
+*.mp
+*.t[1-9]
 
 #(e)ledmac/(e)ledpar
 *.end

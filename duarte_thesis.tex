@@ -34,7 +34,15 @@
 \providecommand{\cPV}{\ensuremath{\cmsSymbolFace{V}}\xspace}
 \providecommand{\MATNLO}{{\MADGRAPH{}\_a\textsc{mc@nlo}}\xspace}
 \newcommand{\dPhiR}{\ensuremath{\Delta\phi_\mathrm{R}}\xspace}
-
+\newcommand{\apj}{ApJ}%                                         % Journal abbreviations
+\newcommand{\apjs}{ApJS}
+\newcommand{\apjl}{ApJL}
+\newcommand{\aap}{A{\&}A}
+\newcommand{\aaps}{A{\&}AS}
+\newcommand{\mnras}{MNRAS}
+\newcommand{\aj}{AJ}
+\newcommand{\araa}{ARAA}
+\newcommand{\pasp}{PASP}
 % avoids incorrect hyphenation, added Nov/08 by SSR
 \hyphenation{ALPGEN}
 \hyphenation{EVTGEN}
@@ -116,15 +124,23 @@
 
 \mainmatter
 
+\part{Introduction, Fundamentals, and Naturalness}
+\label{part:intro}
 \include{introduction}
 \include{theory}
 \include{kinematic}
+\part{The LHC, CMS, and Searches for New Physics}
+\label{part:searches}
 \include{cms}
 \include{hlt13TeV}
 \include{analysis8TeV}
 \include{analysis13TeV}
 \include{pheno}
+\part{Beyond the LHC: Calorimeters with Precision Timing}
+\label{part:timing}
 \include{timing}
+\part{Conclusion}
+\label{part:conclusion}
 \include{conclusion}
 
 %\bibliography{duarte_thesis}{}
@@ -134,5 +150,9 @@
 \printbibliography[heading=bibintoc]
 
 \printindex
+\appendix
+\part{Other Searches for Exotic New Physics}
+\label{part:app}
+\include{dijet}
 
 \end{document}

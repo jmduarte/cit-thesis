@@ -1,15 +1,8 @@
+\chapter{Fundamentals}
+\label{ch:fundamentals}
 \section{The Standard Model of Particle Physics}
-
-The standard model (SM) of particle physics is a description of nature
-composed of two main ingredients:
-\begin{enumerate}[(a)]
-\item a list of known particles and their quantum properties, and
-\item an inventory of the interactions of these particles through the fundamental forces
-(except for gravity): the strong nuclear force, the weak nuclear force, and the electromagnetic
-force. 
-\end{enumerate}
-It is a renormalizable quantum field theory based on a gauge
-symmetry~\cite{tHooft:419894}. A fundamental consequence of relativity and quantum mechanics
+The standard model (SM) of particle physics is a renormalizable quantum field theory based on a gauge
+symmetry~\cite{PhysRevLett.19.1264,tHooft:419894}. A fundamental consequence of relativity and quantum mechanics
 is that there are only two types of particles: those with integer
 spins, whose wave functions are symmetric under particle exchange, called \emph{bosons}, and those
 with half-integer spin, whose wave functions are anti-symmetric under
@@ -103,8 +96,8 @@ massless due to the fact that the gauge symmetry forbids explicit mass
 terms in the Lagrangian. In 1964, it was proposed that
 \emph{spontaneous symmetry breaking} could be achieved in gauge
 theories through the introduction of a scalar
-field~\cite{PhysRevLett.13.321,HIGGS1964132,PhysRevLett.13.508,PhysRevLett.13.585,PhysRev.145.1156,PhysRev.155.1554}. Spontaneous symmetry breaking
-means the equations of the dynamics are exactly symmetric, but they
+field~\cite{PhysRevLett.13.321,HIGGS1964132,PhysRevLett.13.508,PhysRevLett.13.585,PhysRev.145.1156,PhysRev.155.1554}. Spontaneous
+symmetry breaking means the equations of the dynamics are exactly symmetric, but they
 admit solutions that are not. In the SM, the mechanism of electroweak symmetry breaking
 is a framework to keep the structure of gauge symmetry and
 interactions at high energy, and still generate the observed masses
@@ -215,10 +208,12 @@ Besides giving masses to the fermions, the Yukawa terms have another important
 consequence: they allow the fermions to affect the
 observed mass of the Higgs boson through quantum corrections.
 
-\section{Higgs Mass and Naturalness}
+\chapter{Naturalness and Supersymmetry}
+\label{ch:naturalness}
+\section{Naturalness in the Standard Model}
 \label{sec:higgsnaturalness}
-The leading quantum correction to the Higgs mass squared parameter is due to
-the large Yukawa coupling to the top quark, which gives the
+The leading quantum correction to the Higgs mass is due to
+the large Yukawa coupling of the top quark, which gives the
 top quark its large mass. In an effective field theory approach, where
 momenta of virtual particles are cut off at the scale
 $\Lambda_{\mathrm{UV}}$, we can compute the top quark's contribution in the SM to leading order,
@@ -239,15 +234,17 @@ m^2_{h^0} &= m^2_{h^0\mathrm{(bare)}} +\Delta(m^2_{h^0}) \\
 &= -\frac{3|y_t|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 + \cdots~,
 \label{eqn:toploop}
 \end{align}
-where $\Lambda_{\mathrm{UV}}$ is an ultraviolet momentum cutoff,
-usually taken to be the grand unification scale $10^{16} \GeV$ or the Planck scale $10^{19} \GeV$. This
-quadratic dependence on $\Lambda_{\mathrm{UV}}$ means the Higgs
-mass parameter is sensitive to the physics in the ultraviolet. This sensitivity requires a large fine tuning of $m^2_{h^0\mathrm{(bare)}}$ to explain
-why $m^2_{h^0}$, measured to be $(125.09\pm0.24 \GeV)^2$, remains small. This undesirable situation is called the
-\emph{naturalness problem}. This conundrum of how a light fundamental
+The quadratic dependence in Eqn.~\ref{eqn:toploop} on
+$\Lambda_{\mathrm{UV}}$, usually taken to be the Planck scale $10^{19}
+\GeV$, means the Higgs mass is sensitive to new physics in the
+ultraviolet. Taken literally, this sensitivity implies an enormous fine tuning of
+$m^2_{h^0\mathrm{(bare)}}$ to achieve almost perfect
+cancellation\footnote{to $1$ part in $10^{34}$} with
+$\Delta(m^2_{h^0})$ in order to explain how $m_{h^0}$
+is measured to be so small at $125.09\pm0.24 \GeV$~\cite{Aad:2015zhl}. The conundrum of how a light fundamental
 scalar particle can exist in the presence of (presumably) new physics
-in the ultraviolet is one of the key motivations for new physics at
-the \TeV scale, especially \emph{supersymmetry}.
+in the ultraviolet is called the \emph{naturalness problem} and is one
+of the key motivations for new physics at the \TeV scale, especially \emph{supersymmetry}.
 
 
 \section{Supersymmetry}
@@ -372,7 +369,7 @@ split into two components based on $R$-parity, a discrete $Z_2$
 symmetry often assumed in SUSY model building, defined for each
 particle as 
 \begin{equation}
-P_R = (-1)^{\mathrm{B}-\mathrm{L})+2s}
+P_R = (-1)^{(\mathrm{B}-\mathrm{L})+2s}
 \end{equation}
 where $\mathrm{B}$ is the baryon number, $\mathrm{L}$ is the lepton number, and $s$ is the spin
 of the particle. With this assignment, all SM particles have even
@@ -401,7 +398,9 @@ If $R$-parity is conserved, there are three important phenomenological consequen
 \item In collider experiments, superpartners can only be produced in even numbers (usually two).
 \end{itemize}
 
-\section{Elecroweak SUSY Sector}
+\textbf{NEED TO DISCUSS SOFT SUSY BREAKING}
+
+\section{Elecroweak Supersymmetric Sector}
 \label{sec:ewksusy}
 The superpartners of the neutral gauge bosons (neutral gauginos), and
 the fermionic partners of the neutral Higgs bosons (neutral higgsinos),
@@ -437,31 +436,30 @@ where $M_2$ and $M_1$ are the wino and bino mass terms, respectively.
 The eigenvalues of these matrices are the masses of the
 neutralinos and charginos.
 
-\section{SUSY and Naturalness}
+\section{Naturalness in Supersymmetry}
 \label{sec:susynaturalness}
 
 For SUSY to provide a ``natural'' solution to the gauge hierarchy problem,
 the top squark, bottom squark, and gluino must have masses below a few
-TeV, making them accessible at the CERN LHC. 
-
-To make this quantitative, we first need to define a measure of
-fine-tuning, such as 
+TeV, making them accessible at the CERN LHC. To make this statement
+quantitative, we first need to define a measure of
+fine-tuning, such as~\cite{Brust:2011tb,naturalSUSY}:
 \begin{equation}
-\Delta = \frac{\Delta(m^2_{h^0})}{m^2_{h^0}}
+\Delta = \frac{\Delta(m^2_{h^0})}{m^2_{h^0}}~.
 \end{equation}
-Other measures of fine-tuning are possible, such as those in...
+%Other measures of fine-tuning are possible, such as those in...
 
-In the decoupling limit of the MSSM at tree-level, we have
+In the decoupling limit of the MSSM at tree-level, the mass of the
+physical Higgs boson satisfies
 \begin{equation}
-m^2_{h^0} = 2(m_{H_u}^2 + |\mu|^2) =  m_Z^2\cos^2(2\beta)  ~.
+m^2_{h^0} = -2(m_{H_u}^2 + |\mu|^2) =  m_Z^2\cos^2(2\beta)  ~.
 \end{equation}
 Due to this tree-level relation between $\mu$, which controls the
-masses of the higgsinos, and $m^2_{h^0}$, we expect the higgsinos to
-be light in order to keep $m^2_{h^0}$ small.
-
-When $\mu$ is small ($\mu \ll M_1, M_2$), the two lightest
+masses of the higgsinos, and $m^2_{h^0}$, we expect both $\mu$ to be
+small and the higgsinos to be light in order to keep $m^2_{h^0}$
+small. When $\mu$ is small ($\mu \ll M_1, M_2$), the two lightest
 neutralinos and the lightest chargino are higgsino-like and their
-masses are close to each other,
+masses are close together~\cite{PhysRevD.37.2515},
 \begin{align}
 m_{\chiz_1} &= |\mu| + \frac{m_Z^2(1+s_{\beta})(\mu - M_1c_W^2-M_2s_W^2)}{2(\mu-M_1)(\mu-M_2)} + \cdots\\
 m_{\chiz_2} &= |\mu| + \frac{m_Z^2(1-s_{\beta})(\mu + M_1c_W^2+M_2s_W^2)}{2(\mu+M_1)(\mu+M_2)} + \cdots\\
@@ -512,16 +510,32 @@ with the contribution from the top quark in Eqn.~\ref{eqn:toploop}:
  &= -\sum_{i=1}^{2} \left ( \frac{3|y_t|^2m_{\tilde
   t_i}^2}{8\pi^2}\log\left (\frac{\Lambda_{\mathrm{UV}}}{m_{\tilde
    t_i}}\right ) \right )+ \cdots~,
+\label{eqn:stoploop}
 \end{align}
-Naturalness therefore requires, very roughly, $m_{\tilde t_{i}}\lesssim
-400 \GeV$ if $\Lambda_{\mathrm{UV}}\approx
-10\TeV$~\cite{Brust:2011tb}. A more complete treatment takes into
-account top squark mixing, 
-\begin{equation}
-\Delta(m^2_{h^0}) = ...
-\end{equation}
+The cancellation of the term proportional to $\Lambda_{\mathrm{UV}}^2$
+in Eqn.~\ref{eqn:stoploop} is one of the major successes of SUSY as a candidate for physics beyond
+the SM. The sensitivity of the Higgs mass to ultraviolet new
+physics is now logarithmic instead of quadratic. If SUSY were an exact
+symmetry (and $m_t=m_{\tilde t_{1,2}}$) then the cancellation would be
+exact and there would be no further naturalness problem. As it stands, however, we know SUSY is broken, and the
+remaining term may also be large depending on the difference in masses
+between the top quark and top squarks. Therefore, naturalness places constraints on the allowed masses of the top
+squarks given an ``acceptable'' level of fine tuning.
 
-Two-loop contribution from gluinos,
+Very roughly, naturalness requires $m_{\tilde t_{i}}\lesssim
+400 \GeV$ if $\Lambda_{\mathrm{UV}}\approx
+10\TeV$ implying a fine tuning of the order of
+10\%~\cite{Brust:2011tb,Craig:2013cxa}. 
+%A more complete treatment takes into
+%account top squark mixing~\cite{Kitano:2006gv,naturalSUSY},
+%\begin{equation}
+%\Delta(m^2_{h^0}) = \frac{3|y_t|^2}{4\pi^2}\left ( m_{Q_3}^2 + m_{U_3}^2 + |A_t|^2 \right ) \log\left(
+ % \frac{\Lambda_{\mathrm{mess}}}{m_{\tilde t}} \right)
+%\end{equation}
+
+There is also a two-loop contribution to the Higgs mass parameter from
+the gluino, which is closely related to the one-loop contribution to
+the stop mass from the gluino
 \begin{align}
 \Delta(m^2_{\tilde t_i}) &= \quad 
 \parbox{20mm}{
@@ -541,10 +555,10 @@ Two-loop contribution from gluinos,
   (\frac{\Lambda_{\mathrm{UV}}}{m_{\tilde g}} \right) + \cdots~,
 \end{align}
 \end{fmffile}
+With this, we have roughly that $m_{\tilde g} \lesssim 2 m_{\tilde t}$.
 
-
-Taking these factors into consideration, we have three conditions for natural
-SUSY~\cite{naturalSUSY}:
+Taking these relationships at tree, one-loop, and two-loop levels into
+consideration, there are three requirements for a minimal natural SUSY spectrum~\cite{naturalSUSY}:
 \begin{enumerate}[(a)]
 \item quasi-degenerate higgsino-like chargino $\chipm_1$ and two
   neutralinos $\chiz_1, \chiz_2$, below
@@ -567,8 +581,8 @@ SUSY~\cite{naturalSUSY}:
 In Ch.~\ref{ch:analysis8TeV} and Ch.~\ref{ch:analysis13TeV}, natural simplified SUSY scenarios are used to interpret
 results. The LSP is the lightest neutralino $\chiz_1$ while the NLSP
 is the lightest chargino $\chipm_1$.  They are both higgsinos and
-their mass splitting is taken to be 5\GeV. The NLSP decays to the LSP
-and a virtual $\PW$ boson ($\chipm_1 \to \PW^{\ast} \chiz_1$). The
+their mass splitting is taken to be 5\GeV, motivated by
+Fig.~\ref{fig:neutralinos}. The NLSP decays to the LSP and a virtual $\PW$ boson ($\chipm_1 \to \PW^{\ast} \chiz_1$). The
 other SUSY particles accessible at the LHC are the gluino and the
 lightest top and bottom squarks. All other SUSY particles are
 assumed to be too heavy to participate in the interactions. The SUSY
