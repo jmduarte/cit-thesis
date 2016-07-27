@@ -60,7 +60,7 @@ of as the components of $\vec\beta^{\mathrm{CM}}$, the longitudinal boost from t
 lab frame to the center-of-momentum (CM) frame, and
 $\pm\vec\beta^{\mathrm{decay}}$, the boost from the CM frame to the
 individual squark rest frames. These three types of rest frames and the
-boosts relating them are illustrated in \ref{fig:frames}.
+boosts relating them are illustrated in Fig.~\ref{fig:frames}.
 
 \begin{figure*}[thb!]
 \centering
@@ -89,7 +89,8 @@ P^{\mathrm{visible}}_z + P^{\mathrm{invisible}}_z = 0~.
 After performing this boost, we can compute the longitudinally
 boost-invariant mass,
 \begin{equation}
-(\MR)^2 =(E_{\Pq_1}^{\prime}+ E_{\Pq_2}^{\prime})^2 = (E_{\Pq_1}+ E_{\Pq_2})^2 - (p^{\Pq_1}_z+ p^{\Pq_2}_z)^2~,
+%(\MR)^2 = E_{\Pq_1}^{\prime}+ E_{\Pq_2}^{\prime})^2 = (E_{\Pq_1}+E_{\Pq_2})^2 - (p^{\Pq_1}_z+ p^{\Pq_2}_z)^2~,
+\MR = E_{\Pq_1}^{\prime}+ E_{\Pq_2}^{\prime}~,
 \end{equation}
 where
 \begin{equation}
@@ -101,34 +102,35 @@ To complete the ``razor picture'' of approximate rest frames, we can
 construct another boost $\vec\beta_{\mathrm R}$, an estimator of $\vec\beta^{\mathrm{decay}}$, intended to be
 applied asymmetrically to $\Pq_1$ and
 $\Pq_2$~\cite{rogan,SuperRazor}. We know that after applying this
-boost, the particles $\Pq_1$ and $\Pq_2$ must have the same energy in
+boost, the particles $\Pq_1$ and $\Pq_2$ should have the same energy in
 their respective decay frames. This symmetry condition imposes a
-constraint on $\vec\beta_{\mathrm R}$
+constraint on $\vec\beta_{\mathrm R}$:
 \begin{align}
-E_{\Pq_1}^{\prime\prime} = E_{\Pq_2}^{\prime\prime} &\Rightarrow \gamma_{\mathrm R}E_{\Pq_1}^{\prime} - \vec\beta_{\mathrm
-  R}\cdot \vec p^{\,\Pq_1\prime} =  \gamma_{\mathrm R}E_{\Pq_2}^{\prime} + \vec\beta_{\mathrm
+&&E_{\Pq_1}^{\prime\prime} &= E_{\Pq_2}^{\prime\prime} \\
+&\Rightarrow& \gamma_{\mathrm R}E_{\Pq_1}^{\prime} - \vec\beta_{\mathrm
+  R}\cdot \vec p^{\,\Pq_1\prime} &=  \gamma_{\mathrm R}E_{\Pq_2}^{\prime} + \vec\beta_{\mathrm
   R}\cdot \vec p^{\,\Pq_2\prime} \\
-&\Rightarrow \vec\beta_R\cdot(\vec p^{\,\Pq_1\prime} + \vec
-  p^{\,\Pq_2\prime}) = E^{\Pq_1\prime}- E^{\Pq_2\prime}
+&\Rightarrow& \vec\beta_{\mathrm R}\cdot(\vec p^{\,\Pq_1\prime} + \vec
+  p^{\,\Pq_2\prime}) &= E^{\Pq_1\prime}- E^{\Pq_2\prime}
 \end{align}
 %where
 %\begin{align}
 %E_{\Pq_1}^{\prime\prime} &= \gamma_{\mathrm R}E_{\Pq_1}^{\prime} - \vec\beta_{\mathrm R}\cdot \vec p^{\,\Pq_1\prime} \\
 %E_{\Pq_2}^{\prime\prime} &= \gamma_{\mathrm R}E_{\Pq_2}^{\prime} + \vec\beta_{\mathrm R}\cdot \vec p^{\,\Pq_2\prime} ~.
 %\end{align}
-Using symmetry, and the extremal condition $\partial (
+Using this symmetry, and the extremal condition $\partial (
 E_{\Pq_1}^{\prime\prime} + E_{\Pq_2}^{\prime\prime} )/ \partial
-\vec\beta_R = 0$, we arrive at the boost
+\vec\beta_{\mathrm R} = 0$, we can uniquely specify the boost,
 \begin{equation}
 \vec\beta_{\mathrm{R}} = 
 \frac{\vec p^{\Pq_1\prime} - \vec p^{\Pq_2\prime}}{E^{\Pq_1\prime}+ E^{\Pq_2\prime}}~.
 \end{equation}
-After this boost, we see $\MR$ can be expressed as 
+In the approximate decay frames, $\MR$ can be expressed as 
 \begin{equation}
 \MR =2\gamma_{\mathrm R} E_{\Pq_1}^{\prime\prime} = 2\gamma_{\mathrm R} E_{\Pq_2}^{\prime\prime} ~.
 \end{equation}
 We expect that the distribution of \MR for signal events will have a
-peak near $M_{\Delta}$ if our assumptions that the pair production is near threshold
+peak near $M_{\Delta}$ if the assumptions that the pair production is near threshold
 and $p^{\Pq_1}_z \approx -p^{\Pq_2}_z$ are correct in an average
 statistical sense. Background events, in general, will not have
 any special feature near $M_{\Delta}$. For example, events consisting
@@ -136,61 +138,85 @@ only of visible particles and $\ptvecmiss$ from mismeasurement, such
 as QCD dijet production, would be expected to have a steeply falling \MR distribution
 related to the distribution of the CM energy $\sqrt{\hat{s}}$.
 
-We can also define a second mass variable that inherits knowledge of
-the mass splitting $M_{\Delta}$, using the visible and invisible transverse
-momentum in the event. Note that this information was not used in the
-definition of \MR. Motivated by the fact that backgrounds with no
-invisible particles must have $\Pq_1$ and $\Pq_2$ back-to-back (a fact
-that mismeasurement dos not tend to greatly change), we define a
-transverse mass in terms of the visible transverse momenta and the
-missing transverse energy:
+We can also define a second mass variable that is sensitive to the
+mass splitting $M_{\Delta}$ using the visible and invisible transverse
+momentum in the event. Note that this information was not directly used in the
+definition of \MR. Motivated by the fact that dijet backgrounds with no
+invisible particles must have $\Pq_1$ and $\Pq_2$ back-to-back, we define a
+transverse mass variable:
 \begin{equation}
 \MRT = \sqrt{ \frac{\ETm(\pt^{\Pq_1}+\pt^{\Pq_2}) -
 \ptvecmiss \cdot
- (\ptvec^{\,\Pq_1}+\ptvec^{\,\Pq_2}) }{2}},
+ (\ptvec^{\,\Pq_1}+\ptvec^{\,\Pq_2}) }{2}}~.
 \end{equation}
-Assuming pair production at threshold, $\MRT \leq M_{\Delta}$ for
-signal events. The razor dimensionless ratio is defined as
+While $\MR$ estimates the mass scale of new-physics particle
+production, $\MRT$ quantifies the transverse momentum imbalance
+in the event.  Assuming pair production at threshold, $\MRT \leq M_{\Delta}$ for
+signal events. Finally, the razor dimensionless ratio is defined as
 \begin{equation}
-\R \equiv \frac{\MRT}{\MR}.
+\Rtwo \equiv \left(\frac{\MRT}{\MR}\right)^2
 \end{equation} 
-we expect $\Rtwo\sim 1/4$ for signal events , while for background
+We expect $\Rtwo\sim 1/4$ for signal events , while for background
 without real missing transverse energy, we expect $\Rtwo \sim 0$. Note
-that by construction, $\MRT \leq \MR$ and thus $R^2\leq 1$ if the
+that by construction, $\MRT \leq \MR$ and thus $\Rtwo\leq 1$ if the
 missing transverse momentum perfectly balances the visible transverse momentum
-(as is necessary in the dijet case).
-
-To generalize this approach to the case with an arbitrary number of visible
-final state particles, we treat each event
-as a dijet-like event by clustering particles into two pseudojets
-called \emph{megajets}. 
-
-Then, we may compute, \MR and $\MRT$, defined as
-\begin{align}
- \label{eq:MRstar}
- \MR &\equiv
- \sqrt{
-(\abs{\vec{p}^{j_{1}}}+\abs{\vec{p}^{j_{2}}})^2 -({p}^{j_1}_z+{p}^{j_2}_z)^2},\\
-\MRT &\equiv \sqrt{ \frac{\ETm(\pt^{j_1}+\pt^{j_2}) -
-\ptvecmiss \cdot
- (\ptvec^{\,j_1}+\ptvec^{\,j_2}) }{2}},
-\end{align}
-where $\vec{p}_{j_i}$, $\ptvec^{\,j_i}$, and
-$p^{j_i}_z$ are the momentum of the $i$th megajet, its
-transverse component with respect to the beam axis, and its
-longitudinal component, respectively, with $\ETm$ the magnitude of $\ptvecmiss$. While
-$\MRT$ quantifies the transverse momentum imbalance,
-$\MR$ estimates the mass scale of new-physics particle
-production in the event. 
-
+(as is necessarily true in the dijet case). The behavior of the razor
+variables $\MR$ and $\Rtwo$ in the case of squark pair production for
+different squark and LSP mases can be seen in Fig~\ref{fig:T2RsqMR}.
 
 \begin{figure*}[thb!]
 \centering
 \includegraphics[width=0.49\textwidth]{figs/theory/MR_T2_pheno.pdf}
 \includegraphics[width=0.49\textwidth]{figs/theory/RSQ_T2_pheno.pdf}\\
 \includegraphics[width=0.49\textwidth]{figs/theory/MR_T2_R2_pheno.pdf}
-\caption{Distribution of \Rtwo and \MR for different squark and LSP masses.\label{fig:T2RsqMR}}
+\caption{Distribution of \Rtwo and \MR in the case of squark pair
+  production for different squark and LSP masses. The peak of the \MR
+  distribution scales with $M_{\Delta}$ and the $\Rtwo$ distribution
+  has a larger mean and falls less steeply than the corresponding
+  distribution for the backgrounds.\label{fig:T2RsqMR}}
 \end{figure*}
 
-\textbf{NEED TO EXPAND ON KINEMATICS A LOT}
+To generalize this approach to the case with an arbitrary number of visible
+final state particles, we treat each event
+as a dijet-like event by clustering particles into two pseudojets
+called \emph{megajets}. All possible assignments of objects to the megajets are considered,
+with the requirement that a megajet consist of at least one
+object. The sum of the four-momenta of the objects assigned to a
+megajet defines the megajet four-momentum.  When more than two objects
+are reconstructed, more than one megajet assignment is possible\footnote{The number of ways of partitioning a set of $n$ particles into two
+megajets is given by a Stirling number of the second kind, ${n\brace 2}= \frac{1}{2!}\sum_{j=0}^2(-1)^{2-j}{2\choose j}j^n =2^{n-1} -1$}.
+We select the assignment that minimizes the sum of the
+invariant masses of the two megajets $m_{j_1}^2 + m_{j_2}^2$, where $m_{j_i}$ is the mass of the
+$i$th megajet. 
+
+Conceptually, this is similar to minimizing the opening angles between
+the constituent particles in the megajets. For example, in the simplest nontrivial case of a three-particle event, there are
+three distinct megajet assignment. We choose the clustering of the three
+particles labeled $i,j,k$ that minimizes the sum
+\begin{equation}
+\min_{i\neq j\neq k} m_{ij}^2 + m_{k}^2~,
+\end{equation}
+which for massless particles reduces to
+\begin{equation}
+\min_{i\neq j\neq k} \frac{1-\cos\theta_{ij}}{E_k}\approx \frac{\theta_{ij}^2}{2E_k}
+\end{equation}
+for small opening angles $\theta_{ij}$.
+
+After forming the megajets, we may compute \MR and $\MRT$, and $\Rtwo$
+in terms of lab-frame quantities for an arbitrary number of final
+state particles,
+\begin{align}
+ \label{eq:MRstar}
+ \MR &\equiv
+ \sqrt{
+(\abs{\vec{p}^{j_{1}}}+\abs{\vec{p}^{j_{2}}})^2 -({p}^{j_1}_z+{p}^{j_2}_z)^2}~,\\
+\MRT &\equiv \sqrt{ \frac{\ETm(\pt^{j_1}+\pt^{j_2}) -
+\ptvecmiss \cdot
+ (\ptvec^{\,j_1}+\ptvec^{\,j_2}) }{2}}~,\\
+\Rtwo &\equiv \left(\frac{\MRT}{\MR}\right)^2~,
+\end{align}
+where $\vec{p}_{j_i}$, $\ptvec^{\,j_i}$, and
+$p^{j_i}_z$ are the momentum of the $i$th megajet, its
+transverse component with respect to the beam axis, and its
+longitudinal component, respectively, with $\ETm$ the magnitude of $\ptvecmiss$. 
 
