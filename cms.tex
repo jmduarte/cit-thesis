@@ -3,25 +3,70 @@
 The Compact Muon Solenoid (CMS) detector is a multi-purpose detector
 conceived to study proton-proton (and lead-lead) collisions produced
 by the Large Hadron Collider (LHC) at CERN~\cite{Adolphi:2008zzk}.
-The central feature of the CMS detector is a
-superconducting solenoid of 6\unit{m} internal diameter, providing a
-magnetic field of 3.8\unit{T}. Within the superconducting solenoid
-volume are a silicon pixel and a silicon strip tracker, a
-lead-tungstate crystal electromagnetic calorimeter, and a
-brass/scintillator hadron calorimeter, each composed of a barrel and
-two endcap sections. Muons are measured in gas-ionization detectors
-embedded in the magnet steel flux-return yoke outside the
-solenoid. Extensive forward calorimetry complements the coverage
-provided by the barrel and endcap detectors. Jets and leptons are
-reconstructed within the pseudorapidity region $\abs{\eta}<3$, covered by the
-electromagnetic and hadron calorimeters. Muons are reconstructed with
-$\abs{\eta}<2.4$. Events are selected by a
-two-level trigger system. The first level (L1) is based on a hardware
-filter, followed by a software-based high level trigger (HLT). 
-%A more detailed description of the CMS detector, together with a definition
-%of the coordinate system used and the relevant kinematic variables,
-%can be found in Ref.~\cite{Adolphi:2008zzk}.
 
+The ultimate goals of the LHC physics programme are to elucidate the nature of
+electroweak symmetry breaking and search for evidence of new symmetries, new
+forces, or new constituents of matter that could pave the way toward a
+unified theory beyond the standard model. There are several detector
+and readout requirements for CMS to meet these goals:
+\begin{itemize}
+\item Good muon identification and momentum resolution over a wide
+  range of momenta, good dimuon mass resolution ($\approx 1\%$ at 100
+  \GeV), and the ability to unambiguously determine the charge of muons
+  with $p<1 \TeV$. See Sec.~\ref{sec:muon};
+\item Good charged particle momentum resolution and reconstruction
+efficiency in the inner tracker. Efficient triggering and offline
+identification of $\Pgt$ leptons and \PQb-jets, requiring pixel
+detectors close to the interaction region. See Sec.~\ref{sec:tracker};
+\item Good electromagnetic energy resolution, good diphoton and
+  dielecron mass resolution ($\approx 1\%$ at 100 \GeV), wide
+  geometric coverage, $\pi^0$ rejection, and efficient photon and
+  lepton isolation at high luminosities. See Sec.~\ref{sec:ecal};
+\item Good missing-transverse-energy and dijet-mass resolution,
+  requiring hadron calorimeters with hermetic geometric coverage and
+  fine lateral segmentation. See Sec.~\ref{sec:hcal};
+\item Fast online event selection process (\emph{trigger}) to reduce the rate from $10^9$ inelastic collision
+  events per second to $\lesssim1000$ events per second for storage
+  and subsequent analysis. See Sec.~\ref{sec:trigger};
+\item Infrastructure for the alignment and calibration of the detector. See Sec.~\ref{sec:alca}.
+\end{itemize}
+The design of CMS, pictured in Fig.~\ref{fig:CMSperspective} and detailed
+in the following sections, meets these requirements. Each detector subsystem is
+integral to the performance of CMS as a whole and is specialized to a
+particular class of particles, as seen in Fig.~\ref{fig:CMSslice}: the silicon
+tracker measures the tracks of charged particles, the electromagnetic
+calorimeter measures the energy of electrons and photons, the hadron calorimeter measures the
+energy of charged and neutral hadrons, the
+superconducting solenoid bends the tracks of charged particles to
+allow for a precise momentum measurement, and the muon detectors
+identify and measure the momentum of muons.
+
+%The central feature of the CMS detector is a
+%superconducting solenoid of 6\unit{m} internal diameter, providing a
+%magnetic field of 3.8\unit{T}. Within the superconducting solenoid
+%volume are a silicon pixel and a silicon strip tracker, a
+%lead-tungstate crystal electromagnetic calorimeter, and a
+%brass/scintillator hadron calorimeter, each composed of a barrel and
+%two endcap sections. Muons are measured in gas-ionization detectors
+%embedded in the magnet steel flux-return yoke outside the
+%solenoid. Extensive forward calorimetry complements the coverage
+%provided by the barrel and endcap detectors. Jets and leptons are
+%econstructed within the pseudorapidity region $\abs{\eta}<3$, covered by the
+%electromagnetic and hadron calorimeters. Muons are reconstructed with
+%$\abs{\eta}<2.4$. Events are selected by a two-level trigger system. The first level (L1) is based on a hardware
+%filter, followed by a software-based high level trigger (HLT). 
+
+\begin{figure}
+\includegraphics[width=.9\textwidth]{figs/cms/Figure_001-002.pdf}
+\caption{Perspective view of the CMS detector.\label{fig:CMSperspective}}
+\end{figure}
+
+
+
+\begin{figure}
+\includegraphics[width=.9\textwidth]{figs/cms/CMSslice_whiteBackground.png}
+\caption{A slice of the CMS detector.\label{fig:CMSslice}}
+\end{figure}
 
 \section{Large Hadron Collider}
 The Large Hadron Collider (LHC) is a 27\unit{km} two-ring superconducting
@@ -94,7 +139,6 @@ dipole magnet is shown in \ref{fig:LHCDipole}.
 \caption{Cross-section of the LHC dipole magnet.\label{fig:LHCDipole}}
 \end{figure}
 
-
 The observed number of events $N_{\mathrm{exp}}$ is the product of the cross
 section of interest $\sigma_{\mathrm{exp}}$ and the time integral of
 the instantaneous luminosity,
@@ -121,13 +165,58 @@ F=\left(1+\left(\frac{\theta_c\sigma_z}{2\sigma^{\ast}}\right)^2\right)^{-1/2}~,
 where $\theta_c$ is the full crossing angle, $\sigma_z$ is the RMS
 bunch length, and $\sigma^{\ast}$ is the RMS bunch size.
 
+
+\section{Superconducting Solenoid}
+\label{sec:magnet}
+The central feature of the CMS detector is a
+superconducting solenoid of 6\unit{m} internal diameter, providing a
+magnetic field of 3.8\unit{T}. 
+
+\section{Silicon Tracker}
+\label{sec:tracker}
+The first layer of detector encountered by outgoing particles from the
+collisiongs the superconducting solenoid is a silicon pixel and a
+silicon strip tracker.
+
+%lead-tungstate crystal electromagnetic calorimeter, and a
+%brass/scintillator hadron calorimeter, each composed of a barrel and
+%two endcap sections. 
+\section{Electromagnetic Calorimeter}
+\label{sec:ecal}
+
+Within the superconducting solenoid volume and just outside of the tracker, lies the electromagnetic
+calorimeter (ECAL) composed of lead-tungstate (PbWO$_{4}$) scintillating crystals.
+The ECAL barrel energy resolution for electrons is measured in beam tests
+to be~\cite{Adzic:2007mi,Chatrchyan:2013dga},
+\begin{align}
+\frac{\sigma_E}{E} &= \frac{S}{\sqrt E (\GeV)} \oplus \frac{N}{E (\GeV)} \oplus C \\
+&= \frac{2.8\%}{\sqrt E (\GeV)} \oplus \frac{12\%}{E (\GeV)} \oplus 0.3\%
+\end{align}
+%\\&= \frac{7\%}{\sqrt E (\GeV)} \oplus \frac{35\%}{E (\GeV)} \oplus 0.7\%
+where the three contributions are the stochastic, noise, and constant terms.
+
+\begin{equation}
+\left(\frac{\sigma_E}{E}\right)^2 = \left(\frac{S}{\sqrt{E}}\right)^2
++  \left(\frac{N}{E}\right)^2 + C^2
+\end{equation}
+where $S$ is a stochastic term, $N$ is a noise term, and $C$ is a
+constant term.
+
+\section{Hadron Calorimeter}
+\label{sec:hcal}
+
+\section{Muon System}
+\label{sec:muon}
+Muons are measured in gas-ionization detectors embedded in the magnet steel flux-return yoke outside the solenoid.
+
+
 \section {Level-1 and High Level Trigger}
+\label{sec:trigger}
 
 \section{Alignment and Calibration}
-
+\label{sec:alca}
 
 \begin{figure}
 \includegraphics[width=.9\textwidth,clip=true,viewport=0 180 900 700]{figs/cms/AlCa.pdf}
 \caption{Alignment and calibration data-processing flow.\label{fig:AlCa}}
 \end{figure}
-
