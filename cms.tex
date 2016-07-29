@@ -181,40 +181,75 @@ in front of the calorimeters.
 \section{Silicon Tracker}
 \label{sec:tracker}
 The first layer of the detector encountered by outgoing particles from the
-collisions is a silicon pixel and strip
-tracker~\cite{Chatrchyan:2014fea}. The tracker is cylinder-shaped with
-an outer radius of $1.2$ \unit{m} and a length of $5.6$ \unit{m}. The
-pixel detector barrel (endcaps) comprises three (two) layers of pixel
+collisions is the tracker, composed of a small silicon pixel
+surrounded by a large silicon strip tracker~\cite{Chatrchyan:2014fea}. Both tracker subdetectors are
+cylinder-shaped and occupy a total $5.8$ \unit{m} in length and $2.5$
+\unit{m} in diameter. The pixel detector barrel (endcaps) comprises three (two) layers of pixel
 detectors, providing three-dimensional position measurements of the
 hits arising from the interaction of charged particles with its
-sensors.  The hit position resolution is approximately $10$ $\mu$m in
-the transverse coordinate and 20–40 $\mu$m in the longitudinal
-coordinate, while the third coordinate is given by the sensor plane position.
-
-
-Surrounding this is 
-surrounded by ten (twelve) layers of micro-strip detectors. The $17,000$ silicon sensors
-are finely segmented into $66$ million $150 \times 100$ $\mu$m pixels and $9.6$ million $180$ $\mu$m-wide strips.
-This granularity offers separation of closely-spaced particle trajectories in energetic jets.
-
+sensors. The hit position resolution is approximately $10$ $\mu$m in
+the transverse coordinate and $20–40$ $\mu$m in the longitudinal
+coordinate, while the third coordinate is given by the sensor plane
+position. In total, its $1440$ modules cover an area of about 1
+m$^{2}$ and have $66$ million pixels.
 
 %The pixel detector consists of cylindrical barrel layers at radii of 4.4, 7.3 and 10.2 cm, and two pairs of endcap disks at z = ±34.5 and ±46.5 cm. It provides three-dimensional (3-D) position measurements of the hits arising from the interaction of charged particles with its sensors.
 
-the longitudinal coordinate, while the third coordinate is given by the sensor plane position. In total, its 1440 modules cover an area of about 1 m2 and have 66 million pixels.
-The strip tracker has 15 148 silicon modules, which in total cover an
-active area of about 198 m2 and have 9.3 million strips. It is
-composed of four subsystems. The Tracker Inner Barrel (TIB) and Disks
-(TID) cover r < 55 cm and |z| < 118 cm, and are composed of four
-barrel layers, supplemented by three disks at each end. These provide
-position measurements in rφ with a resolution of approximately 13–38
-μm. The Tracker Outer Barrel (TOB) covers r > 55 cm and |z| < 118 cm
-and consists of six barrel layers providing position measurements in
-rφ with a resolution of approximately 18–47 μm. The Tracker EndCaps
-(TEC) cover the region 124 < |z| < 282 cm. Each TEC is composed of
-nine disks, each containing up to seven concentric rings of silicon
-strip modules, yielding a range of resolutions similar to that of the
-TOB.
+Surrounding this is the silicon strip tracker. The silicon detector
+barrel (endcaps) has ten (twelve) layers of micro-strip detectors. In
+total, the with
+$15,148$ silicon modules, which cover an active area of about $198$
+m$^2$ and have $9.3$ million strips. 
 
+%It is composed of four subsystems. The Tracker Inner Barrel (TIB) and Disks
+%(TID) cover r < 55 cm and |z| < 118 cm, and are composed of four
+%barrel layers, supplemented by three disks at each end. These provide
+%position measurements in rφ with a resolution of approximately 13–38
+%μm. The Tracker Outer Barrel (TOB) covers r > 55 cm and |z| < 118 cm
+%and consists of six barrel layers providing position measurements in
+%rφ with a resolution of approximately 18–47 μm. The Tracker EndCaps
+%(TEC) cover the region 124 < |z| < 282 cm. Each TEC is composed of
+%nine disks, each containing up to seven concentric rings of silicon
+%strip modules, yielding a range of resolutions similar to that of the
+%TOB.
+
+The fine granularity of the two tracker subdetectors offers separation of closely-spaced particle
+trajectories in energetic jets. Fig.~\ref{fig:tracker} shows a
+schemetic layout of the tracker in the $r-z$ plane and
+the material budget of the CMS tracker, both in units of radiation
+lengths and nuclear interaction lengths, as estimated from
+simulation. 
+%The simulation describes the tracker material budget with
+%an accuracy better than 10\%, as was established by measuring the
+%distribution of reconstructed nuclear interactions and photon
+%conversions in the tracker.
+
+\begin{figure}
+\includegraphics[width=.9\textwidth]{figs/cms/TrackerLayoutNew.pdf}\\
+\includegraphics[width=.45\textwidth]{figs/cms/MaterialBudget_RadLengths.pdf}
+\includegraphics[width=.45\textwidth]{figs/cms/MaterialBudget_InteractionLengths.pdf}
+\caption{ (Top) Schematic cross section through the CMS tracker in the $r-z$
+  plane. (Bottom) Total thickness $t$ of the tracker material
+  traversed by a particle produced at the nominal interaction point,
+  as a function of pseudorapidity η, expressed in units of radiation
+  length $X_0$ (left) and nuclear interaction length $\lambda_I$
+  (right). 
+%In this view, the tracker is symmetric about the horizontal
+%  line $r = 0$, so only the top half is shown. The center of the
+%  tracker, corresponding to the approximate position of the pp
+%  collision point, is indicated by a star. Green dashed lines help the
+%  reader understand which modules belong to each of the named tracker
+%  subsystems. Strip tracker modules that provide 2D hits are shown by
+%  thin, black lines, while those permitting the reconstruction of hit
+%  positions in 3D are shown by thick, blue lines. The latter actually
+%  each consist of two back-to-back strip modules, in which one module
+%  is rotated through a `stereo' angle. The pixel modules, shown by the
+%  red lines, also provide 3D hits. Within a given layer, each module
+%  is shifted slightly in $r$ or $z$ with respect to its neighbouring
+%  modules, which allows them to overlap, thereby avoiding gaps in the
+%  acceptance.
+\label{fig:tracker}}
+\end{figure}
 
 
 \section{Electromagnetic Calorimeter}
