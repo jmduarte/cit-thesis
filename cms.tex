@@ -61,8 +61,6 @@ identify and measure the momentum of muons.
 \caption{Perspective view of the CMS detector.\label{fig:CMSperspective}}
 \end{figure}
 
-
-
 \begin{figure}
 \includegraphics[width=.9\textwidth]{figs/cms/CMSslice_whiteBackground.png}
 \caption{A slice of the CMS detector.\label{fig:CMSslice}}
@@ -169,25 +167,69 @@ bunch length, and $\sigma^{\ast}$ is the RMS bunch size.
 \section{Superconducting Solenoid}
 \label{sec:magnet}
 The central feature of the CMS detector is a
-superconducting solenoid of 6\unit{m} internal diameter, providing a
-magnetic field of 3.8\unit{T}. 
+superconducting solenoid providing a uniform axial
+magnetic field of 3.8\unit{T}  over a magnetic length of 12.5 \unit{m}
+and a free-bore radius of 3.15 \unit{m}. The large bending power ($11.4$ \unit{T}\unit{m}) of the
+superconducting magnet permits a precise measurement of the momentum
+of high-energy charged particles. The return field is large enough to
+saturate $1.5$ \unit{m} of iron, allowing four \emph{muon stations} to be
+integrated to ensure robustness and full geometric coverage. The bore
+of the magnet coil is large enough to accommodate the inner tracker
+and the calorimetry inside, thereby minimizing the amount of material
+in front of the calorimeters.
 
 \section{Silicon Tracker}
 \label{sec:tracker}
-The first layer of detector encountered by outgoing particles from the
-collisiongs the superconducting solenoid is a silicon pixel and a
-silicon strip tracker.
+The first layer of the detector encountered by outgoing particles from the
+collisions is a silicon pixel and strip
+tracker~\cite{Chatrchyan:2014fea}. The tracker is cylinder-shaped with
+an outer radius of $1.2$ \unit{m} and a length of $5.6$ \unit{m}. The
+pixel detector barrel (endcaps) comprises three (two) layers of pixel
+detectors, providing three-dimensional position measurements of the
+hits arising from the interaction of charged particles with its
+sensors.  The hit position resolution is approximately $10$ $\mu$m in
+the transverse coordinate and 20–40 $\mu$m in the longitudinal
+coordinate, while the third coordinate is given by the sensor plane position.
 
-%lead-tungstate crystal electromagnetic calorimeter, and a
-%brass/scintillator hadron calorimeter, each composed of a barrel and
-%two endcap sections. 
+
+Surrounding this is 
+surrounded by ten (twelve) layers of micro-strip detectors. The $17,000$ silicon sensors
+are finely segmented into $66$ million $150 \times 100$ $\mu$m pixels and $9.6$ million $180$ $\mu$m-wide strips.
+This granularity offers separation of closely-spaced particle trajectories in energetic jets.
+
+
+%The pixel detector consists of cylindrical barrel layers at radii of 4.4, 7.3 and 10.2 cm, and two pairs of endcap disks at z = ±34.5 and ±46.5 cm. It provides three-dimensional (3-D) position measurements of the hits arising from the interaction of charged particles with its sensors.
+
+the longitudinal coordinate, while the third coordinate is given by the sensor plane position. In total, its 1440 modules cover an area of about 1 m2 and have 66 million pixels.
+The strip tracker has 15 148 silicon modules, which in total cover an
+active area of about 198 m2 and have 9.3 million strips. It is
+composed of four subsystems. The Tracker Inner Barrel (TIB) and Disks
+(TID) cover r < 55 cm and |z| < 118 cm, and are composed of four
+barrel layers, supplemented by three disks at each end. These provide
+position measurements in rφ with a resolution of approximately 13–38
+μm. The Tracker Outer Barrel (TOB) covers r > 55 cm and |z| < 118 cm
+and consists of six barrel layers providing position measurements in
+rφ with a resolution of approximately 18–47 μm. The Tracker EndCaps
+(TEC) cover the region 124 < |z| < 282 cm. Each TEC is composed of
+nine disks, each containing up to seven concentric rings of silicon
+strip modules, yielding a range of resolutions similar to that of the
+TOB.
+
+
+
 \section{Electromagnetic Calorimeter}
 \label{sec:ecal}
 
-Within the superconducting solenoid volume and just outside of the tracker, lies the electromagnetic
-calorimeter (ECAL) composed of lead-tungstate (PbWO$_{4}$) scintillating crystals.
-The ECAL barrel energy resolution for electrons is measured in beam tests
-to be~\cite{Adzic:2007mi,Chatrchyan:2013dga},
+Within the superconducting solenoid volume and just outside of the
+tracker, lies the electromagnetic
+calorimeter (ECAL), a hermetic homogenous calorimeter composed of
+lead-tungstate (PbWO$_{4}$)
+scintillating crystals covering pseudorapidities up to
+$\abs{\eta}<1.479$ with the barrel detector, and from $1.479$ to $3.0$
+with the two endcap disks.
+
+The ECAL barrel energy resolution for electrons is measured in
+an electron test beam to be~\cite{Adzic:2007mi,Chatrchyan:2013dga},
 \begin{align}
 \frac{\sigma_E}{E} &= \frac{S}{\sqrt E (\GeV)} \oplus \frac{N}{E (\GeV)} \oplus C \\
 &= \frac{2.8\%}{\sqrt E (\GeV)} \oplus \frac{12\%}{E (\GeV)} \oplus 0.3\%
@@ -195,19 +237,70 @@ to be~\cite{Adzic:2007mi,Chatrchyan:2013dga},
 %\\&= \frac{7\%}{\sqrt E (\GeV)} \oplus \frac{35\%}{E (\GeV)} \oplus 0.7\%
 where the three contributions are the stochastic, noise, and constant terms.
 
-\begin{equation}
-\left(\frac{\sigma_E}{E}\right)^2 = \left(\frac{S}{\sqrt{E}}\right)^2
-+  \left(\frac{N}{E}\right)^2 + C^2
-\end{equation}
-where $S$ is a stochastic term, $N$ is a noise term, and $C$ is a
-constant term.
+A finer-grained detector, known as the preshower, is installed in
+front of each endcap disks. It consists of two layers, each comprising
+a lead radiator followed by a plane of silicon strip sensors, with a pitch of $1.9$ \unit{mm}.
+%The two lead radiators represent approximately two and one radiation lengths,
+%respectively. The two planes of silicon sensors have orthogonal strips
+%with a pitch of $1.9$ \unit{mm}. When either a photon or an electron
+%passes through the lead, it initiates an electromagnetic shower. The
+%granularity of the detector and the small radius of the initiating
+%shower provide an accurate measurement of the shower
+%position. 
+Originally, the aim of the preshower superior granularity
+was twofold: (i) resolve the photons from $\pi^0$ decays as to discriminate
+them from prompt photons and (ii) signal the presence of a
+photon/electron in the ECAL by requiring an associated signal in the
+preshower. However, the high probability for photons to convert and for
+electrons to radiate, and the large number of $\pi^0$s produced by hadron
+interactions in the tracker material generates parasitic signals in
+the preshower, thereby substantially affecting its identification and
+separation capabilities.
 
 \section{Hadron Calorimeter}
 \label{sec:hcal}
 
+The ECAL is surrounded by a hermetic sampling hadron
+calorimeter (HCAL) consisting of several layers of brass absorber and plastic scintillator
+tiles interleaved. A barrel detector ($\abs{\eta}<1.3$) and two endcap
+disks ($1.3<\abs{\eta}<3.0$) provide pseudorapidity coverage up to
+$3.0$. The scintillation light is converted by wavelength-shifting (WLS) fibers
+embedded in the scintillator tiles and channeled to photodetectors via
+clear fibers. This light is detected by photodetectors (hybrid
+photodiodes, or HPDs) that can provide gain and operate in high axial
+magnetic fields. This central calorimetry is complemented by a
+tail-catcher in the barrel region (HO) ensuring that hadronic
+showers are sampled with nearly 11 hadronic interaction
+lengths.
+
+The HCAL is read out in individual towers with a cross section of
+$\Delta\eta\times\Delta\phi = 0.087 \times 0.087$ for $\abs{\eta}<1.6$
+and $0.17\times 0.17$ at larger pseudorapidities. The HCAL energy resolution is measured in a pion test beam to
+be~\cite{Abdullin:2009zz}
+\begin{align}
+\frac{\sigma_E}{E} &= \frac{110\%}{\sqrt E (\GeV)} \oplus 9\%~.
+\end{align}
+
+Coverage up to a pseudorapidity of $5.0$ is provided by a forward
+hadron calorimeter (HF) situated at 11 \unit{m} from the interaction
+point.The HF consists of a steel absorber composed of grooved
+plates. Radiation-hard quartz fibers are inserted in the grooves along
+the beam direction. The \v{C}erenkov light emitted in the
+quartz fibers is detected by photomultipliers. The forward
+calorimeters ensure full geometric coverage for the measurement of the
+transverse energy in the event. 
+
 \section{Muon System}
 \label{sec:muon}
-Muons are measured in gas-ionization detectors embedded in the magnet steel flux-return yoke outside the solenoid.
+
+Muons are measured in gas-ionization detectors embedded in the magnet
+steel flux-return yoke outside the solenoid. Each muon
+station consists of several layers of aluminium drift tubes (DT) in
+the barrel region and cathode strip chambers (CSC) in the endcap
+region, complemented by resistive plate chambers (RPC). 
+
+\section{Particle Flow Reconstruction}
+\label{sec:pf}
 
 
 \section {Level-1 and High Level Trigger}
