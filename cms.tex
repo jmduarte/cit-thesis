@@ -96,6 +96,17 @@ F=\left(1+\left(\frac{\theta_c\sigma_z}{2\sigma^{\ast}}\right)^2\right)^{-1/2}~,
 where $\theta_c$ is the full crossing angle, $\sigma_z$ is the RMS
 bunch length, and $\sigma^{\ast}$ is the RMS bunch size.
 
+The integrated luminosity delivered by the LHC to the CMS experiment
+versus time for $2010-2016$ is shown in Fig.~\ref{fig:IntLumi20102016}.
+
+\begin{figure}\centering
+\includegraphics[width=.9\textwidth]{figs/cms/int_lumi_cumulative_pp_2.pdf}
+\caption{Cumulative luminosity versus day delivered to CMS during
+  stable beams for pp collisions. This is shown for 2010 (green), 2011
+  (red), 2012 (blue), 2015 (purple) and 2016 (orange)
+  data-taking.\label{fig:IntLumi20102016}}
+\end{figure}
+
 
 \chapter{The CMS Experiment}
 \label{ch:cms}
@@ -155,12 +166,12 @@ identify and measure the momentum of muons.
 %$\abs{\eta}<2.4$. Events are selected by a two-level trigger system. The first level (L1) is based on a hardware
 %filter, followed by a software-based high-level trigger (HLT). 
 
-\begin{figure}
+\begin{figure}\centering
 \includegraphics[width=.9\textwidth]{figs/cms/Figure_001-002.pdf}
 \caption{Perspective view of the CMS detector.\label{fig:CMSperspective}}
 \end{figure}
 
-\begin{figure}
+\begin{figure}\centering
 \includegraphics[width=.9\textwidth]{figs/cms/CMSslice_whiteBackground.png}
 \caption{A slice of the CMS detector.\label{fig:CMSslice}}
 \end{figure}
@@ -309,13 +320,35 @@ an electron test beam to be~\cite{Adzic:2007mi,Chatrchyan:2013dga},
 &= \frac{2.8\%}{\sqrt E (\GeV)} \oplus \frac{12\%}{E (\GeV)} \oplus 0.3\%
 \end{align}
 %\\&= \frac{7\%}{\sqrt E (\GeV)} \oplus \frac{35\%}{E (\GeV)} \oplus 0.7\%
-where the three contributions are the stochastic, noise, and constant terms.
+where the three contributions are the stochastic, noise, and constant
+terms.
 
 A finer-grained detector, known as the preshower, is installed in
 front of each endcap disks. It consists of two layers, each comprising
 a lead radiator followed by a plane of silicon strip sensors, with a
 pitch of $1.9$ \unit{mm}. The goal of the preshower is to enhance photon
 identification capabilities.
+
+Since ECAL crystals are approximately one Moli\'ere radius in lateral
+dimension, high energy electromagnetic showers spread laterally over
+several crystals. 
+%Furthermore, in CMS, the presence of material in
+%front of the electromagnetic calorimeter (corresponding to 1--2$\,X_0$
+%depending on the $\eta$ region) causes conversion of photons and
+%bremsstrahlung from electrons. The strong magnetic field of the
+%experiment tends to spread this radiated energy along $\phi$.
+Clustering algorithms are used to sum together energy
+deposits in adjacent crystals belonging to the same electromagnetic
+shower. The clustering algorithm proceeds first with the formation of ``basic clusters'', corresponding
+to local maxima of energy deposits. The basic clusters are then merged
+together to form a ``supercluster'', which is extended in
+$\phi$, to recover the radiated energy. Because of the differences
+between the geometric arrangement of the crystals in the barrel and
+endcap regions, a different clustering algorithm is used in each
+region. The clustering algorithm used in EB, called the `hybrid'
+algorithm, is described in~\cite{CMS_TDR_v1}. In EE and ES, the
+algorithm merges together fixed-size 5$\times$5 crystal basic clusters
+and associates each with corresponding ES energy deposits.
 
 \section{Hadron Calorimeter}
 \label{sec:hcal}
@@ -789,7 +822,10 @@ event size from the default of $\sim 1$\unit{MB} in order to increase the record
 approach, first implemented at the LHC by the CMS experiment in
 2011~\cite{CMS-DP-2012-022}, allows us to increase the physics signal
 acceptance of CMS even in the presence of backgrounds with large cross
-sections. 
+sections. This is particularly useful in the search for
+narrow resonances in the dijet mass spectrum, as described in Ch.~\ref{ch:dijet}, where this strategy allows the search to
+be extended into a low-dijet-mass region previously only accessible at
+lower-energy colliders~\cite{Khachatryan:2016ecr,CMS-PAS-EXO-16-032}.
 
 Fig~\ref{fig:DataScouting} schematically displays the $H_{\mathrm{T}}$
 thresholds used for the different varieties of data scouting during the
@@ -804,7 +840,7 @@ information, has a larger event size $\sim 10$\unit{kB}. In order to stay within
 HLT timing budget, the maximum permissible rate is 720 \unit{Hz}. Simultaneously, the \emph{data parking} stream sends the
 full raw events from PF scouting directly to tape without reconstruction. This
 multifaceted approach is advantageous in the case that a signal is
-seen in scouting data and more investigation is warranted.
+seen in the scouting data that warrants more investigation.
 
 \begin{figure}\centering
 \includegraphics[width=.9\textwidth]{figs/cms/Scouting2015.pdf}\\
@@ -956,19 +992,29 @@ barrel and $200$ \unit{kGy} at $\abs{\eta} = 3$ after $10$ years of LHC operatio
 corresponding to an integrated luminosity of $500$ \fbinv~\cite{CMSECALTDR}. The
 expected hadron fluence varies between about $10^{13}$ cm$^{-2}$ in the barrel
 and $10^{14}$ cm$^{-2}$ at $\abs{\eta} = 3$. The main observable effect of the radiation
-is a wavelength-dependent loss of crystal transparency but without
-changes to the scintillation mechanism~\cite{Adzic:2009aa}. Figure
-~\ref{fig:ECALLaserHistory} demonstrates the loss in response over
-time from the start of 2011.
+is a wavelength-dependent loss of crystal transparency due to the
+formation of color centers, but without changes to the scintillation
+mechanism~\cite{Adzic:2009aa}. In order to measure and correct for
+response change during LHC operation, the ECAL is equipped with a
+light monitoring (LM) system~\cite{Anfreville:2007zz,Zhang:2005ip}. 
+
+The evolution of the ECAL response to the laser light in 2011 is shown
+in Fig.~\ref{fig:ECALLaserHistory}, as a function of time. 
+%An average value is shown for each of six pseudorapidity ranges. The data are normalized to the
+%measurements at the start of 2011. The corresponding instantaneous
+%luminosity is also shown. 
+The response drops during periods of LHC operation, but for a given dose-rate the compensating self-annealing
+of the crystals reduces the rate of loss of response. These
+observations correspond to changes in crystal transparency~\cite{Adzic:2009aa}. The average drop in response to
+laser light, by the end of 2011, was $2–3$\% in the barrel rising to 40\% in
+in the endcaps for $2.7< \abs{\eta}< 3.0$.
+
 %A second effect of the
 %radiation is that the VPT response decreases with accumulated
 %photocathode charge to a plateau [17]. Radiation does not affect the
 %gain of the APDs but in large doses induces dark currents which cause
 %small reductions in the bias voltage at the APDs if not compensated
 %for. 
-In order to measure and correct for response change during LHC
-operation, the ECAL is equipped with a laser light monitoring
-system~\cite{Anfreville:2007zz,Zhang:2005ip}. 
 
 \begin{figure}\centering
 \includegraphics[width=.9\textwidth]{figs/cms/histories_2011_v2.pdf}
@@ -981,7 +1027,107 @@ system~\cite{Anfreville:2007zz,Zhang:2005ip}.
   2011.\label{fig:ECALLaserHistory}}
 \end{figure}
 
+The ECAL light monitoring system is used to determine corrections,
+denoted $S(t)$, to response changes in the ECAL. The
+laser light is injected through optical fibers in each crystal. The spectral
+composition and the path for the collection of laser light at the
+photodetector are different from those for scintillation light. A
+conversion factor is required to relate the changes in the ECAL
+response to laser light to the changes in the scintillation
+signal. The relationship is described by a power law~\cite{CMSECALTDR}:
+\begin{equation}
+\frac{S(t)}{S_0} = \left(\frac{R(t)}{R_0}\right)^{\alpha}~,
+\end{equation}
+where $S(t)$ is the channel response to scintillation light at a particular time $t$, $S_0$ is the initial
+response, and $R(t)$ and $R_0$ are the corresponding response to laser
+light. The exponent $\alpha$ is independent of the loss for small
+transparency losses and was measured in test beams to be $1.52$ and
+$1.0$ for crystals from the two different
+producers~\cite{VanLysebetten:787485,Adzic:2006za,Ghezzi:934066}.
 
+Different forms of these laser corrections, differing in time and
+spatial granularity, are utilized at different
+times in the data processing: online at the HLT, during the prompt
+reconstruction, and during offline reprocessing of the data. At HLT,
+the laser corrections are updated once-per-week and are applied to 11
+different $\eta$ rings in each endcap and 17 different $\eta$ rings in
+the barrel (the corrections are averaged over each ring). For the prompt reconstruction and the offline
+reprocessing, the laser corrections are updated every 40 minutes
+and are applied crystal-by-crystal.
+
+The validation of the HLT laser corrections uses a custom workflow which
+re-runs the HLT reconstruction on recently collected data with two versions of
+laser corrections: the version currently online (and now out-of-date)
+and the version to be validated (and up-to-date). An example of a
+succesfully validated HLT laser correction for a particular week of
+data-taking in 2015 is shown in Fig.~\ref{fig:ECALHLT}. Unlike the
+outdated laser corrections (shown in blue), the updated
+laser corrections (shown in black) correct the energy response and
+improve the energy resolution for both the endcaps and the barrel.
+
+\begin{figure}\centering
+\includegraphics[width=.9\textwidth]{figs/cms/Week42_transpCorr_EB_overlay_IntermediateBlack_oldBlue.png}\\
+\includegraphics[width=.9\textwidth]{figs/cms/Week41_transpCorr_EE_overlay_newBlack_oldBlue.png}
+\caption{The top (bottom) plot shows the difference between the supercluster energy
+  reconstructed at HLT and a reference energy for the ECAL barrel (endcaps) for a particular
+  week of data-taking in 2015. The blue data points show the
+  difference using the week-old laser corrections, while the solid black histogram shows the reconstructed energy with the
+  updated laser correction undergoing validation.\label{fig:ECALHLT}}
+\end{figure}
+%https://twiki.cern.ch/twiki/bin/viewauth/CMS/EGammaHLT2015LaserCorrValWeeklyReport
+
+The $\Pgh$ meson data are used to validate the laser corrections for prompt reconstruction. The events are
+selected online by a dedicated calibration trigger and recorded with
+reduced event content. A fit is carried out on the invariant mass distribution of the photon
+pairs in the mass range of the $\Pgh$ meson. The fit comprises a
+polynomial function to describe the background and a Gaussian
+distribution to describe the resonance peak. Fig.~\ref{fig:etaEB}
+shows an example of the $\Pgh$-meson peak with the fit superimposed,
+and the relative value of the fitted $\Pgh$ mass versus time in EB for
+a period of 60 hours. The plot shows the data before (red points) and
+after (green points) the laser corrections applied. A number of
+measurements are possible for each LHC fill, owing to the high
+rate for recording $\Pgh$ events. This permits short-term changes in
+the ECAL response to be verified before the prompt reconstruction
+takes place.
+
+\begin{figure}[bht]
+\begin{center}
+ \includegraphics[width=0.40\linewidth,height=5.6cm]{figs/cms/eta_peak.pdf}
+ \includegraphics[width=0.59\linewidth,height=5.6cm]{figs/cms/eta_zoom.pdf}
+\end{center}
+\caption{\label{fig:etaEB}
+Left: An example of the $\Pgh$-meson peak reconstructed from the invariant
+mass of photon pairs in the barrel, with the result of the fit with a Gaussian
+distribution (continuous line) and a polynomial function (dotted line);
+Right: Stability of the $\Pgh\to\Pgg\Pgg$ mass measurement in the barrel as a
+function of time, over a period of 60 hours, for data recorded in
+September 2011. The plot shows the data with (green points) and
+without (red points) laser corrections applied.}
+\end{figure}
+
+Finally, isolated electrons from $\PW$-boson decays are used to provide an energy
+scale to validate the laser corrections over periods of days to
+weeks. The event selection is described
+in~\cite{EGM-10-004,Khachatryan:2010xn}.
+The ratio of the electron energy, $E$, measured in the ECAL, to the
+electron momentum, $p$, measured in the tracker, is computed in each
+event, and a reference $E/p$ distribution is obtained from the entire
+data set after applying laser corrections. The width of the $E/p$
+reference distribution is dominated by the energy and momentum
+resolution and is not biased by residual imperfections in the laser
+corrections. This reference distribution is then scaled to fit
+$E/p$ distributions obtained by dividing the same data in groups of
+12000 consecutive events. The scale factors provide a measure of the
+relative response and are shown in Fig.~\ref{fig:wenuEB} for 2011, as
+a function of time. The data are shown before (red points) and after
+(green points) laser corrections to the ECAL channel response are
+applied. The magnitude of the average correction for each point is
+indicated by the continuous blue line. A stable response to
+electromagnetic showers is achieved throughout 2011 with an RMS of
+0.12\% in the barrel and 0.35\% in the endcaps. This method does not require a
+knowledge of the absolute calibration of both the energy and the
+momentum.
 
 \begin{figure}
 \begin{center}
@@ -997,27 +1143,12 @@ system~\cite{Anfreville:2007zz,Zhang:2005ip}.
 \end{tabular}
 \end{center}
 \caption{\label{fig:wenuEB}
-Relative energy response variation for EB (top) and EE (bottom)
+Relative energy response variation for the barrel (top) and the endcaps (bottom)
 determined from the $E/p$ analysis of electrons in $\PW$-boson decays.
 Left: examples of fits to the $E/p$ distributions before (red) and
-after (green) LM corrections. Middle: Response stability during the
+after (green) laser corrections. Middle: Response stability during the
 2011 $\Pp\Pp$ data-taking period before (red open circles) and after
 (green points) response corrections; the blue line shows the inverse
-of the average LM corrections. Right: Distribution of the projected
+of the average laser corrections. Right: Distribution of the projected
 relative energy scales.}
-\end{figure}
-
-These corrections are also applied and updated once-per-week at the HLT level for
-data taking to prevent a worsening of the $e/\Pgg$ HLT resolution which would result in a severe rise in the
-trigger rates of $e/\Pgg$ HLT paths. 
-
-\begin{figure}\centering
-\includegraphics[width=.9\textwidth]{figs/cms/Week42_transpCorr_EB_overlay_IntermediateBlack_oldBlue.png}\\
-\includegraphics[width=.9\textwidth]{figs/cms/Week41_transpCorr_EE_overlay_newBlack_oldBlue.png}
-\caption{(Top) HLT super cluster energy relative to RECO super cluster
-  energy for the ECAL barrel during 2015 Week 42. (Bottom) HLT super cluster energy relative to RECO super cluster
-  energy for the ECAL endcaps during 2015 Week 41. The blue data points represent the
-  reconstructed energy using the week-old laser corrections, whie the
-  solid black histogram represents the reconstructed energy with the
-  current laser correction.\label{fig:ECALHLT}}
 \end{figure}
