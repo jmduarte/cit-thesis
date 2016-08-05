@@ -2248,7 +2248,7 @@
    hNS->GetYaxis()->SetTitleSize(0.065);
    hNS->GetYaxis()->SetTickLength(0);
    hNS->GetYaxis()->SetTitleFont(42);
-   hNS->GetZaxis()->SetTitle("Standard Deviations");
+   hNS->GetZaxis()->SetTitle("");
    hNS->GetZaxis()->SetLabelFont(42);
    hNS->GetZaxis()->SetLabelSize(0.056);
    hNS->GetZaxis()->SetTitleSize(0.056);
@@ -2420,7 +2420,7 @@
    TText *text = pt->AddText("CMS simulation #sqrt{s} = 8 TeV,  razor MultiJet box, L = 19.3 fb^{-1}");
    pt->Draw();
 
-   pt = new TPaveText(0.42,0.70,0.70,0.92,"brNDC");
+   pt = new TPaveText(0.42,0.69,0.70,0.91,"brNDC");
    pt->SetBorderSize(0);
    pt->SetFillColor(0);
    pt->SetFillStyle(0);
@@ -2429,8 +2429,8 @@
    pt->SetTextFont(42);
    pt->SetTextSize(0.065);
    //text = pt->AddText("SM Backgrounds: t#bar{t}, W/Z+jets");
-   text = pt->AddText("pp#rightarrow#tilde{g}#tilde{g}, #tilde{g}#rightarrow b#bar{b}, #sigma = 0.02 pb");
-   text = pt->AddText("m_{#tilde{g}} = 1325 GeV, m_{#tilde{#chi}} = 50 GeV");
+   text = pt->AddText("pp#rightarrow#tilde{g}#tilde{g}, #tilde{g}#rightarrow b#bar{b}#tilde{#chi}^{0}_{1}, #sigma = 0.02 pb");
+   text = pt->AddText("m_{#tilde{g}} = 1325 GeV, m_{#tilde{#chi}^{0}_{1}} = 50 GeV");
    pt->Draw();
 
    pt = new TPaveText(0.96,0.13,0.99,0.92,"brNDC");

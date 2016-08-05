@@ -1,12 +1,72 @@
 \chapter{Searches for Supersymmetry at $\sqrt{s}=8\TeV$}
 \label{ch:analysis8TeV}
 
+As discussed in Sec.~\ref{sec:sms}, models of SUSY predict
+additional, undiscovered fundamental particles which correspond to the
+heavy superpartners of SM particles. Of particular interest is the production of top squarks, bottom squarks, and gluinos due to their role in taming
+the quadric divergence of the Higgs mass in the SM (see
+Sec.~\ref{sec:susynaturalness}). The residual fine-tuning inherent in these models is
+dependent on the masses of these superpartners, with a
+preference for smaller masses to avoid large fine-tuning. These
+considerations have motivated searches for the lightest allowed top
+and bottom squarks, as well as gluinos that may that couple to top/bottom
+squarks, whose decays would produce final states enriched in
+\PQb-jets. Moreover, due to the possible presence of top quarks that
+produce leptons $\sim30\%$ of the time in the
+decay chain, electrons or muons may be used the event selection to
+enhance the signal-to-background ratio. We exploit both of
+these features (\PQb-jets and leptons) in the event classification.
+
+We classify events into different ``boxes,'' or data categories, based on
+the jet multiplicity, \PQb-jet multiplicity, and lepton (\Pe or \Pgm)
+multiplicity. The advantages of this classification are (i) by
+isolating different SM background processes, like $\ttbar$, we can better
+model them individually, and (ii) in the event of a discovery, we may be
+able to infer the values of certain SUSY branching fractions based on the boxes where
+the signal is present. The likelihood functions of the different boxes are
+statistically combined to exclude or discover particular SUSY
+models. In the following, this classification and statistical
+combination is referred to as the razor box approach.
+
+In this chapter, we present an inclusive search for gluinos and top
+squarks\footnote{Though we don't explicitly interpret our results
+  in the context of bottom squark production, many of the conclusions regarding top squark
+  production carry over.} using $\Pp\Pp$ collision data collected by CMS at $\sqrt{s}=8\TeV$ in the
+context of the minimal natural SUSY spectrum outlined in
+Sec.~\ref{sec:sms}~\cite{razor8TeV}. Previous searches for natural SUSY by CMS~\cite{1LepMVA,SUS12024,Chatrchyan:2014lfa,Chatrchyan:2013iqa,Chatrchyan:2013fea}
+and ATLAS~\cite{Aad:2013wta,Aad:2014lra,Aad:2014pda,Aad:2014bva,Aad:2014qaa}
+at $\sqrt{s}=7\TeV$ and $8\TeV$ have probed gluino masses up to 1300\GeV and top squark
+masses up to 700\GeV under the assumptions of specific decay modes for
+the SUSY particles. One important feature that sets this search apart
+is that the SUSY parameter space of gluino and top squark branching ratios is
+explored for the first time at the LHC~\cite{razor8TeV}. Notably, the
+razor box approach ensures good sensitivity to a wide range of
+branching ratios. In addition, we combine the results from the hadronic razor search
+with those from a previous search~\cite{1LepMVA} for top-squark
+production in the single-lepton (\Pe or \Pgm) channel to obtain
+an improved bound on top-squark pair production. 
+
+The remainder of this chapter is organized as follows. The event
+selection and box definitions are detailed in
+Sections~\ref{sec:selection8TeV}~and~\ref{sec:box8TeV},
+respectively. The modeling of the SM backgrounds through a fit using
+an emprical function is explained in Sec.~\ref{sec:bmodel8TeV}. In
+particular, the motivation for this empirical function and the
+properties that make it a suitable description are examined in Sec.~\ref{function8TeV}.
+The results of the fits to data are presented and compared to the
+corresponding results in a signal injection scenario in
+Sec.~\ref{sec:fit8TeV}. Finally, limits are derived in the context of the
+natural SUSY scenario of Sec.~\ref{sec:sms}  and a summary is given in
+Sections~\ref{sec:limit8TeV}~and~\ref{sec:conclusions8TeV},
+respectively.
+
 \section{Event selection}
-\label{sec:selection}
+\label{sec:selection8TeV}
 Events are selected at the L1 trigger level by requiring at least two
 jets with $|\eta|<3$. At the HLT level, events are selected using
 dedicated razor algorithms, consisting of a loose selection on \MR and
-$\Rtwo$. Razor-specific triggers are used in the HLT in order to avoid
+$\Rtwo$. Razor-specific triggers, similar to those in
+Sec.~\ref{sec:hlt13TeV}, are used in the HLT in order to avoid
 biases on the shapes of distributions from the SM background that are
 introduced by requirements on more traditional selection variables
 such as $\ETm$.  The razor triggers reject the majority of the SM
@@ -21,7 +81,7 @@ muon with $\pt>12\GeV$ in combination with looser requirements on
 $\Rtwo$, $\MR$, and their product. The trigger efficiency, evaluated
 using a dedicated trigger, is measured to be $(95 \pm 5)\%$ and is
 independent of $\Rtwo$ and $\MR$ for the events selected with the
-baseline requirements described in Chapter~\ref{ch:kinematic}.
+baseline requirements described in Ch.~\ref{ch:kinematic}.
 
 Following the trigger selection, events are required to contain at
 least one reconstructed interaction vertex. If more than one vertex is
@@ -32,18 +92,18 @@ mimic event topologies with high energy and large $\pt$
 imbalance~\cite{Chatrchyan:2011tn,Chatrchyan:2012lia,Khachatryan:2014gga}.
 
 The analysis uses a global event description based on the CMS particle
-flow (PF) algorithm~\cite{PF1,PF2}. Individual particles (PF
-candidates) are reconstructed by combining the information from the inner
-tracker, the calorimeters, and the muon system. Five categories of PF
-candidates are defined: muons, electrons, photons (including their
-conversions to $\Pep\Pem$ pairs), charged hadrons, and neutral
-hadrons. The contamination from other proton-proton collisions in the
-same or in neighboring bunch crossings is reduced by discarding the
-charged PF candidates not compatible with the interaction point. When
-computing lepton isolation and jet energy, the corresponding
-contamination from neutral particles is subtracted on average by
-applying an event-by-event correction based on the jet-area
-method~\cite{jetarea_fastjet,jetarea_fastjet_pu,JME-JINST}.
+flow (PF) algorithm~\cite{PF1,PF2}, described in Sec.~\ref{sec:pf}.
+% Individual particles (PF candidates) are reconstructed by combining the information from the inner
+%tracker, the calorimeters, and the muon system. Five categories of PF
+%candidates are defined: muons, electrons, photons (including their
+%conversions to $\Pep\Pem$ pairs), charged hadrons, and neutral
+%hadrons. The contamination from other proton-proton collisions in the
+%same or in neighboring bunch crossings is reduced by discarding the
+%charged PF candidates not compatible with the interaction point. When
+%computing lepton isolation and jet energy, the corresponding
+%contamination from neutral particles is subtracted on average by
+%applying an event-by-event correction based on the jet-area
+%method~\cite{jetarea_fastjet,jetarea_fastjet_pu,JME-JINST}.
 
 A ``tight'' lepton identification is used for muons and electrons,
 consisting of requirements on isolation and track reconstruction
@@ -63,11 +123,10 @@ imbalance in the event, $\ptvecmiss$, is the
 negative of the sum of the $\ptvec$ of the PF candidates in the
 event. Its magnitude is referred to as $\ETm$. For each event, the $\ptvecmiss$ and the
 four-momenta of all the jets with $\pt>40$\GeV and $\abs{\eta}<2.4$ are
-used to compute the razor variables, as described in
-Section~\ref{sec:razVar}.
+used to compute the razor variables, as described in section~\ref{sec:kinematic}.
 
 The medium working point of the combined secondary vertex
-algorithm~\cite{btag8TeV} is used for b-jet tagging. The \PQb-tagging
+algorithm~\cite{btag8TeV}, describred in Sec.~\ref{sec:btag}, is used for \PQb-jet tagging. The \PQb-tagging
 efficiency and mistag probability are measured from data control
 samples as a function of the jet $\pt$ and $\eta$. Correction factors
 are derived for Monte Carlo (MC) simulations through comparison of the
@@ -75,18 +134,18 @@ measured and simulated \PQb-tagging efficiencies and mistag rates found
 in these control samples~\cite{btag8TeV}.
 
 Events with no \PQb-tagged jet are discarded, a criterion motivated by
-the natural SUSY signatures described in Section~\ref{sec:sms}. A tighter
+the natural SUSY signatures described in Sec.~\ref{sec:sms}. A tighter
 requirement ($\geq$2 \PQb-tagged jets) is imposed on events without an
 identified tight lepton and fewer than four jets. This requirement reduces the
-expected background from SM production of $\cPZ(\to\nu\bar\nu)$+jets
+expected background from SM production of $\cPZ(\to\nu\bar\nu)+$jets
 events to a negligible level.
 
 
 \section{Box definitions}
-\label{sec:razVar}
+\label{sec:box8TeV}
 
 The selected events are categorized into the different razor boxes according to
-their event content as shown in Table~\ref{tab:boxDef}. In the table,
+their event content as shown in Tab.~\ref{tab:boxDef}. In the table,
 the boxes are listed according to the filling order, from the first
 (at the top of the table) to the last (at the bottom). If an event
 satisfies the requirements of two or more boxes, the event is assigned
@@ -108,17 +167,18 @@ multiplicity: 1 \PQb-tag, 2 \PQb-tags, and $\geq$3 \PQb-tags.
  razor boxes. Boxes are listed in order of event filling priority.
  \label{tab:boxDef}}
 \resizebox{\textwidth}{!}{
-\begin{tabular}{ccccc}
+\begin{tabular}{l|c|c|c|c}
+\hline\hline
 Box & Lepton & \PQb-tag & Kinematic & Jet \\
 \hline
  \multicolumn{5}{c}{Two-lepton boxes}\\
 \hline
 \multirow{2}{*}{MuEle} & $\geq$1 tight electron and & \multirow{6}{*}{$\geq$1 \PQb-tag} & \multirow{2}{*}{} & \multirow{6}{*}{$\geq$2 jets}\\
 & $\geq$1 loose muon & & & \\
-\cline{1-2}
+%\cline{1-2}
 \multirow{2}{*}{MuMu} & $\geq$1 tight muon and & & ($\MR >300$\GeV and $\Rtwo > 0.15$) and & \\
 & $\geq$1 loose muon & & ($\MR > 350$\GeV  or $\Rtwo > 0.2$) & \\
-\cline{1-2}
+%\cline{1-2}
 \multirow{2}{*}{EleEle} & $\geq$1 tight electron and & & & \\
 & $\geq$1 loose electron& & & \\
 \hline
@@ -128,7 +188,7 @@ MuMultiJet & 1 tight muon & \multirow{4}{*}{$\geq$1 \PQb-tag} & & \multirow{2}{*
 %\cline{1-2}
 EleMultiJet &1 tight electron & & ($\MR > 300$\GeV and $\Rtwo > 0.15$) and & \\
 %\cline{1-2}
-\cline{5-5}
+%\cline{5-5}
 MuJet & 1 tight muon & & ($\MR > 350$\GeV or $\Rtwo > 0.2$) & \multirow{2}{*}{2 or 3 jets}\\
 %\cline{1-2}
 EleJet & 1 tight electron & & &  \\
@@ -138,7 +198,9 @@ EleJet & 1 tight electron & & &  \\
 MultiJet & none & $\geq$1 \PQb-tag & ($\MR > 400$\GeV and $\Rtwo > 0.25$) and &$\geq$4 jets\\
 %\cline{1-3}
 %\cline{5-5}
-$\geq$2 \PQb-tagged jet & none & $\geq$2 \PQb-tag &  ($\MR > 450$\GeV or $\Rtwo > 0.3$) & 2 or 3 jets\\
+$\geq$2 \PQb-tagged jet & none & $\geq$2 \PQb-tag &  ($\MR > 450$\GeV
+or $\Rtwo > 0.3$) & 2 or 3 jets\\
+\hline\hline
 \end{tabular}}
 \end{table*}
 
@@ -181,8 +243,8 @@ larger values of $\Rtwo$~\cite{razorPRL,razorPRD}.
  boxes and (right) the other boxes.}
 \end{figure}
 
-\section{Modeling of the standard model backgrounds}
-\label{sec:bmodel}
+\section{Background Modeling}
+\label{sec:bmodel8TeV}
 Under the hypothesis of no contribution from new-physics processes,
 the event distribution in the considered portion of the
 ($\MR$, $\Rtwo$) plane can be described by the sum of
@@ -212,6 +274,7 @@ negligible. The remainder of the background in each box originates
 from $\ttbar$ events.
 
 \subsection{Empirical Razor Function}
+\label{sec:function8TeV}
 Based on the study of the data collected at $\sqrt{s}=7\TeV$ and the
 corresponding MC samples~\cite{razorPRL,razorPRD}, the two-dimensional
 probability density function
@@ -265,6 +328,19 @@ only one instance of the function, but allowing the $n$ parameter to deviate
 from $1$. Fig.~\ref{fig:twoexp} illustrates the similarity between using two exponential components and using one
 instance of the generalized function.
 
+%where $\MRz$, $\Rtwoz$, $b$, and $n$ are free parameters.
+%In the original study~\cite{razorPRD}, this function with $n$ fixed to
+%$1$ was used to model the data in each category. The function choice
+%was motivated by the observation that for $n=1$, the
+%function projects to an exponential both on $\Rtwo$ and $\MR$, and $b$
+%is proportional to the exponential rate parameter in each
+%one-dimensional projection. The generalized function
+%in Eq.~(\ref{eq:razFunction}) was found to be in better agreement with the SM
+%backgrounds over a larger range of $\Rtwo$ and $\MR$~\cite{razor8TeV}. The two
+%parameters $b$ and $n$ determine the tail of the distribution in the 
+%two-dimensional plane, while the $\MRz$ ($\Rtwoz$) parameter affects the tail of the 
+%one-dimensional projection on $\Rtwo$ ($\MR$). 
+
 \begin{figure}[tb!]
 \centering
 \includegraphics[width=0.8\textwidth,clip=true,viewport= 0 70 600 410]{figs/analysis8TeV/twoexp.pdf}
@@ -311,14 +387,32 @@ respectively, where $\Gamma(a,x)$ is the incpmplete gamma function:
  \Gamma(a,x)=\int_{x}^{\infty}t^{a-1}e^{-t}\mathrm{d}t~.
 \end{equation}
 
-The shape of the empirical function is determined through a \textsc{RooFit}-based extended and unbinned
-maximum likelihood fit to the data~\cite{Verkerke:2003ir}. Two kinds
-of fit are performed: (i)~a sideband-only fit, which is extrapolated
-to the signal region in order to test for the presence of a signal
-(discussed in the remainder of this section), and (ii)~a simultaneous
-fit to the signal and sideband regions, performed both under the
-background-only and background-plus-signal hypotheses, which is used
-for the interpretation of the results (Section~\ref{sec:limit}). In both cases, the empirical function is
+
+\section{Background fit results and signal injection}
+\label{sec:fit8TeV}
+The shape of the empirical function in $\MR$ and $\Rtwo$ is determined through a
+\textsc{RooFit}-based, extended, maximum likelihood fit to the
+data~\cite{Verkerke:2003ir} performed in one of two ways: 
+\begin{itemize}
+  \item A fit to the data in the sideband regions in $\MR$ and 
+    $\Rtwo$ as a model-independent way to look for excesses or 
+    discrepancies. The fit is performed using only the data in the 
+    sideband, and the functional form is extrapolated to the full $\MR$ and $\Rtwo$ plane.
+  \item A fit to the data in the full search region in $\MR$ and $\Rtwo$ under  
+    background-only and signal-plus-background hypotheses, following 
+    a modified frequentist approach (LHC $\CLs$)~\cite{Junk:1999kv, Read:2002hq,Read:2000ru,Cowan:2010js,ATLAS:2011tau} 
+    to interpret the data in the context of particular SUSY simplified
+    models (Sec.~\ref{sec:limit8TeV}).
+\end{itemize}
+%Two kinds
+%of fit are performed: (i)~a sideband-only fit, which is extrapolated
+%to the signal region in order to test for the presence of a signal
+%(discussed in the remainder of this section), and (ii)~a simultaneous
+f%it to the signal and sideband regions, performed both under the
+%background-only and background-plus-signal hypotheses, which is used
+%for the interpretation of the results
+%(Section~\ref{sec:limit8TeV}). 
+In both cases, the empirical function is
 found to adequately describe the SM background in each of the boxes,
 for each \PQb-tagged jet multiplicity value.
 
@@ -329,7 +423,7 @@ The SM background-only likelihood function for the two-lepton boxes is written a
 \label{eq:Lik1btag}
 \end{equation}
 where $P_\mathrm{SM}(\MR,\Rtwo)$ is the empirical function in
-Eq.~(\ref{eq:razFun}) normalized to unity, $N_{SM}$ is the
+Eq.~(\ref{eq:razFun}) normalized to unity, $N_\mathrm{SM}$ is the
 corresponding normalization factor, $\boldsymbol\theta$ is the set of
 background shape and normalization parameters, and the product runs
 over the $N$ events in the data set. The same form of the
@@ -352,7 +446,7 @@ background normalization parameters for each \PQb-tagged jet multiplicity
 bin are also treated as independent parameters.
 
 The background shape parameters are estimated from the events in the
-two sidebands (Section~\ref{sec:razVar}). This shape is then used to
+two sidebands (Section~\ref{sec:box8TeV}). This shape is then used to
 derive a background prediction in the signal-sensitive region:
 $30\,000$ alternative sets of background shape parameters are generated
 from the covariance matrix returned by the fit. An ensemble of
@@ -492,12 +586,12 @@ predictions is observed.
 
 To demonstrate the discovery potential of this analysis, we apply the
 background-prediction procedure to a simulated signal-plus-background
-MC sample. Figure~\ref{fig:T1bbbbsignalinj} shows the \MR and  \Rtwo distributions of SM background events and T1bbbb
+MC sample. Figure~\ref{fig:T1bbbbT2ttsignalinj} shows the \MR and  \Rtwo distributions of SM background events and T1bbbb
 events (Section~\ref{sec:sms}). The gluino and LSP masses are set
 respectively to 1325\GeV and 50\GeV, representing a new-physics
 scenario near the expected sensitivity of the analysis. A
 signal-plus-background sample is obtained by adding the two
-distributions of Fig.~\ref{fig:T1bbbbsignalinj}, assuming an
+distributions of Fig.~\ref{fig:T1bbbbT2ttsignalinj}, assuming an
 integrated luminosity of 19.3\fbinv and a gluino-gluino production
 cross section of 0.02\unit{pb}, corresponding to 78 expected signal events
 in the signal-sensitive region. The agreement between the background
@@ -514,15 +608,16 @@ mass spectrum.
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/SMbkgd_FF.pdf}
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/SMbkgd_FF.pdf}\\
 \includegraphics[width=0.49\textwidth]{figs/analysis8TeV/T1bbbb_1325_50_FF.pdf}
-\caption{Distribution of (left) simulated SM background events and (right)
-  T1bbbb gluino-gluino events in the MultiJet box. Each $\sGlu$ is
-  forced to decay to a \bbbar pair and a $\chiz_1$,
-  assumed to be the stable LSP. The $\sGlu$ and $\chiz_1$ masses are
-  fixed to 1325\GeV and 50\GeV,
-  respectively.\label{fig:T1bbbbsignalinj}}
-
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/T2tt_800_25_FF.pdf}
+\caption{Distribution of (top) simulated SM background events,
+  (bottom left) $\sGlu\sGlu$ events, and (bottom right) $\PSQt\PSQt$
+  events in the MultiJet box. Each $\sGlu$ has mass 1325\GeV and
+  decays to a \bbbar pair and a $\chiz_1$ with mass 50\GeV. Similarly, each $\PSQt$ has mass 800\GeV and
+  decays to a $\PQt$ and a $\chiz_1$ with mass 25\GeV
+  The $\sGlu$ and $\chiz_1$ masses are
+  1325\GeV and 50\GeV, respectively.\label{fig:T1bbbbT2ttsignalinj}}
 \end{figure}
 
 \begin{figure}[htb!]
@@ -532,7 +627,7 @@ mass spectrum.
 \includegraphics[width=0.49\textwidth]{figs/analysis8TeV/nSigmaLog_MultiJet.pdf}
 \caption{Result of the fit to the sideband events of a
   signal-plus-background MC sample, corresponding to the gluino model
-  whose distribution is shown in Fig.~\ref{fig:T1bbbbsignalinj}. A
+  whose distribution is shown in Fig.~\ref{fig:T1bbbbT2ttsignalinj}. A
   gluino-gluino production cross section of 0.02\unit{pb} is assumed. The
   one-dimensional projections on (upper left) \MR and (upper right)
    \Rtwo are shown, together with (bottom) the agreement between
@@ -540,12 +635,12 @@ mass spectrum.
   function of  \Rtwo and $\MR$. This agreement is
   evaluated from a two-sided p-value using an ensemble of
   background-only pseudo-experiments as described in
-  Section~\ref{sec:bmodel}.\label{fig:FFsigma0p02}}
+  Section~\ref{sec:bmodel8TeV}.\label{fig:FFsigma0p02}}
 \end{figure}
 
 
 \section{Limit-setting procedure}
-\label{sec:limit}
+\label{sec:limit8TeV}
 
 
 We interpret the results of the searches by determining the 95\%
@@ -567,18 +662,82 @@ corresponding background yield, computed as
 b_i(\boldsymbol{\theta}) = N_{\mathrm{SM}} \int^{\MR^{\mathrm{max},i}}_{\MR^{\mathrm{min},i}}
   \int^{\Rtwo_{\mathrm{max},i}}_{\Rtwo_{\mathrm{min},i}} P_{\mathrm{SM}}(\MR,\Rtwo)  \mathrm{d}\Rtwo \mathrm{d}\MR ~,
 \end{equation}
-and the product runs over $n_b$, the
-number of bins. This then is used to define the test statistic
+and the product runs over the
+number of bins $n_b$. This then is used to define the test statistic
 following the LHC \CLs procedure,
 \begin{equation}
 \tilde q_{\mu} = -2\log\frac{\mathcal L(\mathrm{data}|\mu,\boldsymbol{\hat\theta}_{\mu})}{\mathcal L(\mathrm{data}|\hat\mu, \boldsymbol{\hat\theta})} ~,~~  0\leq\hat\mu\leq\mu~.
 \end{equation}
 
+In the frequentist paradigm, systematic uncertainties are related to
+nuisance parameters $\boldsymbol{\theta}$ that are incorporated into
+the model. Then the dependence of the test statisic on these nuisance
+parameters is removed through ``profiling'' (maximizing the likelihood
+by varying the nuisance parameters). That is the uncertainty is
+propagated by allowing the nuisance parameters to vary in determining
+the profile likelihood test statistic.
+This profiling broadens the test statistic distribution
+thus increasing the uncertainty on the parameter-of-interest $\mu$.
+
+Typically, the distribution of the test statistic is built by
+performing many MC pseudoexperiments, and then this distribution is used to
+evaluate the upper limits on $\mu$. This procedure may become very
+computationally intensive especially if there are many nuisance
+parameters that must be fit in each pseudoexperiment. Based on the
+theorems of Wald~\cite{Wald} and Wilks~\cite{Wilks:1938dza}, there is an approximate method to
+compute upper limits based on the asympotic behavior at large $N$
+(where $N$ is the size of the data sample) of the test
+statistic~\cite{Cowan:2010js}. In this asymptotic regime, the
+distribution of $\tilde q_{\mu}$ approaches a chi-square distribution
+for one degree of freedom~\cite{Wilks:1938dza}. Based on this asymptotic approximation, we
+may derive the observed 95\% CL upper limit on the signal strength
+without many MC pseudoexperiments by computing the value of $\mu$ that satisfies,
+\begin{equation}
+\mathrm{CL}_{\mathrm{s}}\equiv
+\frac{\mathrm{CL}_{\mathrm{s+b}}}{\mathrm{CL}_{\mathrm{b}}} = 
+\frac{1-\Phi(\sqrt{\tilde
+    q_{\mu}})}{\Phi(\sqrt{\tilde q_{\mu,\mathrm{A}}} - \sqrt{\tilde
+    q_{\mu}} ) } = \alpha ~,
+\end{equation}
+where $\alpha = 0.05$ and $\tilde q_{\mu,\mathrm{A}}$ is the test statistic evaluated on
+the Asimov dataset~\cite{Asimov} corresponding exactly to the expected
+background and the nominal nuisance parameters (setting all
+statistical fluctuations to zero)~\cite{Cowan:2010js,LHCCLs}. Similar
+expressions may be used to derive the median expected 95\% CL upper limit, 
+\begin{equation}
+\sqrt{\tilde q_{\mu,\mathrm{A}}} = \Phi^{-1}(1-0.5\alpha) ~,
+\end{equation}
+and to find the $\pm N\sigma$ uncertainty band about the expected limit,
+\begin{equation}
+\sqrt{\tilde q_{\mu,\mathrm{A}}} = \Phi^{-1}(1-\alpha\Phi(\pm N)\pm N)~.
+\end{equation}
+
+Conversely, in the case of a discovery, one tests $\mu=0$ and measures
+the ``local significance'' using a modified test statistic,
+\begin{equation}
+q_{0} = -2\log\frac{\mathcal
+  L(\mathrm{data}|0,\boldsymbol{\hat\theta}_{0})}{\mathcal
+  L(\mathrm{data}|\hat\mu, \boldsymbol{\hat\theta})} ~, ~~ \hat\mu\geq 0~,
+\end{equation}
+The observed local significance is then simply,
+\begin{equation}
+Z = \sqrt{q_0}~.
+\end{equation}
+To claim a discovery, the modern (sociological) standard in experimental high energy
+physics is a global p-value of $2.9\times10^{-7}$ corresponding to global
+significance of $5\sigma$, after taking into account the
+look-elsewhere effect~\cite{Lyons:2013yja,Cousins:2013hry,Gross:2010qma}.
+
+These asymptotic formulae are used in the searches conducted at
+$\sqrt{s}=13\TeV$ described in Chapters~\ref{ch:analysis13TeV}~and~\ref{ch:dijet} of this thesis. However, for the search described
+in this chapter, the final limits are based on MC pseudoexperiments.
+% due to an agreement with ATLAS
+
 For the razor search boxes, the signal contribution is modeled by a
 template function, for a given signal hypothesis in a specific box and
 a given \PQb-tagged jet multiplicity. The template function, normalized
-to unit probability, is multiplied by the expected signal yield in
-each bin ($\sigma_\mathrm{NLO+NLL} L
+to unit probability, is multiplied by the expected signal yield and
+the signal strength parameter in each bin ($\mu\sigma_\mathrm{NLO+NLL} L
 \epsilon^{\text{box}}_{\PQb\text{-tag}}$). Here $\sigma_\mathrm{NLO+NLL}$ is
 the SUSY signal cross section, $L$ is the integrated luminosity
 corresponding to the size of the data set, and
@@ -833,8 +992,8 @@ previous constraints.
 \end{figure}
 
 \section{Summary}
-\label{sec:conclusion}
-We present a search for supersymmetric particles using proton-proton
+\label{sec:conclusion8TeV}
+In this chapter, we presented the search for supersymmetric particles using proton-proton
 collision data collected by CMS in 2012 at $\sqrt{s} = 8\TeV$. The data set
 size corresponds to an integrated luminosity of 19.3\fbinv. We
 consider events with at least two jets, at least one of which is
@@ -847,7 +1006,7 @@ distribution in low-$\MR$ and low-$\Rtwo$ sidebands.
 
 The inclusive razor search is translated into 95\% confidence level
 exclusion limits on the masses of the gluino and the top squark, in the
-context of simplified ``natural'' SUSY models.  For a neutralino mass
+context of simplified natural SUSY models.  For a neutralino mass
 of 100\GeV and depending on the branching fractions, the pair
 production of gluinos and top squarks in multi-bottom, multi-top, and
 mixed top-plus-bottom quark topologies is excluded for gluino masses

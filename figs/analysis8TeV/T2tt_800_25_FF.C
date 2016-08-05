@@ -11,9 +11,9 @@
    c2->SetBorderSize(2);
    c2->SetLogx();
    c2->SetLogy();
-   c2->SetLeftMargin(0.15);
-   c2->SetRightMargin(0.15);
-   c2->SetBottomMargin(0.15);
+   //c2->SetLeftMargin(0.15);
+   //c2->SetRightMargin(0.15);
+   //c2->SetBottomMargin(0.15);
    c2->SetFrameBorderMode(0);
    c2->SetFrameBorderMode(0);
    //Double_t xAxis3[9] = {400, 450, 550, 700, 900, 1200, 1600, 2500, 4000}; 
@@ -3474,6 +3474,7 @@
    hNS->GetXaxis()->SetTitleSize(0.065);
    hNS->GetXaxis()->SetTickLength(0);
    hNS->GetXaxis()->SetTitleFont(42);
+   hNS->GetYaxis()->SetTitleOffset(0.55);
    hNS->GetYaxis()->SetTitle("R^{2}");
    hNS->GetYaxis()->SetNoExponent();
    hNS->GetYaxis()->SetLabelFont(42);
@@ -3481,7 +3482,7 @@
    hNS->GetYaxis()->SetTitleSize(0.065);
    hNS->GetYaxis()->SetTickLength(0);
    hNS->GetYaxis()->SetTitleFont(42);
-   hNS->GetZaxis()->SetTitle("Standard Deviations");
+   hNS->GetZaxis()->SetTitle("");
    hNS->GetZaxis()->SetLabelFont(42);
    hNS->GetZaxis()->SetLabelSize(0.056);
    hNS->GetZaxis()->SetTitleSize(0.056);
@@ -3637,43 +3638,43 @@
    // customization text start here
    gStyle->SetNumberContours(999);
    
-   c2->SetTopMargin(0.15);
+   c2->SetTopMargin(0.10);
    c2->SetBottomMargin(0.15);
-   c2->SetLeftMargin(0.125);
-   c2->SetRightMargin(0.10);
+   c2->SetLeftMargin(0.08);
+   c2->SetRightMargin(0.13);
    
-   TPaveText *pt = new TPaveText(0.1,0.9,0.9,0.9,"brNDC");
+   TPaveText *pt = new TPaveText(0.05,0.935,0.9,0.935,"brNDC");
    pt->SetBorderSize(0);
    pt->SetFillColor(0);
    pt->SetFillStyle(0);
    pt->SetLineColor(0);
    pt->SetTextAlign(12);
    pt->SetTextFont(42);
-   pt->SetTextSize(0.056);
-   TText *text = pt->AddText("CMS simulation #sqrt{s} = 8 TeV,  Razor MultiJet box, L = 19.3 fb^{-1}");
+   pt->SetTextSize(0.06);
+   TText *text = pt->AddText("CMS simulation #sqrt{s} = 8 TeV,  razor MultiJet box, L = 19.3 fb^{-1}");
    pt->Draw();
 
-   pt = new TPaveText(0.48,0.67,0.9,0.85,"brNDC");
+   pt = new TPaveText(0.42,0.69,0.70,0.91,"brNDC");
    pt->SetBorderSize(0);
    pt->SetFillColor(0);
    pt->SetFillStyle(0);
    pt->SetLineColor(0);
    pt->SetTextAlign(12);
    pt->SetTextFont(42);
-   pt->SetTextSize(0.055);
+   pt->SetTextSize(0.065);
    //text = pt->AddText("SM Backgrounds: t#bar{t}, W/Z+jets");
-   text = pt->AddText("pp#rightarrow#tilde{g}#tilde{g}, #tilde{g}#rightarrow t#bar{t}, #sigma = 0.01 pb");
-   text = pt->AddText("m_{#tilde{t}} = 800 GeV, m_{#tilde{#chi}} = 25 GeV");
+   text = pt->AddText("pp#rightarrow#tilde{t} #tilde{t}, #tilde{t}#rightarrow t#tilde{#chi}^{0}_{1}, #sigma = 0.01 pb");
+   text = pt->AddText("m_{#tilde{t}} = 800 GeV, m_{#tilde{#chi}^{0}_{1}} = 25 GeV");
    pt->Draw();
 
-   pt = new TPaveText(0.98,0.13,0.99,0.92,"brNDC");
+   pt = new TPaveText(0.96,0.13,0.99,0.92,"brNDC");
    pt->SetBorderSize(0);
    pt->SetFillColor(0);
    pt->SetFillStyle(0);
    pt->SetLineColor(0);
    pt->SetTextAlign(22);
    pt->SetTextFont(42);
-   pt->SetTextSize(0.055);
+   pt->SetTextSize(0.07);
    text = pt->AddText("Events");
    text->SetTextAngle(90.);
    pt->Draw();

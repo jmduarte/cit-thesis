@@ -3951,7 +3951,7 @@ tex->SetNDC();
    graph->SetHistogram(Graph_LExpP16);
    
    graph->Draw("l");
-      tex = new TLatex(0.98,0.15,"95% C.L. upper limit on cross section [pb]");
+      tex = new TLatex(0.98,0.15,"95% CL upper limit on cross section [pb]");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.045);

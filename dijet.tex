@@ -207,7 +207,7 @@ yields a significance of 2.6 standard deviations.
 %and YY standard deviations for a $\Pq\Pq$ resonance.  
 
 
-\section{Limits}
+\section{Model-Independent Limits}
 
 We use the dijet mass spectrum from wide jets, the background 
 parameterization, and the dijet resonance shapes to set
@@ -232,7 +232,7 @@ that is accounted for as a systematic uncertainty.
 
 The modified frequentist method~\cite{Junk1999,bib-cls} is
 utilized to set upper limits on signal cross sections, following the prescription
-described in Ref.~\cite{LHCCLs}.  We use a multi-bin counting experiment likelihood, which is
+described in Ref.~\cite{LHCCLs} and Sec.~\ref{sec:limit8TeV} of this thesis.  We use a multi-bin counting experiment likelihood, which is
 a product of Poisson distributions corresponding to different bins.
 We evaluate the likelihood independently at each value of resonance pole mass from 600\GeV to 1600\GeV in 50\GeV 
 steps in the low-mass search, and from 1.6\TeV to 7.5\TeV in 100\GeV steps in the high-mass search. 
@@ -317,7 +317,223 @@ than can be expected from any physical model, as they do not have any tails due 
 and located closer to the resonance pole than any combination of two
 partons can produce. 
 
-\begin{table*}[hbtp]
+We present limits with Gaussian shapes of 10\% width in order to compare the sensitivity of this search to
+the tails of the signal shape, and the sensitivity
+of these results with those from ATLAS in Ref.~\cite{ATLAS-CONF-2016-030} which presents results 
+using the same Gaussian shape.  Our limit on $\sigma\, B\, A$ with the Gaussian shape of 10\% width at 750 GeV is 1.8 pb
+expected, and the previous ATLAS limit in Ref.~\cite{ATLAS-CONF-2016-030} was 2.4 pb for a luminosity of 3.4 \fbinv. We note that the ATLAS 
+analysis used $\detajj<1.2$ which gives 93\% of the acceptance of CMS for an isotropic signal.  After adjusting for differences 
+in luminosity and acceptance between the two analyses the CMS and ATLAS sensitivities to a Gaussian resonance of mass 750 GeV and width 10\% are 
+similar.  We also note that at this resonance mass for this signal shape our reported limit, which includes systemic uncertainties, is 60\% larger 
+than the limit obtained without including systematic uncertainties. 
+For a gluon-gluon resonance at a mass of 750 GeV, systematic uncertainties increase the limit by a factor of 3, a significantly larger effect than
+for a Gaussian resonance which neglects the effect of radiation. Our limits on hypothetical Gaussian resonances
+are only recommended for such comparisons, 
+as we have demonstrated that these Gaussian shapes neglect the sizable tails due to QCD radiation, and are consequently more narrow and result in 
+significantly better limits than can be physically expected for any pair of partons.  
+
+\section{Model-Dependent Limits}
+
+All upper limits presented can be compared to the parton-level predictions of $\sigma\, B\, A$, without detector simulation,
+to determine mass limits on new particles.
+The model predictions shown in Fig.~\ref{figLimitLow}-\ref{figLimitAll} are calculated in the narrow-width
+approximation~\cite{Harris:2011bh} using the CTEQ6L1~\cite{refCTEQ} PDF at leading order,
+with a next-to-leading order correction factor included for the $\PWpr$, $\PZpr$, and axigluon/coloron models~\cite{Chivukula:2013xla}. 
+The acceptance is evaluated at the parton level for the resonance decay to two partons. In the case of isotropic
+decays it is $A\approx 0.6$ independent of resonance mass.
+For a given model, new particles are excluded at 95\% \CL in mass regions where the theoretical prediction
+lies at or above the observed upper limit for the appropriate final state of Fig.~\ref{figLimitLow}-\ref{figLimitAll}.
+For the RS graviton model, for which 60\%(40\%) of the cross section comes from sub-proceses with 
+only quarks(gluons) in the final state, we obtain mass limits by comparing the RS graviton
+cross section curve to a weighted average of the limits in the quark-quark and gluon-gluon final states.
+The mass limits are reported in Table~\ref{tab:MassLimit} for all
+models.
+
+\begin{table}[ht]
+  \caption{ Observed and expected mass limits at 95\% CL from this analysis with \RunLumi at $\sqrt{s}=13$\TeV 
+  compared to previously published limits on narrow resonances from CMS with 2.4\fbinv at $\sqrt{s}=13$\TeV~\cite{Khachatryan:2015dcf} 
+  and  with 20\fbinv at $\sqrt{s}=8$\TeV~\cite{Khachatryan:2015sja}. The listed models are excluded between \minMassLow 
+  and the indicated mass limit by this analysis. For the $\PZpr$ model, in addition to the observed mass limit
+  listed below, this analysis also excludes the mass interval between 2.3 and 2.6 \TeV.}
+  \centering
+  \begin{tabular}{lcccc}\hline\hline
+          &                                 & \multicolumn{3}{c}{Observed (expected) mass limit [\TeVns{}]} \\
+    Model & Final                           & \RunLumi      & 2.4\fbinv      & 20\fbinv \\
+          & State                           & 13\TeV        & 13\TeV         & 8\TeV \\
+    \hline
+String   & $\PQq\Pg$                        & 7.4\ (7.4)    & 7.0\ (6.9)     & 5.0\ (4.9)\\
+Scalar diquark  & $\PQq\PQq$                & 6.9\ (6.8)    & 6.0\ (6.1)     & 4.7\ (4.4)\\
+Axigluon/coloron  & $\PQq\PAQq$             & 5.5\ (5.6)    & 5.1\ (5.1)     & 3.7\ (3.9)\\
+Excited quark  &  $\PQq\Pg$                 & 5.4\ (5.4)    & 5.0\ (4.8)     & 3.5\ (3.7)\\
+Color-octet scalar ($k_s^2=1/2$) & $\Pg\Pg$ & 3.0\ (3.3)    & ---            & --- \\
+$\PWpr$ & $\PQq\PAQq$                       & 2.7\ (3.1)    & 2.6\ (2.3)     & 2.2\ (2.2)\\
+$\PZpr$ & $\PQq\PAQq$                       & 2.1\ (2.3)    & ---            & 1.7\ (1.8)\\
+RS Graviton  & $\PQq\PAQq$, $\Pg\Pg$        & 1.9\ (1.8)    & ---            & 1.6\ (1.3)\\\hline\hline
+ \end{tabular}
+\label{tab:MassLimit}
+\end{table}
+
+Following the theoretical framework of Ref.~\cite{Dobrescu:2013coa},
+the upper limits on the cross section of narrow $\PQq\PQq$ resonances are
+translated into 95\% CL upper limits on the coupling
+$g_B$ of a hypothetical leptophobic resonance $\PZpr_B \to\Pq \PAQq$
+as a function of its mass.  The $\PZpr_B$ production cross section
+scales with the square of the coupling $g_B$.  Fig.~\ref{fig:gBvsMZ}
+shows the upper limits obtained with the low-mass search in
+the mass region from 600 to 1600\GeV and with the high-mass search in
+the mass region from 1600 \GeV to 2100\GeV. The limits are competitive with the
+coverage of previous CMS searches at $\sqrt{s}=8
+\TeV$~\cite{Khachatryan:2016ecr}.  Previous exclusions obtained with
+similar searches at various collider energies~\cite{Khachatryan:2016ecr,ATLAS:2015nsi,Dobrescu:2013coa,Aad:2014aqa} are also shown. 
+%As a result of the large data set collected by the data scouting stream,
+%the bound on $g_B$ is improved by up to a factor of 3 for resonance
+%masses between 500 and 800\GeV, compared to previous searches. This
+%corresponds to an order-of-magnitude improvement in the cross section
+%limit.
+
+\begin{figure}
+\centering
+%\includegraphics[width=0.9\textwidth]{figs/dijet/gB_Limits_ALL_with_uncertainty.pdf}
+\includegraphics[width=0.9\textwidth]{figs/dijet/gB_Limits_12_9_ifb.pdf}
+\caption{Observed 95\% \CLp~upper limits on the coupling $g_B$ of a hypothetical leptophobic
+resonance $\PZpr_B \to\PQq \PAQq$~\cite{Dobrescu:2013coa} as a
+function of its mass. The results from this study are compared to
+results obtained with similar searches at different collider
+energies~\cite{Khachatryan:2016ecr,ATLAS:2015nsi,Dobrescu:2013coa,Aad:2014aqa}.\label{fig:gBvsMZ}}
+\end{figure}
+
+The results of the dijet search also have an impact on the allowed
+parameter space in models of dark matter (DM) production at the
+LHC if the mediator is also accessible.
+We may use a similar simplified model to quantify this impact,
+consisting of a leptophobic vector (V) or axial-vector (AV) mediator
+$\PZpr_B$ with couplings to quarks and the DM particle $\chi$~\cite{Boveia:2016mrp,Dobrescu:2013coa}:
+\begin{align}
+\mathcal L_\mathrm{V} &=
+                        -g_{\mathrm{DM}}Z^{\prime}_{B\mu}\overline\chi\gamma^{\mu}\chi
+                        - g^{\prime}_{\Pq}\sum_{\Pq}Z^{\prime}_{B\mu}\bar q\gamma^{\mu} q~,\\
+\mathcal L_\mathrm{AV} &= -g_{\mathrm{DM}}Z^{\prime}_{B\mu}\overline\chi\gamma^{\mu}\gamma_5\chi-g^{\prime}_{\Pq}\sum_{\Pq}Z^{\prime}_{B\mu}\bar q\gamma^{\mu} \gamma_5q~,
+\end{align}
+where $g_{\mathrm{DM}}$ is the coupling of the mediator to the DM particles and $g_{\Pq}^{\prime}=g_B^{\prime}/6$ is the univeral coupling of all quark flavors to the mediator.
+%For V and AV models we follow section 2.1 and S
+%and PS models we use the definition provided in section 2.2 of
+%Ref.~\cite{Boveia:2016mrp}. 
+%As the reinterpretation of pure mediator searches like the CMS dijet
+%analysis requires to take into account different final states
+%(e.g. quarks and DM), we repeat here the definition of the V and AV
+%that are used to compare mediator searches like dijets with \MET
+%based DM searches like monojets. 
+The results of the search for a narrow $\Pq\Paq$ resonance may then be reinterpretted as a search for
+the mediator when it decays to quarks. In this model, the minimal decay width of the mediator is given by the sum of the partial widths for
+all decays into DM particles and quarks that are kinematically accessible: 
+\begin{equation}
+\Gamma^{\mathrm{tot}} =
+\Gamma^{\chi\overline\chi} + 3 \sum_{\Pq} \Gamma^{\Pq\Paq}
+\end{equation}
+The partial widths are given by:
+\begin{align}
+\Gamma^{\chi\overline\chi}_{\mathrm{V}} &=
+\frac{g^2_{\mathrm{DM}}m_{\mathrm{med}}}{12\pi} \left ( 1 - 4
+  \frac{m^2_{\mathrm{DM}}}{m^2_{\mathrm{med}}}  \right )^{1/2} \left ( 1 + 2
+  \frac{m^2_{\mathrm{DM}}}{m^2_{\mathrm{med}}}  \right ) ~,\\
+\Gamma^{\chi\overline\chi}_{\mathrm{AV}} &=
+\frac{g^2_{\mathrm{DM}}m_{\mathrm{med}}}{12\pi} \left ( 1 - 4
+  \frac{m^2_{\mathrm{DM}}}{m^2_{\mathrm{med}}}  \right )^{3/2} ~,\\
+\Gamma^{\Pq\Paq}_{\mathrm{V}} &=
+\frac{(g^{\prime}_{\Pq})^2m_{\mathrm{med}}}{4\pi} \left ( 1 - 4
+  \frac{m^2_{\Pq}}{m^2_{\mathrm{med}}}  \right )^{1/2}\left ( 1 + 2
+  \frac{m^2_{\Pq}}{m^2_{\mathrm{med}}}  \right ) ~,\\
+\Gamma^{\Pq\Paq}_{\mathrm{AV}} &=
+\frac{(g^{\prime}_{\Pq})^2m_{\mathrm{med}}}{4\pi} \left ( 1 - 4
+  \frac{m^2_{\Pq}}{m^2_{\mathrm{med}}}  \right )^{3/2} ~,
+\end{align}
+where $m_{\mathrm{med}}$ is the mediator mass, $m_{\mathrm{DM}}$ is
+the mass of the DM particle, which is assumed to be a Dirac fermion,
+and $m_{\Pq}$ is the quark mass. The two different types
+of contribution to the total width vanish for $m_{\mathrm{med}} < 2
+m_{\mathrm{DM}}$ and $m_{\mathrm{med}} < 2 m_{\Pq}$, respectively.
+
+To derive the limit on $g_B^{\prime}$ in this model in the case of
+a nonzero mediator decay width to DM particles $\Gamma^{\chi\overline\chi}$, it
+is simplest to begin with the limit on $g_B$ in the case of zero decay
+width to DM particles (see Fig.~\ref{fig:gBvsMZ}) and correct for the DM width,
+\begin{align}
+\sigma[\PZpr_B\to\Pq\Paq|g_B^{\prime},g_{\mathrm{DM}}] &=\sigma(\PZpr_B\to\Pq\Paq| g_B, g_{\mathrm{DM}}=0) \\
+\Rightarrow \frac{(g_B^{\prime})^4}{\Gamma^{\Pq\Paq}(g_B^{\prime}) +
+  \Gamma^{\chi\overline\chi}}& =\frac{g_B^4}{\Gamma^{\Pq\Paq}(g_B)} \\
+\Rightarrow (g^{\prime}_B)^2&=\frac{g_B^2}{2}\left(1 + \sqrt{1+ 4\frac{\Gamma^{\chi\overline\chi}}{\Gamma^{\Pq\Paq}}}\right )~.
+\end{align}
+
+Fig.~\ref{fig:DMsummary} shows 95\% CL exclusion regions in $m_{\mathrm{med}}-m_{\mathrm{DM}}$ plane for dijet
+  searches~\cite{CMS-PAS-EXO-16-032,Khachatryan:2016ecr} and
+  different $\MET$ based DM searches~\cite{CMS-PAS-EXO-16-030,CMS-PAS-EXO-16-037,CMS-PAS-EXO-16-039,CMS-PAS-EXO-16-010} from CMS in the leptophobic
+ vector and  axial-vector models defined above. Following the
+  recommendation of the LHC DM working
+  group~\cite{Boveia:2016mrp,Abdallah:2015ter}, the exclusions are
+  computed for a universal quark coupling $g_{\Pq}^{\prime} = 0.25$ and for a DM
+  coupling of $g_{\mathrm{DM}} = 1.0$.
+%The CMS dijet searches are reinterpreted using the model prediction after applying the kinematic cuts of the search on
+%generator-level events and comparing it to the observed and expected
+%exclusions on $\PQq\PAQq$ resonances. 
+The combination of the low- and high-mass searches excludes all values
+of DM particle mass between 0.5 \TeV and 2 \TeV in mediator mass. Above 2 \TeV
+in mediator mass, the observed exclusion depends on the mass of the DM particle,
+which reflects the change in the relative ratio of the quark and DM
+partial widths, and goes up to 2.7 \TeV for heavy DM particles. The exclusion
+limits are very similar for the V and AV models, as expected. 
+%It should be noted that the absolute exclusion regions of the different searches as well as their relative
+%importance strongly depends on the chosen coupling and model
+%scenario. Therefore, the exclusion regions, relic density contours,
+%and unitarity curve shown in this plot are not applicable to other
+%choices of coupling values or model.
+
+\begin{figure}
+\centering 
+\includegraphics[width=0.9\textwidth]{figs/dijet/Vector_EXO_Summary_ICHEP.pdf}\\
+\includegraphics[width=0.9\textwidth]{figs/dijet/Axial_EXO_Summary_ICHEP.pdf}
+\caption{95\% CL exclusion regions in
+  $m_{\mathrm{med}}-m_{\mathrm{DM}}$ plane for dijet
+  searches~\cite{CMS-PAS-EXO-16-032,Khachatryan:2016ecr} and
+  different $\MET$ based DM searches~\cite{CMS-PAS-EXO-16-030,CMS-PAS-EXO-16-037,CMS-PAS-EXO-16-039,CMS-PAS-EXO-16-010} from CMS in the leptophobic
+  vector (top) and axial-vector (bottom) models. Following the
+  recommendation of the LHC DM working
+  group~\cite{Boveia:2016mrp,Abdallah:2015ter}, the exclusions are
+  computed for a universal quark coupling $g^{\prime}_{\Pq} = 0.25$ and for a DM
+  coupling of $g_{\mathrm{DM}} = 1.0$. It should be noted that the relic density
+  contours, unitarity curves, and the exclusion regions of the
+  different searches strongly depend on the chosen coupling and model
+  scenario.\label{fig:DMsummary}}
+\end{figure}
+
+
+%At a resonance mass of 750 GeV for a gluon-gluon resonance the observed limit is 12.9 pb and the expected limit is 9.6 pb,
+%and for a quark-quark resonance the observed limit is 5.6 pb and the expected limit is 3.3 pb.
+%Considering a resonance mass of 750 GeV these limits can be compared to the run 1 limit
+%at $\sqrt{s}=8$\TeV~\cite{Khachatryan:2016ecr} by taking the ratio with a particular model cross section. For example, at $\sqrt{s}=13$\TeV the ratio
+%of the observed upper limit for a gluon-gluon resonance to the cross section for the RS graviton sub-process $gg\rightarrow G \rightarrow gg$ is 
+%$12.9/9.6=1.34$, which is less sensitive than the observed ratio at  $\sqrt{s}=8$\TeV which is  $1.8/1.9=0.95$. 
+%Therefore, this limit on the di-gluon decays of a  narrow resonance at 750 GeV is less stringent than that previously presented in Run 1, 
+
+\section{Conclusions}
+
+
+In summary, two searches for narrow resonances decaying into a pair of jets have been performed using
+pp collisions at $\sqrt{s}=13$\TeV corresponding to an integrated luminosity of \RunLumi. A low-mass search using data scouting from the high-level trigger 
+with calorimeter jets and a high-mass search using particle-flow jets. The dijet mass spectra have been measured to be smoothly falling
+distributions. In the analyzed data samples, there is no evidence for resonant particle production.
+We present generic upper limits on the product $\sigma\, B\, A$ for narrow quark-quark, quark-gluon and gluon-gluon
+resonances that are applicable to any model of narrow dijet resonance production.
+We set mass limits at 95\% CL on models of string resonances, scalar diquarks, excited quarks, axigluons, colorons, color octet scalars, 
+$\PWpr$ bosons, $\PZpr$ bosons, and RS gravitons, which
+extend previously published limits in the dijet channel. We also set
+limits on the coupling of a leptophobic $\PZpr_B$ boson as a
+function of its mass. Finally, these limits are translated to
+determine the impact of the dijet searches on the allowed parameter
+space in models of dark matter production at the LHC. 
+
+
+\clearpage
+\begin{table*}[h!]
   \caption{Limits from the low-mass search. Observed and expected upper limits at 95\% CL on $\sigma \times B \times A$ for a
     $\cPg\cPg$ resonance, a $\cPq\cPg$ resonance, a $\cPq\cPq$ resonance, and a 10\% Gaussian lineshape as a function
     of the resonance mass.
@@ -358,7 +574,7 @@ partons can produce.
     \end{tabular}}
 \end{table*}
 
-\begin{table*}[hbtp]
+\begin{table*}[h!]
   \caption{Limits from the high-mass search. Observed and expected upper limits at 95\% CL on $\sigma \times B \times A$ for a
     $\cPg\cPg$ resonance, a $\cPq\cPg$ resonance, and a $\cPq\cPq$ resonance as a function
     of the resonance mass.
@@ -437,108 +653,3 @@ partons can produce.
       \hline
     \end{tabular}}
 \end{table*}
-
-All upper limits presented can be compared to the parton-level predictions of $\sigma\, B\, A$, without detector simulation,
-to determine mass limits on new particles.
-The model predictions shown in Fig.~\ref{figLimitLow}-\ref{figLimitAll} are calculated in the narrow-width
-approximation~\cite{Harris:2011bh} using the CTEQ6L1~\cite{refCTEQ} PDF at leading order,
-with a next-to-leading order correction factor included for the $\PWpr$, $\PZpr$, and axigluon/coloron models~\cite{Chivukula:2013xla}. 
-The acceptance is evaluated at the parton level for the resonance decay to two partons. In the case of isotropic
-decays it is $A\approx 0.6$ independent of resonance mass.
-For a given model, new particles are excluded at 95\% \CL in mass regions where the theoretical prediction
-lies at or above the observed upper limit for the appropriate final state of Fig.~\ref{figLimitLow}-\ref{figLimitAll}.
-For the RS graviton model, for which 60\%(40\%) of the cross section comes from sub-proceses with 
-only quarks(gluons) in the final state, we obtain mass limits by comparing the RS graviton
-cross section curve to a weighted average of the limits in the quark-quark and gluon-gluon final states.
-The mass limits are reported in Table~\ref{tab:MassLimit} for all
-models.
-
-Following the theoretical framework of Ref.~\cite{Dobrescu:2013coa},
-the model-independent upper limits on the cross section of $\PQq\PQq$
-resonances are translated into 95\% \CLp~upper limits on the coupling
-$g_B$ of a hypothetical leptophobic resonance $\PZpr_B \to\Pq \PAQq$
-as a function of its mass.  The $\PZpr_B$ production cross section
-scales with the square of the coupling $g_B$.  Fig.~\ref{fig:gBvsMZ}
-shows the upper limits obtained with the data scouting technique in
-the mass region from 600 to 1600\GeV, which are competetive with the
-coverage of previous CMS searches using data scouting at $\sqrt{s}=8
-\TeV$~\cite{Khachatryan:2016ecr}.  Previous exclusions obtained with
-similar searches at various collider energies are also shown. 
-%As a result of the large data set collected by the data scouting stream,
-%the bound on $g_B$ is improved by up to a factor of 3 for resonance
-%masses between 500 and 800\GeV, compared to previous searches. This
-%corresponds to an order-of-magnitude improvement in the cross section
-%limit.
-
-\begin{figure}
-\centering
-%\includegraphics[width=0.9\textwidth]{figs/dijet/gB_Limits_ALL_with_uncertainty.pdf}
-\includegraphics[width=0.9\textwidth]{figs/dijet/gB_Limits_12_9_ifb.pdf}
-\caption{Observed 95\% \CLp~upper limits on the coupling $g_B$ of a hypothetical leptophobic
-resonance $\PZpr_B \to\PQq \PAQq$~\cite{Dobrescu:2013coa} as a
-function of its mass. The results from this study are compared to
-results obtained with similar searches at different collider
-energies~\cite{Khachatryan:2016ecr,ATLAS:2015nsi,Dobrescu:2013coa,Aad:2014aqa}.\label{fig:gBvsMZ}}
-\end{figure}
-
-
-\begin{table}[ht]
-  \caption{ Observed and expected mass limits at 95\% CL from this analysis with \RunLumi at $\sqrt{s}=13$\TeV 
-  compared to previously published limits on narrow resonances from CMS with 2.4\fbinv at $\sqrt{s}=13$\TeV~\cite{Khachatryan:2015dcf} 
-  and  with 20\fbinv at $\sqrt{s}=8$\TeV~\cite{Khachatryan:2015sja}. The listed models are excluded between \minMassLow 
-  and the indicated mass limit by this analysis. For the $\PZpr$ model, in addition to the observed mass limit
-  listed below, this analysis also excludes the mass interval between 2.3 and 2.6 \TeV.}
-  \centering
-  \begin{tabular}{lcccc}
-          &                                 & \multicolumn{3}{c}{Observed (expected) mass limit [\TeVns{}]} \\
-    Model & Final                           & \RunLumi      & 2.4\fbinv      & 20\fbinv \\
-          & State                           & 13\TeV        & 13\TeV         & 8\TeV \\
-    \hline
-String   & $\PQq\Pg$                        & 7.4\ (7.4)    & 7.0\ (6.9)     & 5.0\ (4.9)\\
-Scalar diquark  & $\PQq\PQq$                & 6.9\ (6.8)    & 6.0\ (6.1)     & 4.7\ (4.4)\\
-Axigluon/coloron  & $\PQq\PAQq$             & 5.5\ (5.6)    & 5.1\ (5.1)     & 3.7\ (3.9)\\
-Excited quark  &  $\PQq\Pg$                 & 5.4\ (5.4)    & 5.0\ (4.8)     & 3.5\ (3.7)\\
-Color-octet scalar ($k_s^2=1/2$) & $\Pg\Pg$ & 3.0\ (3.3)    & ---            & --- \\
-$\PWpr$ & $\PQq\PAQq$                       & 2.7\ (3.1)    & 2.6\ (2.3)     & 2.2\ (2.2)\\
-$\PZpr$ & $\PQq\PAQq$                       & 2.1\ (2.3)    & ---            & 1.7\ (1.8)\\
-RS Graviton  & $\PQq\PAQq$, $\Pg\Pg$        & 1.9\ (1.8)    & ---            & 1.6\ (1.3)\\
- \end{tabular}
-\label{tab:MassLimit}
-\end{table}
-
-
-%At a resonance mass of 750 GeV for a gluon-gluon resonance the observed limit is 12.9 pb and the expected limit is 9.6 pb,
-%and for a quark-quark resonance the observed limit is 5.6 pb and the expected limit is 3.3 pb.
-%Considering a resonance mass of 750 GeV these limits can be compared to the run 1 limit
-%at $\sqrt{s}=8$\TeV~\cite{Khachatryan:2016ecr} by taking the ratio with a particular model cross section. For example, at $\sqrt{s}=13$\TeV the ratio
-%of the observed upper limit for a gluon-gluon resonance to the cross section for the RS graviton sub-process $gg\rightarrow G \rightarrow gg$ is 
-%$12.9/9.6=1.34$, which is less sensitive than the observed ratio at  $\sqrt{s}=8$\TeV which is  $1.8/1.9=0.95$. 
-%Therefore, this limit on the di-gluon decays of a  narrow resonance at 750 GeV is less stringent than that previously presented in Run 1, 
-
-We have presented limits with Gaussian shapes of 10\% width in order to compare the sensitivity of this search to
-the tails of the signal shape, and the sensitivity
-of these results with those from ATLAS in Ref.~\cite{ATLAS-CONF-2016-030} which presents results 
-using the same Gaussian shape.  Our limit on $\sigma\, B\, A$ with the Gaussian shape of 10\% width at 750 GeV is 1.8 pb
-expected, and the previous ATLAS limit in Ref.~\cite{ATLAS-CONF-2016-030} was 2.4 pb for a luminosity of 3.4 \fbinv. We note that the ATLAS 
-analysis used $\detajj<1.2$ which gives 93\% of the acceptance of CMS for an isotropic signal.  After adjusting for differences 
-in luminosity and acceptance between the two analyses the CMS and ATLAS sensitivities to a Gaussian resonance of mass 750 GeV and width 10\% are 
-similar.  We also note that at this resonance mass for this signal shape our reported limit, which includes systemic uncertainties, is 60\% larger 
-than the limit obtained without including systematic uncertainties. 
-For a gluon-gluon resonance at a mass of 750 GeV, systematic uncertainties increase the limit by a factor of 3, a significantly larger effect than
-for a Gaussian resonance which neglects the effect of radiation. Our limits on hypothetical Gaussian resonances
-are only recommended for such comparisons, 
-as we have demonstrated that these Gaussian shapes neglect the sizable tails due to QCD radiation, and are consequently more narrow and result in 
-significantly better limits than can be physically expected for any pair of partons.  
-
-
-\section{Conclusions}
-
-
-In summary, two searches for narrow resonances decaying into a pair of jets have been performed using
-pp collisions at $\sqrt{s}=13$\TeV corresponding to an integrated luminosity of \RunLumi. A low-mass search using data scouting from the HLT trigger 
-with calorimeter jets and a high-mass search using particle flow jets. The dijet mass spectra have been measured to be smoothly falling
-distributions. In the analyzed data samples, there is no evidence for resonant particle production.
-We present generic upper limits on the product $\sigma\, B\, A$ for narrow quark-quark, quark-gluon and gluon-gluon
-resonances that are applicable to any model of narrow dijet resonance production.
-We set mass limits at 95\% CL on models of string resonances, scalar diquarks, excited quarks, axigluons, colorons, color octet scalars, 
-W$^{\prime}$ bosons, Z$^{\prime}$ bosons, and RS gravitons, which extend previously published limits in the dijet channel.

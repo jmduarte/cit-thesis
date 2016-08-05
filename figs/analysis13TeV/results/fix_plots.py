@@ -16,16 +16,19 @@ if __name__ == '__main__':
     
     MRbins = {'MultiJet':[500,600, 700, 900, 1200, 1600, 2500, 4000],
               'MuMultiJet':[400, 500,600, 700, 900, 1200, 1600, 2500, 4000],
-              'EleMultiJet':[400, 500,600, 700, 900, 1200, 1600, 2500, 4000]
+              'EleMultiJet':[400, 500,600, 700, 900, 1200, 1600, 2500, 4000],
+              'LeptonMultiJet':[400, 500,600, 700, 900, 1200, 1600, 2500, 4000]
               }
     Rsqbins = {'MultiJet':[0.25,0.30,0.41,0.52,0.64,1.5],
                'MuMultiJet':[0.15,0.20,0.25,0.30,0.41,0.52,0.64,1.5],
-               'EleMultiJet':[0.15,0.20,0.25,0.30,0.41,0.52,0.64,1.5]
+               'EleMultiJet':[0.15,0.20,0.25,0.30,0.41,0.52,0.64,1.5],
+               'LeptonMultiJet':[0.15,0.20,0.25,0.30,0.41,0.52,0.64,1.5]
                }
         
-    newBox = {'MultiJet':'Multi-Jet',
-               'MuMultiJet':'Muon Multi-Jet',
-               'EleMultiJet':'Electron Multi-Jet'
+    newBox = {'MultiJet':'Multijet',
+               'MuMultiJet':'Muon Multijet',
+               'EleMultiJet':'Electron Multijet',
+               'LeptonMultiJet':'Lepton Multijet'
                 }
 
     
@@ -35,12 +38,15 @@ if __name__ == '__main__':
 
     mapToReplace = {'tex = new TLatex(0.75,0.9,"2.2 fb^{-1} (13 TeV)");':'tex = new TLatex(0.82,0.9,"2.3 fb^{-1} (13 TeV)");',
                     'tex = new TLatex(0.75,0.9,"2.1 fb^{-1} (13 TeV)");':'tex = new TLatex(0.82,0.9,"2.3 fb^{-1} (13 TeV)");',
+                    'tex = new TLatex(0.75,0.9,"2.6 fb^{-1} (13 TeV)");':'tex = new TLatex(0.82,0.9,"2.6 fb^{-1} (13 TeV)");',
                     'CMS preliminary':'CMS',
                     'CMS simulation':'CMS',
-                    'razor %s 0 b-tag Sideband Fit'%box:'%s 0 b-tag Sideband Fit'%newBox[box],
-                    'razor %s 1 b-tag Sideband Fit'%box:'%s 1 b-tag Sideband Fit'%newBox[box],
-                    'razor %s 2 b-tag Sideband Fit'%box:'%s 2 b-tag Sideband Fit'%newBox[box],
-                    'razor %s #geq 3 b-tag Sideband Fit'%box:'%s #geq 3 b-tag Sideband Fit'%newBox[box],
+                    'Fit Total':'Fit total',
+                    'Sim. Data':'Sim. data',
+                    'razor %s 0 b-tag Sideband Fit'%box:'%s 0 b-tag sideband fit'%newBox[box],
+                    'razor %s 1 b-tag Sideband Fit'%box:'%s 1 b-tag sideband fit'%newBox[box],
+                    'razor %s 2 b-tag Sideband Fit'%box:'%s 2 b-tag sideband fit'%newBox[box],
+                    'razor %s #geq 3 b-tag Sideband Fit'%box:'%s #geq 3 b-tag sideband fit'%newBox[box],
                     '1,1,500,376':'1,1,700,400',
                     'h_RsqMR_nsigma_%ibtag1d->Draw("pesame");'%btag:'h_RsqMR_nsigma_%ibtag1d->Draw("psame");'%btag,
                     'c_pad1->SetBottomMargin(0);':'c_pad1->SetBottomMargin(0.17);',

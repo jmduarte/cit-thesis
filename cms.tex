@@ -102,7 +102,7 @@ versus time for $2010-2016$ is shown in Fig.~\ref{fig:IntLumi20102016}.
 \begin{figure}\centering
 \includegraphics[width=.9\textwidth]{figs/cms/int_lumi_cumulative_pp_2.pdf}
 \caption{Cumulative luminosity versus day delivered to CMS during
-  stable beams for pp collisions. This is shown for 2010 (green), 2011
+  stable beams for $\Pp\Pp$  collisions. This is shown for 2010 (green), 2011
   (red), 2012 (blue), 2015 (purple) and 2016 (orange)
   data-taking.\label{fig:IntLumi20102016}}
 \end{figure}
@@ -245,7 +245,7 @@ simulation.
 \caption{(Top) Schematic cross section through the CMS tracker in the $r-z$
   plane. (Bottom) Total thickness $t$ of the tracker material
   traversed by a particle produced at the nominal interaction point,
-  as a function of pseudorapidity η, expressed in units of radiation
+  as a function of pseudorapidity $\eta$, expressed in units of radiation
   length $X_0$ (left) and nuclear interaction length $\lambda_I$
   (right). \label{fig:tracker}}
 \end{figure}
@@ -429,12 +429,21 @@ The \emph{particle-flow (PF) reconstruction algorithm}, developed before the sta
 LHC, commissioned with the first 2010 data at
 $\sqrt{s}=7$ \TeV, and still in use during Run 2, is an attempt to
 construct a global event description based on an optimal combination
-of information from all subdetectors.
-This global event description leads to significantly improved performance for electron and muon identification, jet and
+of information from all subdetectors. Individual particles (PF candidates) are reconstructed by combining the information from the inner
+tracker, the calorimeters, and the muon system. Five categories of PF
+candidates are defined: muons, electrons, photons (including their
+conversions to $\Pep\Pem$ pairs), charged hadrons, and neutral
+hadrons. This global event description leads to significantly improved performance for electron and muon identification, jet and
 hadronic $\tau$ decay reconstruction, and missing transverse energy
-evaluation. This approach also enables identification and masking of
-particles produced by parasitic (pile-up) interactions towards
-efficient pile-up mitigations methods. PF reconstruction also minimizes the need
+evaluation. 
+
+This approach enables the mitigation of effects due to
+particles produced by additional $\Pp\Pp$ collisions in the same or in neigboring bunch
+crossings (pileup). Charged PF candidates not compatible
+with the interaction point are discarded and when computing lepton
+isolation and jet energy, the corresponding contamination from neutral
+particles is subtracted on average by applying an event-by-event correction based on the jet-area
+method~\cite{jetarea_fastjet,jetarea_fastjet_pu,JME-JINST}. PF reconstruction also minimizes the need
 for a posteriori corrections inherent to the information missing in
 the traditional physics object reconstruction path. 
 
@@ -609,7 +618,7 @@ displaying the systematic uncertainty of the simulation. The last bin contains t
 \end{figure}
 
 \subsection{Identification of \PQb-quark Jets}
-
+\label{sec:btag}
 Jets that arise from bottom-quark hadronization (\cPqb-jets) are
 present in many physics processes, such as the decay of top quarks,
 the Higgs boson, and top and bottom squarks predicted by natural supersymmetric models. 
@@ -622,7 +631,18 @@ The properties of the bottom and, to a lesser extent, the charm
 hadrons can be used to identify the hadronic jets into which the
 \cPqb\ and \cPqc\ quarks fragment.  These hadrons have relatively
 large masses, long lifetimes ($c\tau\sim 450~\mu\mathrm{m}$) and daughter particles with hard momentum
-spectra. Their semileptonic decays can be exploited as well. 
+spectra. Their semileptonic decays can be exploited as well.
+
+A variety of reconstructed objects -- tracks, vertices and identified
+leptons -- can be used to build observables that discriminate between
+\Pqb- and light-parton jets. Several simple and robust algorithms use
+just a single observable, while others combine several of these
+objects to achieve a higher discrimination power. Each of these
+algorithms yields a single discriminator value for each jet. The
+minimum thresholds on these discriminators define loose (``L''), medium
+(``M''), and tight (``T'') operating points with a misidentification
+probability for light-parton jets of close to 10\%, 1\%, and 0.1\%,
+respectively, at an average jet \pt of about $80 \GeV$.
 
 The algorithm that was shown to have the best performance
 in terms of \cPqb-jet identification efficiency and light-parton-jet fake rate

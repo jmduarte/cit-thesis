@@ -27,8 +27,8 @@ characteristic mass scale $M_{\Delta}\gtrsim 500 \GeV$ and sufficient
 transverse momentum imbalance. Another update is that the 13 \TeV razor triggers are based on PF-reconstructed objects rather
 than Calo jets and muons, which means the online $\Rtwo$ variable is
 much more correlated with the offline $\Rtwo$ variable, which is also
-PF-based. This leads to an improved trigger efficiency for 2015, shown
-in Fig.~\ref{fig:turnons}.
+PF-based. This leads to an improved trigger efficiency plateau of
+$97\%$ for 2015 (compared to $95\%$ in 2012), shown in Fig.~\ref{fig:turnons}.
 
 \begin{figure}[htb!]
 \centering
@@ -39,9 +39,9 @@ in Fig.~\ref{fig:turnons}.
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=0.45\textwidth]{figs/hlt13TeV/turnons_2015_no100GeVmuons/HLT_RsqMR240_Rsq0p09_MR200_HLT_RsqMR240_Rsq0p09_MR200_4jet_HLT_Rsq0p25_HLT_Ele27_eta2p1_WPLoose_Gsf_effRsq_MR500.pdf}
-\includegraphics[width=0.45\textwidth]{figs/hlt13TeV/turnons_2015_no100GeVmuons/HLT_RsqMR240_Rsq0p09_MR200_HLT_RsqMR240_Rsq0p09_MR200_4jet_HLT_Rsq0p25_HLT_Ele27_eta2p1_WPLoose_Gsf_effMR_Rsq0p25.pdf}\\
-\includegraphics[width=0.45\textwidth]{figs/hlt13TeV/turnons_2015_no100GeVmuons/HLT_RsqMR240_Rsq0p09_MR200_HLT_RsqMR240_Rsq0p09_MR200_4jet_HLT_Rsq0p25_HLT_Ele27_eta2p1_WPLoose_Gsf_eff2D.pdf}
+\includegraphics[width=0.45\textwidth]{figs/hlt13TeV/turnons_2015_no100GeVmuons_thesis/HLT_RsqMR240_Rsq0p09_MR200_HLT_RsqMR240_Rsq0p09_MR200_4jet_HLT_Rsq0p25_HLT_Ele27_eta2p1_WPLoose_Gsf_effRsq_MR500.pdf}
+\includegraphics[width=0.45\textwidth]{figs/hlt13TeV/turnons_2015_no100GeVmuons_thesis/HLT_RsqMR240_Rsq0p09_MR200_HLT_RsqMR240_Rsq0p09_MR200_4jet_HLT_Rsq0p25_HLT_Ele27_eta2p1_WPLoose_Gsf_effMR_Rsq0p25.pdf}\\
+\includegraphics[width=0.45\textwidth]{figs/hlt13TeV/turnons_2015_no100GeVmuons_thesis/HLT_RsqMR240_Rsq0p09_MR200_HLT_RsqMR240_Rsq0p09_MR200_4jet_HLT_Rsq0p25_HLT_Ele27_eta2p1_WPLoose_Gsf_eff2D.pdf}
 \caption{\label{fig:turnons} Trigger efficiencies as measured using a
   data sample of single-electron events for $\Rtwo$ (top
   left), $\MR$ (top right), and in the $(\MR,\Rtwo)$ plane (bottom).}
@@ -155,19 +155,25 @@ collected in 2015, are presented in Tab.~\ref{tab:rates2015}.
    interactions, while run 259721 had $1.5\times 10^{33}$ cm$^{-2}$
    s$^{-1}$ peak instananeous luminosity with 23 average pileup interactions. \label{tab:rates2015}}
 \resizebox{\textwidth}{!}{
-\begin{tabular}{l|l|l}
-\multirow{2}{*}{Trigger path} &  Data rate (run 260627) & CPU time (run 259721) \\
- &  $5\times 10^{33}$ cm$^{-2}$ s$^{-1}$, 17 PU &  $1.5\times 10^{33}$ cm$^{-2}$ s$^{-1}$, 23 PU \\\hline
-HLT\_RsqMR240\_Rsq0p09\_MR200 & 7.7 Hz & 27 \unit{ms}\\ 
-HLT\_RsqMR270\_Rsq0p09\_MR200 & 2.3 Hz & 17 \unit{ms} \\ 
-HLT\_RsqMR240\_Rsq0p09\_MR200\_4jet & 1.2 Hz & 20 \unit{ms}\\
-HLT\_RsqMR270\_Rsq0p09\_MR200\_4jet & 0.5 Hz  & 15 \unit{ms} \\
-HLT\_Rsq0p25 & 0.7 Hz & 14 \unit{ms}\\
-HLT\_Rsq0p30 & 0.4 Hz & 14 \unit{ms} \\
-HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_&\multirow{2}{*}{16.0 \unit{Hz}} & \multirow{2}{*}{34 \unit{ms}}\\
+\begin{tabular}{l|c|c}
+\hline\hline
+\multirow{4}{*}{Trigger path} &  Data rate [Hz] & CPU time [ms]\\
+& Run 260627 & Run 259721\\
+ &  $5\times 10^{33}$ cm$^{-2}$ s$^{-1}$ &  $1.5\times 10^{33}$
+                                          cm$^{-2}$ s$^{-1}$ \\
+& 17 PU  & 23 PU\\
+\hline
+HLT\_RsqMR240\_Rsq0p09\_MR200 & 7.7 & 27 \\ 
+HLT\_RsqMR270\_Rsq0p09\_MR200 & 2.3 & 17  \\ 
+HLT\_RsqMR240\_Rsq0p09\_MR200\_4jet & 1.2 & 20 \\
+HLT\_RsqMR270\_Rsq0p09\_MR200\_4jet & 0.5 & 15 \\
+HLT\_Rsq0p25 & 0.7 & 14 \\
+HLT\_Rsq0p30 & 0.4 & 14  \\
+HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_&\multirow{2}{*}{16.0} & \multirow{2}{*}{34}\\
 ~DoublePFBTagCSV0p7\_0p4\_Mbb60\_200 & &\\
-HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_ & \multirow{2}{*}{8.0 Hz} & \multirow{2}{*}{26 \unit{ms}}\\
-~DoublePFBTagCSV0p7\_Mbb60\_200 & & 
+HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_ & \multirow{2}{*}{8.0} & \multirow{2}{*}{26}\\
+~DoublePFBTagCSV0p7\_Mbb60\_200 & & \\
+\hline\hline
 \end{tabular}}
 \end{table*}
 % timing from: 
