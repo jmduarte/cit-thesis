@@ -7,6 +7,7 @@ duarte_thesis*.pdf
 *.fls
 *.out
 *.toc
+.DS_Store
 
 ## Intermediate documents:
 *.dvi
