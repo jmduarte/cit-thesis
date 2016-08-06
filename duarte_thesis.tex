@@ -1,6 +1,6 @@
 %\documentclass[draftfoot,12pt]{cit_thesis}
 \documentclass[12pt]{caltech_thesis}
-\usepackage{feynmp}
+\usepackage{feynmp-auto}
 \usepackage[utf8]{inputenc}
 %\DeclareUnicodeCharacter{00A0}{~}
 \unitlength=1mm 
@@ -12,6 +12,24 @@
 \DeclareGraphicsRule{.6}{mps}{*}{}
 \DeclareGraphicsRule{.7}{mps}{*}{}
 \DeclareGraphicsRule{.8}{mps}{*}{}
+
+
+% begin feynman diagram setups
+\usepackage{feynmp-auto}
+% before setting default graphics include widths, save the default to properly scale feynman diagrams with their labels
+\makeatletter
+\let\ginnatwidth\Gin@nat@width
+\let\ginnatheight\Gin@nat@height
+\makeatother
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+%if you don't use the feynmandiagram environment for feynmf/mp figures, and you've changed the Gin keys above, then you need to manually adjust the unit length for feynman diagrams to get ratio of tex labels to graphics right. \unitlength = 1.21mm for tufte \linewidth and \textheight
+\DeclareGraphicsRule{*}{mps}{*}{}
+\newenvironment{feynmandiagram}[1][]{\setkeys{Gin}{width=\ginnatwidth,totalheight=\ginnatheight}\begin{fmffile}{#1}
+\begin{fmfgraph*}(70,50)\fmfpen{thick}}{\end{fmfgraph*}\end{fmffile}\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}}
+% end feynman diagram setup
+% \setfloatalignment forces the caption placement to be treated as top, bottom, etc.
+%\newcommand{\setfloatalignment}[1]{\global\def\floatalignment{#1}\@tufte@float@debug{Forcing position: [#1]}}% manually sets the float alignment
+
 \usepackage{pennames}
 \usepackage{ptdr-definitions}
 \usepackage{multirow}
@@ -72,6 +90,19 @@
 \newcommand{\highestMass }{7.7\TeV}
 \newcommand{\minMassLow}{0.6\TeV}
 \newcommand{\minMassHigh}{1.6\TeV}
+\newcommand{\chiDM}{\ensuremath{\chi}\xspace}
+\newcommand{\DMParticle}{\chiDM}
+\newcommand{\mMed}{\ensuremath{m_{\mathrm{med}}}\xspace}
+\newcommand{\MPhi}{\ensuremath{m_{\Phi}}\xspace}% note upper case \Phi for single-top model
+\newcommand{\Mphi}{\ensuremath{m_{\phi}}\xspace}% note lower case \phi
+\newcommand{\mmed}{\mMed}
+\newcommand{\Mmed}{\mMed}
+\newcommand{\gDM}{\ensuremath{g_{\mathrm{DM}}}\xspace}
+\newcommand{\gdm}{\gDM}
+\newcommand{\gq}{\ensuremath{g_{\mathrm q}}\xspace}
+\newcommand{\ifb}{\ensuremath{\mathrm{fb}^{-1}}\xspace}
+\newcommand{\mdm}{\ensuremath{m_{\mathrm{DM}}}\xspace}
+\newcommand{\mDM}{\mdm}
 % avoids incorrect hyphenation, added Nov/08 by SSR
 \hyphenation{ALPGEN}
 \hyphenation{EVTGEN}
@@ -80,11 +111,11 @@
 
 % special commands
 \newcommand{\met}{\ETm}
-\newcommand{\mgaga}{$m_{\Pgg\Pgg}$}
+\newcommand{\mgaga}{\ensuremath{m_{\Pgg\Pgg}}\xspace}
 \newcommand{\Rsq}{\Rtwo}
 \newcommand{\chizone}{\chiz_1}
 \newcommand{\chiztwo}{\chiz_2}
-\newcommand{\sbottom}{\tilde{b}}
+\newcommand{\sbottom}{\PSQb}
 
 \usepackage{tikz}
 \usepackage{ifthen}

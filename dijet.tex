@@ -407,14 +407,68 @@ parameter space in models of dark matter (DM) production at the
 LHC if the mediator is also accessible.
 We may use a similar simplified model to quantify this impact,
 consisting of a leptophobic vector (V) or axial-vector (AV) mediator
-$\PZpr_B$ with couplings to quarks and the DM particle $\chi$~\cite{Boveia:2016mrp,Dobrescu:2013coa}:
+$\PZpr_B$ with couplings to quarks and the DM particle $\chi$~\cite{Boveia:2016mrp,Dobrescu:2013coa,Abercrombie:2015wmb}:
 \begin{align}
 \mathcal L_\mathrm{V} &=
                         -g_{\mathrm{DM}}Z^{\prime}_{B\mu}\overline\chi\gamma^{\mu}\chi
                         - g^{\prime}_{\Pq}\sum_{\Pq}Z^{\prime}_{B\mu}\bar q\gamma^{\mu} q~,\\
 \mathcal L_\mathrm{AV} &= -g_{\mathrm{DM}}Z^{\prime}_{B\mu}\overline\chi\gamma^{\mu}\gamma_5\chi-g^{\prime}_{\Pq}\sum_{\Pq}Z^{\prime}_{B\mu}\bar q\gamma^{\mu} \gamma_5q~,
 \end{align}
-where $g_{\mathrm{DM}}$ is the coupling of the mediator to the DM particles and $g_{\Pq}^{\prime}=g_B^{\prime}/6$ is the univeral coupling of all quark flavors to the mediator.
+where $g_{\mathrm{DM}}$ is the coupling of the mediator to the DM
+particles and $g_{\Pq}^{\prime}=g_B^{\prime}/6$ is the univeral
+coupling of all quark flavors to the mediator. Fig.~\ref{fig:OP} shows
+the most important diagrams for monojet and dijet searches.
+
+\begin{figure}[h!]
+\centering
+  \unitlength=0.005\textwidth
+  \vspace{\baselineskip}
+  \begin{feynmandiagram}[modelVmonojetParameters]
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2}
+    \fmftop{isr}
+    \fmfbottom{pisr}
+    \fmf{wiggly,tension=0.6,label={ $\PZpr_B(\mMed)$}}{v1,v2}
+    \fmf{fermion}{o2,v2,o1}
+    \fmf{fermion}{i2,visr,v1}
+    \fmf{plain}{v1,pvisr,i1}
+    \fmf{fermion,tension=0}{v1,i1}
+    \fmfdot{v1,v2}
+    \fmflabel{ ${\gq^{\prime}}$}{v1}
+    \fmflabel{ ${\gDM}$}{v2}
+    \fmflabel{ ${\Paq}$}{i1}
+    \fmflabel{ ${\Pq}$}{i2}
+    \fmflabel{ ${\overline{\chiDM}(\mDM)}$}{o1}
+    \fmflabel{ ${\chiDM(\mDM)}$}{o2}
+    \fmf{gluon,tension=0}{visr,isr}
+    \fmf{phantom,tension=0}{pvisr,pisr}
+    \fmflabel{ ${\Pg}$}{isr}
+  \end{feynmandiagram}\hfill
+  \begin{feynmandiagram}[modelVdijetParameters]
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2}
+    \fmftop{isr}
+    \fmfbottom{pisr}
+    \fmf{wiggly,tension=0.6,label.side=right,label={ $\PZpr_B(\mMed)$}}{v1,v2}
+    \fmf{fermion}{o2,v2,o1}
+    \fmf{fermion}{i2,v1}
+    \fmf{plain}{v1,i1}
+    \fmf{fermion,tension=0}{v1,i1}
+    \fmfdot{v1,v2}
+    \fmflabel{ ${\gq^{\prime}}$}{v1}
+    \fmflabel{ ${\gq^{\prime}}$}{v2}
+    \fmflabel{ ${\Paq}$}{i1}
+    \fmflabel{ ${\Pq}$}{i2}
+    \fmflabel{ $\Paq$}{o1}
+    \fmflabel{ $\Pq$}{o2}
+  \end{feynmandiagram}
+  \vspace{\baselineskip}
+\caption{Representative Feynman diagrams showing the pair production of
+  dark matter particles in association with a radiated gluon from the initial
+  state (left) and the pair production of quarks (right) via a vector or axial-vector $\PZpr_B$ mediator. The cross section and kinematics depend on the mediator and dark
+matter masses, and the mediator couplings to dark matter and quarks respectively: ($\mMed ,\, \mDM ,\, \gDM ,\, \gq^{\prime})$~\cite{Abercrombie:2015wmb}. \label{fig:OP}}
+\end{figure}
+
 %For V and AV models we follow section 2.1 and S
 %and PS models we use the definition provided in section 2.2 of
 %Ref.~\cite{Boveia:2016mrp}. 
@@ -458,10 +512,10 @@ a nonzero mediator decay width to DM particles $\Gamma^{\chi\overline\chi}$, it
 is simplest to begin with the limit on $g_B$ in the case of zero decay
 width to DM particles (see Fig.~\ref{fig:gBvsMZ}) and correct for the DM width,
 \begin{align}
-\sigma[\PZpr_B\to\Pq\Paq|g_B^{\prime},g_{\mathrm{DM}}] &=\sigma(\PZpr_B\to\Pq\Paq| g_B, g_{\mathrm{DM}}=0) \\
-\Rightarrow \frac{(g_B^{\prime})^4}{\Gamma^{\Pq\Paq}(g_B^{\prime}) +
+&&\sigma[\PZpr_B\to\Pq\Paq|g_B^{\prime},g_{\mathrm{DM}}] &=\sigma(\PZpr_B\to\Pq\Paq| g_B, g_{\mathrm{DM}}=0) \\
+&\Rightarrow& \frac{(g_B^{\prime})^4}{\Gamma^{\Pq\Paq}(g_B^{\prime}) +
   \Gamma^{\chi\overline\chi}}& =\frac{g_B^4}{\Gamma^{\Pq\Paq}(g_B)} \\
-\Rightarrow (g^{\prime}_B)^2&=\frac{g_B^2}{2}\left(1 + \sqrt{1+ 4\frac{\Gamma^{\chi\overline\chi}}{\Gamma^{\Pq\Paq}}}\right )~.
+&\Rightarrow& (g^{\prime}_B)^2&=\frac{g_B^2}{2}\left(1 + \sqrt{1+ 4\frac{\Gamma^{\chi\overline\chi}}{\Gamma^{\Pq\Paq}(g_B)}}\right )~.
 \end{align}
 
 Fig.~\ref{fig:DMsummary} shows 95\% CL exclusion regions in $m_{\mathrm{med}}-m_{\mathrm{DM}}$ plane for dijet
@@ -469,7 +523,7 @@ Fig.~\ref{fig:DMsummary} shows 95\% CL exclusion regions in $m_{\mathrm{med}}-m_
   different $\MET$ based DM searches~\cite{CMS-PAS-EXO-16-030,CMS-PAS-EXO-16-037,CMS-PAS-EXO-16-039,CMS-PAS-EXO-16-010} from CMS in the leptophobic
  vector and  axial-vector models defined above. Following the
   recommendation of the LHC DM working
-  group~\cite{Boveia:2016mrp,Abdallah:2015ter}, the exclusions are
+  group~\cite{Boveia:2016mrp,Abdallah:2015ter,Abercrombie:2015wmb}, the exclusions are
   computed for a universal quark coupling $g_{\Pq}^{\prime} = 0.25$ and for a DM
   coupling of $g_{\mathrm{DM}} = 1.0$.
 %The CMS dijet searches are reinterpreted using the model prediction after applying the kinematic cuts of the search on
