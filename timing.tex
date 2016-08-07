@@ -1,16 +1,19 @@
 \chapter{Fast Timing for the High-Luminosity LHC}
 \label{ch:timing}
 
-\section{Introduction}
-
-The high luminosity upgrade of the Large Hadron Collider (HL-LHC) at
-CERN~\cite{Rossi:1471000} is expected to provide instantaneous luminosities of
+To significantly extend the discovery reach of colliders to natural
+SUSY, it is necessary to go to higher energies and higher
+luminosities. Studies based on current search strategies~\cite{CMS:2013xfa,CMS-PAS-FTR-13-014},
+project discovery-level sensitivity up to $\sim 2\TeV$ gluinos and $\sim
+1\TeV$ top squarks for an integrated luminosity of $3000\fbinv$ at an
+upgraded high luminosity LHC (HL-LHC) with $\sqrt{s}=14\TeV$. In
+order to produce this enormous dataset, the HL-LHC~\cite{Rossi:1471000} is expected to provide instantaneous luminosities of
 $5\times10^{34}$ cm$^{-2}$s$^{-1}$. The enhanced data rates will
 provide the datasets necessary to perform precision measurements of the Higgs couplings, 
-probe rare Higgs processes, study the scattering of longitudinally polarized W
-bosons and search for physics beyond the standard model. 
+probe rare Higgs processes, study the scattering of longitudinally polarized $\PW$
+bosons, and search for physics beyond the SM.
 
-The  rate of simultaneous interactions per bunch crossing (pileup) is  projected to reach 
+The rate of simultaneous interactions per bunch crossing (known as pileup) is projected to reach 
 an average of $140$ to $200$. The large amount of pileup increases the likelihood of 
 confusion in the reconstruction of events of interest, due to the contamination from 
 particles produced in different pileup interactions. The ability to discriminate between 
@@ -22,36 +25,36 @@ objects performance metrics will suffer.
 One way to mitigate pileup confusion effects, complementary to precision tracking methods, 
 is to perform a time of arrival measurement associated with a particular layer of the calorimeter, 
 allowing for a time assignment for both charged particles and photons. Such a measurement with 
-a precision of about $20$ to $30$~ps, when unambiguously associated to the corresponding energy
+a precision of about $20$ to $30$~\unit{ps}, when unambiguously associated to the corresponding energy
 measurement, will significantly reduce the inclusion of pileup particles in  the
 reconstruction of the event of interest given that the spread in collision time of
-pileup interactions is about $200$~ps. The association of the time measurement to the energy 
+pileup interactions is about $200$~\unit{ps}. The association of the time measurement to the energy 
 measurement is crucial,  leading to  a  prototype  design that calls for the time and energy 
 measurements to be performed in the same active detector element. It is in this context that we 
 study the possibility of measuring the time of arrival of particles with a calorimetric device.
 
 We focus our studies on measurements of the time of flight using sampling calorimeters 
 based on LYSO crystals. Due to its very high light yield 
-($\sim 30$K photons/MeV)~\cite{LYSOProperties}, and radiation 
+($\sim 30$~\unit{K} photons/\MeV)~\cite{LYSOProperties}, and radiation 
 tolerance~\cite{5402126, 4291695, 5402125, Dissertori:2013rma}, LYSO
 is the active element of one of the options considered for the upgrade of the
 Compact Muon Solenoid (CMS) detector for the HL-LHC~\cite{Contardo:1605208}. 
 
-In Figure~\ref{fig:ScintillatorTiming} we present a simplified illustration of
+In Fig.~\ref{fig:ScintillatorTiming} we present a simplified illustration of
 the major time scales associated to the timing measurement using a monolithic
 crystal calorimeter. Upon entering the crystal the photon or electron travels
 at the speed of light, interacts, and begins to shower, producing scintillation light in the crystal. 
 The time between the entry of the photon into the crystal and the first interaction is denoted by
-$t_I$ and for high energy impinging particles it is the shower development time. 
+$t_\mathrm{I}$ and for high energy impinging particles it is the shower development time. 
 The time associated with the conversion of the incident photon to
-scintillation light is denoted by $t_S$. The scintillation light travels from
+scintillation light is denoted by $t_\mathrm{S}$. The scintillation light travels from
 the point of interaction to the photodetector at the velocity $c/\hat{n}$, where
 $\hat{n}$ is the effective index of refraction of the crystal~\cite{Moses}. The
 time associated with the propagation of the scintillation light to the photodetector 
-is denoted by $t_P$. Once the scintillation light reaches the photodetector, the  photons 
+is denoted by $t_\mathrm{P}$. Once the scintillation light reaches the photodetector, the  photons 
 are converted into an electrical signal. The time associated with this process is known as the
-photodetector signal transit time, $t_T$. Finally, the data acquisition (DAQ)
-system has a characteristic time constant $t_D$. Each of these time intervals will fluctuate or 
+photodetector signal transit time, $t_\mathrm{T}$. Finally, the data acquisition (DAQ)
+system has a characteristic time constant $t_\mathrm{D}$. Each of these time intervals will fluctuate or 
 jitter on an event-by-event basis, contributing to the time resolution.
 
 
@@ -69,7 +72,7 @@ $32$~GeV, and showed that the time of arrival of the front of an electromagnetic
 shower can be determined with a precision better than $20$~ps. The electronic
 time resolution of the DAQ system was measured to be about $6$~ps. Using
 the same techniques, we measure the time resolution of the MCP-PMT photodetectors 
-used in the studies presented in this paper  to be between $11$~ps and $14$~ps, depending 
+used in the studies presented in this chapter to be between $11$~ps and $14$~ps, depending 
 on the exact device.
 
 To characterize the time resolution of an inorganic crystal scintillator calorimeter we
@@ -108,7 +111,7 @@ accuracy (11.5 bit SNR). All experimental beam studies were performed at the Fer
 Beam Facility (FTBF), which provided proton beams from the Fermilab Main
 Injector accelerator at $120$ GeV, and secondary electron beams of energies
 ranging from $4$ to $32$~GeV. All detector elements were placed inside of a dark box
-lined with copper foil, providing RF shielding. A $2$x$2$~$\mathrm{mm}^{2}$
+lined with copper foil, providing RF shielding. A $2\times2$~$\mathrm{mm}^{2}$
 scintillator was placed inside the box at the upstream extremity and used to
 trigger the DAQ readout, providing a strict constraint on the
 location and directionality of the beam particles used in the time of flight
@@ -243,10 +246,10 @@ of the total energy of the electron, but yields a reasonable energy measurement
 as it is close to the shower maximum.
 
 The time of flight measurement is performed using the LYSO sampling calorimeter
-for electron beams with energies varying from $4$~GeV to $32$~GeV. The corresponding 
+for electron beams with energies varying from $4 \GeV$ to $32 \GeV$. The corresponding 
 measured time of flight distributions are shown in Figure~\ref{fig:LYSOCubeTOF}.
-We achieve the best time resolution of $34$~ps for electrons
-with beam energy of $32$~GeV.
+We achieve the best time resolution of $34$~\unit{ps} for electrons
+with beam energy of $32 \GeV$.
 
 \begin{figure}[H] \centering
 \includegraphics[width=0.23\textwidth]{figs/timing/TOF_Electron_LYSOCube_4GeV} 
@@ -259,16 +262,16 @@ for 4 GeV (top left), 8 GeV(top right), 16 GeV (bottom left),  32 GeV (bottom ri
 \end{figure}
 
 The time resolution measurement is plotted as a function of the
-beam energy in Figure~\ref{fig:TOFResolutionVsEnergy} (left). We fit the result to the sum of a 
-$1/\sqrt{E}$ term and a constant term of about $11$~ps.   Given that we measure the contribution 
+beam energy in Figure~\ref{fig:ShashlikSideReadoutTOFResolutionVsEnergy} (left). We fit the result to the sum of a 
+$1/\sqrt{E}$ term and a constant term of about $11$~\unit{ps}.   Given that we measure the contribution 
 to the intrinsic time resolution of the photodetector and the DAQ electronics to be about 
-$20$~ps~\cite{MCPFastCaloNIMA}, using the results from the 32 GeV electron beam, we infer 
+$20$~\unit{ps}~\cite{MCPFastCaloNIMA}, using the results from the 32 GeV electron beam, we infer 
 that the combined contribution to the time resolution from the shower profile
 fluctuations, the scintillation mechanism, and the light propagation time inside the
-LYSO cube is about $27$~ps.  
+LYSO cube is about $27$~\unit{ps}.  
 
 \subsection{Timing Studies of the LYSO-Tungsten Shashlik Calorimeter}
-\subsubsection{Wavelength shifting fibers readout (WLS Y11 \& DSB1)}
+\subsubsection{Wavelength Shifting Fibers Readout (WLS Y11 \& DSB1)}
 We study the time resolution of a LYSO-tungsten Shashlik calorimeter, one of the
 proposed choices for the Phase 2 upgrade of the CMS endcap calorimeter
 system~\cite{Contardo:1605208}. We compare the time resolution performance for
@@ -321,7 +324,6 @@ experimental setup. }
 % with the average pulse shape obtained from direct optical coupling of the
 % photodetector to the edge of one of the LYSO tiles, plotted in green. 
 %
-
 
 \begin{figure}[H] \centering
 %\includegraphics[width=0.32\textwidth]{figs/timing/FiberPulsesY11DSB1} 
@@ -387,7 +389,7 @@ using DSB1 fibers for electron beams with varying beam energies.}
 \end{figure}
 
 
-\subsubsection{Directly coupled MCP-PMTs to LYSO shashlik plates}
+\subsubsection{Directly Coupled MCP-PMTs to LYSO Shashlik Plates}
 
 In this setup the MCP-PMT photodetectors are directly coupled to the edges of two adjacent LYSO layers in the shashlik
 calorimeter and scintillation light is directly transported to the photodetector
@@ -441,11 +443,6 @@ with signal extracted from the edges of two LYSO layers. }
 \end{figure}
 
 
-\begin{figure}[h] \centering
-
-\caption{\small}
-\label{fig:LYSOCubeTOFResolutionVsEnergy}
-\end{figure}
 \begin{figure}[H] \centering
 \includegraphics[width=0.32\textwidth]{figs/timing/TimeResolutionVsEnergy_CrystalCube} 
 \includegraphics[width=0.32\textwidth]{figs/timing/TimeResolutionVsEnergy_ShashlikDSB1Fiber} 
@@ -469,15 +466,15 @@ experiment suggest that a LYSO-tungsten shashlik calorimeter with edge readout
 can likely achieve $30$~ps resolution provided some improvement to the light
 collection efficiency is achieved.
 
-\section{Results Discussion and Summary }
+\section{Summary}
 
-In this article we have described studies characterizing the timing performance
-of LYSO-based calorimeters. Using a (1.7~cm)$^{3}$ LYSO crystal that
+In this chapter we have described studies characterizing the timing performance
+of LYSO-based calorimeters. Using a (1.7\unit{cm})$^{3}$ LYSO crystal that
 samples the electromagnetic showers created by electrons of various energies
-ranging from $4$~GeV to $32$~GeV at about $4.5$~$X_{0}$, we infer that the
+ranging from $4$~\GeV to $32$~\GeV at about $4.5X_{0}$, we infer that the
 contribution to the time resolution from event-by-event fluctuations of the
 shower profile, the scintillation process, and the light propagation is less than
-$30$~ps. Studies using different wavelength shifting fibers in a LYSO-tungsten shashlik calorimeter 
+$30$~\unit{ps}. Studies using different wavelength shifting fibers in a LYSO-tungsten shashlik calorimeter 
 demonstrates that the choice of the fiber affects the timing performance. Besides the absorption 
 and re-emission processes in the fibers, we found that another important factor influencing
 the timing performance is the light extraction efficiency. Using DSB1 fibers, despite being 
@@ -515,6 +512,6 @@ signal, corrected for the attenuation factors. }
 \end{figure}
 
 In summary, using a LYSO-based calorimeter and different light propagation experimental setups 
-we obtain about $30$~ps resolution time measurement for the maximum light yield achieved. 
+we obtain about $30$~\unit{ps} resolution time measurement for the maximum light yield achieved. 
 As a follow-up we will investigate the time resolution in the limit of very large light yield, 
 and attempt to improve the light collection efficiency in these types of detectors.

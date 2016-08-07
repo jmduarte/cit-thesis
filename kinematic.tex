@@ -15,7 +15,7 @@ intended for use in any generic new physics scenario with visible and
 invisible final state particles.
 
 In defining the razor variables, it is useful to consider the explicit
-example of squark pair production $\PSq_1\PSq_2$, where each squark
+example of symmetric squark pair production $\PSq_1\PSq_2$, where each squark
 decays to a quark and a neutralino LSP $\PSq_i\to\Pq_i\chiz_{i}$, as shown in
 Fig.~\ref{fig:T2}. In the following, we treat the quarks as massless.
 \begin{figure*}[thb!]
@@ -52,10 +52,12 @@ gain information about the unseen sparticle masses. Unfortunately there are too 
 degrees of freedom to do this. 
 
 In principle, we need all eight components of the invisible particles'
-four-momenta to construct the desired boosts. At a hadron collider, we only have access
+four-momenta to construct the desired boosts. At a hadron collider, we
+do not know the momentum along the beam line the initial state
+interacting partons. As such, we only have access
 only to the missing transverse momentum $\ptvecmiss$, which in the
 ideal case of no initial/final state radiation (ISR/FSR), no pileup
-contamination, and perfect detector measurement is $\ptvec^{\,\chiz_{1}}
+contamination, and perfect detector measurement, is equal to $\ptvec^{\,\chiz_{1}}
 + \ptvec^{\,\chiz_{2}},$ giving us two constraints. After making the simplifying
 assumption of symmetry between the two sides of the decay chain 
 %(two additional constraints: $p_{\PSq_1})^2 = p_{\PSq_2})^2$ and $p_{\chiz_1})^2 = p_{\chiz_2})^2$)
@@ -124,7 +126,11 @@ constraint on $\vec\beta_{\mathrm R}$:
 %\end{align}
 Using this symmetry, and the extremal condition $\partial (
 E_{\Pq_1}^{\prime\prime} + E_{\Pq_2}^{\prime\prime} )/ \partial
-\vec\beta_{\mathrm R} = 0$, we can uniquely specify the boost,
+\vec\beta_{\mathrm R} = 0$\footnote{This extremal condition is one possible
+  choice and though it doesn't necessarily produce the right boost event-by-event
+  (thus contributing to an increase in the $\MR$ resolution), on
+  average, it does produce an $\MR$ variable that estimates (i.e. peaks at) the correct
+  mass scale $M_{\Delta}$.}, we can uniquely specify the boost,
 \begin{equation}
 \vec\beta_{\mathrm{R}} = 
 \frac{\vec p^{\Pq_1\prime} - \vec p^{\Pq_2\prime}}{E^{\Pq_1\prime}+ E^{\Pq_2\prime}}~.
@@ -176,7 +182,7 @@ different squark and LSP mases can be seen in Fig~\ref{fig:T2RsqMR}.
 \caption{Distribution of \Rtwo and \MR in the case of squark pair
   production for different squark and LSP masses. The peak of the \MR
   distribution scales with $M_{\Delta}$ and the $\Rtwo$ distribution
-  has a larger mean and falls less steeply than the corresponding
+  has a larger mean value and falls less steeply than the corresponding
   distribution for the backgrounds.\label{fig:T2RsqMR}}
 \end{figure*}
 
