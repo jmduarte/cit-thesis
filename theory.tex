@@ -34,12 +34,12 @@ The matter fields are fermions, which fall into two
 categories: the quarks $\cPqu$, $\cPqd$, $\cPqc$, $\cPqs$, $\cPqt$, and $\cPqb$, which participate in the
 strong interactions, and the leptons, $\PGe$, $\PGm$, $\PGt$, $\PGne$,
 $\PGnGm$, and $\PGnGt$, which do
-not. The fermions, repersented by left- and right-handed Weyl spinors,
+not. The fermions, represented by left- and right-handed Weyl spinors,
 also naturally fit into three generations of matter,
 as displayed in Fig.~\ref{fig:standardmodel}. 
 
 The second ingredient of the SM, an inventory of the interactions between the
-particles, is given by the Langrangian density, 
+particles, is given by the Lagrangian density, 
 \begin{align}
 \mathcal{L}_{\mathrm{SM}} &= -\frac{1}{4}B_{\mu\nu}B^{\mu\nu} -\frac{1}{4}W^{a}_{\mu\nu}W^{a\mu\nu} - \frac{1}{4}G^{\alpha}_{\mu\nu}G^{\alpha\mu\nu}
   & \mathrm{(gauge~terms)}\nonumber\\
@@ -210,7 +210,7 @@ Besides giving masses to the fermions, the Yukawa terms have another important
 consequence: they allow the fermions to affect the
 observed mass of the Higgs boson through quantum corrections.
 
-\textbf{ Maurizio says: I would add a few lines about the tree-level Higgs mass. This connects to the next chapter}
+%\textbf{ Maurizio says: I would add a few lines about the tree-level Higgs mass. This connects to the next chapter}
 
 \chapter{Naturalness and Supersymmetry}
 \label{ch:naturalness}
@@ -279,7 +279,7 @@ explained further in Sec.~\ref{sec:susynaturalness}.
 
 SUSY can be thought of as an extension of the usual group of spacetime
 symmetries, known as the Poincar\'{e} group. This group has
-generators related to translation symmetry, $P_m$, and Loretnz
+generators related to translation symmetry, $P_m$, and Lorentz
 symmetry, $M_{mn} = -M_{nm}$, which form a Lie algebra:
 \begin{align}
 ~[P_m,P_n] &= 0 \nonumber\\
@@ -297,13 +297,13 @@ generators $B_r$ and Lie algebra,
 \end{equation}
 with structure functions $f_{rs}{}^t$, is if the extended symmetry
 group is simply the direct product $($Poincar\'{e}$)\times G$ with a
-trivial Lie algerbra,
+trivial Lie algebra,
 \begin{equation}
 ~[B_r,P_m] = [B_r,M_{mn}] = 0~.
 \end{equation}
 
 However, SUSY exploits a loophole in the Coleman-Mandula theorem,
-which only considers bosonic symmetry generators, by incorpororating
+which only considers bosonic symmetry generators, by incorporating
 fermionic symmetry generators $Q$ that generate SUSY transformations,
 \begin{equation}
 Q|\mathrm{boson}\rangle = |\mathrm{fermion}\rangle, ~~~~
@@ -403,7 +403,7 @@ If $R$-parity is conserved, there are three important phenomenological consequen
 \item In collider experiments, superpartners can only be produced in even numbers (usually two).
 \end{itemize}
 
-\section{Elecroweak Supersymmetric Sector}
+\section{Electroweak Supersymmetric Sector}
 \label{sec:ewksusy}
 The superpartners of the neutral gauge bosons (neutral gauginos), and
 the fermionic partners of the neutral Higgs bosons (neutral higgsinos),
@@ -595,7 +595,7 @@ where $\mathcal L_\mathrm{MSSM}$ contains all of the gauge and Yukawa
 interactions that preserve SUSY, and $\mathcal
 L_\mathrm{MSSM}^\mathrm{soft}$ violates SUSY but contains only mass
 terms and couplings with \emph{positive} mass dimension. Explicitly, the
-soft SUSY breaking part of the MSSM lagrangian can be written~\cite{susyprimer},
+soft SUSY breaking part of the MSSM Lagrangian can be written~\cite{susyprimer},
 \begin{align}
 \mathcal
   L_\mathrm{MSSM}^\mathrm{soft}&=-\frac{1}{2}\left(M_3\widetilde{g}\widetilde{g}
@@ -656,7 +656,7 @@ M_1,M_2,M_3,\boldsymbol{a_u},\boldsymbol{a_d},\boldsymbol{a_e} &\sim m_\mathrm{s
 Motivated by the discussion of Sec.~\ref{sec:susynaturalness}, we may
 outline an explicit minimal natural SUSY scenario. In this scenario, the LSP is the lightest neutralino $\chiz_1$ while the NLSP
 is the lightest chargino $\chipm_1$. They are both higgsinos and
-quadi-degenerate. To reduce the dimensionality of this parameter
+quasi-degenerate. To reduce the dimensionality of this parameter
 space, and the NLSP-LSP mass splitting is taken to be 5\GeV.
 This specific choice of mass splitting is supported by Fig.~\ref{fig:neutralinos}, but does not
 have a large impact on the results of the interpretation. 
@@ -717,7 +717,7 @@ Fig.~\ref{fig:SMSDiagrams}.
   considered in this thesis.\label{fig:SMSDiagrams}}
 \end{figure*}
 
-\subsection{Technical Implentation in \PYTHIA}
+\subsection{Technical Implementation in \PYTHIA}
 To simplify the treatment of the sparticle decays in \PYTHIA v6.4.26, we directly implement three-body decays of
 the form $\chipm_1 \to \chiz_1 \mathrm{f} \mathrm{f}^{\prime}$, with branching ratios
 as shown in Table~\ref{tab:nlspbr}.

@@ -1,15 +1,31 @@
 \chapter{Topological HLT Development at $\sqrt{s}=13 \TeV$}
 \label{ch:hlt13TeV}
 
+Traditionally, trigger algorithms employed at hadron colliders consisted
+of selecting events based on the presence of specific particles, such
+as leptons or photons, above some energy threshold and isolated from
+the rest of the event. In other trigger algorithms, global
+event properties (such as ``sum'' quantities like the hadronic transverse energy $H_{\mathrm{T}}$
+or the missing transverse energy $\MET$) were also used. 
+
+The advent of new techniques to search for new physics,
+especially kinematic variables designed for particular event topologies, such as \MR and
+\Rtwo, meant that the event selection used in new searches no
+longer directly mapped to traditional trigger requirements on isolated
+particles or global event ``sums.'' Fortunately, the flexibility of
+the HLT system allowed the development dedicated trigger paths, based
+on sophisticated kinematic variables and specific event topologies.
+
 To target a broad range of new physics possibilities, we designed four different
 types of triggers for use at $\sqrt{s}=13\TeV$:
 \begin{itemize}
-\item Dijet razor trigger with hyperbolic \MR and \Rtwo requirements targetting the squark pair production topology;
+\item Dijet razor trigger with hyperbolic \MR and \Rtwo requirements
+  targeting the squark pair production topology;
 \item Quadjet razor trigger with hyperbolic \MR and \Rtwo requirements
-  targetting top-squark or gluino pair production topologies;
-\item High-\Rtwo trigger targetting dijet+invisible topologies with
+  targeting top-squark or gluino pair production topologies;
+\item High-\Rtwo trigger targeting dijet+invisible topologies with
   large transverse momentum imbalance; and
-\item Razor $\PH(\bbbar)$ trigger targetting production of
+\item Razor $\PH(\bbbar)$ trigger targeting production of
   $\PH(\bbbar)+\mathrm{jet}+\mathrm{invisible}$ with some transverse momentum imbalance.
 \end{itemize}
 
@@ -39,12 +55,14 @@ $97\%$ for 2015 (compared to $95\%$ in 2012), shown in Fig.~\ref{fig:turnons}.
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=0.45\textwidth]{figs/hlt13TeV/turnons_2015_no100GeVmuons_thesis/HLT_RsqMR240_Rsq0p09_MR200_HLT_RsqMR240_Rsq0p09_MR200_4jet_HLT_Rsq0p25_HLT_Ele27_eta2p1_WPLoose_Gsf_effRsq_MR500.pdf}
-\includegraphics[width=0.45\textwidth]{figs/hlt13TeV/turnons_2015_no100GeVmuons_thesis/HLT_RsqMR240_Rsq0p09_MR200_HLT_RsqMR240_Rsq0p09_MR200_4jet_HLT_Rsq0p25_HLT_Ele27_eta2p1_WPLoose_Gsf_effMR_Rsq0p25.pdf}\\
-\includegraphics[width=0.45\textwidth]{figs/hlt13TeV/turnons_2015_no100GeVmuons_thesis/HLT_RsqMR240_Rsq0p09_MR200_HLT_RsqMR240_Rsq0p09_MR200_4jet_HLT_Rsq0p25_HLT_Ele27_eta2p1_WPLoose_Gsf_eff2D.pdf}
-\caption{\label{fig:turnons} Trigger efficiencies as measured using a
-  data sample of single-electron events for $\Rtwo$ (top
-  left), $\MR$ (top right), and in the $(\MR,\Rtwo)$ plane (bottom).}
+\includegraphics[width=0.49\textwidth]{figs/hlt13TeV/turnons_2015_no100GeVmuons_thesis/HLT_RsqMR240_Rsq0p09_MR200_HLT_RsqMR240_Rsq0p09_MR200_4jet_HLT_Rsq0p25_HLT_Ele27_eta2p1_WPLoose_Gsf_effRsq_MR500.pdf}
+\includegraphics[width=0.49\textwidth]{figs/hlt13TeV/turnons_2015_no100GeVmuons_thesis/HLT_RsqMR240_Rsq0p09_MR200_HLT_RsqMR240_Rsq0p09_MR200_4jet_HLT_Rsq0p25_HLT_Ele27_eta2p1_WPLoose_Gsf_effMR_Rsq0p25.pdf}\\
+\includegraphics[width=0.7\textwidth]{figs/hlt13TeV/turnons_2015_no100GeVmuons_thesis/HLT_RsqMR240_Rsq0p09_MR200_HLT_RsqMR240_Rsq0p09_MR200_4jet_HLT_Rsq0p25_HLT_Ele27_eta2p1_WPLoose_Gsf_eff2D.pdf}
+\caption{\label{fig:turnons} Trigger efficiency of the boolean ``or'' of
+  the dijet, quadjet and high-\Rtwo triggers as used in the search of
+  Ch.~\ref{ch:analysis13TeV}, measured in a data sample of
+  single-electron events as a function of $\Rtwo$ (top
+  left), $\MR$ (top right), and as a function of $(\MR,\Rtwo)$ (bottom).}
 \end{figure}
 
 The high-\Rtwo trigger is motivated by the search for the direct
@@ -61,31 +79,63 @@ event selection using the razor variables. The sensitivity of these variables to
 suggested in Ref.~\cite{Fox:2012ee}, and the search carried out by CMS
 demonstrates that the resulting sensitivity is comparable to that of
 monojet searches~\cite{Fox:2012ee,Papucci:2014iwa,Khachatryan:2016reg}.
-The hallmark of many direct DM production models in the razor plane is an
-almost-peaking behavior near $\Rtwo\gtrsim 0.8$ and an exponentially
+The hallmark of many direct DM production models in the razor plane is
+a peaking behavior near $\Rtwo\gtrsim 0.8$ and an exponentially
 falling $\MR$ distribution with no special structure. For this reason,
 the high-\Rtwo trigger is designed with a threshold in \Rtwo but no
 requirement on \MR to allow for greater DM signal acceptance.
 
 Finally, the razor $\PH(\bbbar)$ trigger is motivated by an
-excess observed by CMS in events with a $\PH
+excess observed in Run 1 by CMS in events with a $\PH
 (\Pgg\Pgg)$ plus at least one extra jet~\cite{RazorHgaga}. The excess,
 corresponding to a local significance of
 $2.9\sigma$, consists of five events observed with $400\GeV<\MR<1400
-\GeV$,  $\Rtwo>0.05$, and $m_{\Pgg\Pgg}$ consisent with $m_{h^0}= 125
+\GeV$,  $\Rtwo>0.05$, and $m_{\Pgg\Pgg}$ consistent with $m_{h^0}= 125
 \GeV$ in a high-resolution diphoton category, compared to less than one
 expected background event. The general idea is to search for a similar
 signature in the $\PH\to\bbbar$ channel, which comes with a larger
 signal yield (90,000 times more assuming SM Higgs branching ratios),
 but a much larger background, resulting in a considerably worse
-signal-to-background ratio. To this end, the trigger
+signal-to-background ratio and a much larger background event rate. These final
+two features make the definition of an optimal trigger strategy much more
+challenging than in the $\PH\to\Pgg\Pgg$ decay channel. Given this, the trigger
 requirements of three jets, two \cPqb-jets, $\MR>300
-\GeV$,  $\Rtwo>0.02$, and $m_{\bbbar}$ roughly consisent with $m_{h^0}= 125
+\GeV$, $\Rtwo>0.02$, and $m_{\bbbar}$ roughly consistent with $m_{h^0}= 125
 \GeV$ are chosen to (a) maintain signal acceptance based on the observed
 features, (b) accept additional events outside of $m_{h^0}$ window
 to permit a robust background estimation based on a fit, and (c)
-limit the rate and average CPU time of the trigger to an acceptable level.
-%, reduced to $1.6\sigma$ after the LEE.
+limit the rate and average CPU time of the trigger to an acceptable
+level.
+
+For each trigger, we developed two different versions: a ``main''
+version intended for $7\times 10^{33}$ cm$^{-2}$ s$^{-1}$ and 20 average
+pileup interactions, and a ``backup'' version, with tighter thresholds
+intended for $1.4\times 10^{34}$ cm$^{-2}$ s$^{-1}$ and 40 average
+pileup interactions. The correspondence between the purpose of each
+trigger and its path name is shown in Tab.~\ref{tab:pathnames}.
+
+\begin{table*}[ht!]
+\centering
+ \caption{Correspondence between the purpose of each
+trigger and its path name.\label{tab:pathnames}}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l|l}
+\hline\hline
+Trigger path  & Purpose \\
+\hline
+HLT\_RsqMR240\_Rsq0p09\_MR200 & main dijet trigger\\
+HLT\_RsqMR270\_Rsq0p09\_MR200 & backup dijet trigger \\
+HLT\_RsqMR240\_Rsq0p09\_MR200\_4jet & main quadjet trigger \\
+HLT\_RsqMR270\_Rsq0p09\_MR200\_4jet & backup quadjet trigger \\
+HLT\_Rsq0p25 & main high-\Rtwo trigger \\
+HLT\_Rsq0p30 & backup high-\Rtwo trigger \\ 
+HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_&\multirow{2}{*}{main $\PH(\bbbar)$ trigger} \\
+~DoublePFBTagCSV0p7\_0p4\_Mbb60\_200 & \\
+HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_ & \multirow{2}{*}{backup $\PH(\bbbar)$ trigger}  \\
+~DoublePFBTagCSV0p7\_Mbb60\_200 & \\
+\hline\hline
+\end{tabular}}
+\end{table*}
 
 \section{HLT Path Design}
 
@@ -96,7 +146,7 @@ rejects events with no hadronic activity above a certain threshold reconstructed
 As detailed in Sec.~\ref{sec:trigger}, there are two main technical
 constraints an HLT path must satisfy: (a) the average CPU time required must be
 small enough so that the entire HLT menu fits within the timing budget
- of $\sim160$ \unit{ms} and (b) the rate must
+ of $\sim160$ \unit{ms} per event and (b) the rate must
 be small enough so that the entire HLT menu fits within the maximum
 allowable rate  of $\sim1$ \unit{kHz}. To satisfy the timing
 requirement, all the paths are outfitted with
@@ -130,8 +180,13 @@ variables.
 
 \section{HLT Rate and Average CPU Time}
 
-The HLT rates and average CPU time consumed for the razor triggers, as measured in data
-collected in 2015, are presented in Tab.~\ref{tab:rates2015}.
+The HLT rates and average CPU time consumed per event for the both the main and
+backup razor triggers, as measured in data collected in 2015, are
+presented in Tab.~\ref{tab:rates2015}. The thresholds on the razor
+variables, jet $\pt$, and \cPqb-tag discriminator values, and were all
+optimized to achieve an acceptable level of added rate and added CPU
+time per event with respect to the rest of HLT menu (taking into
+account overlapping events and reused algorithms) for the full suite of razor triggers. 
 
 %\begin{table*}[ht!]
 %\centering
@@ -149,11 +204,11 @@ collected in 2015, are presented in Tab.~\ref{tab:rates2015}.
 
 \begin{table*}[ht!]
 \centering
- \caption{HLT rates and average CPU time consumed for the razor
-   triggers under different running conditions in 2015. Run 260627 had peak $5\times 10^{33}$ cm$^{-2}$
+ \caption{HLT rates and average CPU time consumed for the main and
+   backup razor triggers under different running conditions in 2015. Run 260627 had peak $5\times 10^{33}$ cm$^{-2}$
    s$^{-1}$ peak instantaneous luminosity with 17 average pileup
    interactions, while run 259721 had $1.5\times 10^{33}$ cm$^{-2}$
-   s$^{-1}$ peak instananeous luminosity with 23 average pileup interactions. \label{tab:rates2015}}
+   s$^{-1}$ peak instantaneous luminosity with 23 average pileup interactions. \label{tab:rates2015}}
 \resizebox{\textwidth}{!}{
 \begin{tabular}{l|c|c}
 \hline\hline
@@ -184,14 +239,30 @@ HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_ & \multirow{2}{*}{8.0} & \multirow{2}{
 
 \section{Pileup Dependence}
 
-The HLT rate, normalized by the number of collinding bunches, as a function of the number of pileup interactions for
+The HLT rate, normalized by the number of colliding bunches, as a function of the number of pileup interactions for
 each razor trigger and for different data runs collected in 2015 is
-shown in Fig.~\ref{fig:HLTpileup}. Nominally, the dependence of the
+shown in Figures~\ref{fig:HLTpileup1}~and~\ref{fig:HLTpileup2}. Nominally, the dependence of the
 normalized HLT rate on pileup is expected to be linear, as is the case
-for single-object triggers. Contrastingly, triggers based on``sum'' quantities
+for single-object triggers. Contrastingly, triggers based on sum quantities
 (such as $H_\mathrm{T}$ or $\MET$) and multi-object triggers often
-demonstrate a nonlinear dependence on pileup~\cite{Bocci:2016}. As the
-razor triggers are both based on sum quantities and multiple objects,
+demonstrate a nonlinear dependence on pileup, not due to a physical
+increase in the cross section of the selected physics processes, but rather due to the effects of pileup
+contamination~\cite{Bocci:2016}. To illustrate this, consider the
+case of a QCD dijet event with no true $\MET$. Normally such an event
+would be rejected by $\MET$ triggers that require $\MET$ above some
+threshold, but if some jets from pileup interactions are misinterpreted as part of the
+event-of-interest then the HLT-reconstructed $\ptvecmiss$ will be
+$-\sum_{j\in\mathrm{pileup}} \vecpt^{\,j}$, which may not perfectly balance to
+zero as illustrated in Fig.~\ref{fig:pileupjet}.
+
+\begin{figure}[ht!]
+\centering 
+\includegraphics[width=0.7\textwidth]{figs/hlt13TeV/pileupjet.pdf}
+\caption{\label{fig:pileupjet} Pileup jet misinterpreted as part of
+  the main interaction event.}
+\end{figure}
+
+As the razor triggers are both based on sum quantities and multiple objects,
 they also exhibit some nonlinear dependence on pileup. This implies
 that as the pileup increases at the LHC in 2016 and beyond, either trigger thresholds
 will need to rise dramatically or more sophisticated methods to deal
@@ -199,17 +270,24 @@ with pileup contamination will need to implemented. One such method is
 delineated in Ch.~\ref{ch:timing}.
 
 \begin{figure}[ht!]
-\begin{tabular}{cc}
 \centering 
-\includegraphics[width=0.49\textwidth]{figs/hlt13TeV/linear/HLT_RsqMR240_Rsq0p09_MR200_instLumi_vs_rawRate.pdf}
-  & \includegraphics[width=0.49\textwidth]{figs/hlt13TeV/linear/HLT_RsqMR240_Rsq0p09_MR200_4jet_instLumi_vs_rawRate.pdf}\\
-(a) HLT\_RsqMR240\_Rsq0p09\_MR200 & (b) HLT\_RsqMR240\_Rsq0p09\_MR200\_4jet\\
-\includegraphics[width=0.49\textwidth]{figs/hlt13TeV/linear/HLT_Rsq0p25_instLumi_vs_rawRate.pdf}
-  &\includegraphics[width=0.49\textwidth]{figs/hlt13TeV/linear/HLT_Rsq0p02_MR300_TriPFJet80_60_40_DoublePFBTagCSV0p7_0p4_Mbb60_200_instLumi_vs_rawRate.pdf}\\
-\multirow{2}{*}{(c) HLT\_Rsq0p25} & (d) HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_\\
-& ~DoublePFBTagCSV0p7\_0p4\_Mbb60\_200
-\end{tabular}
-\caption{\label{fig:HLTpileup} Pileup dependence of the razor triggers.}
+\includegraphics[width=0.9\textwidth]{figs/hlt13TeV/linear/HLT_RsqMR240_Rsq0p09_MR200_instLumi_vs_rawRate.pdf}\\
+(a) HLT\_RsqMR240\_Rsq0p09\_MR200 \\
+\includegraphics[width=0.9\textwidth]{figs/hlt13TeV/linear/HLT_RsqMR240_Rsq0p09_MR200_4jet_instLumi_vs_rawRate.pdf}\\
+(b) HLT\_RsqMR240\_Rsq0p09\_MR200\_4jet
+\caption{\label{fig:HLTpileup1} Pileup dependence of the dijet (a) and
+  quadjet (b) razor triggers.}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering 
+\includegraphics[width=0.9\textwidth]{figs/hlt13TeV/linear/HLT_Rsq0p25_instLumi_vs_rawRate.pdf}\\
+(c) HLT\_Rsq0p25\\
+ \includegraphics[width=0.9\textwidth]{figs/hlt13TeV/linear/HLT_Rsq0p02_MR300_TriPFJet80_60_40_DoublePFBTagCSV0p7_0p4_Mbb60_200_instLumi_vs_rawRate.pdf}\\
+(d) HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_\\
+~DoublePFBTagCSV0p7\_0p4\_Mbb60\_200
+\caption{\label{fig:HLTpileup2} Pileup dependence of the high-\Rtwo
+  (c) and $\PH(\bbbar)$ (d) razor triggers.}
 \end{figure}
 
 

@@ -13,7 +13,7 @@ luminosity $10^{34} \unit{cm}^{-2} \unit{s}^{-1}$.
 \resizebox{\textwidth}{!}{
 \begin{tabular}{|l|c|c|c|c|}
 \hline 
-Parameter & Unit & \textbf{Design} & \textbf{Acheived (2012)} & \textbf{Acheived (2015)} \\\hline
+Parameter & Unit & \textbf{Design} & \textbf{Achieved (2012)} & \textbf{Achieved (2015)} \\\hline
 \multicolumn{5}{|c|}{\textbf{Beam Data}}\\\hline
 Proton energy & [GeV] & 7000 & 4000 & 6500 \\\hline
 Relativistic gamma factor $\gamma_r$ & & 7461 & 4263 & 6928 \\\hline
@@ -59,8 +59,7 @@ One of the main features influencing the design of the LHC is the re-use of the
 existing 26.7\unit{km} tunnel from the Large Electron Positron collider (LEP), which is
 comprised of eight crossing points (or arcs) and eight straight sections for
 RF cavities. The tunnel in the arc sections has an internal diameter of 3.7\unit{m}. Due to the limited available space, two completely separate
-proton rings would be extremely difficult to install.  magnets
-would be  difficult to fit in which makes the twin-bore magnet design proposed by John
+proton rings with separate magnet systems would be extremely difficult to install, which makes the twin-bore magnet design proposed by John
 Blewett in 1971~\cite{Blewett:1068131} ideal due to its
 ``two-in-one'' use of the limited space. A cross-section of the main superconducting
 dipole magnet is shown in \ref{fig:LHCDipole}.
@@ -96,8 +95,10 @@ F=\left(1+\left(\frac{\theta_c\sigma_z}{2\sigma^{\ast}}\right)^2\right)^{-1/2}~,
 where $\theta_c$ is the full crossing angle, $\sigma_z$ is the RMS
 bunch length, and $\sigma^{\ast}$ is the RMS bunch size.
 
-The integrated luminosity delivered by the LHC to the CMS experiment
-versus time for $2010-2016$ is shown in Fig.~\ref{fig:IntLumi20102016}.
+The integrated luminosity of proton-proton collisions delivered by the
+LHC to the CMS experiment versus time from $2010$ through $2016$ is
+shown in Fig.~\ref{fig:IntLumi20102016}. The LHC also delivers lead-proton and
+lead-lead collisions for one month each year to the experiments.
 
 \begin{figure}\centering
 \includegraphics[width=.9\textwidth]{figs/cms/int_lumi_cumulative_pp_2.pdf}
@@ -111,7 +112,7 @@ versus time for $2010-2016$ is shown in Fig.~\ref{fig:IntLumi20102016}.
 \chapter{The CMS Experiment}
 \label{ch:cms}
 The Compact Muon Solenoid (CMS) detector is a multi-purpose detector
-conceived to study proton-proton (and lead-lead) collisions produced
+conceived to study proton-proton, proton-lead, and lead-lead collisions produced
 by the Large Hadron Collider (LHC) at CERN~\cite{Adolphi:2008zzk}.
 
 The ultimate goals of the LHC physics programme are to elucidate the nature of
@@ -140,16 +141,26 @@ detectors close to the interaction region. See Sec.~\ref{sec:tracker};
   and subsequent analysis. See Sec.~\ref{sec:trigger};
 \item Infrastructure for the alignment and calibration of the detector. See Sec.~\ref{sec:alca}.
 \end{itemize}
+
 The design of CMS, pictured in Fig.~\ref{fig:CMSperspective} and detailed
 in the following sections, meets these requirements. Each detector subsystem is
 integral to the performance of CMS as a whole and is specialized to a
 particular class of particles, as seen in Fig.~\ref{fig:CMSslice}: the silicon
 tracker measures the tracks of charged particles, the electromagnetic
 calorimeter measures the energy of electrons and photons, the hadron calorimeter measures the
-energy of charged and neutral hadrons, the
-superconducting solenoid bends the tracks of charged particles to
-allow for a precise momentum measurement, and the muon detectors
+energy of charged and neutral hadrons, and the muon detectors
 identify and measure the momentum of muons.
+
+All of the subdetectors are built around the central feature of the
+CMS detector, which is a superconducting solenoid providing a uniform axial
+magnetic field of 3.8\unit{T}  over a magnetic length of 12.5 \unit{m}
+and a free-bore radius of 3.15 \unit{m}. The large bending power ($11.4$ \unit{T}\unit{m}) of the
+superconducting magnet permits a precise measurement of the momentum
+of high-energy charged particles in silicon tracker. The return field is large enough to
+saturate $1.5$ \unit{m} of iron, allowing four \emph{muon stations} to be
+integrated and the bore of the magnet coil is large enough to accommodate the inner tracker
+and the calorimetry inside, thereby minimizing the amount of material
+in front of the calorimeters.
 
 %The central feature of the CMS detector is a
 %superconducting solenoid of 6\unit{m} internal diameter, providing a
@@ -161,7 +172,7 @@ identify and measure the momentum of muons.
 %embedded in the magnet steel flux-return yoke outside the
 %solenoid. Extensive forward calorimetry complements the coverage
 %provided by the barrel and endcap detectors. Jets and leptons are
-%econstructed within the pseudorapidity region $\abs{\eta}<3$, covered by the
+%reconstructed within the pseudorapidity region $\abs{\eta}<3$, covered by the
 %electromagnetic and hadron calorimeters. Muons are reconstructed with
 %$\abs{\eta}<2.4$. Events are selected by a two-level trigger system. The first level (L1) is based on a hardware
 %filter, followed by a software-based high-level trigger (HLT). 
@@ -176,21 +187,6 @@ identify and measure the momentum of muons.
 \caption{A slice of the CMS detector.\label{fig:CMSslice}}
 \end{figure}
 
-
-\section{Superconducting Solenoid}
-\label{sec:magnet}
-The central feature of the CMS detector is a
-superconducting solenoid providing a uniform axial
-magnetic field of 3.8\unit{T}  over a magnetic length of 12.5 \unit{m}
-and a free-bore radius of 3.15 \unit{m}. The large bending power ($11.4$ \unit{T}\unit{m}) of the
-superconducting magnet permits a precise measurement of the momentum
-of high-energy charged particles. The return field is large enough to
-saturate $1.5$ \unit{m} of iron, allowing four \emph{muon stations} to be
-integrated.
-% to ensure robustness and full geometric coverage.
-The bore of the magnet coil is large enough to accommodate the inner tracker
-and the calorimetry inside, thereby minimizing the amount of material
-in front of the calorimeters.
 
 \section{Silicon Tracker}
 \label{sec:tracker}
@@ -229,10 +225,14 @@ m$^2$ and have $9.3$ million strips.
 
 The fine granularity of the two tracker subdetectors offers separation of closely-spaced particle
 trajectories in energetic jets. Fig.~\ref{fig:tracker} shows a
-schemetic layout of the tracker in the $r-z$ plane and
+schematic layout of the tracker in the $r-z$ plane and
 the material budget of the CMS tracker, both in units of radiation
 lengths and nuclear interaction lengths, as estimated from
-simulation. 
+simulation. Due to the tracker's material budget, a consistent fraction of
+electrons and photon begin showering already in the tracker, which
+implies the need for a global strategy to event reconstruction
+(detailed in Sec.~\ref{sec:pf}).
+
 %The simulation describes the tracker material budget with
 %an accuracy better than 10\%, as was established by measuring the
 %distribution of reconstructed nuclear interactions and photon
@@ -261,7 +261,7 @@ simulation.
 %  each consist of two back-to-back strip modules, in which one module
 %  is rotated through a `stereo' angle. The pixel modules, shown by the
 %  red lines, also provide 3D hits. Within a given layer, each module
-%  is shifted slightly in $r$ or $z$ with respect to its neighbouring
+%  is shifted slightly in $r$ or $z$ with respect to its neighboring
 %  modules, which allows them to overlap, thereby avoiding gaps in the
 %  acceptance.
 
@@ -274,7 +274,9 @@ tracker, lies the electromagnetic calorimeter (ECAL) schematically
 pictured in Fig.~\ref{fig:ecal}. The ECAL is a hermetic homogenous
 calorimeter composed of 61,200 lead-tungstate (PbWO$_{4}$) scintillating crystals mounted in
 the barrel covering $\abs{\eta}<1.479$, and 7,324 crystals mounted in the two endcap disks
-covering $1.479<\abs{\eta}<3.0$. The high-density ($8.28$ g/cm$^{3}$),
+covering $1.479<\abs{\eta}<3.0$. The crystals in the barrel are arranged in a
+quasi-projective geometry, meaning that they point back to the center of the detector.
+The high-density ($8.28$ g/cm$^{3}$),
 short radiation length ($X_0 = 0.89$ cm), and small Moli\'{e}re radius
 ($R_M$ = 2.2 cm) of PbWO$_{4}$ allow the construction of a compact
 calorimeter with fine granularity.
@@ -341,14 +343,15 @@ Clustering algorithms are used to sum together energy
 deposits in adjacent crystals belonging to the same electromagnetic
 shower. The clustering algorithm proceeds first with the formation of ``basic clusters'', corresponding
 to local maxima of energy deposits. The basic clusters are then merged
-together to form a ``supercluster'', which is extended in
-$\phi$, to recover the radiated energy. Because of the differences
+together to form a ``supercluster,'' which is extended in
+$\phi$ (because charged particle tracks bend in $\phi$, but not in
+$\eta$), to recover the radiated energy. Because of the differences
 between the geometric arrangement of the crystals in the barrel and
 endcap regions, a different clustering algorithm is used in each
-region. The clustering algorithm used in EB, called the `hybrid'
-algorithm, is described in~\cite{CMS_TDR_v1}. In EE and ES, the
-algorithm merges together fixed-size 5$\times$5 crystal basic clusters
-and associates each with corresponding ES energy deposits.
+region. The clustering algorithm used in the barrel, called the ``hybrid''
+algorithm, is described in Ref.~\cite{CMS_TDR_v1}. In the endcap and
+preshower, the algorithm merges together fixed-size 5$\times$5 crystal basic clusters
+and associates each with corresponding preshower energy deposits.
 
 \section{Hadron Calorimeter}
 \label{sec:hcal}
@@ -411,14 +414,14 @@ momentum measurement up to a muon \pt of about $300$ \GeV.
 Each particle yields a specific signature in the CMS detector: compared to charged
 hadrons, electrons have no HCAL cluster; neutral hadrons have no
 tracks; photons have neither of those; and muons leave a signal in the
-muon chambers. Traditional reconstruction methods typically utilize
-the information from only one subdetector in reconstrucing a
+muon chambers (see Fig.~\ref{fig:CMSslice}). Traditional reconstruction methods typically utilize
+the information from only one subdetector in reconstructing a
 particular physics object: for example, jets are traditionally
 reconstructed using only information from the HCAL. 
 
 %Establishing a connection between the information
 %provided by the successive detector layers provides a
-%greater level of robustness to particle identifciation and determination of the particle
+%greater level of robustness to particle identification and determination of the particle
 %properties.
 %Thanks to the fine spatial granularity of the
 %CMS detector, the final-state particles arising from
@@ -433,16 +436,19 @@ of information from all subdetectors. Individual particles (PF candidates) are r
 tracker, the calorimeters, and the muon system. Five categories of PF
 candidates are defined: muons, electrons, photons (including their
 conversions to $\Pep\Pem$ pairs), charged hadrons, and neutral
-hadrons. This global event description leads to significantly improved performance for electron and muon identification, jet and
-hadronic $\tau$ decay reconstruction, and missing transverse energy
-evaluation. 
+hadrons. This global event description leads to an improved performance for electron and muon identification, jet and
+hadronic $\tau$ decay reconstruction, and missing transverse energy. The improvements for $\tau$'s, jets, and \MET are
+especially significant because of the advantage gained by consistently
+integrating the muon and electron reconstruction into the global event
+description so that there is no ambiguity in the interpretation of
+each detected signal. 
 
 This approach enables the mitigation of effects due to
-particles produced by additional $\Pp\Pp$ collisions in the same or in neigboring bunch
-crossings (pileup). Charged PF candidates not compatible
-with the interaction point are discarded and when computing lepton
-isolation and jet energy, the corresponding contamination from neutral
-particles is subtracted on average by applying an event-by-event correction based on the jet-area
+particles produced by additional $\Pp\Pp$ collisions in the same or in neighboring bunch
+crossings (known as pileup). Charged PF candidates not compatible
+with the interaction point are discarded before entering downstream
+reconstruction steps (e.g., jet clustering and computing lepton
+isolation and the contamination from neutral particles is subtracted on average by applying an event-by-event correction based on the jet-area
 method~\cite{jetarea_fastjet,jetarea_fastjet_pu,JME-JINST}. PF reconstruction also minimizes the need
 for a posteriori corrections inherent to the information missing in
 the traditional physics object reconstruction path. 
@@ -457,13 +463,14 @@ Ch.~\ref{ch:analysis8TeV} and Ch.~\ref{ch:analysis13TeV}, with both
 methods of reconstruction.
 
 Jets are reconstructed with the anti-$\kt$ algorithm
-\cite{antikt,fastjet} and a distance parameter $R=0.4$, clustering either the particles reconstructed by the
+\cite{antikt,fastjet} and a distance parameter $R=0.4$ (or $R=0.5$ in
+7\TeV and 8\TeV data), clustering either the particles reconstructed by the
 particle-flow algorithm (PF jets), the energy deposits observed in the
 calorimeters (Calo jets), or the stable particles produced by the
 event generator (Ref jets).
 
 Each PF (Calo) jet is matched to the closest Ref jet within a cone of
-angle 0.1 (0.2) in the $(\eta, \phi)$ space. The use of a twice
+angle $0.1$ ($0.2$) in the $(\eta, \phi)$ space. The use of a twice
 smaller cone angle for PF jets is justified by a twice better
 resolution on the measurement of the jet direction, shown in
 Fig.~\ref{fig:expected_performance_jets_angular}. 
@@ -471,7 +478,9 @@ The improved angular resolution for PF jets is mainly due
 to the precise determination of the charged-hadron direction and
 momentum. In Calo jets, the energy deposits of charged hadrons are spread
 along the $\phi$ direction by the magnetic field, leading to a
-degraded azimuthal resolution. 
+degraded azimuthal resolution. These advantages of the CMS PF
+reconstruction originate from the integration of the track reconstruction into the jet clustering, which is not
+traditionally done in other collider experiments.
 
 \begin{figure}[htb]\centering 
 \includegraphics[width=0.45\textwidth]{figs/cms/EtaPhiResVsRefPt_Barrel_AK4CaloL2L3_AK4PFL2L3_RMS_no2000.pdf} 
@@ -552,8 +561,10 @@ resolution. The \MET resolution is measured for a simulated QCD
 multijet sample of events in Fig~\ref{fig:expected_performance_met} as a function of $\sumET$, the total
 transverse energy developed in the event. Since the vast majority of
 QCD multijet events have no true \MET, the distribution of the
-transverse components of the \vecMET, $\vecMETxy$, is a Gaussian centred at
-zero and its width provides an estimate of the \MET resolution as $\sigma(\MET)=\sqrt{2} \times
+transverse components of the \vecMET, $\vecMETxy$, can be approximated
+as a Gaussian\footnote{Typically non-Gaussian tails emerge due to
+  non-Gaussian response functions of the detector.} centered at zero
+and its width provides an estimate of the \MET resolution as $\sigma(\MET)=\sqrt{2} \times
 \sigma(\METxy)$. The \sumET response, defined as the average fraction of the true \sumET to
 be reconstructed, is also shown in Fig~\ref{fig:expected_performance_met}. Finally, the \vecMET
 angular resolution, measured for a sample of \ttbar events in which at
@@ -581,7 +592,7 @@ Resolution on the measurement of the \vecMET azimuthal angle as a function of th
 
 Rare failures related to the detector, the reconstruction of the PF inputs, 
 and the algorithm itself generally translate to unexpectedly large values of the \MET.
-Events with such large values are systematically scrutinised and when a shortcoming of the PF algorithm is fixed, 
+Events with such large values are systematically scrutinized and when a shortcoming of the PF algorithm is fixed, 
 the global performance of the PF reconstruction typically improves as a whole population of events were affected at lower values
 of the \MET. 
 
@@ -623,8 +634,8 @@ Jets that arise from bottom-quark hadronization (\cPqb-jets) are
 present in many physics processes, such as the decay of top quarks,
 the Higgs boson, and top and bottom squarks predicted by natural supersymmetric models. 
 The ability to accurately identify \cPqb-jets is crucial in reducing
-the otherwise overwhelming background to these channels from processes
-involving jets from gluons (\cPg) and light-flavor quarks (\cPqu,
+the otherwise overwhelming background from processes
+involving jets from gluons (\cPg), light-flavor quarks (\cPqu,
 \cPqd, \cPqs), and from \cPqc-quark fragmentation. 
 
 The properties of the bottom and, to a lesser extent, the charm
@@ -633,7 +644,9 @@ hadrons can be used to identify the hadronic jets into which the
 large masses, long lifetimes ($c\tau\sim 450~\mu\mathrm{m}$) and daughter particles with hard momentum
 spectra. Their semileptonic decays can be exploited as well.
 
-A variety of reconstructed objects -- tracks, vertices and identified
+
+Within the CMS collaboration, these special features of \cPqb-quark
+hadronization are exploited in a set of \cPqb-jet tagging algorithms. A variety of reconstructed objects -- tracks, vertices and identified
 leptons -- can be used to build observables that discriminate between
 \Pqb- and light-parton jets. Several simple and robust algorithms use
 just a single observable, while others combine several of these
@@ -644,15 +657,14 @@ minimum thresholds on these discriminators define loose (``L''), medium
 probability for light-parton jets of close to 10\%, 1\%, and 0.1\%,
 respectively, at an average jet \pt of about $80 \GeV$.
 
-The algorithm that was shown to have the best performance
+The \cPqb-tag algorithm that was shown to have the best performance
 in terms of \cPqb-jet identification efficiency and light-parton-jet fake rate
 in Run 1 is the \emph{Combined Secondary Vertex} (CSV)
 algorithm, which makes use of multivariate techniques to combine
 discriminating variables built from displaced track and secondary
 vertex information as well as jet
-kinematics~\cite{btag7TeV,btag8TeV}. In short, the following set of
-variables with high discriminating power and low correlations is used
-(if no secondary vertex is reconstructed, only the last two variables are available): 
+kinematics~\cite{btag7TeV,btag8TeV}. The following set of
+variables with high discriminating power and low correlations is used:
 \begin{itemize}
 \item the vertex category (real, ``pseudo,'' or ``no vertex'');
 \item the flight distance significance (ratio of the flight
@@ -665,7 +677,8 @@ variables with high discriminating power and low correlations is used
 \item the number of tracks in the jet;
 \item the 3D IP significances for each track in the jet.
 \end{itemize}
-Two likelihood ratios are built from these variables to
+If no secondary vertex is reconstructed, only the last two variables
+in the preceding list are available. Two likelihood ratios are built from these variables to
 discriminate between \cPqb-  and \cPqc-jets and between \cPqb\ and
 light-parton jets. They are combined with prior weights of $0.25$ and $0.75$, respectively.
 
@@ -812,16 +825,16 @@ In order to keep the online reconstruction of physics objects at HLT as
 close as possible to offline reconstruction, PF algorithms are used at
 the HLT whenever possible. 
 %to limit the triggering inefficiency and the false trigger rate
-However, to stay within the HLT timing budget, the online
-reconstruction of a single event for the HLT must be done more than one
-hundred times faster than offline on average.
+However, to stay within and the limited timing budget due to the
+available CPU resources, the online reconstruction of a single event
+for the HLT must be done more than one hundred times faster than offline on average.
 Offline, most of the processing time is spent reconstructing the inner
 tracks for the PF algorithm. For the HLT, the tracking is reduced to three iterations, 
 dropping the time-consuming reconstruction of tracks with a low
 transverse momentum or arising from nuclear interactions in the
 tracker material. These modifications preserve the reconstruction efficiency for
 tracks with $\pt>0.8\,\GeV$ originating from the primary vertex, even
-when these tracks are produced in the decay of a B hadron.
+when these tracks are produced in the decay of B mesons.
 After track reconstruction, a specific instance of the particle identification and reconstruction algorithm runs online, 
 with only two minor differences with respect to the offline algorithm:
 the electron identification and reconstruction is not integrated in
@@ -830,55 +843,18 @@ The main effect of these modifications is a slightly higher jet energy
 scale for jets featuring an electron or a nuclear interaction.
 
 
-\subsection{Data Scouting}
-\label{sec:scouting}
-
 One of the main technical limitations of LHC data processing is the available bandwidth at which events can be
 recorded on disk. Typically, this limitation forces the LHC experiments to increase the thresholds of their
-triggers, in order to keep an acceptable data volume despite the increasing collision rate. 
+triggers, in order to keep an acceptable data volume despite the
+increasing collision rate.  The CMS experiment implemented special
+solutions to circumvent these limitations, combining the standard
+trigger approach (event filtering) with datasize reduction. By
+limiting the amount of recorded information per event, one can accept
+more events without allocating more bandwidth. This strategy is
+adopted both for the alignment and calibration of the detector
+(Sec.~\ref{sec:alca}) and for increasing acceptance to specific
+physics signals (Sec.~\ref{sec:scouting}).
 
-An alternative strategy, referred to as \emph{data scouting}, is reducing the
-event size from the default of $\sim 1$\unit{MB} in order to increase the recorded event rate. This
-approach, first implemented at the LHC by the CMS experiment in
-2011~\cite{CMS-DP-2012-022}, allows us to increase the physics signal
-acceptance of CMS even in the presence of backgrounds with large cross
-sections. This is particularly useful in the search for
-narrow resonances in the dijet mass spectrum, as described in Ch.~\ref{ch:dijet}, where this strategy allows the search to
-be extended into a low-dijet-mass region previously only accessible at
-lower-energy colliders~\cite{Khachatryan:2016ecr,CMS-PAS-EXO-16-032}.
-
-Fig~\ref{fig:DataScouting} schematically displays the $H_{\mathrm{T}}$
-thresholds used for the different varieties of data scouting during the
-2015 and 2016 runs and Fig~\ref{fig:DataScoutingContent} displays the
-corresponding event content. \emph{Calo scouting}, which selects
-events based only on Calo jets and records only calorimetric
-information, has a very small event size of $\sim 1.5$\unit{kB}, allowing the
-rate to go as a high as 3.8 \unit{kHz}. Meanwhile, \emph{PF scouting},
-which runs the full PF algorithm and records all PF-reconstructed
-information, including leptons, photons, and jets with \cPqb-tagging
-information, has a larger event size $\sim 10$\unit{kB}. In order to stay within the
-HLT timing budget, the maximum permissible rate is 720 \unit{Hz}. Simultaneously, the \emph{data parking} stream sends the
-full raw events from PF scouting directly to tape without reconstruction. This
-multifaceted approach is advantageous in the case that a signal is
-seen in the scouting data that warrants more investigation.
-
-\begin{figure}\centering
-\includegraphics[width=.9\textwidth]{figs/cms/Scouting2015.pdf}\\
-\includegraphics[width=.9\textwidth]{figs/cms/Scouting2016.pdf}
-\caption{HLT $H_\mathrm{T}$ thresholds for Calo and PF scouting for
-  2015 (top) and 2016 (bottom) data-taking runs. The
-  rates for the 2015 (2016) are normalized to an instaneous luminosity
-  of $7\times 10^{33}$ cm$^{-2}$ s$^{-1}$ ($10^{34}$ cm$^{-2}$
-  s$^{-1}$). \label{fig:DataScouting}}
-\end{figure}
-
-\begin{figure}\centering
-\includegraphics[width=.45\textwidth]{figs/cms/pfscoutingeventcontent.png}
-\includegraphics[width=.45\textwidth]{figs/cms/caloscoutingeventcontent.png}
-\caption{The event content for PF scouting (left), which amounts to
-  $\sim 10$\unit{kB}, and Calo scouting (right), which amounts to
-  $\sim 1.5$\unit{kB}.\label{fig:DataScoutingContent}}
-\end{figure}
 
 \section{Alignment and Calibration}
 \label{sec:alca}
@@ -900,7 +876,7 @@ calibration and alignment constants.
 %selected examples. 
 
 Most of the alignment and calibration workflows are fed with dedicated
-data samples, called AlCaReco, optimized both in terms of event
+data samples, called AlCaReco datasets, optimized both in terms of event
 selection and event content. Depending on the needs of the specific
 workflow, these samples can be selected offline, while performing the
 reconstruction, or directly online, at the HLT level. 
@@ -918,10 +894,10 @@ depends on the number of selected $\pi^0$ candidates per crystal and
 on the signal-to-background ratio. The candidate diphoton decays are
 selected at the HLT level from events passing single-$e/\Pgg$ and
 single-jet L1 triggers. After selection, only information about a
-limited region of ECAL (energy deposits in 20 to 40 individual
+limited region of ECAL (energy deposits in $20$ to $40$ individual
 crystals) near the $\pi^0$ candidates is stored for the actual
 calibration. This allows to sustain a high rate of calibration events
-(1 to 10 kHz) whilst saving bandwidth and CPU time.
+($1$ to $10$ kHz) whilst saving bandwidth and CPU time.
 
 
 Detector conditions that change on a short time scale require a special
@@ -984,7 +960,7 @@ reprocessing of the data. In normal conditions the full dataset is
 reprocessed once per year. Some important offline workflows are as follows:
 \begin{itemize}
 \item energy calibration of the ECAL response (single channel and overall energy scale calibration);
-\item measurement and correctionion of the tracker orientation with respect to the magnetic field;
+\item measurement and correction of the tracker orientation with respect to the magnetic field;
 \item tracker module alignment.
 \end{itemize}
 
@@ -1081,7 +1057,7 @@ The validation of the HLT laser corrections uses a custom workflow which
 re-runs the HLT reconstruction on recently collected data with two versions of
 laser corrections: the version currently online (and now out-of-date)
 and the version to be validated (and up-to-date). An example of a
-succesfully validated HLT laser correction for a particular week of
+successfully validated HLT laser correction for a particular week of
 data-taking in 2015 is shown in Fig.~\ref{fig:ECALHLT}. Unlike the
 outdated laser corrections (shown in blue), the updated
 laser corrections (shown in black) correct the energy response and
@@ -1173,4 +1149,52 @@ after (green) laser corrections. Middle: Response stability during the
 (green points) response corrections; the blue line shows the inverse
 of the average laser corrections. Right: Distribution of the projected
 relative energy scales.}
+\end{figure}
+
+\subsection{Data Scouting}
+\label{sec:scouting}
+
+An extension of the alignment/calibration data-taking strategy, referred to as \emph{data
+  scouting}, is based on reducing the event size from the default of
+$\sim 1$\unit{MB} in order to increase the recorded event rate and
+thus increase physics signal acceptance. This
+approach, first implemented at the LHC by the CMS experiment in
+2011~\cite{CMS-DP-2012-022}, allows us to increase the physics signal
+acceptance of CMS even in the presence of backgrounds with large cross
+sections. This is particularly useful in the search for
+narrow resonances in the dijet mass spectrum, as described in Ch.~\ref{ch:dijet}, where this strategy allows the search to
+be extended into a low-dijet-mass region previously only accessible at
+lower-energy colliders~\cite{Khachatryan:2016ecr,CMS-PAS-EXO-16-032}.
+
+Fig~\ref{fig:DataScouting} schematically displays the $H_{\mathrm{T}}$
+thresholds used for the different varieties of data scouting during the
+2015 and 2016 runs and Fig~\ref{fig:DataScoutingContent} displays the
+corresponding event content. \emph{Calo scouting}, which selects
+events based only on Calo jets and records only calorimetric
+information, has a very small event size of $\sim 1.5$\unit{kB}, allowing the
+rate to go as a high as 3.8 \unit{kHz}. Meanwhile, \emph{PF scouting},
+which runs the full PF algorithm and records all PF-reconstructed
+information, including leptons, photons, and jets with \cPqb-tagging
+information, has a larger event size $\sim 10$\unit{kB}. In order to stay within the
+HLT timing budget, the maximum permissible rate is 720 \unit{Hz}. Simultaneously, the \emph{data parking} stream sends the
+full raw events from PF scouting directly to tape without reconstruction. This
+multifaceted approach is advantageous in the case that a signal is
+seen in the scouting data that warrants more investigation.
+
+\begin{figure}\centering
+\includegraphics[width=.9\textwidth]{figs/cms/Scouting2015.pdf}\\
+\includegraphics[width=.9\textwidth]{figs/cms/Scouting2016.pdf}
+\caption{HLT $H_\mathrm{T}$ thresholds for Calo and PF scouting for
+  2015 (top) and 2016 (bottom) data-taking runs. The
+  rates for the 2015 (2016) are normalized to an instantaneous luminosity
+  of $7\times 10^{33}$ cm$^{-2}$ s$^{-1}$ ($10^{34}$ cm$^{-2}$
+  s$^{-1}$). \label{fig:DataScouting}}
+\end{figure}
+
+\begin{figure}\centering
+\includegraphics[width=.45\textwidth]{figs/cms/pfscoutingeventcontent.png}
+\includegraphics[width=.45\textwidth]{figs/cms/caloscoutingeventcontent.png}
+\caption{The event content for PF scouting (left), which amounts to
+  $\sim 10$\unit{kB}, and Calo scouting (right), which amounts to
+  $\sim 1.5$\unit{kB}.\label{fig:DataScoutingContent}}
 \end{figure}

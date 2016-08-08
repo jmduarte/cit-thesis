@@ -50,7 +50,7 @@ The remainder of this chapter is organized as follows. The event
 selection and box definitions are detailed in
 Sections~\ref{sec:selection8TeV}~and~\ref{sec:box8TeV},
 respectively. The modeling of the SM backgrounds through a fit using
-an emprical function is explained in Sec.~\ref{sec:bmodel8TeV}. In
+an empirical function is explained in Sec.~\ref{sec:bmodel8TeV}. In
 particular, the motivation for this empirical function and the
 properties that make it a suitable description are examined in Sec.~\ref{sec:function8TeV}.
 The results of the fits to data are presented and compared to the
@@ -126,7 +126,7 @@ four-momenta of all the jets with $\pt>40$\GeV and $\abs{\eta}<2.4$ are
 used to compute the razor variables, as described in section~\ref{sec:kinematic}.
 
 The medium working point of the combined secondary vertex
-algorithm~\cite{btag8TeV}, describred in Sec.~\ref{sec:btag}, is used for \PQb-jet tagging. The \PQb-tagging
+algorithm~\cite{btag8TeV}, described in Sec.~\ref{sec:btag}, is used for \PQb-jet tagging. The \PQb-tagging
 efficiency and mistag probability are measured from data control
 samples as a function of the jet $\pt$ and $\eta$. Correction factors
 are derived for Monte Carlo (MC) simulations through comparison of the
@@ -305,7 +305,7 @@ $(\MR)$, ($\Rtwo$):
 \end{align}
 where $r_0$, $r_1$, $m_0$, and $m_1$ are interrelated exponential parameters.
 This behavior for QCD multijets background is illustrated in
-Fig.~\ref{fig:qcdfit}. The empricial function in Eqn.~\ref{eq:razFun} with
+Fig.~\ref{fig:qcdfit}. The empirical function in Eqn.~\ref{eq:razFun} with
 $n=1$ perfectly replicates this behavior and the exponential parameters can be identified with
 the empirical function's parameters, namely $r_0 = - b\Rtwoz$, $m_0 = - b\MRz$, and $r_1=m_1=b$.
 
@@ -382,7 +382,7 @@ and
    (\Rtwo_{\mathrm{min}}-\Rtwoz)^{1/n}\right) \bigg)~,
 \label{eq:razFunIntegrals}
 \end{align}
-respectively, where $\Gamma(a,x)$ is the incpmplete gamma function:
+respectively, where $\Gamma(a,x)$ is the incomplete gamma function:
 \begin{equation}
  \Gamma(a,x)=\int_{x}^{\infty}t^{a-1}e^{-t}\mathrm{d}t~.
 \end{equation}
@@ -671,7 +671,7 @@ following the LHC \CLs procedure,
 
 In the frequentist paradigm, systematic uncertainties are related to
 nuisance parameters $\boldsymbol{\theta}$ that are incorporated into
-the model. Then the dependence of the test statisic on these nuisance
+the model. Then the dependence of the test statistic on these nuisance
 parameters is removed through ``profiling'' (maximizing the likelihood
 by varying the nuisance parameters). That is the uncertainty is
 propagated by allowing the nuisance parameters to vary in determining
@@ -685,7 +685,7 @@ evaluate the upper limits on $\mu$. This procedure may become very
 computationally intensive especially if there are many nuisance
 parameters that must be fit in each pseudoexperiment. Based on the
 theorems of Wald~\cite{Wald} and Wilks~\cite{Wilks:1938dza}, there is an approximate method to
-compute upper limits based on the asympotic behavior at large $N$
+compute upper limits based on the asymptotic behavior at large $N$
 (where $N$ is the size of the data sample) of the test
 statistic~\cite{Cowan:2010js}. In this asymptotic regime, the
 distribution of $\tilde q_{\mu}$ approaches a chi-square distribution
@@ -843,22 +843,23 @@ SUSY simplified models presented in Section~\ref{sec:sms}.
 \subsection{Limits on Gluino Pair Production}
 \label{sec:interp:gluino}
 
-Derived limits on gluino pair production in the T1bbbb, T1tbbb,
-T1ttbb, T1tttb, and T1tttt scenarios are presented in
+Derived limits on gluino pair production in for different gluino
+branching fraction scenarios are presented in
 Fig.~\ref{fig:gluino2D}.  A comparison of the simplified natural SUSY
 gluino-gluino exclusions, obtained for the different decay-mode
 combinations of third generation quarks, is shown in
 Fig.~\ref{fig:gluinogluinoSUMMARY}. The limits corresponding to
 gluino-gluino topologies with mixed branching fractions lie within the
-band defined by the T1bbbb and the T1tttt contours. As an example,
-gluino masses smaller than 1175\GeV for T1tttt and 1310\GeV for T1bbbb
+band defined by the 100\% $\sGlu\to\bbbar\chiz_1$ and the 100\%
+$\sGlu\to\ttbar\chiz_1$ contours. Gluino masses smaller than 1175\GeV
+for 100\% $\sGlu\to\ttbar\chiz_1$ and 1310\GeV for 100\% $\sGlu\to\bbbar\chiz_1$
 are excluded, for an LSP mass of 100\GeV. For any LSP mass value, a
 larger number of top quarks in the decay topology corresponds to a
 weaker limit, mainly due to a reduced total signal efficiency with
 respect to the four-bottom-quark final state and a worse \MR and
 $\Rtwo$ resolution for events with higher jet multiplicity in the
 final state. Given this fact and the inclusive nature of the analysis,
-the T1tttt limit can be considered to represent a conservative
+the 100\% $\sGlu\to\ttbar\chiz_1$ limit can be considered to represent a conservative
 estimate of a branching-fraction-independent limit, generically valid
 for gluino-gluino production within the context of the natural SUSY
 spectrum shown in Fig.~\ref{fig:spectrum}.
@@ -871,8 +872,12 @@ spectrum shown in Fig.~\ref{fig:spectrum}.
 \includegraphics[width=0.4\textwidth]{figs/analysis8TeV/T1tttbHybridNew0Lp1Lp2LXSEC.pdf}
 \includegraphics[width=0.4\textwidth]{figs/analysis8TeV/T1ttttHybridNew0Lp1Lp2LXSEC.pdf}
 \caption{Interpretation of the inclusive search with razor variables
-  in the context of gluino pair production models: (upper left) T1bbbb, (upper right)
-  T1tbbb, (middle left) T1ttbb, (middle right) T1tttb, and (bottom) T1tttt. The limit for T1bbbb
+  in the context of gluino pair production models: (upper left) 100\% $\sGlu\to\bbbar\chiz_1$, (upper right)
+  50\% $\sGlu\to\bbbar\chiz_1$ and 50\% $\sGlu\to \cPqt \cPqb\chipm_1$
+  (middle left) 100\% $\sGlu\to \cPqt \cPqb\chipm_1$, (middle right)
+  50\% $\sGlu\to\ttbar\chiz_1$ and 50\% $\sGlu\to \cPqt
+  \cPqb\chipm_1$, and (bottom) 100\% $\sGlu\to\ttbar\chiz_1$. The
+  limit for 100\% $\sGlu\to\bbbar\chiz_1$
   is derived using only the hadronic boxes, while the limits for the
   remaining models are derived using all nine boxes. The color coding
   indicates the observed 95\% \CL upper limit on the signal cross
@@ -901,8 +906,9 @@ spectrum shown in Fig.~\ref{fig:spectrum}.
 \subsection{Limits on Top-Squark Pair Production}
 \label{sec:interp:stop}
 
-Derived limits on squark pair production from the razor variables in
-the T2bW$^{\ast}$, T2tb, and T2tt scenarios are presented in
+Derived limits on top squark pair production from the razor search in
+the 100\% $\sTop\to\cPqb\chipm_1$, 50\% $\sTop\to\cPqb\chipm_1$ and
+50\% $\sTop\to\cPqt\chiz_1$, and 100\% $\sTop\to\cPqt\chiz_1$ scenarios are presented in
 Fig.~\ref{fig:squark2D} and compared in
 Fig.~\ref{fig:stopSUMMARY}. As in the
 case of the gluino interpretation, the expected limit from the razor
@@ -921,7 +927,7 @@ exact. However, for large mass differences between the squarks and the
 chargino, the chargino decay products may be boosted enough to become
 observable, breaking the correspondence. For the models
 with the intermediate decay to charginos, there is a migration
-of reconstructed events from the low-background 2b-Jet box to the
+of reconstructed events from the low-background 2\cPqb-Jet box to the
 high-background MultiJet box and a consequently weaker
 limit with respect to the simplified model without decays to charginos.
 
@@ -932,7 +938,8 @@ limit with respect to the simplified model without decays to charginos.
 \includegraphics[width=0.49\textwidth]{figs/analysis8TeV/T2ttHybridNew0Lp1Lp2LXSEC.pdf}
 \caption{Interpretation of the inclusive search with razor variables
   in the context of top-squark pair production models: (\cmsUpperLeft)
-  T2bW$^{\ast}$, (\cmsUpperRight) T2tb, and (bottom) T2tt.  The limit for T2bW$^{\ast}$
+  100\% $\sTop\to\cPqb\chipm_1$, (\cmsUpperRight) 50\% $\sTop\to\cPqb\chipm_1$ and
+50\% $\sTop\to\cPqt\chiz_1$, and (bottom) 100\% $\sTop\to\cPqt\chiz_1$.  The limit for 100\% $\sTop\to\cPqb\chipm_1$
   is derived using only the hadronic boxes, while the limits for the
   remaining models are derived using all nine boxes. The meaning of
   the color coding and the displayed contours is explained in the
@@ -984,7 +991,7 @@ previous constraints.
 \includegraphics[width=0.49\textwidth]{figs/analysis8TeV/T2briCOMBINED.pdf}
 \caption{Top-squark mass limit at a 95\% \CL, obtained combining the
   result of the hadronic razor boxes with the result of
-  Ref.~\cite{1LepMVA} for (\cmsLeft) T2tt and (\cmsRight) independent of
+  Ref.~\cite{1LepMVA} for (\cmsLeft) 100\% $\sTop\to\cPqt\chiz_1$ and (\cmsRight) independent of
   the branching fraction choice. The meaning of
   the color coding and the displayed contours is explained in the
   caption of Fig.~\ref{fig:gluino2D}.\label{fig:combinedLimit}}
