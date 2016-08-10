@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Tue Feb  9 14:50:06 2016) by ROOT version5.34/31
-   TCanvas *c = new TCanvas("c", "c",0,45,500,364);
+//=========  (Mon Aug  8 15:31:21 2016) by ROOT version5.34/31
+   TCanvas *c = new TCanvas("c", "c",2240,45,500,364);
    c->SetHighLightColor(2);
    c->Range(181.25,-3.039148,868.75,3.671016);
    c->SetFillColor(0);
@@ -764,7 +764,7 @@ tex->SetNDC();
    tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.52,0.84,"pp #rightarrow #tilde{b}#tilde{b}, #tilde{b}#rightarrowb#tilde{#chi}^{0}_{2},  #tilde{#chi}_{2}^{0}#rightarrowH#tilde{#chi}^{0}_{1}");
+      tex = new TLatex(0.52,0.84,"pp #rightarrow #tilde{b}_{1}#tilde{b}_{1}, #tilde{b}_{1}#rightarrowb#tilde{#chi}^{0}_{2},  #tilde{#chi}_{2}^{0}#rightarrowH#tilde{#chi}^{0}_{1}");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.045);
@@ -784,7 +784,7 @@ tex->SetNDC();
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("Graph","#sigma_{NLO+NLL} (#tilde{b}#tilde{b}) #pm 1 #sigma (theory)","lf");
+   TLegendEntry *entry=leg->AddEntry("Graph","#sigma_{NLO+NLL} (#tilde{b}_{1}#tilde{b}_{1}) #pm 1 #sigma (theory)","lf");
 
    ci = TColor::GetColor("#6666ff");
    entry->SetFillColor(ci);

@@ -70,7 +70,7 @@ The SM background events are simulated using a \GEANTfour-based model~\cite{G4} 
 The simulation of SUSY signal model events is performed using the CMS fast
 simulation package~\cite{FastSim}. All simulated events include the
 effects of pileup, i.e. multiple $\Pp\Pp$ collisions within the same or
-neighboring bunch crossings, and are processed with the same chain of
+neighboring bunch crossings (in time), and are processed with the same chain of
 reconstruction programs as used for collision data. Simulated events are weighted to
 reproduce the observed distribution of pileup in the dataset, calculated based on the measured 
 instantaneous luminosity. 
@@ -176,10 +176,10 @@ $\pt>20 \GeV$, and the isolation, defined as the $\pt$ sum of other nearby PF ca
 The loose cutoff-based selection~\cite{Khachatryan:2015dfa} is used and results in an efficiency
 of about $50\%$ for successfully reconstructed $\ensuremath{\tau_{\mathrm{h}}}$.
 
-To identify jets originating from \PB-hadron decays, we use the updated
+To identify jets originating from \PB-meson decays, we use the updated
 CSVv2 \cPqb-jet tagger (see Sec.~\ref{sec:btag}), which uses the inclusive
 vertex finder to select \cPqb-jets~\cite{CMS-PAS-BTV-15-001,btag8TeV,btag7TeV}. The ``medium'' 
-working point is used to define the event categories for the search signal regions,
+working point selection is used to define the event categories for the search signal regions,
 and for jets with $\pt$ between $40$ and $200$~$\GeV$ yields an
 efficiency of approximately $70\%$ for \cPqb-jets and an average 
 misidentification probability of $1.5\%$ for jets originating from light-flavor 
@@ -196,14 +196,15 @@ the same energy cluster as an identified electron are vetoed.
 
 \label{sec:StrategySelection}
 
-We select events with four or more jets, using search categories
+We employ a similar ``razor box'' approach to that used for the 8\TeV
+search in Sec.~\ref{sec:box8TeV}. We select events with four or more jets, using search categories
 defined by the number of leptons and \cPqb-tagged jets in the event. Events in the
 zero lepton category, denoted as the Multijet category, are required to have no 
 electrons or muons passing the tight or veto selection, and no selected $\ensuremath{\tau_{\mathrm{h}}}$. 
 Events in the one electron (muon) category, denoted as the Electron Multijet (Muon Multijet) category,
 are required to have one and only one electron (muon) passing the tight selection.
 Within these three event classes, we divide the events further into categories depending on
-whether the events have zero, one, two, or three or more \cPqb-tagged jets. 
+whether the events have zero, one, two, or more than two\cPqb-tagged jets. 
 
 Each event in the above categories is treated as a dijet-like event in
 order to compute the razor variables $\MR$  and $\Rtwo$ as defined

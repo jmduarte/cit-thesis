@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Tue Feb  9 14:51:24 2016) by ROOT version5.34/31
+//=========  (Tue Aug  9 13:25:47 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,500,360);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -29,8 +29,18 @@
    hOBS->SetMarkerStyle(20);
    hOBS->SetMarkerSize(0.8);
    hOBS->GetXaxis()->SetTitle("Bin Number");
+   hOBS->GetXaxis()->SetBinLabel(1,"0");
+   hOBS->GetXaxis()->SetBinLabel(2,"1");
+   hOBS->GetXaxis()->SetBinLabel(3,"2");
+   hOBS->GetXaxis()->SetBinLabel(4,"3");
+   hOBS->GetXaxis()->SetBinLabel(5,"4");
+   hOBS->GetXaxis()->SetBinLabel(6,"5");
+   hOBS->GetXaxis()->SetBinLabel(7,"6");
+   hOBS->GetXaxis()->SetBinLabel(8,"7");
+   hOBS->GetXaxis()->SetBinLabel(9,"8");
+   hOBS->GetXaxis()->SetBinLabel(10,"9");
    hOBS->GetXaxis()->SetLabelFont(42);
-   hOBS->GetXaxis()->SetLabelSize(0.045);
+   hOBS->GetXaxis()->SetLabelSize(0.07);
    hOBS->GetXaxis()->SetTitleSize(0.045);
    hOBS->GetXaxis()->SetTitleFont(42);
    hOBS->GetYaxis()->SetTitle("Number of Events");
@@ -233,8 +243,18 @@
    hOBS->SetMarkerStyle(20);
    hOBS->SetMarkerSize(0.8);
    hOBS->GetXaxis()->SetTitle("Bin Number");
+   hOBS->GetXaxis()->SetBinLabel(1,"0");
+   hOBS->GetXaxis()->SetBinLabel(2,"1");
+   hOBS->GetXaxis()->SetBinLabel(3,"2");
+   hOBS->GetXaxis()->SetBinLabel(4,"3");
+   hOBS->GetXaxis()->SetBinLabel(5,"4");
+   hOBS->GetXaxis()->SetBinLabel(6,"5");
+   hOBS->GetXaxis()->SetBinLabel(7,"6");
+   hOBS->GetXaxis()->SetBinLabel(8,"7");
+   hOBS->GetXaxis()->SetBinLabel(9,"8");
+   hOBS->GetXaxis()->SetBinLabel(10,"9");
    hOBS->GetXaxis()->SetLabelFont(42);
-   hOBS->GetXaxis()->SetLabelSize(0.045);
+   hOBS->GetXaxis()->SetLabelSize(0.07);
    hOBS->GetXaxis()->SetTitleSize(0.045);
    hOBS->GetXaxis()->SetTitleFont(42);
    hOBS->GetYaxis()->SetTitle("Number of Events");

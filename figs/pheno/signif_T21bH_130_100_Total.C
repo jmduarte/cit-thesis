@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Tue Feb  9 14:49:42 2016) by ROOT version5.34/31
-   TCanvas *c = new TCanvas("c", "c",0,45,500,364);
+//=========  (Mon Aug  8 15:25:47 2016) by ROOT version5.34/31
+   TCanvas *c = new TCanvas("c", "c",2240,45,500,364);
    c->SetHighLightColor(2);
    c->Range(0,0,1,1);
    c->SetFillColor(0);
@@ -13,7 +13,7 @@
    TPad *c_pad1 = new TPad("c_pad1", "pad1",0,0.5,1,1);
    c_pad1->Draw();
    c_pad1->cd();
-   c_pad1->Range(181.25,-0.5,868.75,7);
+   c_pad1->Range(181.25,-0.5,868.75,5.75);
    c_pad1->SetFillColor(0);
    c_pad1->SetBorderMode(0);
    c_pad1->SetBorderSize(2);
@@ -119,6 +119,10 @@
    graph->SetHistogram(Graph_Graph_Graph12);
    
    graph->Draw("l ");
+   
+   TPaveText *pt = new TPaveText(0.15,0.6,0.45,0.795,"NBNDC");
+   pt->SetFillColor(0);
+   pt->Draw();
    TLatex *   tex = new TLatex(0.15,0.7,"Pythia+Delphes (8 TeV)");
 tex->SetNDC();
    tex->SetTextFont(42);
@@ -131,19 +135,23 @@ tex->SetNDC();
    tex->SetTextSize(0.09);
    tex->SetLineWidth(2);
    tex->Draw();
+   
+   pt = new TPaveText(0.51,0.35,0.895,0.795,"NBNDC");
+   pt->SetFillColor(0);
+   pt->Draw();
       tex = new TLatex(0.52,0.7,"pp #rightarrow #tilde{b}_{1}#tilde{b}_{2}, #tilde{b}_{2}#rightarrowb#tilde{#chi}^{0}_{2},  #tilde{#chi}_{2}^{0}#rightarrowH#tilde{#chi}^{0}_{1}");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.09);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.52,0.6,"m_{#tilde{b}_{1}} = 130 GeV");
+      tex = new TLatex(0.52,0.56,"#tilde{b}_{1}#rightarrowb#tilde{#chi}^{0}_{1}, m_{#tilde{b}_{1}} = 130 GeV");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.09);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.52,0.5,"m_{#tilde{#chi}^{0}_{2}} = 230 GeV, m_{#tilde{#chi}^{0}_{1}} = 100 GeV");
+      tex = new TLatex(0.52,0.42,"m_{#tilde{#chi}^{0}_{2}} = 230 GeV, m_{#tilde{#chi}^{0}_{1}} = 100 GeV");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.09);

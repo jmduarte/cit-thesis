@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Tue Feb  9 14:53:25 2016) by ROOT version5.34/31
-   TCanvas *c = new TCanvas("c", "c",0,45,500,364);
+//=========  (Mon Aug  8 16:05:29 2016) by ROOT version5.34/31
+   TCanvas *c = new TCanvas("c", "c",2240,45,500,364);
    c->SetHighLightColor(2);
    c->Range(181.25,-3.039148,868.75,3.671016);
    c->SetFillColor(0);
@@ -242,20 +242,20 @@ tex->SetNDC();
    tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.52,0.78,"m_{#tilde{b}_{1}} = 130 GeV");
+      tex = new TLatex(0.52,0.76,"#tilde{b}_{1}#rightarrowb#tilde{#chi}^{0}_{1}, m_{#tilde{b}_{1}} = 130 GeV");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.52,0.72,"m_{#tilde{#chi}^{0}_{2}} = 230 GeV, m_{#tilde{#chi}^{0}_{1}} = 100 GeV");
+      tex = new TLatex(0.52,0.68,"m_{#tilde{#chi}^{0}_{2}} = 230 GeV, m_{#tilde{#chi}^{0}_{1}} = 100 GeV");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
    tex->Draw();
    
-   TLegend *leg = new TLegend(0.5,0.53,0.85,0.68,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.5,0.53,0.85,0.63,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(0);
    leg->SetLineStyle(1);

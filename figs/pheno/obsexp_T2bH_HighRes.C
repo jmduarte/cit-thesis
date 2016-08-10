@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Tue Feb  9 14:51:29 2016) by ROOT version5.34/31
+//=========  (Tue Aug  9 13:24:54 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,500,360);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -29,8 +29,18 @@
    hOBS->SetMarkerStyle(20);
    hOBS->SetMarkerSize(0.8);
    hOBS->GetXaxis()->SetTitle("Bin Number");
+   hOBS->GetXaxis()->SetBinLabel(1,"0");
+   hOBS->GetXaxis()->SetBinLabel(2,"1");
+   hOBS->GetXaxis()->SetBinLabel(3,"2");
+   hOBS->GetXaxis()->SetBinLabel(4,"3");
+   hOBS->GetXaxis()->SetBinLabel(5,"4");
+   hOBS->GetXaxis()->SetBinLabel(6,"5");
+   hOBS->GetXaxis()->SetBinLabel(7,"6");
+   hOBS->GetXaxis()->SetBinLabel(8,"7");
+   hOBS->GetXaxis()->SetBinLabel(9,"8");
+   hOBS->GetXaxis()->SetBinLabel(10,"9");
    hOBS->GetXaxis()->SetLabelFont(42);
-   hOBS->GetXaxis()->SetLabelSize(0.045);
+   hOBS->GetXaxis()->SetLabelSize(0.07);
    hOBS->GetXaxis()->SetTitleSize(0.045);
    hOBS->GetXaxis()->SetTitleFont(42);
    hOBS->GetYaxis()->SetTitle("Number of Events");
@@ -221,8 +231,18 @@
    hOBS->SetMarkerStyle(20);
    hOBS->SetMarkerSize(0.8);
    hOBS->GetXaxis()->SetTitle("Bin Number");
+   hOBS->GetXaxis()->SetBinLabel(1,"0");
+   hOBS->GetXaxis()->SetBinLabel(2,"1");
+   hOBS->GetXaxis()->SetBinLabel(3,"2");
+   hOBS->GetXaxis()->SetBinLabel(4,"3");
+   hOBS->GetXaxis()->SetBinLabel(5,"4");
+   hOBS->GetXaxis()->SetBinLabel(6,"5");
+   hOBS->GetXaxis()->SetBinLabel(7,"6");
+   hOBS->GetXaxis()->SetBinLabel(8,"7");
+   hOBS->GetXaxis()->SetBinLabel(9,"8");
+   hOBS->GetXaxis()->SetBinLabel(10,"9");
    hOBS->GetXaxis()->SetLabelFont(42);
-   hOBS->GetXaxis()->SetLabelSize(0.045);
+   hOBS->GetXaxis()->SetLabelSize(0.07);
    hOBS->GetXaxis()->SetTitleSize(0.045);
    hOBS->GetXaxis()->SetTitleFont(42);
    hOBS->GetYaxis()->SetTitle("Number of Events");
@@ -241,7 +261,7 @@ tex->SetNDC();
    tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.15,0.78,"pp #rightarrow #tilde{b}#tilde{b}, #tilde{b}#rightarrowb#tilde{#chi}^{0}_{2}, #tilde{#chi}_{2}^{0}#rightarrowH#tilde{#chi}^{0}_{1}");
+      tex = new TLatex(0.15,0.78,"pp #rightarrow #tilde{b}_{1}#tilde{b}_{1}, #tilde{b}_{1}#rightarrowb#tilde{#chi}^{0}_{2}, #tilde{#chi}_{2}^{0}#rightarrowH#tilde{#chi}^{0}_{1}");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.045);
@@ -275,7 +295,7 @@ tex->SetNDC();
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("pdfHighRes","m_{#tilde{b}} = 500 GeV, #sigma_{#tilde{b}#tilde{b}} = 1.0 pb","l");
+   entry=leg->AddEntry("pdfHighRes","m_{#tilde{b}_{1}} = 500 GeV, #sigma_{#tilde{b}_{1}#tilde{b}_{1}} = 1.0 pb","l");
 
    ci = TColor::GetColor("#ff0000");
    entry->SetLineColor(ci);
@@ -285,7 +305,7 @@ tex->SetNDC();
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("pdfHighRes","m_{#tilde{b}} = 800 GeV, #sigma_{#tilde{b}#tilde{b}} = 1.3 pb","l");
+   entry=leg->AddEntry("pdfHighRes","m_{#tilde{b}_{1}} = 800 GeV, #sigma_{#tilde{b}_{1}#tilde{b}_{1}} = 1.3 pb","l");
 
    ci = TColor::GetColor("#ff0000");
    entry->SetLineColor(ci);

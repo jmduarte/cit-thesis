@@ -16,7 +16,7 @@ gluino branching ratios~\cite{razor8TeV,CMS-PAS-SUS-15-004}.
 
 In a few cases, a data yield above the expected background was
 observed for certain signal regions, for example, in the case of the
-{\textit edge} dilepton analysis by CMS~\cite{CMSedge} and the SUSY
+\emph{edge} dilepton analysis by CMS~\cite{CMSedge} and the SUSY
 search in $\PZ+$jets events by ATLAS~\cite{ATLASZpeak}. These excesses
 correspond to, respectively, $\sim 2.4\sigma$ and $\sim 3.0\sigma$ of
 local significance, which are reduced after accounting for the
@@ -105,7 +105,7 @@ translated in terms of mass exclusion bounds.
 \includegraphics[width=0.45\textwidth]{figs/theory/T21bH.pdf}
 \includegraphics[width=0.45\textwidth]{figs/theory/T2bH.pdf}
 \caption{\label{fig:simplifiedModels} Pictorial representation of the
-  decay chains associated with model A (left) and model B (right), as described in the text.}
+  decay chains and event topologies associated with model A (left) and model B (right), as described in the text.}
 \end{figure}
 
 \section{Event generation and detector simulation}
@@ -205,17 +205,27 @@ Finally, the search region selection is as follows,
     126+2\sigma_{\mathrm{eff}})$ in each event category, where
     $\sigma_{\mathrm{eff}}$ is defined such that $\sim68\%$ of Higgs
     boson events fall in an interval of $\pm\sigma_{\mathrm{eff}}$
-    around the nominal $m_H$ value. Using this procedure, we derive
-    $\sigma_{\mathrm{eff}}$ to be 3.8\GeV in the \texttt{HighRes} box
-    and 2.2\GeV in the  \texttt{HighRes} and \texttt{LowRes}
-    boxes. For the \texttt{Hbb} and \texttt{Zbb} boxes, we use the overall average value
-    of 2.8\GeV as in Ref.~\cite{RazorHgaga}.
+    around the nominal $m_\PH$ value. Following this procedure using
+    our generated and simulated signal samples, we derive
+    $\sigma_{\mathrm{eff}}$ to be 3.8\GeV in the \texttt{HighPt} box
+    and 2.2\GeV in the \texttt{HighRes} and \texttt{LowRes}
+    boxes. For the \texttt{Hbb} and \texttt{Zbb} boxes, due to the low
+    number of selected signal events, we use the overall average value
+    of 2.8\GeV. 
     %$\sigma_{\mathrm{eff}}=1.46$\GeV in the \texttt{HighRes} box, 
    %$\sigma_{\mathrm{eff}}=1.56$\GeV in the \texttt{HighPt} box, and $\sigma_{\mathrm{eff}}=2$\GeV in the
 %\texttt{Hbb} and \texttt{Zbb} boxes.
 \end{itemize}
+We note that these $\sigma_{\mathrm{eff}}$ values are larger than the
+    corresponding ones in Ref.~\cite{RazorHgaga}. This is due to the
+    larger width observed for the diphoton mass distribution in Higgs
+    boson events simulated and reconstructed with \textsc{Delphes},
+    compared to official CMS software. This implies the effective
+    diphoton mass resolution when using \textsc{Delphes} is larger than in the
+    real CMS detector. We attempt to account for this with a
+    modification explained in Sec.\ref{sec:validation}.
 
-\subsection{Bayesian Statistical Interpretation}
+\subsection{Bayesian Statistical Procedure}
 We model the likelihood according to a Poisson density,
 considering the expected background yield (with associated
 uncertainty), the expected signal yield (for a given signal cross
@@ -281,8 +291,21 @@ section $\sigma$, and $\mathcal L(\mathrm{data}
   For each signal model with specified masses, we scan the signal
   cross section $\sigma$ to find the maximum significance,
   which occurs at the mode of the posterior.
-\subsection{Cross-validation and Correction}
-To cross-validate our emulation result, we produced 95\% CL
+
+\subsection{Correction and Validation}
+\label{sec:validation}
+
+As explained Sec.~\ref{sec:analysis}, we find differences in the
+performance of the emulated CMS detecor and the real CMS detector,
+e.g. the larger diphoton mass resolution. To take into account this
+and other differences in the detector simulation and reconstruction performed by
+\textsc{Delphes} and official CMS software, we conservatively double the
+background uncertainties in each bin reported by CMS in Ref.~\cite{RazorHgaga} when evaluating the likelihood in
+Eqn.~\ref{eqn:likelihood}. We find this conservative approach better
+reproduces the observed and expected limits on a benchmark simplified
+model.
+
+To validate our emulation result, we produced 95\% CL
 limits on the production cross section of an electroweak simplified
 model of $\chipm_1\chiz_2$ production, followed by
 the decays $\chipm_1\to \PW^{\pm}\chiz_1$,
@@ -321,15 +344,13 @@ figure~\ref{fig:TChiwh1dLimit} as a function of $m_{\chipm_1}$.
 \end{figure}
 
 
-\section{Results}
+\section{Results and Reinterpretation}
 \label{sec:results}
 
-%Fig.~\ref{fig:T21bHPosterior500}  shows the posteriors for different
-%boxes and the combination for a particular mass point in model
-%A ($m_{\sbottom_2}=500$\GeV, $m_{\sbottom_2}=130$\GeV,
-%$m_{\chiztwo}=230$\GeV, and $m_{\chizone}=130$\GeV). 
+Figures~\ref{fig:T21bHT2bHExpObs500800}-\ref{fig:T21bHT2bH1dSignif}
+contain the results of the reinterpretation of the data for both models.
 To show how well signal model A agrees with the excess,
-Fig.~\ref{fig:T21bHExpObs500800} displays the expected SM background
+Fig.~\ref{fig:T21bHT2bHExpObs500800} (top) displays the expected SM background
 distribution and uncertainty compared to the distribution of the
 signal events for $m_{\sbottom_2}=500\GeV$ and
 $m_{\sbottom_2}=800\GeV$, with other mass parameters set as
@@ -357,84 +378,66 @@ in the yield tables in Ref.~\cite{RazorHgaga}. %to Tab.~\ref{tab:bins}.
 %\end{table}
 The normalization for the signal is
 taken from the mode (i.e. ``best-fit'') signal cross section of the posterior density in the
-\texttt{HighRes} box. Finally, Fig.~\ref{fig:T21bH1dLimit}, shows the
-95\% CL combined limit as a function of the $\sbottom_2$ mass.
+\texttt{HighRes} box. Fig.~\ref{fig:T21bHT2bH1dLimit} (top), shows the
+95\% CL combined upper limit on the cross section for model A as a function of the $\sbottom_2$
+mass compared to the NLO+NLL predicted cross section at
+$\sqrt{s}=8\TeV$~\cite{NLONLL1,NLONLL2,NLONLL3,NLONLL4,NLONLL5,Borschensky:2014cia}. Finally,
+Fig.~\ref{fig:T21bHT2bH1dSignif} (top) shows the maximum significance $Z$ for
+model B as a function of $m_{\sbottom_2}$ as well as the ``best fit''
+(mode) signal cross section.
 
-
-%Fig.~\ref{fig:T2bHPosterior450},~\ref{fig:T2bHExpObs450800},~and~\ref{fig:T2bH1dLimit}
-%are
-Fig.~\ref{fig:T2bHExpObs500800},~and~\ref{fig:T2bH1dLimit} are
-the analogous results for model B. The chosen model B mass points in Fig.~\ref{fig:T2bHExpObs500800} are
+The bottom of Fig.~\ref{fig:T21bHT2bHExpObs500800}-\ref{fig:T21bHT2bH1dSignif} are
+the analogous results for model B. The chosen model B mass points in Fig.~\ref{fig:T21bHT2bHExpObs500800} are
 $m_{\sbottom_1}=500$\GeV or $m_{\sbottom_1}=800\GeV$ , $m_{\chiztwo}=230\GeV$, and
-$m_{\chizone}=130$\GeV and the limit scan in Fig.~\ref{fig:T2bH1dLimit} is as a function of the $\sbottom_1$ mass.
-
-%\begin{figure}[htb]
-%\includegraphics[width=0.45\textwidth]{figs/pheno/posterior_T21bH_500_130_100.pdf}
-%\caption{\label{fig:T21bHPosterior500} Posterior probability
- % density functions for the $\sbottom_1\sbottom_1$ production cross
- % section in model A for the \texttt{HighPt} box (blue), \texttt{HighRes} box (red), and the combination (black). The solid colored region
- % under each curve illustrates the 5\% tail probability. Note, the chosen masses are $m_{\tilde\chi_1^0}=100$\GeV and
- % $m_{\tilde{\chi}_2^0}=230$\GeV.}
-%\end{figure}
+$m_{\chizone}=130$\GeV and the limit and significance scans in
+Fig.~\ref{fig:T21bHT2bH1dLimit}~and~\ref{fig:T21bHT2bH1dSignif} are
+performed as a function of the $\sbottom_1$ mass.
 
 \begin{figure}[htb]\centering
-\includegraphics[width=0.9\textwidth]{figs/pheno/obsexp_T21bH_HighRes.pdf}
-\caption{\label{fig:T21bHExpObs500800} The expected background and
-  uncertainty compared to the ``best-fit'' signal distribution in the \texttt{HighRes} box for two particular
-  mass points, $m_{\sbottom_2}=500$\GeV and $m_{\sbottom_2}=800$\GeV, in model A.}
-\end{figure}
-
-\begin{figure}[htb]
-\includegraphics[width=0.9\textwidth]{figs/pheno/xsecUL_T21bH_130_100_Total.pdf}
-\caption{\label{fig:T21bH1dLimit} The 95\% CL upper limit on the
-  cross section on $\sbottom_1\sbottom_2$ production in model A as a function of $m_{\sbottom_2}$ (black) compared
-  to the LO predicted cross section (yellow). Note, this scan assumes
-  $m_{\chiz_1}=100$\GeV, $m_{\chiz_2}=230$\GeV, and  $m_{\sbottom_1}=130$\GeV.}
-\end{figure}
-
-\begin{figure}[htb]\centering
-\includegraphics[width=0.9\textwidth]{figs/pheno/signif_T2bH_100_Total.pdf}
-\caption{\label{fig:T21bH1dSignif} The maximum significance $Z$ for a
-  given $m_{\sbottom_2}$ (top) and the ``best fit'' signal cross
-  section (bottom). Note, this scan assumes
-  $m_{\chiz_1}=100$\GeV, $m_{\sbottom_1}=130$\GeV  and $m_{\chiz_2}=230$\GeV.}
-\end{figure}
-
-%\begin{figure}[htb]
-%\includegraphics[width=0.45\textwidth]{figs/pheno/posterior_T2bH_450_100.pdf}
-%\caption{\label{fig:T2bHPosterior450} Posterior probability
-% density functions for the $\sbottom_1\sbottom_1$ production cross
-%  section in model B for the \texttt{HighPt} box (blue),
-%  \texttt{HighRes} box (red), \texttt{Hbb} box (green), and the combination (black). The solid colored region
-%  under each curve illustrates the 5\% tail probability. Note, the chosen masses are $m_{\tilde\chi_1^0}=100$\GeV and
-%  $m_{\tilde{\chi}_2^0}=230$\GeV.}
-%\end{figure}
-
-\begin{figure}[htb]\centering
-\includegraphics[width=0.9\textwidth]{figs/pheno/obsexp_T2bH_HighRes.pdf}
-\caption{\label{fig:T2bHExpObs500800} The expected background and
-  uncertainty compared to the ``best-fit'' signal distribution in the \texttt{HighRes} box for two particular
+\begin{tabular}{c}
+\includegraphics[width=0.9\textwidth]{figs/pheno/obsexp_T21bH_HighRes.pdf}\\
+(a)\\
+\includegraphics[width=0.9\textwidth]{figs/pheno/obsexp_T2bH_HighRes.pdf}\\
+(b)
+\end{tabular}
+\caption{\label{fig:T21bHT2bHExpObs500800} (Top) The expected background and
+  uncertainty (multiplied by a factor of two as explained in the text) compared to the ``best-fit'' signal distribution in the \texttt{HighRes} box for two particular
+  mass points, $m_{\sbottom_2}=500\GeV$ and $m_{\sbottom_2}=800\GeV$,
+  in model A. (Bottom) The expected background and
+  uncertainty (multiplied by a factor of two as explained in the text) compared to the ``best-fit'' signal distribution in the \texttt{HighRes} box for two particular
   mass points, $m_{\sbottom_1}=500\GeV$ and $m_{\sbottom_1}=800\GeV$, in model B.}
 \end{figure}
 
 \begin{figure}[htb]\centering
-\includegraphics[width=0.9\textwidth]{figs/pheno/xsecUL_T2bH_100_Total.pdf}
-\caption{\label{fig:T2bH1dLimit} The 95\% CL upper limit on the
+\begin{tabular}{c}
+\includegraphics[width=0.9\textwidth]{figs/pheno/xsecUL_T21bH_130_100_Total.pdf}\\
+(a) \\
+\includegraphics[width=0.9\textwidth]{figs/pheno/xsecUL_T2bH_100_Total.pdf}\\
+(b)
+\end{tabular}
+\caption{\label{fig:T21bHT2bH1dLimit} (Top) The 95\% CL upper limit on the
+  cross section on $\sbottom_1\sbottom_2$ production in model A as a function of $m_{\sbottom_2}$ (black). (Bottom) The 95\% CL upper limit on the
   cross section on $\sbottom_1\sbottom_1$ production in model B as a function of $m_{\sbottom_1}$ (black) compared
-  to the NLO+NLL predicted cross section (yellow). Note, this scan assumes
-  $m_{\chiz_1}=100\GeV$ and $m_{\chiz_2}=230\GeV$.}
+  to the NLO+NLL predicted cross section (yellow). Note, these scans assume
+  $m_{\chiz_1}=100\GeV$, $m_{\chiz_2}=230\GeV$ and for model A, $m_{\sbottom_1}=130$\GeV. }
 \end{figure}
 
 \begin{figure}[htb]\centering
-\includegraphics[width=0.9\textwidth]{figs/pheno/signif_T2bH_100_Total.pdf}
-\caption{\label{fig:T2bH1dSignif} The maximum significance $Z$ for a
-  given $m_{\sbottom_1}$ (top) and the ``best-fit'' signal cross
-  section (bottom) compared to the NLO+NLL predicted cross section (yellow). Note, this scan assumes
-  $m_{\chiz_1}=100\GeV$ and $m_{\chiz_2}=230\GeV$.}
+\begin{tabular}{c}
+\includegraphics[width=0.9\textwidth]{figs/pheno/signif_T21bH_130_100_Total.pdf}\\
+(a)\\
+\includegraphics[width=0.9\textwidth]{figs/pheno/signif_T2bH_100_Total.pdf}\\
+(b)
+\end{tabular}
+\caption{\label{fig:T21bHT2bH1dSignif} (Top) The maximum significance $Z(\sigma)$ for a
+  given $m_{\sbottom_2}$ in the top panel and the ``best fit'' signal cross
+  section $\sigma$ in the bottom panel for model A.  (Bottom) The maximum significance $Z(\sigma)$ for a
+  given $m_{\sbottom_1}$ in the top panel and the ``best fit'' signal cross
+  section $\sigma$ in the bottom panel for model B.  Note, these scans assume
+  $m_{\chiz_1}=100\GeV$, $m_{\chiz_2}=230\GeV$ and for model A, $m_{\sbottom_1}=130$\GeV.}
 \end{figure}
 
-
-\section{Summary}
+\section{Discussion and Summary}
 \label{sec:conclusionspheno}
 
 In this chapter, we put forth two proposals of simplified models of bottom squark
@@ -455,4 +458,6 @@ corresponding to model B with $m_{\sbottom_1}=500\GeV$,
 $m_{\chiztwo}=230\GeV$, and $m_{\chizone}=100\GeV$. Following this
 study, model B was also used by the CMS collaboration to interpret the
 results of the updated 13\TeV search for SUSY in the same channel~\cite{CMS-PAS-SUS-16-012}, where the
-largest signal significance was found to be $2.9\sigma$ for $m_{\sbottom_1}=XXX\GeV$, $m_{\chiztwo}=XXX\GeV$, and $m_{\chizone}=XXX\GeV$.
+largest signal significance was found to be $2.1\sigma$ for
+$m_{\sbottom_1}=500\GeV$, $m_{\chiztwo}=230\GeV$, and
+$m_{\chizone}=100\GeV$.
