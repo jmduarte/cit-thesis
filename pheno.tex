@@ -8,7 +8,7 @@ squark, and the top squark.
 %The production of these superpartners 
 %results in events with multiple top and bottom quarks, produced in
 %association with missing transverse energy \met. 
-As presented in Chapters~\ref{ch:analysis8TeV}~and\ref{ch:analysis13TeV}, No evidence for such
+As presented in Chapters~\ref{ch:analysis8TeV}~and~\ref{ch:analysis13TeV}, No evidence for such
 a signal was found, pushing the allowed mass range for gluinos and top
 squarks above $\sim 1600 \GeV$ and $\sim 700 \GeV$, respectively, for a
 low-mass neutralino LSP and independent of the top squark and
@@ -68,8 +68,7 @@ In the first model, hereafter referred to as model A, we consider the
 asymmetric production of a $\sbottom_2
 \sbottom_1$ pair, where $\sbottom_2$ and $\sbottom_1$ are the heaviest
 and the lightest bottom squarks, respectively. The $\sbottom_2$ decays
-to $\cPqb \chiztwo$, with $\chiztwo \to \PH \chizone$, as for the bottom
-squarks in the first model. The lightest neutralino $\chizone$ is
+to $\cPqb \chiztwo$, with $\chiztwo \to \PH \chizone$. The lightest neutralino $\chizone$ is
 assumed to be the LSP. The $\sbottom_1$, close in mass to the LSP,
 decays to $\cPqb \chizone$. All the other SUSY partners are assumed to be
 too heavy to be produced at the LHC and are ignored in this
@@ -83,20 +82,18 @@ $\sbottom_1 \to \cPqb \chiztwo$. The $\chiztwo$ then decays to $\PH
 partners are ignored. This simplified model results
 in events with two $\PH$ bosons and at least two jets.
 
-We fix the $\chiztwo$ and $\chizone$ masses to 230\GeV
-and 100\GeV, respectively. 
 The mass spectrum for each model is shown in
-Fig.~\ref{fig:simplifiedModels}.
-In model A, %three benchmarks are
+Fig.~\ref{fig:simplifiedModels}. We fix the $\chiztwo$ and $\chizone$ masses to 230\GeV
+and 100\GeV, respectively.  In model A, %three benchmarks are
 %assumed for the $\sbottom_1$ mass: 130\GeV, 165\GeV, and 200\GeV. 
-we fix the $\sbottom_1$ mass to 130\GeV as varying the mass
-between the $\chizone$ and $\chiztwo$ masses has little effect.
+we fix the $\sbottom_1$ mass to 130\GeV as varying its mass
+in between the limits of the $\chizone$ and $\chiztwo$ masses has little effect.
 Finally, we scan the $\sbottom_2$ ($\sbottom_1$) mass between 250\GeV
 and 800\GeV for model A (B). These assumptions do not limit the
-conclusions derived on the squark production cross section. As a
-matter of fact, the analysis is sensitive to mass differences and not
-to the absolute mass of SUSY partners. On the other hand, this specific
-choice of LSP mass plays a role when the cross section limits are
+conclusions derived on the squark production cross section. In fact,
+the analysis is sensitive to mass differences and not to the absolute
+mass of SUSY partners. On the other hand, the chosen LSP and NLSP
+masses does play a role when the cross section limits are
 translated in terms of mass exclusion bounds.
 
 \begin{figure}[htb]\centering
@@ -108,7 +105,7 @@ translated in terms of mass exclusion bounds.
   decay chains and event topologies associated with model A (left) and model B (right), as described in the text.}
 \end{figure}
 
-\section{Event generation and detector simulation}
+\section{Event generation and Detector Simulation}
 \label{sec:gensim}
 The study is performed using samples of Monte Carlo events. The event generation is performed in \textsc{PYTHIA}~8.210~\cite{Pythia64,Pythia82}.
 The default parton density function set is \textsc{NNPDF}~2.3 QCD+QED
@@ -116,7 +113,7 @@ LO (with $\alpha_s(M_Z) =
 0.130$)~\cite{NNPDF1,NNPDF2,NNPDF3}. Fast simulation of the CMS
 detector is performed in \textsc{Delphes}~3.3.2~\cite{Delphes3}. The
 default description of CMS as provided in the release is used, except
-for a slight modification to the photon isolation and efficiency,
+for a modification to the photon isolation and efficiency,
 described in the next section. Jet clustering is performed using
 \FASTJET~3.1.3~\cite{fastjet}. As in CMS, the anti-$\kt$ jet
 clustering algorithm is used with jet-size parameter $R=0.5$~\cite{antikt}.
@@ -245,7 +242,7 @@ flat. The likelihood is then
 \begin{align}
 \mathcal L(\mathrm{data} |\sigma) &=\int_{0}^{\infty}d\mu~\mathrm{Ln}(\mu|\bar\mu,\delta\mu)\prod_{i=0}^{n_{\mathrm{bins}}}\int_0^{\infty} db_i~
    \mathrm{Poisson}(n_i|L\mu\sigma\epsilon_i+ b_i)\nonumber\\
-&\times\mathrm{Gamma}(b|\bar{b}_i,\delta b_i)
+&\times\Gamma(b|\bar{b}_i,\delta b_i)
 \label{eqn:likelihood}
 \end{align}
 where the product runs over the number of bins $n_{\mathrm{bins}}$; $n_i$ is the
@@ -259,7 +256,7 @@ signal strength, a nuisance parameter modifying the signal cross section
 $\mathrm{Ln}(x|m,\delta)$ is the log-normal
 distribution for $x$, parameterized such that $\mathrm{log}(m)$ is the
 mean and $\mathrm{log}(1+m\delta)$ is the standard deviation of the
-log of the distribution; $\mathrm{Gamma}(x|m,\delta)$ is the gamma
+log of the distribution; $\Gamma(x|m,\delta)$ is the gamma
 distribution for $x$, parameterized such that $m$ is the
 mode and $\delta^2$ is the variance of the distribution. The 95\%
 credibility level (CL) upper limit on the
@@ -296,7 +293,7 @@ section $\sigma$, and $\mathcal L(\mathrm{data}
 \label{sec:validation}
 
 As explained Sec.~\ref{sec:analysis}, we find differences in the
-performance of the emulated CMS detecor and the real CMS detector,
+performance of the emulated CMS detector and the real CMS detector,
 e.g. the larger diphoton mass resolution. To take into account this
 and other differences in the detector simulation and reconstruction performed by
 \textsc{Delphes} and official CMS software, we conservatively double the
@@ -453,11 +450,10 @@ $m_{\chiztwo}-m_{\chizone}=130\GeV$. We scan the bottom squark masses
 for a fixed LSP mass of $m_{\chizone}=100\GeV$ for both models and
 quantify the agreement with the data. We find
 the excess observed in data is broadly consistent with both models,
-with the largest signal significance of $1.8\sigma$
+with the largest signal significance being $1.8\sigma$
 corresponding to model B with $m_{\sbottom_1}=500\GeV$,
-$m_{\chiztwo}=230\GeV$, and $m_{\chizone}=100\GeV$. Following this
-study, model B was also used by the CMS collaboration to interpret the
+$m_{\chiztwo}=230\GeV$, and $m_{\chizone}=100\GeV$. Interestingly, following this
+study, model B used by the CMS collaboration to interpret the
 results of the updated 13\TeV search for SUSY in the same channel~\cite{CMS-PAS-SUS-16-012}, where the
-largest signal significance was found to be $2.1\sigma$ for
-$m_{\sbottom_1}=500\GeV$, $m_{\chiztwo}=230\GeV$, and
+largest signal significance was found to be $2.1\sigma$ for the same masses of $m_{\sbottom_1}=500\GeV$, $m_{\chiztwo}=230\GeV$, and
 $m_{\chizone}=100\GeV$.

@@ -8,20 +8,34 @@ to fall steeply and smoothly with increasing dijet mass.
 Many extensions of the standard model predict the existence of new massive particles
 that couple to quarks (\PQq) and gluons (\Pg) and can be detected as resonances in the
 dijet mass spectrum. Here we report a search for narrow
-resonances, those with natural widths that are small compared to the experimental resolution.
+resonances, those with natural widths that are small compared to the
+experimental resolution (up to $\sim10\%$ of the resonance mass).
 
 A CMS publication at $\sqrt{s}=8$\TeV using the data scouting technique searched for dijet resonances 
-with invariant mass between $0.5$\TeV and $1.6$\TeV\cite{Khachatryan:2016ecr}. Here we conduct a similar \textit{low-mass}  
+with invariant mass between $0.5$\TeV and $1.6$\TeV~\cite{Khachatryan:2016ecr}. Here we conduct a similar \textit{low-mass}  
 search for resonances with mass between \minMassLow and \minMassHigh from \RunLumi of data collected at $\sqrt{s}=13$\TeV in 2016 using jets reconstructed from the 
-calorimeter energy alone. Results are compared with a recent trigger level search at $\sqrt{s}=13$\TeV by ATLAS~\cite{ATLAS-CONF-2016-030}.
+calorimeter energy alone (Calo jets). A similar technique has been implemented by
+ATLAS, as discussed in Ref.~\cite{ATLAS-CONF-2016-030}.
 
-Analyses at $\sqrt{s}=13$\TeV have searched for dijet resonances with masses above 1.5\TeV at CMS~\cite{Khachatryan:2015dcf}
+This low-mass search was partially motivated by the excess at $750 \GeV$ in both the CMS~\cite{Khachatryan:2016hje} and ATLAS~\cite{Aaboud:2016tru} diphoton mass
+spectra in 2015 13\TeV data. To effectively search in this mass range
+with minimal systematic uncertainty due to the trigger, it is
+necessary to use the data scouting technique with Calo jets, as it allows
+the dijet resonance search to begin at $\mjj\gtrsim450\GeV$ with full
+trigger efficiency. Due to tighter trigger thresholds (explained in Sec.\ref{sec:scouting}), the corresponding data scouting technique
+  using jets reconstructed with the particle-flow algorithm (PF jets)~\cite{PF1,PF2} requires $\mjj\gtrsim750\GeV$ for full trigger
+  efficiency, which does not permit a robust background estimation at
+  that value. Unfortunately, more recent results using additional 13\TeV data
+collected in 2016 by CMS~\cite{CMS-PAS-EXO-16-027} and
+  ATLAS~\cite{ATLAS-CONF-2016-059} suggest the diphoton excess at $m_{\Pgg\Pgg}=750 \GeV$ may have been a statistical fluctuation.
+
+Analyses at $\sqrt{s}=13$\TeV have also searched for dijet resonances with masses above 1.5\TeV at CMS~\cite{Khachatryan:2015dcf}
 and above 1.2\TeV at ATLAS~\cite{ATLAS:2015nsi} and have extended the limits on models of dijet resonances to higher
 masses than the run 1 searches from CMS~\cite{Khachatryan:2010jd,Chatrchyan2011123,CMS:2012yf,Chatrchyan:2013qhXX,Khachatryan:2015sja}
 and ATLAS~\cite{ATLAS2010,Aad:2011aj,Aad201237,ATLAS:2012pu,Aad:2014aqa}. Dijet resonance searches have  
 so far used the strategies reviewed in Ref.~\cite{Harris:2011bh}. Here we present a similar \textit{high-mass}
-search for dijet resonances above 1.6\TeV using \RunLumi of data collected at $\sqrt{s}=13$\TeV in 2016 and using jets reconstructed with the particle-flow 
-algorithm~\cite{PF1,PF2}.
+search for dijet resonances above 1.6\TeV using \RunLumi of data
+collected at $\sqrt{s}=13$\TeV in 2016 and using PF jets~\cite{PF1,PF2}.
 
 We present model-independent searches and, in addition, consider the following models of
 $s$-channel dijet resonances: string resonances~\cite{Anchordoqui:2008di,Cullen:2000ef}, scalar diquarks~\cite{ref_diquark},  axigluons~\cite{ref_axi,Chivukula:2013xla},
@@ -30,9 +44,9 @@ colorons~\cite{ref_coloron,Chivukula:2013xla}, excited quarks
 new gauge bosons ($\PWpr$ and $\PZpr$)~\cite{ref_gauge}, and Randall--Sundrum (RS) gravitons
 (G)~\cite{ref_rsg}. 
 We note that the anomalous coupling of the color-octet scalar model used is $k_s^2=1/2$~\cite{Chivukula:2014pma}, 
-reducing the width and cross section of this model by a factor of 1/2 compared to our previous searches, 
-and otherwise the specific choices of parameters for the models are the same as our previous searches and can 
-be found in Ref.~\cite{CMS:2012yf}.
+reducing the width and cross section of this model by a factor of 1/2
+compared to previous CMS searches, and otherwise the specific choices
+of parameters for the models are the same as in Ref.~\cite{CMS:2012yf}.
 
 We also interpret the results of the searches in the context of a
 simplified model of dark matter (DM) production with a vector or
@@ -48,10 +62,10 @@ The particle-flow (PF) algorithm~\cite{PF1,PF2} is used to reconstruct the
 particles in an event and to identify them as muons, electrons, photons, and either charged or neutral
 hadrons. 
 
-Jets are reconstructed from either particles, giving PF-jets, or from calorimeter towers, giving
-Calo-jets. To reconstruct both types of jets we use the anti-$k_t$ algorithm~\cite{antikt} with a distance 
+Jets are reconstructed from either particles, giving PF jets, or from calorimeter towers, giving
+Calo jets. To reconstruct both types of jets we use the anti-$k_t$ algorithm~\cite{antikt} with a distance 
 parameter of 0.4, implemented in the \textsc{FastJet} package~\cite{Cacciari:2005hq}.
-For PF-jets, charged PF candidates not originating from the primary vertex
+For PF jets, charged PF candidates not originating from the primary vertex
 are removed prior to the jet finding. For both types of jets, an event-by-event jet-area-based
 correction~\cite{jetarea_fastjet,jetarea_fastjet_pu,Chatrchyan:2011ds}
 is applied to the jets to remove the estimated energy from additional collisions in 
@@ -60,14 +74,14 @@ the same or adjacent bunch crossings (pileup).
 Events are selected using a two-tier trigger system. Events satisfying
 loose jet requirements at the first level (L1) are examined by the high-level trigger (HLT).
 The high-level triggers use $H_\mathrm{T}$, the scalar sum of the jet \pt from all jets in the event 
-with $\pt>40$\GeV and $|\eta|<3$. For the high-mass search PF-jets are used to compute $H_\mathrm{T}$,
+with $\pt>40$\GeV and $|\eta|<3$. For the high-mass search PF jets are used to compute $H_\mathrm{T}$,
 and events are accepted if they pass the HLT trigger requiring $H_\mathrm{T}>800$\GeV. 
 For the high-mass search we select events with $\mjj>\RECOminMjjCut$ for which the combined L1 trigger 
 and HLT are found to be fully efficient.
 For the low-mass search, when an event passes the HLT trigger the jets 
 reconstructed at the HLT are directly saved, along with a few other necessary objects reconstructed at HLT. The shorter 
 time for event reconstruction and the reduced event size saved at HLT allows a reduced $H_T$ threshold compared
-to the high-mass search. For the low-mass search Calo-jets are used to compute $H_\mathrm{T}$, the threshold is 
+to the high-mass search. For the low-mass search Calo jets are used to compute $H_\mathrm{T}$, the threshold is 
 $H_\mathrm{T}>250$\GeV, and we select events with $\mjj>\CALOminMjjCut$ for which the trigger 
 is fully efficient.
 
@@ -85,8 +99,8 @@ required to have $\pt>30$\GeV and $\abs{\eta}<2.5$.  The two jets with largest
 \pt are defined as the leading jets.
 Jet identification (ID) criteria are
 applied to remove spurious jets associated with calorimeter
-noise. The Jet ID for PF-jets is described in Ref.~\cite{JME-10-003-PAS}.
-The Jet ID for Calo-jets requires that the fraction of jet energy deposited within
+noise. The Jet ID for PF jets is described in Ref.~\cite{JME-10-003-PAS}.
+The Jet ID for Calo jets requires that the fraction of jet energy deposited within
 the electromagnetic calorimeter be between 5\% and 95\% of the
 total jet energy. An event is rejected if either of the two leading jets does not satisfy
 the jet ID criteria.
@@ -94,7 +108,7 @@ the jet ID criteria.
 \subsection{Wide Jet Reconstruction and Event Selection}
 
 Geometrically close jets are combined into ``wide jets'' and
-used to determine the dijet mass, as in our previous
+used to determine the dijet mass, as in previous
 searches~\cite{Chatrchyan2011123,CMS:2012yf,Chatrchyan:2013qhXX,Khachatryan:2015sja}.  The wide-jet algorithm, designed 
 for dijet resonance event reconstruction, reduces the analysis sensitivity to gluon radiation from the
 final state partons.  The two leading jets are used as seeds and the four-vectors of all other jets, if within $\Delta R=\sqrt{\smash[b]{(\Delta\eta)^2 +
@@ -106,8 +120,9 @@ jets to satisfy $\detajj<1.3$.
 The above requirements maximize the search sensitivity for
 isotropic decays of dijet resonances in the presence of QCD dijet background.
 For the low-mass search, after wide jet reconstruction and event selection, we use a correction derived from a smaller sample 
-of \textit{in situ} dijet data to calibrate the wide jets reconstructed from Calo-jet at HLT to have the same response as the wide jets
-reconstructed from PF-jets.
+of \textit{in situ} dijet data to calibrate the wide jets
+reconstructed from Calo jet at HLT to have the same response as the wide jets
+reconstructed from PF jets.
 %roughly a 1\% correction.
 
 \subsection{Dijet Mass Spectrum}
@@ -149,10 +164,10 @@ and for the low-mass search are fit with the
 following parameterization:
 \begin{equation} 
 \frac{{\rd}\sigma}{{\rd}\mjj} =
-\frac{P_{0} (1 - x)^{P_{1}}}{x^{P_{2} + P_{3} \ln{(x)}}}\ ,
+\frac{p_{0} (1 - x)^{p_{1}}}{x^{p_{2} + p_{3} \log{(x)}}}\ ,
 \label{eqBackgroundParam}
 \end{equation}
-where $x=\mbox{\mjj}/\sqrt{s}$ and $P_0$, $P_1$, $P_2$, and $P_3$ are four fitted parameters.
+where $x=\mbox{\mjj}/\sqrt{s}$ and $p_0$, $p_1$, $p_2$, and $p_3$ are four fitted parameters.
 The functional form in Eq.~\ref{eqBackgroundParam} was also used in previous
 searches \cite{Khachatryan:2016ecr,Khachatryan:2015dcf,Khachatryan:2010jd,Chatrchyan2011123,CMS:2012yf,Chatrchyan:2013qhXX,Khachatryan:2015sja,
 ATLAS:2015nsi,ATLAS2010,Aad:2011aj,Aad201237,ATLAS:2012pu,Aad:2014aqa,refCDFrun2} to describe the data. 
@@ -160,7 +175,7 @@ In Fig.~\ref{figDataAndFit} we show the result of binned maximum likelihood fits
 of degrees of freedom: $\chi^2/\mathrm{NDF}=33.3/42$ for the high-mass search, $\chi^2/\mathrm{NDF}=17.3/22$ for the low-mass search.  
 The dijet mass spectra are well modeled by the background fits.  In the lower panels of Fig.~\ref{figDataAndFit}, in the region of dijet mass between 1.1 and 2 \TeV, 
 the bin-by-bin differences between the data and the background fit are not identical in the two searches 
-because fluctuations in reconstructed dijet mass for calo-jets and pf-jets are not completely correlated.
+because fluctuations in reconstructed dijet mass for Calo jets and PF jets are not completely correlated.
 
 \section{Search}
 
@@ -178,10 +193,11 @@ generated with the \PYTHIA8~\cite{Sjostrand:2007gs} program.
   simulation of the detector. Resonances from quark-quark processes modeled by $\PQq\PAQq\to \PXXG \to \PQq\PAQq$  (blue),
 quark-gluon processes modeled by $\PQq\Pg\to \Qstar \to \PQq\Pg$ (red),
 and gluon-gluon processes modeled by $\Pg\Pg\to \PXXG \to \Pg\Pg$ (black), where \PXXG is an RS graviton
-and \Qstar is an excited quark. (left) Resonances generated with a mass of 750 \GeV are shown for wide jets from PF-jet reconstruction (solid) and 
-calo-jet reconstruction (dashed). Also shown is a hypothetical Gaussian shape (dotted green) with a mean mass of 750 \GeV and an RMS width equal 
+and \Qstar is an excited quark. (left) Resonances generated with a
+mass of 750 \GeV are shown for wide jets from PF jet reconstruction (solid) and 
+Calo jet reconstruction (dashed). Also shown is a hypothetical Gaussian shape (dotted green) with a mean mass of 750 \GeV and an RMS width equal 
 to 10\% of the mean mass.
-(right) Resonances generated with a mass of 1, 3, 5 and 7 TeV are shown for wide jets from PF-jet reconstruction.}
+(right) Resonances generated with a mass of 1, 3, 5 and 7 TeV are shown for wide jets from PF jet reconstruction.}
     \label{figMassShapes}
   \end{center}
 \end{figure}
@@ -193,7 +209,7 @@ containing gluons, which emit QCD radiation more strongly than
 quarks, have a more pronounced tail.  In Fig.~\ref{figMassShapes}, for a resonance mass of 750 \GeV, we also show
 a hypothetical Gaussian shape with an RMS width of 10\%, which is one of the widths used by the ATLAS 
 experiment for their generic limits on Gaussian resonances. Fitting the core of the CMS \PQq\PQq resonance lineshape
-for calo-jets to a truncated Gaussian also gives an RMS width of approximately 10\% at the resonance mass value 
+for Calo jets to a truncated Gaussian also gives an RMS width of approximately 10\% at the resonance mass value 
 of 750 GeV. Note that the expected distributions
 of dijet resonances from PYTHIA differ from a Gaussian shape centered at the 
 resonance mass. This is primarily because of QCD radiation which produces significant tails and
@@ -201,7 +217,7 @@ shifts the peak to a lower value of dijet mass.  These real physical effects in 
 result in lower search sensitivity compared to hypothetical Gaussian shapes which neglect these
 effects. 
 
-Figure~\ref{figDataAndFit} includes our signal distributions of quark-quark, quark-gluon and gluon-gluon 
+Figure~\ref{figDataAndFit} includes the signal distributions of quark-quark, quark-gluon and gluon-gluon 
 resonances with signal cross sections excluded at 95\% CL by this analysis, as described below.
 There is no evidence for a narrow resonance in the data, as seen in Fig.~\ref{figDataAndFit}.
 The most significant excess in the data relative to the background fit occurs in the low-mass search
@@ -251,8 +267,8 @@ we find that the background systematic uncertainty has the largest effect on the
 background uncertainty affects the limit depends significantly on the signal shape and the resonance mass, with the largest effect for
 the gluon-gluon resonances and the smallest effect for the hypothetical Gaussian resonances in the low-mass search,
 and the effect decreases as the resonance mass increases. The affect of systematics can be seen in the lower panels of 
-Figure~\ref{figDataAndFit}, where, for example, the excluded gg resonance signal at 750 \GeV is more significantly above the data than 
-is the excluded qq resonance signal at 6 \TeV.
+Figure~\ref{figDataAndFit}, where, for example, the excluded $\Pg\Pg$ resonance signal at 750 \GeV is more significantly above the data than 
+is the excluded $\PQq\PQq$ resonance signal at 6 \TeV.
 
 \begin{figure*}[hbtp]
   \centering
@@ -327,7 +343,7 @@ is the excluded qq resonance signal at 6 \TeV.
 Figures~\ref{figLimitLow}-\ref{figLimitAll} and
 tables~\ref{tab:limits}-\ref{tab:pflimits} show the model-independent observed
 upper limits at 95\% confidence level (\CLp) on
-$\sigma\, B\, A$, i.e., the product of
+$\sigma\times B\times A$, i.e., the product of
 the cross section ($\sigma$), the branching fraction ($B$), and the acceptance ($A$) for the
 kinematic requirements $\detajj<1.3$ and $\abs{\eta}<2.5$,
 for narrow resonances. 
@@ -336,35 +352,40 @@ an RMS width equal to 10\% of the mass.
 The acceptance of the minimum dijet mass requirement in each search has been taken into account
 by correcting the limits, and therefore does not appear in the acceptance $A$.
 Figures~\ref{figLimitLow}-\ref{figLimitAll} also show the expected limits on the cross section and their bands of uncertainty.
-The generated mass spectra are fit with a signal$+$background model to extract expected upper limits.
+The generated mass spectra are fit with a signal-plus-background model to extract expected upper limits.
 The difference in the limits for $\PQq\PQq$, $\PQq\Pg$, $\Pg\Pg$ and Gaussian resonances at the same resonance mass
 originates from the difference in their lineshapes. We note that the limits from Gaussian resonances are smaller
 than can be expected from any physical model, as they do not have any tails due to radiation, and consequently they are narrower 
 and located closer to the resonance pole than any combination of two
 partons can produce. 
 
-
 We present limits with Gaussian shapes of 10\% width in order to compare the sensitivity of this search to
 the tails of the signal shape, and the sensitivity
 of these results with those from ATLAS in Ref.~\cite{ATLAS-CONF-2016-030} which presents results 
-using the same Gaussian shape.  Our limit on $\sigma\, B\, A$ with the Gaussian shape of 10\% width at 750 GeV is 1.8 pb
-expected, and the previous ATLAS limit in Ref.~\cite{ATLAS-CONF-2016-030} was 2.4 pb for a luminosity of 3.4 \fbinv. We note that the ATLAS 
-analysis used $\detajj<1.2$ which gives 93\% of the acceptance of CMS for an isotropic signal.  After adjusting for differences 
-in luminosity and acceptance between the two analyses the CMS and ATLAS sensitivities to a Gaussian resonance of mass 750 GeV and width 10\% are 
-similar.  We also note that at this resonance mass for this signal shape our reported limit, which includes systemic uncertainties, is 60\% larger 
-than the limit obtained without including systematic uncertainties. 
-For a gluon-gluon resonance at a mass of 750 GeV, systematic uncertainties increase the limit by a factor of 3, a significantly larger effect than
-for a Gaussian resonance which neglects the effect of radiation. Our limits on hypothetical Gaussian resonances
-are only recommended for such comparisons, 
-as we have demonstrated that these Gaussian shapes neglect the sizable tails due to QCD radiation, and are consequently more narrow and result in 
+using the same Gaussian shape.  We find a similar sensitivity between
+the two experiments. We note, however, that these Gaussian shapes are
+unrealistic as they neglect the sizable tails due to QCD radiation, and are consequently more narrow and result in 
 significantly better limits than can be physically expected for any pair of partons.  
+%The limit on $\sigma\times B\times A$ with the Gaussian shape of 10\% width at 750 GeV is 1.8 pb
+%expected, and the previous ATLAS limit in Ref.~\cite{ATLAS-CONF-2016-030} was 2.4 pb for a luminosity of 3.4 \fbinv. We note that the ATLAS 
+%analysis used $\detajj<1.2$ which gives 93\% of the acceptance of CMS for an isotropic signal.  After adjusting for differences 
+%in luminosity and acceptance between the two analyses the CMS and ATLAS sensitivities to a Gaussian resonance of mass 750 GeV and width 10\% are 
+%similar.  We also note that at this resonance mass for this signal shape our reported limit, which includes systemic uncertainties, is 60\% larger 
+%than the limit obtained without including systematic uncertainties. 
+%For a gluon-gluon resonance at a mass of 750 GeV, systematic uncertainties increase the limit by a factor of 3, a significantly larger effect than
+%for a Gaussian resonance which neglects the effect of radiation. Our limits on hypothetical Gaussian resonances
+%are only recommended for such comparisons, 
+%as we have demonstrated that these Gaussian shapes neglect the sizable tails due to QCD radiation, and are consequently more narrow and result in 
+%significantly better limits than can be physically expected for any pair of partons.  
 
 Figures~\ref{figSignifLow}~and~\ref{figSignifHigh} also show the observed
-signal significance as a function of resonance mass for both searches.
+signal significance as a function of resonance mass for both
+searches. No sizeable significance is found, with the largest being
+$2.6\sigma$ for an $850\GeV$ $\Pg\Pg$ resonance.
 
 \section{Model-Dependent Interpretation}
 
-All upper limits presented can be compared to the parton-level predictions of $\sigma\, B\, A$, without detector simulation,
+All upper limits presented can be compared to the parton-level predictions of $\sigma\times B\times A$, without detector simulation,
 to determine mass limits on new particles.
 The model predictions shown in Fig.~\ref{figLimitLow}-\ref{figLimitAll} are calculated in the narrow-width
 approximation~\cite{Harris:2011bh} using the CTEQ6L1~\cite{refCTEQ} PDF at leading order,
@@ -373,7 +394,7 @@ The acceptance is evaluated at the parton level for the resonance decay to two p
 decays it is $A\approx 0.6$ independent of resonance mass.
 For a given model, new particles are excluded at 95\% \CL in mass regions where the theoretical prediction
 lies at or above the observed upper limit for the appropriate final state of Fig.~\ref{figLimitLow}-\ref{figLimitAll}.
-For the RS graviton model, for which 60\%(40\%) of the cross section comes from sub-proceses with 
+For the RS graviton model, for which 60\% (40\%) of the cross section comes from sub-proceses with 
 only quarks(gluons) in the final state, we obtain mass limits by comparing the RS graviton
 cross section curve to a weighted average of the limits in the quark-quark and gluon-gluon final states.
 The mass limits are reported in Table~\ref{tab:MassLimit} for all
@@ -464,12 +485,15 @@ the most important diagrams for monojet and dijet searches.
     \fmf{plain}{v1,pvisr,i1}
     \fmf{fermion,tension=0}{v1,i1}
     \fmfdot{v1,v2}
+    %\fmfdot{v1,v2,visr}
     \fmflabel{ ${\gq^{\prime}}$}{v1}
     \fmflabel{ ${\gDM}$}{v2}
     \fmflabel{ ${\Paq}$}{i1}
     \fmflabel{ ${\Pq}$}{i2}
     \fmflabel{ ${\overline{\chiDM}(\mDM)}$}{o1}
     \fmflabel{ ${\chiDM(\mDM)}$}{o2}
+    %\fmflabel{ $\alpha_{\mathrm{s}}$}{visr}
+    \fmfv{decor.shape=circle,decor.filled=full,decor.size=2thick,label=$g_{\mathrm{s}}$,label.angle=180}{visr}
     \fmf{gluon,tension=0}{visr,isr}
     \fmf{phantom,tension=0}{pvisr,pisr}
     \fmflabel{ ${\Pg}$}{isr}
@@ -495,8 +519,12 @@ the most important diagrams for monojet and dijet searches.
   \vspace{\baselineskip}
 \caption{Representative Feynman diagrams showing the pair production of
   dark matter particles in association with a radiated gluon from the initial
-  state (left) and the pair production of quarks (right) via a vector or axial-vector $\PZpr_B$ mediator. The cross section and kinematics depend on the mediator and dark
-matter masses, and the mediator couplings to dark matter and quarks respectively: ($\mMed ,\, \mDM ,\, \gDM ,\, \gq^{\prime})$~\cite{Abercrombie:2015wmb}. \label{fig:OP}}
+  state used in $\MET+\mathrm{X}$ (mono-X) searches (left) and the
+  pair production of quarks used in dijet searches (right) via a
+  vector or axial-vector $\PZpr_B$ mediator. The cross section and kinematics depend on the mediator and dark
+matter masses, and the mediator couplings to dark matter and quarks
+respectively: ($\mMed ,\, \mDM ,\, \gDM ,\,
+\gq^{\prime}$)~\cite{Abercrombie:2015wmb}. \label{fig:OP}}
 \end{figure}
 
 %For V and AV models we follow section 2.1 and S
@@ -548,7 +576,8 @@ width to DM particles (see Fig.~\ref{fig:gBvsMZ}) and correct for the DM width,
 &\Rightarrow& (g^{\prime}_B)^2&=\frac{g_B^2}{2}\left(1 + \sqrt{1+ 4\frac{\Gamma^{\chi\overline\chi}}{\Gamma^{\Pq\Paq}(g_B)}}\right )~.
 \end{align}
 
-Fig.~\ref{fig:DMsummary} shows 95\% CL exclusion regions in $m_{\mathrm{med}}-m_{\mathrm{DM}}$ plane for dijet
+Fig.~\ref{fig:DMsummary} shows 95\% CL exclusion regions in
+($m_{\mathrm{med}}$,$m_{\mathrm{DM}}$) plane for dijet
   searches~\cite{CMS-PAS-EXO-16-032,Khachatryan:2016ecr} and
   different $\MET$ based DM searches~\cite{CMS-PAS-EXO-16-030,CMS-PAS-EXO-16-037,CMS-PAS-EXO-16-039,CMS-PAS-EXO-16-010} from CMS in the leptophobic
  vector and  axial-vector models defined above. Following the
@@ -576,7 +605,7 @@ limits are very similar for the V and AV models, as expected.
 \includegraphics[width=0.95\textwidth]{figs/dijet/Vector_EXO_Summary_ICHEP.pdf}\\
 \includegraphics[width=0.95\textwidth]{figs/dijet/Axial_EXO_Summary_ICHEP.pdf}
 \caption{95\% CL exclusion regions in
-  $m_{\mathrm{med}}-m_{\mathrm{DM}}$ plane for dijet
+  ($m_{\mathrm{med}}$,$m_{\mathrm{DM}}$) plane for dijet
   searches~\cite{CMS-PAS-EXO-16-032,Khachatryan:2016ecr} and
   different $\MET$ based DM searches~\cite{CMS-PAS-EXO-16-030,CMS-PAS-EXO-16-037,CMS-PAS-EXO-16-039,CMS-PAS-EXO-16-010} from CMS in the leptophobic
   vector (top) and axial-vector (bottom) models. Following the
@@ -604,14 +633,13 @@ In summary, two searches for narrow resonances decaying into a pair of jets have
 pp collisions at $\sqrt{s}=13$\TeV corresponding to an integrated luminosity of \RunLumi. A low-mass search using data scouting from the high-level trigger 
 with calorimeter jets and a high-mass search using particle-flow jets. The dijet mass spectra have been measured to be smoothly falling
 distributions. In the analyzed data samples, there is no evidence for resonant particle production.
-We present generic upper limits on the product $\sigma\, B\, A$ for narrow quark-quark, quark-gluon and gluon-gluon
+We present generic upper limits on the product $\sigma\times B\times A$ for narrow quark-quark, quark-gluon and gluon-gluon
 resonances that are applicable to any model of narrow dijet resonance production.
 We set mass limits at 95\% CL on models of string resonances, scalar diquarks, excited quarks, axigluons, colorons, color octet scalars, 
 $\PWpr$ bosons, $\PZpr$ bosons, and RS gravitons, which
 extend previously published limits in the dijet channel. We also set
 limits on the coupling of a leptophobic $\PZpr_B$ boson as a
-function of its mass. Finally, these limits are translated to
-determine the impact of the dijet searches on the allowed parameter
+function of its mass. Finally, these limits are translated to determine the impact of the dijet searches on the allowed parameter
 space in models of dark matter production at the LHC. 
 
 
