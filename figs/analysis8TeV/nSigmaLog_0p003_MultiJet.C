@@ -1840,9 +1840,10 @@ TPaveText *pt = new TPaveText(0.09,0.9,0.9,0.85,"brNDC");
    pt->SetTextFont(42);
    pt->SetTextSize(0.057);
    text = pt->AddText("SM backgrounds: t#bar{t}, W/Z+jets");
-   text = pt->AddText("pp #rightarrow #tilde{g}#tilde{g}, #tilde{g}#rightarrowb#bar{b}, #sigma_{#tilde{g}#tilde{g}} = 0.003 pb");
+   text = pt->AddText("pp#rightarrow#tilde{g}#tilde{g}, #tilde{g}#rightarrowb#bar{b}#tilde{#chi}_{1}^{0}, #sigma_{#tilde{g}#tilde{g}}=0.003 pb");
    text = pt->AddText("            m_{#tilde{g}} = 1325 GeV");
-   text = pt->AddText("            m_{#tilde{#chi}} = 50 GeV");
+   text = pt->AddText("            m_{#tilde{#chi}^{0}_{1}} = 50 GeV");
+   text = pt->AddText("");
    pt->Draw();
 
    pt = new TPaveText(0.955,0.22,0.985,0.92,"brNDC");

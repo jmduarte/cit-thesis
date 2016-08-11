@@ -370,7 +370,7 @@ TPaveText *pt = new TPaveText(0.17,0.73,0.7,0.89,"brNDC");
    pt->SetTextFont(42);
    pt->SetTextSize(0.065);
    text = pt->AddText("pp#rightarrow#tilde{g}#tilde{g}");
-   text = pt->AddText("#tilde{g}#rightarrow b#bar{b}");
+   text = pt->AddText("#tilde{g}#rightarrow b#bar{b}#tilde{#chi}_{1}^{0}");
    pt->Draw();
 
    pt = new TPaveText(0.17,0.58,0.8,0.71,"brNDC");
@@ -381,7 +381,7 @@ TPaveText *pt = new TPaveText(0.17,0.73,0.7,0.89,"brNDC");
    pt->SetTextAlign(12);
    pt->SetTextFont(42);
    pt->SetTextSize(0.058);
-   text = pt->AddText("m_{#tilde{g}} = 1325 GeV, m_{#tilde{#chi}} = 50 GeV");  
+   text = pt->AddText("m_{#tilde{g}} = 1325 GeV, m_{#tilde{#chi}_{1}^{0}} = 50 GeV");  
    text = pt->AddText("#sigma_{#tilde{g}#tilde{g}} = 0.01 pb");
    pt->Draw();
    
