@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Wed Aug  3 14:28:51 2016) by ROOT version5.34/31
+//=========  (Tue Aug 23 09:56:06 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",1,1,500,376);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -13,37 +13,37 @@
    c->SetRightMargin(0.15);
    c->SetFrameBorderMode(0);
    c->SetFrameBorderMode(0);
-   Double_t xAxis2[9] = {300, 325, 350, 400, 500, 600, 700, 900, 1200}; 
+   Double_t xAxis1[9] = {300, 325, 350, 400, 500, 600, 700, 900, 1200}; 
    
-   TEfficiency * effMR_Rsq0.252 = new TEfficiency("effMR_Rsq0.25","MR efficiency",8,xAxis2);
+   TEfficiency * effMR_Rsq0.251 = new TEfficiency("effMR_Rsq0.25","MR efficiency",8,xAxis1);
    
-   effMR_Rsq0.252->SetConfidenceLevel(0.6826895);
-   effMR_Rsq0.252->SetBetaAlpha(1);
-   effMR_Rsq0.252->SetBetaBeta(1);
-   effMR_Rsq0.252->SetWeight(1);
-   effMR_Rsq0.252->SetStatisticOption(0);
-   effMR_Rsq0.252->SetPosteriorMode(0);
-   effMR_Rsq0.252->SetShortestInterval(0);
-   effMR_Rsq0.252->SetTotalEvents(0,0);
-   effMR_Rsq0.252->SetPassedEvents(0,0);
-   effMR_Rsq0.252->SetTotalEvents(1,2002);
-   effMR_Rsq0.252->SetPassedEvents(1,1380);
-   effMR_Rsq0.252->SetTotalEvents(2,1529);
-   effMR_Rsq0.252->SetPassedEvents(2,1125);
-   effMR_Rsq0.252->SetTotalEvents(3,1887);
-   effMR_Rsq0.252->SetPassedEvents(3,1492);
-   effMR_Rsq0.252->SetTotalEvents(4,1806);
-   effMR_Rsq0.252->SetPassedEvents(4,1572);
-   effMR_Rsq0.252->SetTotalEvents(5,718);
-   effMR_Rsq0.252->SetPassedEvents(5,659);
-   effMR_Rsq0.252->SetTotalEvents(6,326);
-   effMR_Rsq0.252->SetPassedEvents(6,311);
-   effMR_Rsq0.252->SetTotalEvents(7,216);
-   effMR_Rsq0.252->SetPassedEvents(7,205);
-   effMR_Rsq0.252->SetTotalEvents(8,65);
-   effMR_Rsq0.252->SetPassedEvents(8,62);
-   effMR_Rsq0.252->SetTotalEvents(9,0);
-   effMR_Rsq0.252->SetPassedEvents(9,0);
+   effMR_Rsq0.251->SetConfidenceLevel(0.6826895);
+   effMR_Rsq0.251->SetBetaAlpha(1);
+   effMR_Rsq0.251->SetBetaBeta(1);
+   effMR_Rsq0.251->SetWeight(1);
+   effMR_Rsq0.251->SetStatisticOption(0);
+   effMR_Rsq0.251->SetPosteriorMode(0);
+   effMR_Rsq0.251->SetShortestInterval(0);
+   effMR_Rsq0.251->SetTotalEvents(0,0);
+   effMR_Rsq0.251->SetPassedEvents(0,0);
+   effMR_Rsq0.251->SetTotalEvents(1,2002);
+   effMR_Rsq0.251->SetPassedEvents(1,1380);
+   effMR_Rsq0.251->SetTotalEvents(2,1529);
+   effMR_Rsq0.251->SetPassedEvents(2,1125);
+   effMR_Rsq0.251->SetTotalEvents(3,1887);
+   effMR_Rsq0.251->SetPassedEvents(3,1492);
+   effMR_Rsq0.251->SetTotalEvents(4,1806);
+   effMR_Rsq0.251->SetPassedEvents(4,1572);
+   effMR_Rsq0.251->SetTotalEvents(5,718);
+   effMR_Rsq0.251->SetPassedEvents(5,659);
+   effMR_Rsq0.251->SetTotalEvents(6,326);
+   effMR_Rsq0.251->SetPassedEvents(6,311);
+   effMR_Rsq0.251->SetTotalEvents(7,216);
+   effMR_Rsq0.251->SetPassedEvents(7,205);
+   effMR_Rsq0.251->SetTotalEvents(8,65);
+   effMR_Rsq0.251->SetPassedEvents(8,62);
+   effMR_Rsq0.251->SetTotalEvents(9,0);
+   effMR_Rsq0.251->SetPassedEvents(9,0);
    
    TF1 *sigmoidMR = new TF1("sigmoidMR","[0]/(1.0+exp(-(x-[1])/[2]))",300,1200);
    sigmoidMR->SetFillColor(19);
@@ -69,11 +69,11 @@
    sigmoidMR->SetParameter(2,99.83277);
    sigmoidMR->SetParError(2,10.69295);
    sigmoidMR->SetParLimits(2,0,0);
-   effMR_Rsq0.252->GetListOfFunctions()->Add(sigmoidMR);
-   effMR_Rsq0.252->SetFillColor(19);
-   effMR_Rsq0.252->SetMarkerStyle(20);
-   effMR_Rsq0.252->SetMarkerSize(0.8);
-   effMR_Rsq0.252->Draw("apez");
+   effMR_Rsq0.251->GetListOfFunctions()->Add(sigmoidMR);
+   effMR_Rsq0.251->SetFillColor(19);
+   effMR_Rsq0.251->SetMarkerStyle(20);
+   effMR_Rsq0.251->SetMarkerSize(0.8);
+   effMR_Rsq0.251->Draw("apez");
    TLatex *   tex = new TLatex(0.12,0.92,"CMS preliminary");
 tex->SetNDC();
    tex->SetTextFont(42);

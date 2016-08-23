@@ -2,16 +2,18 @@
 \label{ch:pheno}
 
 Much of the focus of the ATLAS and CMS collaborations has been on
-searching for strongly-produced SUSY partners needed to protect the mass of the Higgs
+searching for strongly-produced SUSY partners, which have large
+production cross sections at the LHC and are needed to protect the mass of the Higgs
 ($\PH$) boson from large quantum corrections: the gluino, the bottom
 squark, and the top squark. 
 %The production of these superpartners 
 %results in events with multiple top and bottom quarks, produced in
 %association with missing transverse energy \met. 
-As presented in Chapters~\ref{ch:analysis8TeV}~and~\ref{ch:analysis13TeV}, No evidence for such
-a signal was found, pushing the allowed mass range for gluinos and top
+As presented in
+Chapters~\ref{ch:analysis8TeV}~and~\ref{ch:analysis13TeV}, no evidence
+for the production of such particles was found, pushing the allowed mass range for gluinos and top
 squarks above $\sim 1600 \GeV$ and $\sim 700 \GeV$, respectively, for a
-low-mass neutralino LSP and independent of the top squark and
+low-mass neutralino LSP and largely independent of the top squark and
 gluino branching ratios~\cite{razor8TeV,CMS-PAS-SUS-15-004}.
 
 In a few cases, a data yield above the expected background was
@@ -21,23 +23,24 @@ search in $\PZ+$jets events by ATLAS~\cite{ATLASZpeak}. These excesses
 correspond to, respectively, $\sim 2.4\sigma$ and $\sim 3.0\sigma$ of
 local significance, which are reduced after accounting for the
 look-elsewhere effect (LEE). Several interpretations of these results
-were given in literature~\cite{Theory1,Theory2,Theory3,Theory4,Theory5,Theory6},
-mainly related to the production of SUSY particles producing long
-decay chains. 
+were given in the literature~\cite{Theory1,Theory2,Theory3,Theory4,Theory5,Theory6},
+mainly related to the electroweak production of SUSY particles with long decay chains. 
 
-Here we discuss an equally interesting excess, observed in a search
+Here we discuss another interesting excess, observed in a search
 for electroweak SUSY partners in $\PH (\Pgg\Pgg)+ \geq 1$~jet events by the CMS
 collaboration performed at $8\TeV$~\cite{RazorHgaga}. The analysis uses the diphoton
-invariant mass \mgaga to select events with a $\PH$-like candidate
-and the \mgaga sidebands to estimate the background from
-standard-model processes. The background prediction is performed as a
+invariant mass \mgaga to select events with a $\PH$-like
+candidate. The nonresonant (mostly QCD
+diphoton production) and resonant (standard model $\PH(\Pgg\Pgg)$
+production) backgrounds are estimated using the \mgaga sidebands in data
+and the Monte Carlo simulation, respectively. The background prediction is performed as a
 function of the razor variables $\MR$ and $\Rtwo$ in five mutually
 exclusive \emph{boxes}, targeting different final states:
-high-$\pt$ $\PH (\Pgg\Pgg)$ (\texttt{HighPt}), $\PH
-(\Pgg\Pgg)$+$\PH (\bbbar)$ (\texttt{Hbb}) $\PH
-(\Pgg\Pgg)$+$\PZ (\bbbar)$ (\texttt{Zbb}), and low-$\pt$ $\PH
+high-$\pt$ $\PH (\Pgg\Pgg)$ (\texttt{HighPt} box), $\PH
+(\Pgg\Pgg)+\PH (\bbbar)$ (\texttt{Hbb} box), $\PH
+(\Pgg\Pgg)+\PZ (\bbbar)$ (\texttt{Zbb} box), and low-$\pt$ $\PH
 (\Pgg\Pgg)$ with high- and low-resolution photons
-(\texttt{HighRes} and \texttt{LowRes}, respectively). Five events are
+(\texttt{HighRes} and \texttt{LowRes} boxes, respectively). Five events are
 observed in one ($\MR$, $\Rtwo$) bin of the \texttt{HighRes} box, compared
 to less than one expected background event. This corresponds to a
 local significance of $2.9\sigma$, reduced to $1.6\sigma$ after the
@@ -49,7 +52,7 @@ to derive bounds on squark production. Since the analysis does not
 require or veto jets originating from \cPqb-quarks (\cPqb-jets), our results
 apply to bottom-squark production in natural SUSY models. 
 
-Recently an updated search was performed with data collected at
+Recently, an updated search was performed with data collected at
 $13\TeV$~\cite{CMS-PAS-SUS-16-012}, which exhibits a similar excess of
 $2.5\sigma$ local significance, reduced to $1.4\sigma$ after the
 LEE. Model B proposed in this thesis was also
@@ -72,15 +75,16 @@ to $\cPqb \chiztwo$, with $\chiztwo \to \PH \chizone$. The lightest neutralino $
 assumed to be the LSP. The $\sbottom_1$, close in mass to the LSP,
 decays to $\cPqb \chizone$. All the other SUSY partners are assumed to be
 too heavy to be produced at the LHC and are ignored in this
-analysis. This model results in a new mechanism for
-$\PH$+jets production, with one of the associated jets being soft. 
+analysis. This model represents a new mechanism for the production of
+$\PH+2\cPqb\textrm{-}\mathrm{jets}+\mathrm{invisible}$, with one of
+the associated \cPqb-jets typically having low momentum.
 
 In the second model, hereafter referred to as model B~\cite{annthesis}, two bottom
 squarks $\sbottom_1\sbottom_1$ are produced, each decaying as
 $\sbottom_1 \to \cPqb \chiztwo$. The $\chiztwo$ then decays to $\PH
 \chizone$, the $\chizone$ being the LSP. As for model A, the other SUSY
-partners are ignored. This simplified model results
-in events with two $\PH$ bosons and at least two jets.
+partners are ignored. This simplified model corresponds to a final
+state consisting of $2\PH+2\cPqb\textrm{-}\mathrm{jets}+\mathrm{invisible}$.
 
 The mass spectrum for each model is shown in
 Fig.~\ref{fig:simplifiedModels}. We fix the $\chiztwo$ and $\chizone$ masses to 230\GeV
@@ -105,11 +109,11 @@ translated in terms of mass exclusion bounds.
   decay chains and event topologies associated with model A (left) and model B (right), as described in the text.}
 \end{figure}
 
-\section{Event generation and Detector Simulation}
+\section{Event Generation and Detector Simulation}
 \label{sec:gensim}
 The study is performed using samples of Monte Carlo events. The event generation is performed in \textsc{PYTHIA}~8.210~\cite{Pythia64,Pythia82}.
 The default parton density function set is \textsc{NNPDF}~2.3 QCD+QED
-LO (with $\alpha_s(M_Z) =
+LO (with $\alpha_s(m_\PZ) =
 0.130$)~\cite{NNPDF1,NNPDF2,NNPDF3}. Fast simulation of the CMS
 detector is performed in \textsc{Delphes}~3.3.2~\cite{Delphes3}. The
 default description of CMS as provided in the release is used, except
@@ -125,7 +129,7 @@ The emulated event selection is summarized as follows,
 \begin{itemize}
 \item Events with two isolated photons with $\pt>25$\GeV and
   $|\eta|<1.44$ are selected. As in Ref.~\cite{CMSPhoton}, the photon
-  isolation variables, $I_{\gamma}$, $I_{n}$, and $I_{\pi}$, are
+  isolation variables, $I_{\gamma}$, $I_{\mathrm{n}}$, and $I_{\pi}$, are
   computed by summing the transverse momenta of photons, neutral
   hadrons, and charged hadrons, respectively, inside an isolation
   cone of radius $\Delta R=0.3$ around the selected photon. The photon
@@ -134,12 +138,16 @@ The emulated event selection is summarized as follows,
   efficiency is applied in \textsc{Delphes} such that isolated photons with $\pt<10$\GeV ($\pt\geq10$\GeV) are
   randomly selected with 94\% (98\%) efficiency.
 \begin{table}\centering
-\caption{\label{tab:isolation}Photon isolation requirements, as in Ref~\cite{CMSPhoton}.}
+\caption{\label{tab:isolation}Photon isolation requirements, as in
+  Ref~\cite{CMSPhoton}. The photon isolation variables, $I_{\gamma}$, $I_{\mathrm{n}}$, and $I_{\pi}$, are
+  computed by summing the transverse momenta of photons, neutral
+  hadrons, and charged hadrons, respectively, inside an isolation
+  cone of radius $\Delta R=0.3$ around the selected photon.}
 %\begin{ruledtabular}
 \begin{tabular}{lc|r}\hline\hline
  \multirow{2}{*}{$I_{\gamma}$} & barrel & $1.3\GeV + 0.005\pt^{\gamma}$\\
  & endcap & -- \\\hline
- \multirow{2}{*}{$I_{n}$} & barrel & $3.5\GeV+ 0.04\pt^{\gamma}$\\
+ \multirow{2}{*}{$I_{\mathrm{n}}$} & barrel & $3.5\GeV+ 0.04\pt^{\gamma}$\\
  & endcap &  $2.9\GeV+ 0.04\pt^{\gamma}$ \\\hline
  \multirow{2}{*}{$I_{\pi}$} & barrel & $2.6\GeV$\\
  & endcap &  $2.3\GeV$ \\\hline\hline
@@ -155,17 +163,17 @@ The emulated event selection is summarized as follows,
   of the anti-$\kt$~\cite{antikt} algorithm with jet radius parameter $R=0.5$.
 \item Events with at least one jet with $\pt>30$ GeV and $|\eta|<3.0$
   are selected.
-\item An emulation of the medium working point (mistag probability of
-  1\% b-tag efficiency of $\sim$ 80\%) of the combined secondary vertex (CSV) b-tagging
-  algorithm is used to identify b-jets~\cite{btag8TeV}.
+\item An emulation of the ``medium'' requirement (mistag probability of
+  1\% and \cPqb-tag efficiency of $\sim 68\%$) of the combined secondary vertex (CSV) \cPqb-tagging
+  algorithm is used to identify \cPqb-jets~\cite{btag8TeV}.
 \item A $\bbbar$ candidate pair is identified if both jets satisfy the medium requirement of
-  the b-tagging algorithm (note: the CMS analysis requires only one to
+  the \cPqb-tagging algorithm (note: the CMS analysis requires only one to
   satisfy the medium requirement, while both are required to satisfy
   the loose requirement).
 \item The $\bbbar$ candidate pair with the mass closest to 125\GeV or 91.2\GeV is chosen as the $\PH\to
-  \bbbar$ or $Z\to \bbbar$ candidate, respectively.
-\item The razor variable \MR, calculated from two megajets is required to be greater than
-  $150$\GeV. All possible combinations of the reconstructed jets and
+  \bbbar$ or $\PZ\to \bbbar$ candidate, respectively.
+\item The razor variable \MR, calculated from two megajets~\cite{razorPRD} is required to be greater than
+  $150\GeV$. All possible combinations of the reconstructed jets and
 the $\PH(\Pgg\Pgg)$ candidate are clustered to form megajets. The pair of megajets that
 minimizes the sum in quadrature of the invariant masses of the two megajets is selected.
 \end{itemize}
@@ -177,15 +185,24 @@ following requirements,
   with $p_{T}>110$\GeV. 
 \item \texttt{Hbb}: remaining events with a $\PH\to \bbbar$ candidate
   with mass $110\geq m_{\bbbar}\geq 140$\GeV. 
-\item \texttt{Zbb}: remaining events with a $Z\to \bbbar$ candidate
+\item \texttt{Zbb}: remaining events with a $\PZ\to \bbbar$ candidate
   with mass $76\geq m_{\bbbar}\geq 106$\GeV. 
-\item \texttt{HighRes}: 70\% of remaining events (after the \texttt{Zbb} selection). 
+\item \texttt{HighRes}: 70\% of remaining events after the
+  \texttt{Zbb} selection (emulating the efficiency of the ``high-resolution photon'' selection).
 \item \texttt{LowRes}: all remaining events. 
 \end{itemize}
 We assume the breakdown of events between the \texttt{HighRes} box and \texttt{LowRes}
-box is 70\%-to-30\% of events after the \texttt{Zbb} selection based on the fact that CMS 
-observes a similar breakdown for both SM Higgs background and
-electroweak SUSY signal processes in Monte Carlo simulation~\cite{RazorHgaga}.
+box is 70\%-to-30\% after the \texttt{Zbb} selection. This
+is based on the following observations:  (i) CMS categorizes events in the \texttt{HighRes} box if
+both photons in the event satisfy $\sigma_E/E < 0.015$, where $\sigma_E/E$ is the estimated
+relative energy resolution, and categorizes events in the
+\texttt{LowRes} box otherwise, (ii) CMS observes a similar
+70\%-to-30\% breakdown for both SM Higgs production and
+electroweak SUSY processes in Monte Carlo
+simulation~\cite{RazorHgaga}, and (iii) we expect this breakdown to be
+model-independent assuming both photons are real and come from the
+decay of a Higgs boson, as it is based on the properties of such photons
+detected in CMS and not on the details of the model.
 
 %Given the difficulty of emulating the high-resolution requirement
 %(both photons must satisfy $\sigma_E/E<0.015$, where $\sigma_E/E$ is the relative
@@ -222,7 +239,7 @@ We note that these $\sigma_{\mathrm{eff}}$ values are larger than the
     real CMS detector. We attempt to account for this with a
     modification explained in Sec.\ref{sec:validation}.
 
-\subsection{Bayesian Statistical Procedure}
+\section{Bayesian Statistical Procedure}
 We model the likelihood according to a Poisson density,
 considering the expected background yield (with associated
 uncertainty), the expected signal yield (for a given signal cross
@@ -234,23 +251,23 @@ log-normal density) on the signal strength, a multiplicative
 factor modifying the signal cross section. We then derive the
 posterior density for the signal cross section $\sigma$ as:
 \begin{equation}
-p(\sigma|\mathrm{data}) \propto \mathcal L(\mathrm{data} |\sigma)p_0(\sigma)
+p(\sigma|\mathrm{data}) \propto \mathcal L(\mathrm{data} |\sigma)p_0(\sigma)~,
 \label{eqn:posterior}
 \end{equation}
 where $\mathcal L(\mathrm{data} |\sigma)$ is the likelihood and $p_0(\sigma)$ is the prior density taken to be
-flat. The likelihood is then
+uniform. The likelihood is then
 \begin{align}
-\mathcal L(\mathrm{data} |\sigma) &=\int_{0}^{\infty}d\mu~\mathrm{Ln}(\mu|\bar\mu,\delta\mu)\prod_{i=0}^{n_{\mathrm{bins}}}\int_0^{\infty} db_i~
+\mathcal L(\mathrm{data} |\sigma) &=\int_{0}^{\infty}\mathrm{d}\mu~\mathrm{Ln}(\mu|\bar\mu,\delta\mu)\prod_{i=0}^{n_{\mathrm{bins}}}\int_0^{\infty} \mathrm{d}b_i~
    \mathrm{Poisson}(n_i|L\mu\sigma\epsilon_i+ b_i)\nonumber\\
-&\times\Gamma(b|\bar{b}_i,\delta b_i)
+&\times\Gamma(b_i|\bar{b}_i,\delta b_i)~,
 \label{eqn:likelihood}
 \end{align}
 where the product runs over the number of bins $n_{\mathrm{bins}}$; $n_i$ is the
 observed yield in the $i^{\mathrm{th}}$ bin, $L$ is the integrated
-luminosity, $b_i$ is the actual value of the background yield in the
+luminosity, $b_i$ is the assumed value of the background yield in the
 $i^{\mathrm{th}}$ bin and $\bar{b}_i\pm \delta b_i$ is its expected value
 and the associated uncertainty; $\epsilon_i$ is the nominal value
-of the signal efficiency in the $i^{\mathrm{th}}$ bin; $\mu$ is the
+of the signal efficiency times acceptance in the $i^{\mathrm{th}}$ bin; $\mu$ is the
 signal strength, a nuisance parameter modifying the signal cross section
 (nominally equal to $\bar\mu=1$ with a $\delta\mu=30\%$ uncertainty);
 $\mathrm{Ln}(x|m,\delta)$ is the log-normal
@@ -263,7 +280,7 @@ credibility level (CL) upper limit on the
 signal cross section $\sigma_{\mathrm{up}}$ is obtained from the
 posterior, such that 
 \begin{equation}
-\frac{\int_0^{\sigma_{\mathrm{up}}}d\sigma~ p(\sigma|\mathrm{data})}{\int_0^{\infty}d\sigma~ p(\sigma|\mathrm{data})} = 0.95~.
+\frac{\int_0^{\sigma_{\mathrm{up}}}\mathrm{d}\sigma~ p(\sigma|\mathrm{data})}{\int_0^{\infty}\mathrm{d}\sigma~ p(\sigma|\mathrm{data})} = 0.95~.
 \end{equation}
 
 We also utilize a signal significance measure defined by
@@ -289,7 +306,7 @@ section $\sigma$, and $\mathcal L(\mathrm{data}
   cross section $\sigma$ to find the maximum significance,
   which occurs at the mode of the posterior.
 
-\subsection{Correction and Validation}
+\section{Correction and Validation}
 \label{sec:validation}
 
 As explained Sec.~\ref{sec:analysis}, we find differences in the
@@ -345,17 +362,18 @@ figure~\ref{fig:TChiwh1dLimit} as a function of $m_{\chipm_1}$.
 \label{sec:results}
 
 Figures~\ref{fig:T21bHT2bHExpObs500800}-\ref{fig:T21bHT2bH1dSignif}
-contain the results of the reinterpretation of the data for both models.
-To show how well signal model A agrees with the excess,
+contain the results of the reinterpretation of the CMS data for both models.
+To show how well signal model A agrees with the excess observed by CMS,
 Fig.~\ref{fig:T21bHT2bHExpObs500800} (top) displays the expected SM background
-distribution and uncertainty compared to the distribution of the
+distribution and uncertainty taken from the CMS result compared to the distribution of the
 signal events for $m_{\sbottom_2}=500\GeV$ and
 $m_{\sbottom_2}=800\GeV$, with other mass parameters set as
 $m_{\sbottom_2}=130\GeV$, $m_{\chiztwo}=230\GeV$, and
-$m_{\chizone}=130\GeV$. The bin numbers correspond to the order given
-in the yield tables in Ref.~\cite{RazorHgaga}, and in Tab.~\ref{tab:bins}.
+$m_{\chizone}=100\GeV$. The bin numbers correspond to the order of the
+signal regions in the yield tables in Ref.~\cite{RazorHgaga} and are
+reproduced in Tab.~\ref{tab:bins}.
 \begin{table}[htb] \centering
-\caption{\label{tab:bins}\texttt{HighRes} bin numbering scheme.}
+\caption{\label{tab:bins}\texttt{HighRes} bin numbering scheme as in Ref.~\cite{RazorHgaga}.}
 \begin{tabular}{c|cc}
 \hline\hline
 Bin &$\MR$ range & $\Rtwo$ range \\
@@ -376,21 +394,21 @@ Bin &$\MR$ range & $\Rtwo$ range \\
 The normalization for each signal model is taken from the mode (i.e. ``best-fit'') signal cross section of the posterior density in the
 \texttt{HighRes} box. Fig.~\ref{fig:T21bHT2bH1dLimit} (top), shows the
 95\% CL combined upper limit on the cross section for model A. Finally,
-Fig.~\ref{fig:T21bHT2bH1dSignif} (top) shows the maximum significance $Z$ for
-model B as a function of $m_{\sbottom_2}$ as well as the best fit signal cross section.
+Fig.~\ref{fig:T21bHT2bH1dSignif} (top) shows the maximum significance
+$Z$ as well as the best fit signal cross section for model A as a function of $m_{\sbottom_2}$.
 
 The bottom of Fig.~\ref{fig:T21bHT2bHExpObs500800}-\ref{fig:T21bHT2bH1dSignif} are
 the analogous results for model B. The chosen model B mass points in Fig.~\ref{fig:T21bHT2bHExpObs500800} are
 $m_{\sbottom_1}=500\GeV$ or $m_{\sbottom_1}=800\GeV$, $m_{\chiztwo}=230\GeV$, and
-$m_{\chizone}=130\GeV$ and the limit and significance scans in
+$m_{\chizone}=100\GeV$. The limit and significance scans in
 Fig.~\ref{fig:T21bHT2bH1dLimit}~and~\ref{fig:T21bHT2bH1dSignif} are
 performed as a function of the $\sbottom_1$ mass. For model B, we also
-compare both the excluded cross section and the best-fit cross section
-as a function of the $\sbottom_1$ mass to the NLO+NLL predicted cross section at
+compare both the excluded cross section at 95\% CL and the best-fit cross section
+as a function of the $\sbottom_1$ mass to the NLO$+$NLL predicted cross section at
 $\sqrt{s}=8\TeV$~\cite{NLONLL1,NLONLL2,NLONLL3,NLONLL4,NLONLL5,Borschensky:2014cia}. We
 find the $8\TeV$ data excludes bottom squark pair prodction below $m_{\sbottom_1}=330\GeV$ for
 the chosen neutralino masses of $m_{\chiztwo}=230\GeV$ and
-$m_{\chizone}=130\GeV$. More interestingly, the largest combined significance
+$m_{\chizone}=100\GeV$. More interestingly, the largest combined significance
 is $1.8\sigma$ for $m_{\sbottom_1}=500\GeV$ and the best-fit cross section
 is $0.4\unit{pb}$, which is of the same order of magnitude as the
 predicted cross section.
@@ -407,7 +425,8 @@ predicted cross section.
   mass points, $m_{\sbottom_2}=500\GeV$ and $m_{\sbottom_2}=800\GeV$,
   in model A. (Bottom) The expected background and
   uncertainty (multiplied by a factor of two as explained in the text) compared to the best-fit signal distribution in the \texttt{HighRes} box for two particular
-  mass points, $m_{\sbottom_1}=500\GeV$ and $m_{\sbottom_1}=800\GeV$, in model B.}
+  mass points, $m_{\sbottom_1}=500\GeV$ and $m_{\sbottom_1}=800\GeV$,
+  in model B. The bin numbers correspond to the order of the signal regions in the yield tables in Ref.~\cite{RazorHgaga} and are reproduced in Tab.~\ref{tab:bins}.}
 \end{figure}
 
 \begin{figure}[htb]\centering
@@ -442,18 +461,18 @@ predicted cross section.
 \section{Discussion and Summary}
 \label{sec:conclusionspheno}
 
-In this chapter, we put forth two proposals of simplified models of bottom squark
+In this chapter, we proposed two simplified models of bottom squark
 pair production for use in the interpretation of an excess observed
-by CMS in a search for SUSY in $\PH+$jet events using razor variables at $\sqrt{s}=8\TeV$~\cite{RazorHgaga}. In model A, we consider the
+by CMS in a search for SUSY in $\PH+$jets events using razor variables at $\sqrt{s}=8\TeV$~\cite{RazorHgaga}. In model A, we considered the
 asymmetric production of a $\sbottom_2
 \sbottom_1$ pair, with the $\sbottom_1\to\chizone$, $\sbottom_2\to\cPqb
 \chiztwo$, and $\chiztwo \to H \chizone$, where $\chizone$ is a
-neutralino LSP and we fix the mass splitting $m_{\chiztwo}-m_{\chizone}=130\GeV$. In model B, we consider the symmetric production of a
+neutralino LSP and we fix the mass splitting $m_{\chiztwo}-m_{\chizone}=130\GeV$. In model B, we considered the symmetric production of a
 $\sbottom_1\sbottom_1$ pair, with $\sbottom_1 \to \cPqb \chiztwo$,
 $\chiztwo \to \PH \chizone$, and
-$m_{\chiztwo}-m_{\chizone}=130\GeV$. We scan the bottom squark masses
+$m_{\chiztwo}-m_{\chizone}=130\GeV$. We scanned the bottom squark masses
 for a fixed LSP mass of $m_{\chizone}=100\GeV$ for both models and
-quantify the agreement with the data. We find
+quantified the agreement with the data. We found
 the excess observed in data is broadly consistent with both models,
 with the largest signal significance being $1.8\sigma$
 corresponding to model B with $m_{\sbottom_1}=500\GeV$,

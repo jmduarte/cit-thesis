@@ -45,10 +45,10 @@ particles, is given by the Lagrangian density,
   & \mathrm{(gauge~terms)}\nonumber\\
 & +\overline\ell_\mathrm{L}\tilde\sigma^{\mu}iD_{\mu}\ell_\mathrm{L} +
    \overline e_\mathrm{R}\sigma^{\mu}iD_{\mu}e_\mathrm{R} + \overline \nu_\mathrm{R}
-   \sigma^{\mu}iD_{\mu}\nu_\mathrm{R} + (\mathrm{h.c.})& \mathrm{(lepton~kinetic~terms)}\nonumber\\
+   \sigma^{\mu}iD_{\mu}\nu_\mathrm{R} + (\mathrm{h.c.})& \mathrm{(lepton~kinetic~and~gauge~terms)}\nonumber\\
 & +\overline q_\mathrm{L}\tilde\sigma^{\mu}iD_{\mu}q_\mathrm{L} +
    \overline u_\mathrm{R}\sigma^{\mu}iD_{\mu}u_\mathrm{R} + \overline d_\mathrm{R}
-   \sigma^{\mu}iD_{\mu}d_\mathrm{R} + (\mathrm{h.c.})& \mathrm{(quark~kinetic~terms)}\nonumber\\
+   \sigma^{\mu}iD_{\mu}d_\mathrm{R} + (\mathrm{h.c.})& \mathrm{(quark~kinetic~and~gauge~terms)}\nonumber\\
 & +\mathcal L_{\mathrm{Higgs}} +\mathcal L_{\mathrm{Yukawa}} &  \mathrm{(Higgs~and~Yukawa~terms)}
 \label{eqn:lsm}
 \end{align}
@@ -212,9 +212,9 @@ observed mass of the Higgs boson through quantum corrections.
 
 %\textbf{ Maurizio says: I would add a few lines about the tree-level Higgs mass. This connects to the next chapter}
 
-\chapter{Naturalness and Supersymmetry}
+\chapter{The Hierarchy Problem, Naturalness, and Supersymmetry}
 \label{ch:naturalness}
-\section{Naturalness in the Standard Model}
+\section{The Hierarchy Problem and Naturalness in the Standard Model}
 \label{sec:higgsnaturalness}
 The leading quantum correction to the Higgs mass is due to
 the large Yukawa coupling of the top quark, which gives the
@@ -247,7 +247,7 @@ cancellation\footnote{to $1$ part in $10^{34}$} with
 $\Delta(m^2_{h^0})$ in order to explain how $m_{h^0}$
 is measured to be so small at $125.09\pm0.24 \GeV$~\cite{Aad:2015zhl}. The conundrum of how a light fundamental
 scalar particle can exist in the presence of (presumably) new physics
-in the ultraviolet is called the \emph{naturalness problem} and is one
+in the ultraviolet is called the \emph{hierarchy problem} or the \emph{naturalness problem} and is one
 of the key motivations for new physics at the \TeV scale, especially \emph{supersymmetry}.
 
 
@@ -257,7 +257,7 @@ Supersymmetry (SUSY) is a proposed symmetry of spacetime that
 introduces a bosonic (fermionic) partner for every fermion
 (boson)~\cite{Wess,Golfand,Volkov,Chamseddine,Kane,Fayet,Barbieri,Hall,Ramond}. For
 many years, such a symmetry was thought to be impossible since in 1967,
-Colman and Mandula~\cite{PhysRev.159.1251} published their no-go theorem that says
+Coleman and Mandula~\cite{PhysRev.159.1251} published their no-go theorem that says
 internal symmetries, those that act on internal degrees of
 freedom like spin, cannot be combined with spacetime symmetries in a
 nontrivial way. SUSY evades this theorem because it is based
@@ -268,7 +268,7 @@ and commutation relations.
 Supersymmetric extensions of the SM are compelling 
 because they 
 \begin{enumerate}[(a)]
-\item yield a solution to the naturalness problem, alleviating
+\item yield a solution to the hierarchy problem, alleviating
 the fine-tuning of fundamental
 parameters~\cite{Witten:1981nf,Dimopoulos:1981zb,Dine:1981za,Dimopoulos:1981au,Sakai:1981gr,Kaul:1981hi},
 explained further in Sec.~\ref{sec:susynaturalness}.
@@ -405,6 +405,15 @@ If $R$-parity is conserved, there are three important phenomenological consequen
 
 \section{Electroweak Supersymmetric Sector}
 \label{sec:ewksusy}
+In the MSSM, the description of electroweak symmetry breaking involves
+two complex Higgs doublets, $H_u = (H_u^+, H_u^0) $ and $H_d = (H_d^0, H_d^-)$. The neutral
+components of the Higgs doublets, $H^0_u$ and $H_d^0$, both get vacuum
+expectation values,
+\begin{align}
+v_u &= \langle H_u^0\rangle~,& v_d &= \langle H_d^0\rangle~,
+\end{align}
+with their ratio being written as $\tan\beta = v_u/v_d$.
+
 The superpartners of the neutral gauge bosons (neutral gauginos), and
 the fermionic partners of the neutral Higgs bosons (neutral higgsinos),
 $\psi^0 =(\PSB,\PSWz,\PSHdz,\PSHuz)$, mix to form the
@@ -419,13 +428,16 @@ and chargino mass terms in the Lagrangian are
 with the neutralino mass matrix,
 \begin{equation}
 \mathbf{M}_N =\left (  \begin{matrix}
-M_1 & 0 & -m_Zs_Wc_{\beta} & m_Zs_Ws_{\beta} \\
-0& M_2 & -m_Zc_Wc_{\beta} & -m_Zc_Ws_{\beta} \\
--m_Zs_Wc_{\beta}& m_zc_Wc_{\beta} & 0 & -\mu\\
-m_Zs_Ws_{\beta}& -m_zc_Ws_{\beta} & \mu & 0
+M_1 & 0 & -m_\PZ s_Wc_{\beta} & m_\PZ s_\PW s_{\beta} \\
+0& M_2 & -m_\PZ c_Wc_{\beta} & -m_\PZ c_\PW s_{\beta} \\
+-m_\PZ s_\PW c_{\beta}& m_\PZ c_\PW c_{\beta} & 0 & -\mu\\
+m_\PZ s_\PW s_{\beta}& -m_\PZ c_\PW s_{\beta} & \mu & 0
 \end{matrix}\right)~,
 \end{equation}
-and the chargino mass matrix,
+where $s_\PW = \sin\theta_\PW$, $c_W=\cos\theta_\PW$, $\theta_W$ is the
+weak mixing angle, $s_{\beta} = \sin\beta$, $c_{\beta} =
+\cos\beta$, and $M_2$ and $M_1$ are the wino and bino masses, respectively.
+Likewise, the chargino mass matrix is
 \begin{equation}
 \mathbf{M}_C =\left (  \begin{matrix}
 0 & \mathbf{X}^T \\
@@ -433,9 +445,8 @@ and the chargino mass matrix,
 \end{matrix}\right), ~\mathrm{where} ~ \mathbf{X} = \left (  \begin{matrix}
 M_2 & \sqrt{2}m_Ws_{\beta}\\
  \sqrt{2}m_Wc_{\beta}& \mu
-\end{matrix}\right)~,
+\end{matrix}\right)~.
 \end{equation}
-where $M_2$ and $M_1$ are the wino and bino mass terms, respectively.
 The eigenvalues of these matrices are the masses of the
 neutralinos and charginos.
 
@@ -450,6 +461,8 @@ fine-tuning, such as~\cite{Brust:2011tb,naturalSUSY}:
 \begin{equation}
 \Delta = \frac{\Delta(m^2_{h^0})}{m^2_{h^0}}~.
 \end{equation}
+For a model to be natural, it is traditionally desired that
+$\Delta\lesssim10$, which corresponds to 10\% fine-tuning.
 %Other measures of fine-tuning are possible, such as those in...
 
 In the decoupling limit of the MSSM at tree-level, the mass of the
@@ -520,7 +533,7 @@ in Eqn.~\ref{eqn:stoploop} is one of the major successes of SUSY as a candidate 
 the SM. The sensitivity of the Higgs mass to ultraviolet new
 physics is now logarithmic instead of quadratic. If SUSY were an exact
 symmetry (and $m_t=m_{\tilde t_{1,2}}$) then the cancellation would be
-exact and there would be no further naturalness problem. As it stands, however, we know SUSY is broken, and the
+exact and there would be no further hierarchy problem. As it stands, however, we know SUSY is broken, and the
 remaining term may also be large depending on the difference in masses
 between the top quark and top squarks. Therefore, naturalness places constraints on the allowed masses of the top
 squarks given an ``acceptable'' level of fine tuning.
@@ -651,7 +664,7 @@ M_1,M_2,M_3,\boldsymbol{a_u},\boldsymbol{a_d},\boldsymbol{a_e} &\sim m_\mathrm{s
 \centering
 \includegraphics[width=0.85\textwidth]{figs/analysis8TeV/naturalSpectrum.pdf}
 \caption{\label{fig:spectrum} The simplified natural SUSY spectrum
-  considered in this paper, along with the assumed decay modes.}
+  considered in this thesis, along with the assumed decay modes.}
 \end{figure}
 
 Motivated by the discussion of Sec.~\ref{sec:susynaturalness}, we may
@@ -665,14 +678,16 @@ The NLSP decays to the LSP and a virtual $\PW$ boson ($\chipm_1 \to
 \PW^{\ast} \chiz_1$), whose decay products mostly have too low
 momentum to identified. The other SUSY particles accessible at the LHC are the gluino and the
 lightest top and bottom squarks. All other SUSY particles are
-assumed to be too heavy to participate in the interactions. The SUSY
-particles and their possible decay modes within this natural SUSY
+assumed to be too heavy to participate in the interactions. We only allow
+the gluino decay modes involving third-generation quarks because their
+corresponding decay rates are enhanced if the masses of the third-generation squarks are lighter
+than those of the first two generations. The SUSY particles and their possible decay modes within this natural SUSY
 spectrum are summarized in Fig.~\ref{fig:spectrum}.
 
 In the context of this natural spectrum, several simplified
 models~\cite{ArkaniHamed:2007fw,Alwall:2008ag,Alwall:2008va,Alves:2011sq,Alves:2011wf,Graesser:2012qy}
 are considered in Ch.~\ref{ch:analysis8TeV} and
-Ch.~\ref{ch:analysis13TeV} for gluino pair production, based on three-body gluino
+Ch.~\ref{ch:analysis13TeV} for gluino pair production based on three-body gluino
 decays, in which each gluino decays to one of the following final states~\cite{SUS-11-016}:
 \begin{itemize}
 \item a top quark (antiquark) and a bottom antiquark (quark),
@@ -703,18 +718,17 @@ Fig.~\ref{fig:SMSDiagrams}.
 
 \begin{figure*}[thb!]
 \centering
-\includegraphics[width=0.32\textwidth]{figs/theory/T1bbbb.pdf}
-\includegraphics[width=0.32\textwidth]{figs/theory/T1tbbb.pdf}
-\includegraphics[width=0.32\textwidth]{figs/theory/T1ttbb.pdf} \\
-\includegraphics[width=0.32\textwidth]{figs/theory/T1tbtb.pdf} 
-\includegraphics[width=0.32\textwidth]{figs/theory/T1tttb.pdf}
-\includegraphics[width=0.32\textwidth]{figs/theory/T1tttt.pdf} \\
-\includegraphics[width=0.32\textwidth]{figs/theory/T1qqqq.pdf} \\
-\includegraphics[width=0.32\textwidth]{figs/theory/T2bw.pdf}
-\includegraphics[width=0.32\textwidth]{figs/theory/T2tb.pdf}
-\includegraphics[width=0.32\textwidth]{figs/theory/T2tt.pdf}
-\caption{Diagrams displaying the event topologies of gluino (upper 7
-  diagrams) and top-squark (lower 3 diagrams) pair production
+\includegraphics[width=0.45\textwidth]{figs/theory/T1bbbb.pdf}
+\includegraphics[width=0.45\textwidth]{figs/theory/T1tbbb.pdf}\\
+\includegraphics[width=0.45\textwidth]{figs/theory/T1ttbb.pdf} 
+\includegraphics[width=0.45\textwidth]{figs/theory/T1tbtb.pdf} \\
+\includegraphics[width=0.45\textwidth]{figs/theory/T1tttb.pdf}
+\includegraphics[width=0.45\textwidth]{figs/theory/T1tttt.pdf} \\
+\includegraphics[width=0.45\textwidth]{figs/theory/T1qqqq.pdf} 
+\includegraphics[width=0.45\textwidth]{figs/theory/T2bw.pdf} \\
+\includegraphics[width=0.45\textwidth]{figs/theory/T2tb.pdf}
+\includegraphics[width=0.45\textwidth]{figs/theory/T2tt.pdf}
+\caption{Diagrams displaying the event topologies of gluino and top-squark pair production
   considered in this thesis.\label{fig:SMSDiagrams}}
 \end{figure*}
 
@@ -725,12 +739,14 @@ as shown in Table~\ref{tab:nlspbr}.
 \begin{table}
 \centering
 \begin{tabular}{l|r}
+\hline\hline
 decay mode & branching ratio \\\hline
-$\chip_1 \to \chiz_1 \cPqu \cPaqd$ &  35.1\%\\
-$\chip_1 \to \chiz_1 \cPqc \cPaqs$ &  35.1\%\\
-$\chip_1 \to \chiz_1 \Pep \PGne$ &  11.7\%\\
-$\chip_1 \to \chiz_1 \PGmp \PGnGm$ &  11.7\%\\
-$\chip_1 \to \chiz_1 \PGtp \PGnGt$ &  6.4\%
+$\chip_1 \to \chiz_1 \cPqu \cPaqd$ &  35\%\\
+$\chip_1 \to \chiz_1 \cPqc \cPaqs$ &  35\%\\
+$\chip_1 \to \chiz_1 \Pep \PGne$ &  12\%\\
+$\chip_1 \to \chiz_1 \PGmp \PGnGm$ &  12\%\\
+$\chip_1 \to \chiz_1 \PGtp \PGnGt$ &  6\%\\
+\hline\hline
 \end{tabular}
 \caption{\label{tab:nlspbr}Table of branching ratios implemented in
   \PYTHIA v6.4.26 for the NLSP

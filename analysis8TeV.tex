@@ -19,7 +19,7 @@ these features (\PQb-jets and leptons) in the event classification.
 
 We classify events into different ``boxes,'' or data categories, based on
 the jet multiplicity, \PQb-jet multiplicity, and lepton ($\Pe$ or $\Pgm$)
-multiplicity. The advantages of this classification are (i) by
+multiplicity (see Fig.~\ref{fig:boxFlow}). The advantages of this classification are (i) by
 isolating different SM background processes, like $\ttbar$, we can better
 model them individually, and (ii) in the event of a discovery, we may be
 able to infer the values of certain SUSY branching fractions based on the boxes where
@@ -151,7 +151,8 @@ their event content as shown in Tab.~\ref{tab:boxDef}. In the table,
 the boxes are listed according to the filling order, from the first
 (at the top of the table) to the last (at the bottom). If an event
 satisfies the requirements of two or more boxes, the event is assigned
-to the first listed box to ensure the boxes correspond to disjoint samples.
+to the first listed box to ensure the boxes correspond to disjoint
+samples. A schematic flow chart is shown in Fig.~\ref{fig:boxFlow}.
 
 The events in the single-lepton and two-lepton boxes are recorded
 using the electron and muon razor trigger. The remaining two boxes, generically
@@ -206,6 +207,14 @@ or $\Rtwo > 0.3$) & 2 or 3 jets\\
 \end{tabular}}
 \end{table*}
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.7\textwidth]{figs/analysis8TeV/boxFlow.pdf}
+\caption{\label{fig:boxFlow} Schematic flow chart depicting how a data event
+  is categorized into the different boxes based on its properties.}
+\end{figure}
+
+
 A baseline kinematic requirement is applied to define the region in
 which we search for a signal:
 \begin{itemize}
@@ -245,6 +254,19 @@ larger values of $\Rtwo$~\cite{razorPRL,razorPRD}.
  boxes and (bottom) the other boxes.}
 \end{figure}
 
+An example of an event in data that passes the selection in the
+2\cPqb-Jet box is shown in Fig.~\ref{fig:event8TeV}. The event has
+three \cPqb-tagged jets, $\MR=602\GeV$, and $\Rtwo=0.55$. 
+\begin{figure}[hbtp]
+  \begin{center}
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/newcolor3.png}
+\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/newcolor2.png}
+    \caption{An event in the 2\cPqb-Jet box: three dimensional view (left), 2D view in the $\rho$-$\phi$
+    plane (right). The event has three \cPqb-tagged jets, $\MR=602\GeV$, and $\Rtwo=0.55$.}
+    \label{fig:event8TeV}
+  \end{center}
+\end{figure}
+
 \section{Background Modeling}
 \label{sec:bmodel8TeV}
 Under the hypothesis of no contribution from new-physics processes,
@@ -254,7 +276,9 @@ the contributions from SM $\cPV$+jets events (where
 $\cPV$ indicates a $\PW$ or $\cPZ$ boson) and SM top quark-antiquark and
 single-top events, where the events with a top quark are generically
 referred to as the $\ttbar$ contribution. Based on MC studies, the
-contributions from other processes are determined to be
+contributions from other processes, such as the production of two or
+three electroweak bosons (diboson or triboson) and the production of $\ttbar$ in
+association with a $\PW$ or $\cPZ$ boson ($\ttbar\cPV$), are determined to be
 negligible.
 
 We study each of these processes using MC samples, generated with the
@@ -481,7 +505,7 @@ predictions is observed.
 \includegraphics[width=0.9\textwidth]{figs/analysis8TeV/nSigmaLog_MuMu.pdf}
 \includegraphics[width=0.9\textwidth]{figs/analysis8TeV/nSigmaLog_EleEle.pdf}
 \caption{Comparison of the expected background and the observed yield
-  in the (top) MuEle, (middle) MuMu, and (bottom)
+  in data in the (top) MuEle, (middle) MuMu, and (bottom)
   EleEle boxes. A probability density function is derived for the
   bin-by-bin yield using pseudo-experiments, sampled from the output
   of the corresponding sideband fit. A two sided p-value is computed
@@ -611,8 +635,8 @@ of the gluino-gluino production cross section, including
 sideband region has a negligible impact on the determination of the
 background shape, while a disagreement is observed in the
 signal-sensitive region, characterized as an excess of events
-clustered around $\MR\approx1300$\GeV. The excess indicates
-the presence of a signal, and the position of the excess in the
+clustered around $\MR\approx1.3\TeV$. The excess indicates
+the presence of a signal in this simulated MC sample, and the position of the excess in the
 $\MR$ variable provides information about the underlying SUSY
 mass spectrum.
 
@@ -625,16 +649,14 @@ mass spectrum.
   (bottom left) $\sGlu\sGlu$ events, and (bottom right) $\PSQt\PSQt$
   events in the MultiJet box. Each $\sGlu$ has mass 1325\GeV and
   decays to a \bbbar pair and a $\chiz_1$ with mass 50\GeV. Similarly, each $\PSQt$ has mass 800\GeV and
-  decays to a $\PQt$ and a $\chiz_1$ with mass 25\GeV
-  The $\sGlu$ and $\chiz_1$ masses are
-  1325\GeV and 50\GeV, respectively.\label{fig:T1bbbbT2ttsignalinj}}
+  decays to a $\PQt$ and a $\chiz_1$ with mass 25\GeV.\label{fig:T1bbbbT2ttsignalinj}}
 \end{figure}
 
 \begin{figure}[htb!]
 \centering
 \includegraphics[width=0.49\textwidth]{figs/analysis8TeV/MR_T1bbbb_0p003_MultiJet.pdf}
 \includegraphics[width=0.49\textwidth]{figs/analysis8TeV/RSQ_T1bbbb_0p003_MultiJet.pdf}
-\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/nSigmaLog_0p003_MultiJet.pdf}
+\includegraphics[width=0.9\textwidth]{figs/analysis8TeV/nSigmaLog_0p003_MultiJet.pdf}
 \caption{Result of the fit to the sideband events of a
   signal-plus-background MC sample, corresponding to the gluino model
   whose distribution is shown in Fig.~\ref{fig:T1bbbbT2ttsignalinj}. A
@@ -652,7 +674,7 @@ mass spectrum.
 \centering
 \includegraphics[width=0.49\textwidth]{figs/analysis8TeV/MR_T1bbbb_0p01_MultiJet.pdf}
 \includegraphics[width=0.49\textwidth]{figs/analysis8TeV/RSQ_T1bbbb_0p01_MultiJet.pdf}
-\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/nSigmaLog_0p01_MultiJet.pdf}
+\includegraphics[width=0.9\textwidth]{figs/analysis8TeV/nSigmaLog_0p01_MultiJet.pdf}
 \caption{Result of the fit to the sideband events of a
   signal-plus-background MC sample, corresponding to the gluino model
   shown in Fig.~\ref{fig:T1bbbbT2ttsignalinj}, with a gluino-gluino production cross section of 0.01\unit{pb}. A detailed explanation is
@@ -663,7 +685,7 @@ mass spectrum.
 \centering
 \includegraphics[width=0.49\textwidth]{figs/analysis8TeV/MR_T1bbbb_0p02_MultiJet.pdf}
 \includegraphics[width=0.49\textwidth]{figs/analysis8TeV/RSQ_T1bbbb_0p02_MultiJet.pdf}
-\includegraphics[width=0.49\textwidth]{figs/analysis8TeV/nSigmaLog_0p02_MultiJet.pdf}
+\includegraphics[width=0.9\textwidth]{figs/analysis8TeV/nSigmaLog_0p02_MultiJet.pdf}
 \caption{Result of the fit to the sideband events of a
   signal-plus-background MC sample, corresponding to the gluino model
   shown in Fig.~\ref{fig:T1bbbbT2ttsignalinj}, with a gluino-gluino production cross section of 0.02\unit{pb}. A detailed explanation is
@@ -730,18 +752,34 @@ without many MC pseudoexperiments by computing the value of $\mu$ that satisfies
     q_{\mu}})}{\Phi(\sqrt{\tilde q_{\mu,\mathrm{A}}} - \sqrt{\tilde
     q_{\mu}} ) } = \alpha ~,
 \end{equation}
-where $\alpha = 0.05$ and $\tilde q_{\mu,\mathrm{A}}$ is the test statistic evaluated on
+where $\alpha = 0.05$, $\tilde q_{\mu,\mathrm{A}}$\footnote{Note $\tilde
+  q_{\mu,\mathrm{A}} = \frac{\mu^2}{\sigma_{\mathrm{A}}^2}$ where
+  $\sigma_{\mathrm{A}}$ is an estimator for the variance of $\mu$.} is the test statistic evaluated on
 the Asimov dataset~\cite{Asimov} corresponding exactly to the expected
 background and the nominal nuisance parameters (setting all
-statistical fluctuations to zero)~\cite{Cowan:2010js,LHCCLs}. Similar
+statistical fluctuations to zero)~\cite{Cowan:2010js,LHCCLs}, and 
+$\Phi(x)$ is the cumulative distribution function of the standard
+normal distribution,
+\begin{equation}
+\Phi(x) = \frac{1}{\sqrt{2\pm}}\int_{-\inf}^xe^{-t^2/2}\mathrm{d}t~.
+\end{equation}
+Similar
 expressions may be used to derive the median expected 95\% CL upper limit, 
 \begin{equation}
-\sqrt{\tilde q_{\mu,\mathrm{A}}} = \Phi^{-1}(1-0.5\alpha) ~,
+\frac{1-\Phi(\sqrt{\tilde q_{\mu,\mathrm{A}}})}{0.5} = \alpha ~,
 \end{equation}
+%\begin{equation}
+%\sqrt{\tilde q_{\mu,\mathrm{A}}} = \Phi^{-1}(1-0.5\alpha) ~,
+%\end{equation}
 and to find the $\pm N\sigma$ uncertainty band about the expected limit,
 \begin{equation}
-\sqrt{\tilde q_{\mu,\mathrm{A}}} = \Phi^{-1}(1-\alpha\Phi(\pm N)\pm N)~.
+\frac{1-\Phi(\sqrt{\tilde q_{\mu,\mathrm{A}}}\mp N)}{\Phi(\pm N)} = \alpha~,
 \end{equation}
+%\begin{equation}
+%\sqrt{\tilde q_{\mu,\mathrm{A}}} = \Phi^{-1}(1-\alpha\Phi(\pm N)\pm N)~.
+%\end{equation}
+Importantly, for situations with small numbers of events, the
+asymptotic result is known to give biased (over-optimistic) results~\cite{LHCCLs}.
 
 Conversely, in the case of a discovery, one tests $\mu=0$ and measures
 the ``local significance'' using a modified test statistic,

@@ -290,8 +290,8 @@ $\PW(\ell\nu)+$jets (with $\ell=\Pe,\Pgm,\ensuremath{\tau}$), $\cPZ(\nu\bar\nu)+
 zero \PQb-tagged jets, the background is primarily composed of the $\PW(\ell\nu)+$jets and $\cPZ(\nu\bar\nu)+$jets
 processes, while for categories with two or more \PQb-tagged jets it is
 dominated by the $\ttbar$ process. There are also very small contributions from
-the production of two or three electroweak bosons, and the production of $\ttbar$ in
-association with a $\PW$ or $\cPZ$ boson.
+the diboson, triboson, and $\ttbar\cPV$ production. These
+contributions are summed and labeled ``Other'' in Fig.~\ref{fig:TTBarWJetsCR_MR}-\ref{fig:Znn_PhotonJets}.
 
 We model the background using two independent methods based on control samples in data with entirely
 independent sets of systematic assumptions. The first method (A) is based on the use of 
@@ -315,6 +315,7 @@ are applied to the MC, as are corrections for the trigger
 efficiency and the selection efficiency of electrons, muons, and \PQb-tagged jets. Any
 disagreement observed in these control regions is interpreted as an inaccuracy of the 
 MC in predicting the hadronic recoil spectrum and jet multiplicity. 
+
 Two alternative formulations of the method are typically used in searches for
 new physics~\cite{SUS12024,MT2at8TeV,Aad:2013wta}. The first formulation projects 
 the data control region yields to search regions through translation factors derived 
@@ -327,8 +328,7 @@ In both cases, the contributions from background processes other than the one
 under study are subtracted using the MC prediction.
 We employ the former formulation of the method for the estimate of the QCD background, 
 while the latter formulation is used for modeling all other major backgrounds. 
-Details of the control regions used for each of 
-the dominant background processes are described in the subsections below.
+Details of the control regions used for each of the dominant background processes are described in the subsections below.
 
 Finally, the small contribution from rare background processes such as $\mathrm{t\bar{t}}\cPZ$ are 
 modeled using simulation, and systematic uncertainties from instrumental sources, and in the prediction of its 
@@ -347,7 +347,9 @@ $100 \GeV$. The $\ttbar$ enhanced control region is defined by requiring that th
 least one \PQb-tagged jet, and the $\PW(\ell\nu)+$jets enhanced control region is defined by
 requiring no such \PQb-tagged jets. Other than these  \PQb-tagged jet
 requirements, we have no explicit requirement on the number of jets in
-the event. We first derive corrections for the $\ttbar$ background, and then measure
+the event. 
+
+We first derive corrections for the $\ttbar$ background, and then measure
 corrections for the $W(\ell\nu)+$jets process applying the corrections already obtained
 for the $\ttbar$ background in the $W(\ell\nu)+$jets control region.
 As discussed above, the corrections to the MC prediction are derived in two-dimensional bins of the
@@ -431,7 +433,7 @@ region.
 \end{figure}
 
 The $\ttbar$ background in the Electron and Muon Multijet categories is primarily from
-the dilepton decay mode as the $M_{\mathrm{T}}$ requirement highly suppresses the semi-leptonic decay
+the dilepton decay mode, as the $M_{\mathrm{T}}$ requirement highly suppresses the semi-leptonic decay
 mode. Corrections to the MC simulation derived from the $\ttbar$ control region are primarily comprised
 of semi-leptonic decays. We define an additional control region enhanced in dilepton $\ttbar$ decays 
 to confirm that the MC corrections derived from a region dominated by
@@ -879,7 +881,7 @@ $50\%$ and $100\%$ for the least populated bins. For the $\cPZ\rightarrow\nu\bar
 also propagate the difference in the correction factors measured in the three alternative 
 control regions as a systematic uncertainty, intended to estimate the possible differences in 
 the simulation mismodeling of the hadronic recoil for the $\cPgg+$jets process and 
-the $\cPZ\rightarrow\nu\bar\nu+$jets process. These systematic uncertainties 
+the $\cPZ(\nu\bar\nu)+$jets process. These systematic uncertainties 
 range from $10$ to $40\%$. For the QCD background prediction the statistical uncertainty 
 due to limited event counts in the $\dPhiR> 2.8$ control regions and the systematic
 uncertainty of $87\%$ in the translation factor $\zeta$ are propagated.
@@ -1077,8 +1079,8 @@ mode. For scenarios that include the intermediate decay
 $\chipm_1\to\PW^{\ast \pm}\PSGcz_1$ and small values of $m_{\chiz_1}$ the sensitivity
 is reduced because the LSP carries very little momentum in both the
 NLSP rest frame and the laboratory frame, resulting in small values of
-$\ETmiss$ and $\Rtwo$. By considering the limits obtained for all scanned branching fractions, we
-calculate the exclusion limits independent of any assumption of the branching
+$\ETmiss$ and $\Rtwo$. By considering the most conservative limit obtained for all scanned branching fractions, we
+calculate an exclusion limit independent of any assumption of the branching
 fractions, presented on the right of Fig.~\ref{fig:GluinoToThirdGenLimits}. For
 an LSP with mass of a few hundred $\GeV$, we exclude pair production of gluinos decaying 
 to third-generation quarks for mass below about $1600 \GeV$. This result 
@@ -1154,3 +1156,24 @@ gluino production than previously reported at the LHC.
 For an LSP with mass in the range between $200$ and $600$\GeV, we exclude gluinos
 with mass below $1.55$ to $1.6$\TeV, independent of their decays.
 For an LSP with a mass of $100$\GeV, we exclude top squarks below $750 \GeV$. 
+
+\section{LHC Coverage of Natural SUSY}
+\label{sec:Coverage}
+Although the results of the
+Ch.~\ref{ch:analysis8TeV}~and~\ref{ch:analysis13TeV} represent the
+most generic constaints on the gluino and top squark from the LHC in
+terms of allowing multiple decay modes, more stringent
+constraints for particular decay modes have been
+presented at ICHEP 2016. Fig.~\ref{fig:ICHEP2016Summary} shows the most
+stringent limits on the gluino and top squark from ATLAS and CMS using
+13\TeV data collected in 2016.
+
+\begin{figure}[!htb] \centering
+\includegraphics[width=0.49\textwidth]{figs/summary/ATLAS_SUSY_Stop_tLSP.pdf}
+\includegraphics[width=0.49\textwidth]{figs/summary/T2tt_limits_summary_cms_ICHEP16.pdf}\\
+\includegraphics[width=0.49\textwidth]{figs/summary/ATLAS_SUSY_Strong_all.pdf}
+\includegraphics[width=0.49\textwidth]{figs/summary/T1bbbb_limits_summary_cms_ICHEP16.pdf}
+\caption{ATLAS (left) and CMS (right) 13\TeV limits presented
+  at ICHEP 2016 for top squark (top) and gluino (bottom) pair production.
+\label{fig:ICHEP2016Summary}}
+\end{figure}
