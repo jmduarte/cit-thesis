@@ -107,7 +107,7 @@ lead-lead collisions for one month each year to the experiments.
 \end{figure}
 
 
-\chapter{The CMS Experiment}
+\chapter{The Compact Muon Solenoid experiment}
 \label{ch:cms}
 The Compact Muon Solenoid (CMS) detector is a multi-purpose detector
 conceived to study proton-proton, proton-lead, and lead-lead collisions produced
@@ -186,7 +186,7 @@ in front of the calorimeters.
 \end{figure}
 
 
-\section{Silicon Tracker}
+\section{Silicon tracker}
 \label{sec:tracker}
 The first layer of the detector encountered by outgoing particles from the
 collisions is the tracker, composed of a small silicon pixel
@@ -264,7 +264,7 @@ implies the need for a global strategy to event reconstruction
 %  acceptance.
 
 
-\section{Electromagnetic Calorimeter}
+\section{Electromagnetic calorimeter}
 \label{sec:ecal}
 
 Within the superconducting solenoid volume and just outside of the
@@ -414,7 +414,7 @@ algorithm, is described in Ref.~\cite{CMS_TDR_v1}. In the endcap and
 preshower, the algorithm merges together fixed-size 5$\times$5 crystal basic clusters
 and associates each with corresponding preshower energy deposits.
 
-\section{Hadron Calorimeter}
+\section{Hadron calorimeter}
 \label{sec:hcal}
 
 The ECAL is surrounded by a hermetic sampling hadron
@@ -450,7 +450,7 @@ calorimeters ensure full geometric coverage, which is especially
 important for the measurement of the
 transverse energy in the event.
 
-\section{Muon System}
+\section{Muon system}
 \label{sec:muon}
 
 The most outward part of the CMS detector is the muon spectrometer,
@@ -464,7 +464,7 @@ stations and the inner tracker. Due to the large amount of material before the m
 undergo multiple scattering and thus the inner tracker dominates the
 momentum measurement up to a muon \pt of about $300$ \GeV.
 
-\section{Particle-Flow Reconstruction}
+\section{Particle-flow reconstruction}
 \label{sec:pf}
 %The versatile, albeit simple, design of the CMS apparatus features
 %most of the proper- ties required for particle-flow reconstruction: a
@@ -498,37 +498,94 @@ tracker, the calorimeters, and the muon system. Five categories of PF
 candidates are defined: muons, electrons, photons (including their
 conversions to $\Pep\Pem$ pairs), charged hadrons, and neutral
 hadrons. This global event description leads to an improved performance for electron and muon identification, jet and
-hadronic $\tau$ decay reconstruction, and missing transverse energy. The improvements for $\tau$'s, jets, and \MET are
+hadronic $\tau$ decay reconstruction, and missing transverse
+energy. The improvements for $\tau$'s, jets, and \MET are
 especially significant because of the advantage gained by consistently
 integrating the muon and electron reconstruction into the global event
 description so that there is no ambiguity in the interpretation of
 each detected signal. 
 
-This approach enables the mitigation of effects due to
-particles produced by additional $\Pp\Pp$ collisions in the same or in neighboring bunch
-crossings (known as pileup). Charged PF candidates not compatible
-with the interaction point are discarded before entering the downstream
-reconstruction steps (e.g., jet clustering and computing lepton
-isolation) and the contamination from neutral particles is subtracted on average by applying an event-by-event correction based on the jet-area
-method~\cite{jetarea_fastjet,jetarea_fastjet_pu,JME-JINST}. PF reconstruction also minimizes the need
-for a posteriori corrections inherent to the information missing in
-the traditional physics object reconstruction path. 
+In detail, the PF reconstruction proceeds as follows. To suppress noise in the calorimeters, only cells with energies above a given threshold are considered, this procedure is referred to as ``zero suppression''.
+The energy of photons is obtained directly from the ECAL measurement, corrected for zero-suppression effects.
+The energy of electrons is determined from a combination of the track momentum at the main interaction vertex, the corresponding ECAL cluster energy, and the energy sum of all bremsstrahlung photons associated with the track. 
+The energy of muons is obtained from the corresponding track momentum. 
+The energy of charged hadrons is determined from a combination of the track momentum 
+and the corresponding ECAL and HCAL energies, corrected for zero-suppression effects, 
+and calibrated for the nonlinear response of the calorimeters. 
+Finally, the energy of neutral hadrons is obtained from the corresponding calibrated ECAL and HCAL energies. 
+In the forward region, energy deposits collected by the HF are considered as electromagnetic or hadronic, depending on the respective energy collected by long and short fibers. 
 
-\subsection{Jets and Missing Transverse Energy}
+The PF approach enables additional mitigation of effects due to
+particles produced by additional $\Pp\Pp$ collisions in the same or in neighboring bunch
+crossings (known as pileup). Charged PF candidates whose tracks are unambiguously
+associated with pileup vertices are discarded before entering the downstream
+reconstruction steps (e.g., jet clustering and computing lepton
+isolation). The contamination from neutral particles is subtracted on average by
+applying an event-by-event correction based on the jet-area
+method\footnote{The jet-area method may be applied to Calo jets as
+  well as PF jets.}~\cite{jetarea_fastjet,jetarea_fastjet_pu,JME-JINST,Khachatryan:2016kdb}. 
+%PF reconstruction also minimizes the need
+%for a posteriori corrections inherent to the information missing in
+%the traditional physics object reconstruction path. 
+The median energy density $\rho$ is calculated using the $\kt$
+clustering algorithm~\cite{KT1,KT2,KT3} with distance parameter
+$D=0.6$ and $|\eta|<4.7$. For this calculation, a large number of
+nonphysical particles (ghosts)
+with infinitesimal momenta and random direction, effectively mapping
+all the $(\eta,\phi)$ space, is added to the event. When the jet
+clustering is run on the event, the hard particles in the event are
+clustered together with such ghosts: a few jets will contain
+high-momentum particles from the hard-scattering interaction, but most
+of the jets will be entirely made of ghosts, for which the main real
+energy contributions come from detector noise and especially pileup.   
+The median energy density $\rho$ is defined, in each event, as the
+median of jet momenta $\pt^{i}$ divided by their area $A_i$,
+$\rho = {\mathrm{median}}(\pt^{i}/A_i)$. Using the median instead of
+the mean makes $\rho$ insensitive to hard jets in the event, and
+including zero-energy jets composed of only ghost particles reduces
+bias for low pileup energy densities. Finally, this median energy is
+subtracted to compute the corrected jet $\pt$,
+\begin{equation}
+%\pt^\mathrm{corr} = \pt^\mathrm{uncorr} -\rho\beta(\eta)(1+\gamma(\eta)\log(\pt^{\mathrm{uncorr}}))+rho_0(\eta)] A_j
+\pt^\mathrm{corr} = \pt^\mathrm{uncorr} -\rho A_j - \rho_1(\eta,\log\pt^{\mathrm{uncorr}}) A_j ~,
+\end{equation}
+where $\pt^\mathrm{uncorr}$ is the uncorrected jet $\pt$, $A_j$ is the jet area and
+$\rho_1(\eta,\log\pt^{\mathrm{uncorr}})$ is a small residual $\eta$-
+and $\log\pt^{\mathrm{uncorr}}$-dependent correction~\cite{Khachatryan:2016kdb}.
+
+
+\subsection{Jets and missing transverse energy}
 
 To demonstrate the effectiveness of PF reconstruction over traditional
-calorimeter-based (Calo) reconstruction, we can examine the response
-and resolution of jets and missing transverse energy, the most
+calorimeter-based reconstruction, we can examine the response
+and resolution of jets and missing transverse energy, two of the most
 important physics objects in the searches for SUSY outlined in
 Ch.~\ref{ch:analysis8TeV} and Ch.~\ref{ch:analysis13TeV}, with both
 methods of reconstruction.
 
 Jets are reconstructed with the anti-$\kt$ algorithm
-\cite{antikt,fastjet} and a distance parameter $R=0.4$ (or $R=0.5$ in
-7\TeV and 8\TeV data), clustering either the particles reconstructed by the
-particle-flow algorithm (PF jets), the energy deposits observed in the
-calorimeters (Calo jets), or the stable particles produced by the
-event generator (Ref jets).
+\cite{antikt,fastjet} and a distance parameter of $R=0.4$ ($R=0.5$) for
+13\TeV data (7\TeV and 8TeV data), clustering either the four-momentum
+vectors of particles reconstructed by the particle-flow algorithm (PF jets), the energy deposits observed in the
+calorimeters (Calo jets), or the stable particles (lifetime $c\tau>1\unit{cm}$)
+except neutrinos produced by the event generator (Ref jets).
+
+In reconstructing the PF candidate four-momentum, photons are assumed
+massless and charged hadrons are assigned the charged pion mass. The Calo jet four-momentum is built from the 
+four-momenta assigned to each calorimeter tower deposit as follows. A calorimeter tower consists of one or more HCAL 
+cells and the geometrically corresponding ECAL crystals. For example,
+in the barrel region of the calorimeters, the unweighted sum of one
+single HCAL cell and $5\times 5$ ECAL crystals form a projective
+calorimeter tower. The association between HCAL cells and ECAL
+crystals is more complex in the endcap regions. A four-momentum is
+associated with each tower deposit above a certain threshold, assuming
+zero mass, and taking the direction of the tower position as seen from the interaction
+ point. 
+%The PF jet momentum and spatial resolutions 
+%are greatly improved with respect to calorimeter jets, as the use of the tracking detectors and high granularity of the ECAL
+%improves the energy resolution through the independent measurements of
+%charged hadrons and photons inside a jet, which together constitute
+%$\approx 85$\% of the average jet energy.
 
 Each PF (Calo) jet is matched to the closest Ref jet within a cone of
 angle $0.1$ ($0.2$) in the $(\eta, \phi)$ space. The use of a twice
@@ -688,7 +745,7 @@ of both observed and simulated events and the grey uncertainty band
 displaying the systematic uncertainty of the simulation. The last bin contains the overflow.\label{fig:met_distribution}}
 \end{figure}
 
-\subsection{Identification of \PQb-quark Jets}
+\subsection{Identification of \PQb-quark jets}
 \label{sec:btag}
 Jets that arise from bottom-quark hadronization (\cPqb-jets) are
 present in many physics processes, such as the decay of top quarks,
@@ -921,7 +978,7 @@ adopted both for the alignment and calibration of the detector
 physics signals (Sec.~\ref{sec:scouting}).
 
 
-\section{Alignment and Calibration}
+\section{Alignment and calibration}
 \label{sec:alca}
 
 Fast and efficient methods for the calibration and the alignment of
@@ -1044,7 +1101,7 @@ derive, carefully check, and upload the corrections to the database on
 a weekly basis during data taking.
 
 
-\subsection{ECAL Laser Monitoring}
+\subsection{ECAL laser monitoring}
 
 The ECAL crystals receive large doses of radiation throughout the duration of LHC
 operation. The expected integrated ionizing dose in the ECAL is up to $4\unit{kGy}$ in the
@@ -1123,7 +1180,7 @@ re-runs the HLT reconstruction on recently collected data with two versions of
 laser corrections: the version currently online (and now out-of-date)
 and the version to be validated (and up-to-date). An example of a
 successfully validated HLT laser correction for a particular week of
-data-taking in 2015 is shown in Fig.~\ref{fig:ECALHLT}. Unlike the
+data-taking in 2015 is shown in Fig.~\ref{fig:ECALHLT}~\cite{ECALAlCaTwiki}. Unlike the
 outdated laser corrections (shown in blue), the updated
 laser corrections (shown in black) correct the energy response and
 improve the energy resolution for both the endcaps and the barrel.
@@ -1139,20 +1196,26 @@ improve the energy resolution for both the endcaps and the barrel.
 \end{figure}
 %https://twiki.cern.ch/twiki/bin/viewauth/CMS/EGammaHLT2015LaserCorrValWeeklyReport
 
-The $\Pgh$ and $\pi^0$ meson data are used to validate the laser corrections for prompt reconstruction. The events are
-selected online by a dedicated calibration trigger and recorded with
-reduced event content. A fit is carried out on the invariant mass distribution of the photon
-pairs in the mass range of the $\Pgh$ or $\pi^0$ mesons. The fit comprises a
+The $\Pgh$ and $\pi^0$ meson data are used to validate the laser
+corrections for prompt reconstruction and to intercalibrate the energy of ECAL
+crystals. The events are selected online by a dedicated calibration trigger with a rate of  8 (2.5) \unit{kHz} in the barrel (endcap), and recorded with
+reduced event content, including energy deposits in the ECAL crystals
+surrounding a possible $\pi^0$ candidate. A fit is carried out on the invariant mass distribution of the photon
+pairs in the mass range of the $\Pgh$ or $\pi^0$ meson. The fit comprises a
 polynomial function to describe the background and a Gaussian
 distribution to describe the resonance peak. Fig.~\ref{fig:etaEB}
 shows an example of the $\pi^0$-meson peak with the fit superimposed,
-and the relative value of the fitted $\pi^0$ mass versus time in EB for
-a period of 8 hours. The plot shows the data before (red points) and
-after (green points) the laser corrections applied. A number of
+and the relative value of the fitted $\pi^0$ mass versus time in the barrel for
+a period of 8 hours~\cite{CMS-DP-2016-031}. The right plot shows the
+energy scale as a function of time, with (green points) and without
+(red points) the light monitoring corrections applied, over a period
+of 8 hours for data recorded on May 28, 2016 during LHC fill
+4958. Each point is obtained from a fit to approximately 8 minutes of data taking. A number of
 measurements are possible for each LHC fill, owing to the high
 rate for recording $\pi^0$ and $\Pgh$ events. This permits short-term changes in
 the ECAL response to be verified before the prompt reconstruction
 takes place.
+
 
 \begin{figure}[bht]
 \begin{center}
@@ -1167,22 +1230,15 @@ takes place.
 pairs reconstructed in one crystal of the ECAL barrel, in
 the mass range of the $\pi^0$ meson, during the run 273730 taken in May 2016,
 corresponding to an integrated luminosity of approximately 100
-pb$^{-1}$. These events are collected by CMS with a dedicated trigger at a
-rate of 8 (2.5) \unit{kHz} in the barrel (endcap), allowing to save only the
-minimal information of the events, in particular energy deposits in
-the ECAL crystals surrounding a possible $\pi^0$ candidate. These events
-are used as prompt feedback to monitor the effectiveness of the laser
-monitoring calibration and to intercalibrate the energy of ECAL
-crystals. (Right) The stability of the relative energy scale measured from the invariant mass distribution of
+pb$^{-1}$. (Right) The stability of the relative energy scale measured from the invariant mass distribution of
 $\pi^0$ decays in the ECAL barrel for a typical LHC fill in 2016. The energy scale is measured by fitting
 the invariant mass distribution of approximately 200,000 photon pairs
 in the mass range of the $\pi^0$ meson. Each point is obtained from a fit
 to approximately 8 minutes of data taking. The error bars represent
 the statistical errors on the fitted peak position. The energy scale
-is plotted as a function of time, over a period of 8 hours during an
-LHC fill, for data recorded on May 28, 2016 during LHC fill 4958. The
+is plotted as a function of time, over a period of 8 hours for data recorded on May 28, 2016 during LHC fill 4958. The
 plot shows the data with (green points) and without (red points) light
-monitoring (LM) corrections applied. The right-hand panel shows the
+monitoring corrections applied. The right-hand panel shows the
 projected relative energy scales.
 %Left: An example of the $\Pgh$-meson peak reconstructed from the invariant
 %mass of photon pairs in the barrel, with the result of the fit with a Gaussian
@@ -1194,10 +1250,10 @@ projected relative energy scales.
 }
 \end{figure}
 
-Finally, isolated electrons from $\PW$-boson decays are used to provide an energy
+Finally, isolated electrons from $\PW\to\Pe\PGne$ and $Z\to\Pep\Pem$ decays are used to provide an energy
 scale to validate the laser corrections over periods of days to
 weeks. The event selection is described
-in Ref.~\cite{EGM-10-004,Khachatryan:2010xn,CMSPhoton}.
+in Ref.~\cite{EGM-10-004,Khachatryan:2010xn,CMSPhoton,CMS-DP-2015-065}.
 The ratio of the electron energy, $E$, measured in the ECAL, to the
 electron momentum, $p$, measured in the tracker, is computed in each
 event, and a reference $E/p$ distribution is obtained from the entire
@@ -1206,19 +1262,18 @@ reference distribution is dominated by the energy and momentum
 resolution and is not biased by residual imperfections in the laser
 corrections. This reference distribution is then scaled to fit
 $E/p$ distributions obtained by dividing the same data in groups of
-12000 consecutive events. The scale factors provide a measure of the
-relative response and are shown in Fig.~\ref{fig:wenuEB} for 2012 and 2015, as
-a function of time. The data are shown before (red open circles) and after
-(green filled circles) laser corrections to the ECAL channel response are
-applied. %The magnitude of the average correction for each point is
+12,000 (5,000) consecutive events for 8\TeV (13\TeV) data recorded in 2012 (2015). The scale factors provide a measure of the
+relative response and are shown in Fig.~\ref{fig:wenuEB} for 2012 and
+2015 data, as a function of time~\cite{CMSPhoton,CMS-DP-2015-065}. The data are shown before (red open circles) and after
+(green filled circles) the laser monitoring corrections are applied. %The magnitude of the average correction for each point is
 %indicated by the continuous blue line. 
 A stable response to
 electromagnetic showers is achieved throughout 2012 (2015) with an RMS of
 %0.12\% in the barrel and 0.35\% in the endcaps. This method does not
 %require a
 0.09\% (0.15\%) in the barrel.
-%and 0.28\% in the endcaps. This method does not require a
-knowledge of the absolute calibration of both the energy and the
+%and 0.28\% in the endcaps. 
+This method does not require a knowledge of the absolute calibration of both the energy and the
 momentum.
 
 \begin{figure}
@@ -1247,7 +1302,7 @@ momentum.
 %of the average laser corrections. Right: Distribution of the projected
 %relative energy scales.
 Ratio of the energy measured by the ECAL over the momentum measured by
-the tracker, $E/p$, for electrons selected from $\PW\to\mathrm{e}\nu$ decays, as a
+the tracker, $E/p$, for electrons selected from $\PW\to\Pe\PGne$ and $Z\to\Pep\Pem$ decays, as a
 function of the date at which they were recorded. The ratio is shown
 both before (red open circles) and after (green filled circles) the application of
 transparency corrections obtained from the laser monitoring system,
@@ -1256,12 +1311,12 @@ Histograms of the values of the measured points, together with
 their mean and RMS values are shown beside the main plots.}
 \end{figure}
 
-\section{Data Scouting}
+\section{Data scouting}
 \label{sec:scouting}
 
 An extension of the alignment/calibration data-taking strategy, referred to as \emph{data
   scouting}, is based on reducing the event size from the default of
-$\sim 1$\unit{MB} in order to increase the recorded event rate and
+$\sim 1$\unit{Megabyte} (MB) in order to increase the recorded event rate and
 thus increase physics signal acceptance. This
 approach, first implemented at the LHC by the CMS experiment in
 2011~\cite{CMS-DP-2012-022}, allows us to increase the physics signal
@@ -1276,12 +1331,12 @@ thresholds used for the different varieties of data scouting during the
 2015 and 2016 runs and Fig~\ref{fig:DataScoutingContent} displays the
 corresponding event content. \emph{Calo scouting}, which selects
 events based only on Calo jets and records only calorimetric
-information, has a very small event size of $\sim 1.5$\unit{kB}, allowing the
+information, has a very small event size of $\sim 1.5$\unit{kilobyte} (kB), allowing the
 rate to go as a high as 3.8 \unit{kHz}. Meanwhile, \emph{PF scouting},
 which runs the full PF algorithm and records all PF-reconstructed
 information, including leptons, photons, and jets with \cPqb-tagging
 information, has a larger event size $\sim 10$\unit{kB}. In order to stay within the
-HLT timing budget, the maximum permissible rate is 720 \unit{Hz}. Simultaneously, the \emph{data parking} stream sends the
+HLT timing budget, the maximum permissible rate is 720\unit{Hz}. Simultaneously, the \emph{data parking} stream sends the
 full raw events from PF scouting directly to tape without reconstruction. This
 multifaceted approach is advantageous in the case that a signal is
 seen in the scouting data that warrants more investigation.
@@ -1299,7 +1354,11 @@ seen in the scouting data that warrants more investigation.
 \begin{figure}\centering
 \includegraphics[width=.45\textwidth]{figs/cms/pfscoutingeventcontent.png}
 \includegraphics[width=.45\textwidth]{figs/cms/caloscoutingeventcontent.png}
-\caption{The event content for PF scouting (left), which amounts to
-  $\sim 10$\unit{kB}, and Calo scouting (right), which amounts to
-  $\sim 1.5$\unit{kB}.\label{fig:DataScoutingContent}}
+\caption{The event content for PF scouting (left) consists of PF
+  candidates, anti-$\kt$ $R=0.4$ PF jets, PF $\MET$, reconstructed vertices,
+  PF-reconstructed electrons, muons, photons, and the median energy density in an event $\rho$, which amounts to
+  $\sim 10$\unit{kB}. The event content for Calo scouting (right),
+  consists of anti-$\kt$ $R=0.4$ Calo jets, Calo $\MET$, vertices (if
+  another trigger reconstructed them for this event), and the median energy
+  density in an event $\rho$, which amounts to $\sim 1.5$\unit{kB}.\label{fig:DataScoutingContent}}
 \end{figure}

@@ -1,4 +1,4 @@
-\chapter{Topological HLT Development at $\sqrt{s}=13 \TeV$}
+\chapter{Topological HLT development at $\sqrt{s}=13 \TeV$}
 \label{ch:hlt13TeV}
 
 Traditionally, trigger algorithms employed at hadron colliders consisted
@@ -13,7 +13,7 @@ especially kinematic variables designed for particular event topologies, such as
 \Rtwo, meant that the event selection used in new searches no
 longer directly mapped to traditional trigger requirements on isolated
 particles or global event ``sums.'' Fortunately, the flexibility of
-the HLT system allowed the development dedicated trigger paths, based
+the soft system allowed the development dedicated trigger paths, based
 on sophisticated kinematic variables and specific event topologies.
 
 To target a broad range of new physics possibilities, we designed four different
@@ -25,8 +25,10 @@ types of triggers for use at $\sqrt{s}=13\TeV$:
   targeting top-squark or gluino pair production topologies;
 \item High-\Rtwo trigger targeting dijet+invisible topologies with
   large transverse momentum imbalance; and
-\item Razor $\PH(\bbbar)$ trigger targeting production of
-  $\PH(\bbbar)+\mathrm{jet}+\mathrm{invisible}$ with some transverse momentum imbalance.
+\item Razor $\PH(\bbbar)$ trigger targeting production of Higgs boson
+  decaying to a bottom quark-antiquark pair ($\PH\to\bbbar$) in
+  association with a jet and possibly some missing transverse energy,
+  i.e. $\PH(\bbbar)+\mathrm{jet}+\mathrm{invisible}$.
 \end{itemize}
 
 The dijet and quadjet razor triggers are broadly motivated by SUSY pair
@@ -35,22 +37,23 @@ used in previous searches at $\sqrt{s}=8\TeV$~\cite{razor8TeV}. Both
 sets of triggers are based on hyperbolic thresholds in the $(\MR,\Rtwo)$
 plane, with the 2015 updated thresholds shown in
 Fig~\ref{fig:hyperbolic}. The 2015 hyperbolic contours follow the
-iso-probability contours derived from the background-only fit to the MultiJet category
-in the 8\TeV razor search performed using 2012 data. This implies
+iso-probability contours $(\Rtwo+0.25)(\MR+300\GeV)=\mathrm{constant}$, derived from the background-only fit to the MultiJet category
+in the 8\TeV razor search performed using 2012 data. This implies that
 these hyperbolic contours efficiently reject background, while
-maintaining a large acceptance for SUSY signal models with large
+maintaining a large acceptance for SUSY signal models with a large
 characteristic mass scale $M_{\Delta}\gtrsim 500 \GeV$ and sufficient
 transverse momentum imbalance. Another update is that the 13 \TeV razor triggers are based on PF-reconstructed objects rather
-than Calo jets and muons, which means the online $\Rtwo$ variable is
+than Calo jets and muons, which means that the online $\Rtwo$ variable is
 much more correlated with the offline $\Rtwo$ variable, which is also
 PF-based. This leads to an improved trigger efficiency plateau of
 $97\%$ for 2015 (compared to $95\%$ in 2012), shown in Fig.~\ref{fig:turnons}.
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{figs/hlt13TeV/HLTRsqMR.pdf}
+\includegraphics[width=0.8\textwidth]{figs/hlt13TeV/HLTRsqMR.pdf}
 \caption{\label{fig:hyperbolic} Hyperbolic and baseline thresholds in
-  \Rtwo and \MR used in the dijet and quadjet razor triggers.}
+  \Rtwo and \MR used in the dijet and quadjet razor triggers. The
+  hyperbolic thresholds are of the form $(\Rtwo+0.25)(\MR+300\GeV)=\mathrm{constant}$.}
 \end{figure}
 
 \begin{figure}[ht!]
@@ -85,8 +88,8 @@ the high-\Rtwo trigger is designed with a threshold in \Rtwo but no
 requirement on \MR to allow for greater DM signal acceptance.
 
 Finally, the razor $\PH(\bbbar)$ trigger is motivated by an
-excess observed in Run 1 by CMS in events with a $\PH
-(\Pgg\Pgg)$ plus at least one extra jet~\cite{RazorHgaga}. The excess,
+excess observed in Run 1 by CMS in events with a Higgs boson decaying
+to two photons ($\PH\to\Pgg\Pgg$) plus at least one extra jet~\cite{RazorHgaga}. The excess,
 corresponding to a local significance of
 $2.9\sigma$, consists of five events observed with $400\GeV<\MR<1400
 \GeV$,  $\Rtwo>0.05$, and $m_{\Pgg\Pgg}$ consistent with $m_{h^0}= 125
@@ -111,7 +114,19 @@ version intended for $7\times 10^{33}$ cm$^{-2}$ s$^{-1}$ and 20 average
 pileup interactions, and a ``backup'' version, with tighter thresholds
 intended for $1.4\times 10^{34}$ cm$^{-2}$ s$^{-1}$ and 40 average
 pileup interactions. The correspondence between the purpose of each
-trigger and its path name is shown in Tab.~\ref{tab:pathnames}.
+trigger and its path name is shown in Tab.~\ref{tab:pathnames}. Each trigger path name encodes the main
+  selection criteria. For the dijet and quadjet triggers, ``RsqMR240'' denotes the hyperbolic
+  threshold $(\Rtwo+0.25)(\MR+300\GeV)=240\GeV$, ``Rsq0p09\_MR200''
+  denotes the baseline thresholds $\Rtwo>0.09$ and $\MR>200\GeV$, and ``4jet'' denotes a
+  four-jet requirement where the two leading (remaining) jets are required to have
+  a minimum $\pt$ of $50\GeV$ ($40\GeV$). For the $\PH(\bbbar)$
+  trigger, ``TriPFJet80\_60\_40'' denotes a three-jet requirement where the
+  leading, subleading, and remaining jet is required have a
+  minimium \pt of $80\GeV$, $60\GeV$, and $40\GeV$, respectively, 
+``DoublePFBTagCSV0p7\_0p4'' denotes a two \Pqb-tagged jet
+  requirement, with CSV discriminator values above 0.7 and 0.4,
+  respectively, and ``Mbb60\_200'' denotes the
+  $60<m_{\bbbar}<200\GeV$ mass window.
 
 \begin{table*}[ht!]
 \centering
@@ -136,7 +151,7 @@ HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_ & \multirow{2}{*}{backup $\PH(\bbbar)$
 \end{tabular}}
 \end{table*}
 
-\section{HLT Path Design}
+\section{HLT path design}
 
 The design of the four main HLT paths in terms of producers (in
 purple) and filters (in blue) is shown
@@ -154,7 +169,7 @@ events based only on information from the calorimeters, whose
 reconstruction algorithms are much faster than the PF algorithm. In
 other words, to keep the timing of the paths manageable, it is
 necessary to limit the input rate to the PF algorithm. Thus, all four
-triggers have prefilter based on calorimeter-based versions of the razor
+triggers have a prefilter based on calorimeter-based versions of the razor
 variables.
 
 \begin{figure}[ht!]
@@ -177,7 +192,7 @@ variables.
   the razor triggers.}
 \end{figure}
 
-\section{HLT Rate and Average CPU Time}
+\section{HLT rate and average CPU time}
 
 The HLT rates and average CPU time consumed per event for the both the main and
 backup razor triggers, as measured in data collected in 2015, are
@@ -204,7 +219,7 @@ account overlapping events and reused algorithms) for the full suite of razor tr
 \begin{table*}[ht!]
 \centering
  \caption{HLT rates and average CPU time consumed for the main and
-   backup razor triggers under different running conditions in 2015. Run 260627 had peak $5\times 10^{33}$ cm$^{-2}$
+   backup razor triggers under different running conditions in 2015. Run 260627 had $5\times 10^{33}$ cm$^{-2}$
    s$^{-1}$ peak instantaneous luminosity with 17 average pileup
    interactions, while run 259721 had $1.5\times 10^{33}$ cm$^{-2}$
    s$^{-1}$ peak instantaneous luminosity with 23 average pileup interactions. \label{tab:rates2015}}
@@ -236,13 +251,13 @@ HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_ & \multirow{2}{*}{8.0} & \multirow{2}{
 % https://www.dropbox.com/s/z8qfx57du7h3gzq/TSG_RazorHLT2016_30Mar2016.pdf?dl=0
 
 
-\section{Pileup Dependence of HLT Rate}
+\section{Pileup dependence of HLT rate}
 \label{sec:pileuphlt}
 The HLT rate, normalized by the number of colliding bunches, as a function of the number of pileup interactions for
 each razor trigger and for different data runs collected in 2015 is
 shown in Figures~\ref{fig:HLTpileup1}~and~\ref{fig:HLTpileup2}. Nominally, the dependence of the
 normalized HLT rate on pileup is expected to be linear, as is the case
-for single-object triggers. Contrastingly, triggers based on sum quantities
+for single-object triggers. In contrast, triggers based on sum quantities
 (such as $H_\mathrm{T}$ or $\MET$) and multi-object triggers often
 demonstrate a nonlinear dependence on pileup, not due to a physical
 increase in the cross section of the selected physics processes, but rather due to the effects of pileup
@@ -275,7 +290,9 @@ delineated in Ch.~\ref{ch:timing}.
 \includegraphics[width=0.9\textwidth]{figs/hlt13TeV/linear/HLT_RsqMR240_Rsq0p09_MR200_4jet_instLumi_vs_rawRate.pdf}\\
 (b) HLT\_RsqMR240\_Rsq0p09\_MR200\_4jet
 \caption{\label{fig:HLTpileup1} Pileup dependence of the dijet (a) and
-  quadjet (b) razor triggers.}
+  quadjet (b) razor triggers throughout 2015. Each data point
+  corresponds to a different luminosity section (23.3 seconds of data-taking). The legend denotes the
+  run number and number of colliding bunches in each run.}
 \end{figure}
 
 \begin{figure}[ht!]
@@ -286,7 +303,9 @@ delineated in Ch.~\ref{ch:timing}.
 (d) HLT\_Rsq0p02\_MR300\_TriPFJet80\_60\_40\_\\
 ~DoublePFBTagCSV0p7\_0p4\_Mbb60\_200
 \caption{\label{fig:HLTpileup2} Pileup dependence of the high-\Rtwo
-  (c) and $\PH(\bbbar)$ (d) razor triggers.}
+  (c) and $\PH(\bbbar)$ (d) razor triggers. Each data point
+  corresponds to a different luminosity section (23.3 seconds of data-taking). The legend denotes the
+  run number and number of colliding bunches in each run.}
 \end{figure}
 
 
