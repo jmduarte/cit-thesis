@@ -1261,7 +1261,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("ATLAS_13_fbinv","#splitline{ATLAS 8 #oplus 20.3  fb^{-1} (8 TeV) }{(with Gaussian resonance shapes)}","L");
+   entry=leg->AddEntry("ATLAS_13_fbinv","#splitline{ATLAS 8 #oplus 20.3  fb^{-1} (8 TeV) }{(Gaussian resonance shapes)}","L");
 
    ci = TColor::GetColor("#66ccff");
    entry->SetLineColor(ci);
@@ -1382,7 +1382,7 @@
    entry2->SetMarkerStyle(21);
    entry2->SetMarkerSize(1);
    entry2->SetTextFont(42);
-   entry2=leg3->AddEntry("Graph_CMS_13_TeV_12_9_fbinv_1sigma4","Expected #pm 1","FL");
+   entry2=leg3->AddEntry("Graph_CMS_13_TeV_12_9_fbinv_1sigma4","Expected #pm 1 #sigma","FL");
 
    ci = 925;
    color = new TColor(ci, 0, 0.6, 0, " ", 0.35);
