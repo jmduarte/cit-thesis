@@ -420,6 +420,7 @@ Excited quark  &  $\PQq\Pg$                 & 5.4\ (5.4)    & 5.0\ (4.8)     & 3
 Color-octet scalar ($k_s^2=1/2$) & $\Pg\Pg$ & 3.0\ (3.3)    & ---            & --- \\
 $\PWpr$ & $\PQq\PAQq$                       & 2.7\ (3.1)    & 2.6\ (2.3)     & 2.2\ (2.2)\\
 $\PZpr$ & $\PQq\PAQq$                       & 2.1\ (2.3)    & ---            & 1.7\ (1.8)\\
+DM mediator ($m_\mathrm{DM} = 1\GeV$) & $\PQq\PAQq$                       & 2.0\ (2.2)    & ---            & ---  \\
 RS Graviton  & $\PQq\PAQq$, $\Pg\Pg$        & 1.9\ (1.8)    & ---            & 1.6\ (1.3)\\\hline\hline
  \end{tabular}
 \label{tab:MassLimit}
@@ -442,6 +443,12 @@ similar searches at various collider energies~\cite{Khachatryan:2016ecr,ATLAS:20
 %masses between 500 and 800\GeV, compared to previous searches. This
 %corresponds to an order-of-magnitude improvement in the cross section
 %limit.
+
+% width is a sub-case of the one discussed below. multiplied by 5 for
+% each quark flavor u, d, c, s, b
+%\begin{equation}
+%\Gamma(\Zpr_B\to jj) = 5 \frac{g_B^2m_{\Zpr_B}}{36(4\pi)}\left(1+\frac{\alpha_s}{\pi}\right)
+%\end{equation}
 
 \begin{figure}
 \centering
@@ -538,10 +545,11 @@ respectively: ($\mMed ,\, \mDM ,\, \gDM ,\,
 %based DM searches like monojets. 
 The results of the search for a narrow $\Pq\Paq$ resonance may then be reinterpreted as a search for
 the mediator when it decays to quarks. In this model, the minimal decay width of the mediator is given by the sum of the partial widths for
-all decays into DM particles and quarks that are kinematically accessible: 
+all decays into DM particles and quarks that are kinematically
+accessible, which we take to be $\Pq=\PQu,\PQd,\PQc,\PQs,\PQb$: 
 \begin{equation}
 \Gamma^{\mathrm{tot}} =
-\Gamma^{\chi\overline\chi} + 3 \sum_{\Pq} \Gamma^{\Pq\Paq}
+\Gamma^{\chi\overline\chi} + 3 \sum_{\Pq} \Gamma^{\Pq\Paq}~.
 \end{equation}
 The partial widths are given by:
 \begin{align}
@@ -604,19 +612,25 @@ and ID experiments, these limits are translated into the planes of the DM mass v
 (SI) or spin-dependent (SD) DM-nucleon cross section,
 $\sigma_{\mathrm{SI}}$ or $\sigma_{\mathrm{SD}}$, respectively. The SI
 DM-nucleon cross section takes the form
-\begin{equation}
-\sigma_\mathrm{SI} = \frac{f^2(g^\prime_\Pq) g_\mathrm{DM}^2
-  \mu_{\Pn\chi}}{\pi m_{\mathrm{med}}^4}~,
-\end{equation}
+\begin{align}
+\sigma_\mathrm{SI}& = \frac{f^2(g^\prime_\Pq) g_\mathrm{DM}^2
+  \mu_{\Pn\chi}}{\pi m_{\mathrm{med}}^4}\\
+&\simeq 6.9\times10^{-41}\unit{cm}^2 \cdot \left (\frac{g^\prime_\Pq
+  g_\mathrm{DM}}{0.25} \right)^2 \left (\frac{1 \TeV}{m_\mathrm{med}}
+  \right)^4 \left (\frac{\mu_{\Pn\chi}}{1\GeV} \right)^2 ~,
+\end{align}
 where $\mu_{\Pn\chi} =
 m_\Pn m_\mathrm{DM}/(m_\Pn+m_\mathrm{DM})$ is the
 DM-nucleon reduced mass with $m_\Pn \simeq 0.939\GeV$, and for a
 vector mediator, $f(g^\prime_\Pq) = 3 g^\prime_\Pq$. Similarly, the SD
 DM-nucleon cross section can be written as,
-\begin{equation}
-\sigma_\mathrm{SD} = \frac{3f^2(g^\prime_\Pq) g_\mathrm{DM}^2
-  \mu_{\Pn\chi}}{\pi m_{\mathrm{med}}^4}~,
-\end{equation}
+\begin{align}
+\sigma_\mathrm{SD} &= \frac{3f^2(g^\prime_\Pq) g_\mathrm{DM}^2
+  \mu_{\Pn\chi}}{\pi m_{\mathrm{med}}^4}\\
+&\simeq 2.4\times10^{-42}\unit{cm}^2 \cdot \left (\frac{g^\prime_\Pq
+  g_\mathrm{DM}}{0.25} \right)^2 \left (\frac{1 \TeV}{m_\mathrm{med}}
+  \right)^4 \left (\frac{\mu_{\Pn\chi}}{1\GeV} \right)^2 ~,
+\end{align}
 where, in general, $f(g^\prime_\Pq)$ could be different for protons
 and neutrons:
 \begin{equation}

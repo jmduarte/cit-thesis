@@ -99,11 +99,13 @@
    Graph_CDF1_1_fbinv1->SetStats(0);
    Graph_CDF1_1_fbinv1->SetLineStyle(0);
    Graph_CDF1_1_fbinv1->SetMarkerStyle(20);
-   Graph_CDF1_1_fbinv1->GetXaxis()->SetTitle("M_{Z'_{B}} [GeV]");
+   Graph_CDF1_1_fbinv1->GetXaxis()->SetTitle("m_{Z'_{B}} [GeV]");
    Graph_CDF1_1_fbinv1->GetXaxis()->SetMoreLogLabels();
    Graph_CDF1_1_fbinv1->GetXaxis()->SetNoExponent();
    Graph_CDF1_1_fbinv1->GetXaxis()->SetLabelFont(42);
    Graph_CDF1_1_fbinv1->GetXaxis()->SetLabelOffset(0.007);
+   Graph_CDF1_1_fbinv1->GetXaxis()->SetLabelSize(0.04);
+   Graph_CDF1_1_fbinv1->GetXaxis()->SetTitleSize(0.04);
    Graph_CDF1_1_fbinv1->GetXaxis()->SetTitleOffset(1.2);
    Graph_CDF1_1_fbinv1->GetXaxis()->SetTitleFont(42);
    Graph_CDF1_1_fbinv1->GetYaxis()->SetTitle("Coupling g_{B}");
@@ -112,6 +114,8 @@
    Graph_CDF1_1_fbinv1->GetYaxis()->SetLabelOffset(0.007);
    Graph_CDF1_1_fbinv1->GetYaxis()->SetTitleOffset(1.2);
    Graph_CDF1_1_fbinv1->GetYaxis()->SetTitleFont(42);
+   Graph_CDF1_1_fbinv1->GetYaxis()->SetLabelSize(0.04);
+   Graph_CDF1_1_fbinv1->GetYaxis()->SetTitleSize(0.04);
    Graph_CDF1_1_fbinv1->GetZaxis()->SetLabelFont(42);
    Graph_CDF1_1_fbinv1->GetZaxis()->SetLabelOffset(0.007);
    Graph_CDF1_1_fbinv1->GetZaxis()->SetLabelSize(0.05);
@@ -131,8 +135,9 @@
 
    ci = 930;
    color = new TColor(ci, 1, 1, 0, " ", 0.5);
-   graph->SetLineColor(ci);
-   graph->SetLineWidth(2);
+   graph->SetLineColor(kBlack);
+   graph->SetLineStyle(2);
+   graph->SetLineWidth(3);
    graph->SetMarkerStyle(20);
    graph->SetPoint(0,600,0.4690668102);
    graph->SetPoint(1,650,0.4330771976);
@@ -299,7 +304,11 @@
 
    ci = 926;
    color = new TColor(ci, 0.6, 0.6, 0, " ", 0.2);
+   
+   ci = TColor::GetColor("#660000");
    graph->SetLineColor(ci);
+   //graph->SetLineColor(kBlack);
+   graph->SetLineStyle(7);
    graph->SetLineWidth(2);
    graph->SetMarkerStyle(20);
    graph->SetPoint(0,1600,0.6735132723);
@@ -369,7 +378,10 @@
 
    ci = 924;
    color = new TColor(ci, 0, 0.6, 0, " ", 0.35);
+   
+   ci = TColor::GetColor("#660000");
    graph->SetLineColor(ci);
+   graph->SetLineStyle(7);
    graph->SetLineWidth(2);
    graph->SetMarkerStyle(20);
    graph->SetPoint(0,1600,0.7837422527);
@@ -599,7 +611,7 @@
    Graph_CMS_12_9_fbinv_13_TeV_exp_no_sys8->GetZaxis()->SetTitleFont(42);
    graph->SetHistogram(Graph_CMS_12_9_fbinv_13_TeV_exp_no_sys8);
    
-   graph->Draw("c ");
+   //graph->Draw("c ");
    
    graph = new TGraph(21);
    graph->SetName("CMS_12_9_fbinv_13_TeV_obs_no_sys");
@@ -656,7 +668,7 @@
    Graph_CMS_12_9_fbinv_13_TeV_obs_no_sys9->GetZaxis()->SetTitleFont(42);
    graph->SetHistogram(Graph_CMS_12_9_fbinv_13_TeV_obs_no_sys9);
    
-   graph->Draw("c ");
+   //graph->Draw("c ");
    
    graph = new TGraph(14);
    graph->SetName("CMS_12_9_fbinv_13_TeV_PF_exp");
@@ -1185,9 +1197,12 @@
    
    graph->Draw("c ");
    
-   TLegend *leg = new TLegend(0.4338677,0.568,0.7775551,0.9268571,NULL,"brNDC");
+   //TLegend *leg = new TLegend(0.4338677,0.568,0.7775551,0.9268571,NULL,"brNDC");
+   
+   TLegend *leg = new TLegend(0.25,0.62,0.6,0.92,NULL,"brNDC");
+   leg->SetName("leg");
    leg->SetBorderSize(0);
-   leg->SetTextSize(0.01371429);
+   leg->SetTextSize(0.022);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
    leg->SetLineWidth(1);
@@ -1226,7 +1241,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_20_fbinv"," CMS PF Reco 20 fb^{-1} (8 TeV)","L");
+   entry=leg->AddEntry("CMS_20_fbinv"," CMS PF Reco. 20 fb^{-1} (8 TeV)","L");
 
    ci = TColor::GetColor("#ff00ff");
    entry->SetLineColor(ci);
@@ -1257,7 +1272,7 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    entry=leg->AddEntry("ATLAS_13_TeV_3_4_fbinv","ATLAS 3.4 fb^{-1} (13 TeV)","L");
-
+   
    ci = TColor::GetColor("#0000ff");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
@@ -1266,128 +1281,161 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_12_9_fbinv_13_TeV_obs","CMS Data Scouting 12.9 fb^{-1} (13 TeV) (Obs.)","L");
-   entry->SetLineColor(1);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(3);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_12_9_fbinv_13_TeV_exp","CMS Data Scouting 12.9 fb^{-1} (13 TeV) (Exp.) ","L");
-   entry->SetLineColor(1);
-   entry->SetLineStyle(7);
-   entry->SetLineWidth(3);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_19_fbinv_0_15","#pm 1 #sigma CMS Data Scouting 12.9 fb^{-1} (13 TeV)","F");
+   
+   leg->Draw();
+
+   TLegend *leg2 = new TLegend(0.62,0.785,0.9,0.92,NULL,"brNDC");
+   leg2->SetName("leg2");
+   leg2->SetBorderSize(0);
+   leg2->SetTextSize(0.022);
+   leg2->SetLineColor(1);
+   leg2->SetLineStyle(1);
+   leg2->SetLineWidth(1);
+   
+   leg2->SetHeader("CMS Data Scouting 12.9 fb^{-1} (13 TeV)");
+   
+   ci = 932;
+   color = new TColor(ci, 1, 1, 1, " ", 0);
+   leg->SetFillColor(ci);
+   leg->SetFillStyle(1001);
+
+   TLegendEntry* entry2=leg2->AddEntry("CMS_12_9_fbinv_13_TeV_obs","Observed","L");
+   entry2->SetLineColor(1);
+   entry2->SetLineStyle(1);
+   entry2->SetLineWidth(3);
+   entry2->SetMarkerColor(1);
+   entry2->SetMarkerStyle(21);
+   entry2->SetMarkerSize(1);
+   entry2->SetTextFont(42);
+   //entry=leg2->AddEntry("CMS_12_9_fbinv_13_TeV_exp","CMS Data Scouting 12.9 fb^{-1} (13 TeV) (Exp.) ","L");
+   entry2->SetLineColor(kBlack);
+   entry2->SetLineStyle(2);
+   entry2->SetLineWidth(3);
+   entry2->SetMarkerColor(1);
+   entry2->SetMarkerStyle(21);
+   entry2->SetMarkerSize(1);
+   entry2->SetTextFont(42);
+   entry2=leg2->AddEntry("Graph_CMS_13_TeV_12_9_fbinv_1sigma4","Expected #pm 1 #sigma","FL");
 
    ci = 929;
    color = new TColor(ci, 0, 1, 0, " ", 0.5);
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
+   entry2->SetFillColor(ci);
+   entry2->SetFillStyle(1001);
 
    ci = 928;
    color = new TColor(ci, 0, 1, 0, " ", 0.5);
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_19_fbinv_0_15","#pm 2 #sigma CMS Data Scouting 12.9 fb^{-1} (13 TeV)","F");
+   entry2->SetLineColor(kBlack);
+   entry2->SetLineStyle(2);
+   entry2->SetLineWidth(3);
+   entry2->SetMarkerColor(1);
+   entry2->SetMarkerStyle(21);
+   entry2->SetMarkerSize(1);
+   entry2->SetTextFont(42);
+
+   TLegendEntry *entry2=leg2->AddEntry("Graph_CMS_13_TeV_12_9_fbinv_2sigma4","Expected #pm 2 #sigma","FL");
 
    ci = 931;
    color = new TColor(ci, 1, 1, 0, " ", 0.5);
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
+   entry2->SetFillColor(ci);
+   entry2->SetFillStyle(1001);
 
    ci = 930;
    color = new TColor(ci, 1, 1, 0, " ", 0.5);
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_12_9_fbinv_13_TeV_PF_obs","CMS PF Reco 12.9 fb^{-1} (13 TeV) (Obs.)","L");
+   entry2->SetLineColor(kBlack);
+   entry2->SetLineStyle(2);
+   entry2->SetLineWidth(3);
+   entry2->SetMarkerColor(1);
+   entry2->SetMarkerStyle(21);
+   entry2->SetMarkerSize(1);
+   entry2->SetTextFont(42);
+
+   
+   leg2->Draw();
+
+   TLegend *leg3 = new TLegend(0.65,0.65,0.9,0.785,NULL,"brNDC");
+   leg3->SetName("leg3");
+   leg3->SetBorderSize(0);
+   leg3->SetTextSize(0.022);
+   leg3->SetLineColor(1);
+   leg3->SetLineStyle(1);
+   leg3->SetLineWidth(1);
+   
+   leg3->SetHeader("CMS PF Reco. 12.9 fb^{-1} (13 TeV)");
+   
+   entry2=leg3->AddEntry("CMS_12_9_fbinv_13_TeV_PF_obs","Observed","L");
 
    ci = TColor::GetColor("#660000");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_12_9_fbinv_13_TeV_PF_exp","CMS PF Reco 12.9 fb^{-1} (13 TeV) (Exp.)","L");
+   entry2->SetLineColor(ci);
+   entry2->SetLineStyle(1);
+   entry2->SetLineWidth(2);
+   entry2->SetMarkerColor(1);
+   entry2->SetMarkerStyle(21);
+   entry2->SetMarkerSize(1);
+   entry2->SetTextFont(42);
+   //entry=leg3->AddEntry("CMS_12_9_fbinv_13_TeV_PF_exp","CMS PF Reco. 12.9 fb^{-1} (13 TeV) (Exp.)","L");
 
    ci = TColor::GetColor("#660000");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(7);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_13_TeV_12_9_fbinv_1sigma","#pm 1 #sigma CMS PF Reco 12.9 fb^{-1} (13 TeV)","F");
+   entry2->SetLineColor(ci);
+   entry2->SetLineStyle(7);
+   entry2->SetLineWidth(2);
+   entry2->SetMarkerColor(1);
+   entry2->SetMarkerStyle(21);
+   entry2->SetMarkerSize(1);
+   entry2->SetTextFont(42);
+   entry2=leg3->AddEntry("Graph_CMS_13_TeV_12_9_fbinv_1sigma4","Expected #pm 1","FL");
 
    ci = 925;
    color = new TColor(ci, 0, 0.6, 0, " ", 0.35);
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
+   entry2->SetFillColor(ci);
+   entry2->SetFillStyle(1001);
 
    ci = 924;
    color = new TColor(ci, 0, 0.6, 0, " ", 0.35);
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_13_TeV_12_9_fbinv_2sigma","#pm 2 #sigma CMS PF Reco 12.9 fb^{-1} (13 TeV)","F");
+   entry2->SetLineColor(kBlack);
+   entry2->SetLineStyle(7);
+   entry2->SetLineWidth(2);
+   entry2->SetMarkerColor(1);
+   entry2->SetMarkerStyle(21);
+   entry2->SetMarkerSize(1);
+   entry2->SetTextFont(42);
+   entry2=leg3->AddEntry("CMS_13_TeV_12_9_fbinv_2sigma","Expected #pm 2 #sigma","FL");
 
    ci = 927;
    color = new TColor(ci, 0.6, 0.6, 0, " ", 0.2);
-   entry->SetFillColor(ci);
-   entry->SetFillStyle(1001);
+   entry2->SetFillColor(ci);
+   entry2->SetFillStyle(1001);
 
    ci = 926;
    color = new TColor(ci, 0.6, 0.6, 0, " ", 0.2);
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_12_9_fbinv_13_TeV_obs_no_sys","CMS Data Scouting 12.9 fb^{-1} (13 TeV) (Obs.) (no sys.)","L");
-   entry->SetLineColor(15);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_12_9_fbinv_13_TeV_exp_no_sys","CMS Data Scouting 12.9 fb^{-1} (13 TeV) (Exp.) (no sys.)","L");
-   entry->SetLineColor(15);
-   entry->SetLineStyle(7);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   leg->Draw();
+   entry2->SetLineColor(ci);
+   entry2->SetLineStyle(7);
+   entry2->SetLineWidth(2);
+   entry2->SetMarkerColor(1);
+   entry2->SetMarkerStyle(21);
+   entry2->SetMarkerSize(1);
+   entry2->SetTextFont(42);
+   //entry2=leg3->AddEntry("CMS_12_9_fbinv_13_TeV_obs_no_sys","CMS Data Scouting 12.9 fb^{-1} (13 TeV) (Obs.) (no sys.)","L");
+   entry2->SetLineColor(15);
+   entry2->SetLineStyle(1);
+   entry2->SetLineWidth(2);
+   entry2->SetMarkerColor(1);
+   entry2->SetMarkerStyle(21);
+   entry2->SetMarkerSize(1);
+   entry2->SetTextFont(42);
+   //entry2=leg3->AddEntry("CMS_12_9_fbinv_13_TeV_exp_no_sys","CMS Data Scouting 12.9 fb^{-1} (13 TeV) (Exp.) (no sys.)","L");
+   entry2->SetLineColor(15);
+   entry2->SetLineStyle(7);
+   entry2->SetLineWidth(2);
+   entry2->SetMarkerColor(1);
+   entry2->SetMarkerStyle(21);
+   entry2->SetMarkerSize(1);
+   entry2->SetTextFont(42);
+   leg3->Draw();
    TLatex *   tex = new TLatex(0.95,0.96,"12.9 fb^{-1} (13 TeV)");
 tex->SetNDC();
    tex->SetTextAlign(31);
    tex->SetTextFont(42);
-   tex->SetTextSize(0.03);
+   tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
       tex = new TLatex(0.13825,0.9213,"CMS");
@@ -1412,7 +1460,7 @@ tex->SetNDC();
    CDF1_1_fbinv__1->SetStats(0);
    CDF1_1_fbinv__1->SetLineStyle(0);
    CDF1_1_fbinv__1->SetMarkerStyle(20);
-   CDF1_1_fbinv__1->GetXaxis()->SetTitle("M_{Z'_{B}} [GeV]");
+   CDF1_1_fbinv__1->GetXaxis()->SetTitle("m_{Z'_{B}} [GeV]");
    CDF1_1_fbinv__1->GetXaxis()->SetMoreLogLabels();
    CDF1_1_fbinv__1->GetXaxis()->SetNoExponent();
    CDF1_1_fbinv__1->GetXaxis()->SetLabelFont(42);
@@ -1434,4 +1482,5 @@ tex->SetNDC();
    gB_Limits_All->Modified();
    gB_Limits_All->cd();
    gB_Limits_All->SetSelected(gB_Limits_All);
+   gB_Limits_All->Print("gB_Limits_12_9_ifb.pdf");
 }
