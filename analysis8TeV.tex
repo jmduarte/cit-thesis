@@ -290,13 +290,25 @@ account for the response of the detector.
 
 Once normalized to the NLO inclusive cross
 section and the integrated luminosity, the absolute yield of the
-$\cPV$+jets events contribution satisfying the event selection is found
+$\cPV+$jets events contribution satisfying the event selection is found
 to be negligible in all of the two-lepton boxes. In the remaining boxes,
 its contribution to the total SM background is found to be
-approximately 25\%. The contribution of $\cPV$+jets events in
+approximately 25\%. The contribution of $\cPV+$jets events in
 the $\geq$2 \PQb-tag and the $\geq$4 jet sample is found to be
 negligible. The remainder of the background in each box originates
-from $\ttbar$ events.
+from $\ttbar$ events. Fig.~\ref{fig:pies} illustrates the breakdown of
+the different SM background contributions in each box for the baseline event selection listed in
+Tab.~\ref{tab:boxDef}.
+
+\begin{figure}[tb!]
+\centering
+\includegraphics[width=0.9\textwidth]{figs/analysis8TeV/pies.pdf}
+\caption{Graphical display of the breakdown of the different SM background
+contributions, estimated from MC simulated samples, in each box for
+the baseline event selection listed in Tab.~\ref{tab:boxDef}. For
+these graphs, the $\cPV+$jets background is broken
+down into the separate $\PW+$jets and $\PZ+$jets contributions.\label{fig:pies}}
+\end{figure}
 
 \subsection{Empirical razor function}
 \label{sec:function8TeV}
@@ -496,8 +508,96 @@ one-lepton and hadronic boxes are shown in
 Figs.~\ref{fig:FrenchFlagEle}--\ref{fig:FrenchFlagHad}. Figures~\ref{fig:Proj1DDilep}--\ref{fig:Proj1DHad}
 illustrate the extrapolation of the fit results to the full
 ($\MR$, $\Rtwo$) plane, projected onto  \Rtwo and \MR and summed over the \PQb-tagged jet multiplicity
-bins. No significant deviation of data from the SM background
+bins. No significant deviation of the data from the SM background
 predictions is observed.
+
+A goodness-of-fit (GOF) p-value may be computed for each fit using a
+mixed-sample method~\cite{Williams:2010vh,10.2307/2289012}. In this method, a
+pseudo-experiment data set is generated with a factor of 10 more
+events than in data, $n_\mathrm{MC} = 10n_\mathrm{data}$. The two data sets are mixed and for the mixed
+data set, a test statistic $T$, is calculated by finding the 10 nearest
+neighbors to each point in the mixed set and then counting how many of
+these neighbors are from the same sample:
+\begin{equation}
+T = \frac{1}{n_k(n_\mathrm{data}+n_\mathrm{MC})}\sum_{i=1}^{n_\mathrm{data}+n_\mathrm{MC}}\sum_{k=1}^{n_k} I(i,k)~,
+\end{equation}
+where $I(i,k)=1$ if the $i^{\mathrm{th}}$ event and its
+$k^{\mathrm{th}}$ nearest neighbor belong to the same sample and
+$I(i,k)=0$ otherwise, and $n_k=10$ is the number of nearest-neighbor
+events being considered. A normalized Euclidean metric is used to quantify distances,
+\begin{equation}
+|\vec x_i - \vec x_j|^2  =\sum_{\nu}^D\left ( \frac{x_i^\nu-x_j^\nu}{\sigma_{\nu}} \right)~,
+\end{equation}
+where $D$ is the dimensionality of the dataset, $\vec x_i =
+(x_i^1,...,x_i^D)$ is a random point, and $\sigma_{\nu}$ is the
+root mean square of the $\nu^{\mathrm{th}}$ variate in the dataset. If
+the two samples, the pseudo-experiment data set and the real data
+set, have the same parent distribution, then there is a quantity,
+$(T-\mu_T)/\sigma_T$, that has a limiting standard normal
+distribution. The quantities $\mu_T$ and $\sigma_T$ are,
+\begin{align}
+\mu_T &=
+        \frac{n_\mathrm{data}(n_\mathrm{data}-1)+n_\mathrm{MC}(n_\mathrm{MC}-1)}{n(n-1)}~,\\
+\lim_{n,n_k,D\to\infty}\sigma_T^2 &=\frac{1}{nn_k}\left (
+                                    \frac{n_\mathrm{data}n_\mathrm{MC}}{n^2}
+                                    + 4\frac{n_\mathrm{data}^2n_\mathrm{MC}^2}{n^4}\right)~,
+\end{align}
+where $n=n_\mathrm{data}+n_\mathrm{MC}$. The convergence to this limit
+for $\sigma_T$ is fast enough that it is acceptable to use even for $D=2$,
+$n_k=10$, and $n_\mathrm{MC}=10n_\mathrm{data}$.
+
+The values of the modified test statistic $(T-\mu_T)/\sigma_T$ and the
+corresponding one-sided p-value for each of the sideband fits are
+tabulated in Tab.~\ref{tab:gof8TeV}. To evalute the test statistic, all of the data in the sidebands
+   and the signal-sensitive region is used. Therefore, these measures
+   quantify both the agreement between the sideband
+   data and the fit and the agreement between the signal-sensitive-region
+   data and the extrapolation. We find GOF p-values that are consistent with a
+   uniform distribution and suggest a high-level of agreement between
+   the data and the fit plus the extrapolation.
+
+\begin{table}
+\centering
+ \caption{Goodness-of-fit test statistic and one-sided p-values for
+   each of sideband fits. The mixed-sample method~\cite{Williams:2010vh,10.2307/2289012} used to derive these measures is described in
+   text. To evalute the test statistic, all of the data in the sidebands
+   and the signal-sensitive region is used. Therefore, these measures
+   quantify both the agreement between the sideband
+   data and the fit and the agreement between the signal-sensitive-region
+   data and the extrapolation.
+ \label{tab:gof8TeV}}
+\begin{tabular}{l|r|r|r}
+\hline\hline
+Box & \PQb-tags & $(T-\mu_T)/\sigma_T$ & p-value \\\hline
+ \multicolumn{4}{c}{Two-lepton boxes}\\
+\hline
+MuEle &  $\geq1$  &  0.74 & 23\%  \\
+MuMu &  $\geq1$  &  -0.34 & 63\% \\
+EleEle &  $\geq1$  &  -0.73 & 77\%  \\\hline
+ \multicolumn{4}{c}{Single-lepton boxes}\\
+\hline
+\multirow{3}{*}{MuMultiJet} &  1 &  0.43 & 33\%  \\
+ & 2 &  1.61 & 5\% \\
+ & $\geq3$ & -0.62 & 73\% \\
+\multirow{3}{*}{MuJet} &  1 & 0.82 & 21\%\\
+ & 2 &  -0.26 & 60\%\\
+ & $\geq3$ & 1.04 & 15\% \\
+\multirow{3}{*}{EleMultiJet} &  1 &  -1.39 & 92\%  \\
+ & 2 &  0.46 & 32\% \\
+ & $\geq3$ & 0.49 & 31\% \\
+\multirow{3}{*}{EleJet} &  1 & 0.25 & 40\%\\
+ & 2 & 0.55 & 29\% \\
+ & $\geq3$ & 1.05 & 15\% \\\hline
+ \multicolumn{4}{c}{Hadronic boxes}\\
+\hline
+\multirow{2}{*}{2\PQb-Jet} & 2 & 1.96 & 2\%\\
+ & $\geq3$ &-0.60 & 73\%\\
+\multirow{3}{*}{MultiJet} &  1 & 0.68 & 25\% \\
+ & 2 & -0.77 & 78\%\\
+ & $\geq3$ & -0.47 & 68\%\\
+\hline\hline
+\end{tabular}
+\end{table}
 
 \begin{figure}[tb!]
 \centering
@@ -647,9 +747,10 @@ mass spectrum.
 \includegraphics[width=0.49\textwidth]{figs/analysis8TeV/T2tt_800_25_FF.pdf}
 \caption{Distribution of (top) simulated SM background events,
   (bottom left) $\sGlu\sGlu$ events, and (bottom right) $\PSQt\PSQt$
-  events in the MultiJet box. Each $\sGlu$ has mass 1325\GeV and
-  decays to a \bbbar pair and a $\chiz_1$ with mass 50\GeV. Similarly, each $\PSQt$ has mass 800\GeV and
-  decays to a $\PQt$ and a $\chiz_1$ with mass 25\GeV.\label{fig:T1bbbbT2ttsignalinj}}
+  events in the MultiJet box. Each gluino has a mass of 1325\GeV and
+  decays to a bottom quark-antiquark pair and the LSP with a mass of 50\GeV. Similarly,
+  each top squark has a mass of 800\GeV and
+  decays to a top quark and the LSP with a mass of 25\GeV.\label{fig:T1bbbbT2ttsignalinj}}
 \end{figure}
 
 \begin{figure}[htb!]
@@ -717,7 +818,7 @@ b_i(\boldsymbol{\theta}) = N_{\mathrm{SM}} \int^{\MR^{\mathrm{max},i}}_{\MR^{\ma
 \end{equation}
 and the product runs over the
 number of bins $n_b$. This then is used to define the test statistic
-following the LHC \CLs procedure,
+following the LHC \CLs procedure~\cite{LHCCLs},
 \begin{equation}
 \tilde q_{\mu} = -2\log\frac{\mathcal L(\mathrm{data}|\mu,\boldsymbol{\hat\theta}_{\mu})}{\mathcal L(\mathrm{data}|\hat\mu, \boldsymbol{\hat\theta})} ~,~~  0\leq\hat\mu\leq\mu~.
 \end{equation}
@@ -913,7 +1014,7 @@ SUSY simplified models presented in Section~\ref{sec:sms}.
 \subsection{Limits on gluino pair production}
 \label{sec:interpgluino}
 
-Derived limits on gluino pair production for different gluino
+The derived limits on gluino pair production for different gluino
 branching fraction scenarios (discussed in Sec.~\ref{sec:sms}) are presented in
 Fig.~\ref{fig:gluino2D}.  A comparison of the simplified natural SUSY
 gluino-gluino exclusions, obtained for the different decay-mode
@@ -976,7 +1077,7 @@ spectrum shown in Fig.~\ref{fig:spectrum}.
 \subsection{Limits on top-squark pair production}
 \label{sec:interp:stop}
 
-Derived limits on top squark pair production from the razor search in
+The derived limits on top squark pair production from the razor search in
 the 100\% $\sTop\to\cPqb\chipm_1$, 50\% $\sTop\to\cPqb\chipm_1$ and
 50\% $\sTop\to\cPqt\chiz_1$, and 100\% $\sTop\to\cPqt\chiz_1$ scenarios are presented in
 Fig.~\ref{fig:squark2D} and compared in
