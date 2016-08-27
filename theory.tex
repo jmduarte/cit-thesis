@@ -184,7 +184,7 @@ and write out the terms associated to this field, we find
 \mathcal L_{\mathrm{Higgs}} \supset \frac{1}{2}(\partial^{\mu}H)^2 -
 \lambda v^2 H^2 - \lambda v H^3 - \frac{\lambda}{4}H^4~.
 \end{equation}
-which means this scalar boson, called the \emph{Higgs boson}, is self-interacting and has a mass squared of $m^2_{h^0} =
+which means this scalar boson, called the \emph{Higgs boson}, is self-interacting and has a mass squared of $m^2_\PH =
 2\lambda v^2$ at tree-level.
 
 \section{Fermion masses}
@@ -195,14 +195,16 @@ vev. This is accomplished by adding Yukawa terms to the Lagrangian for
 each generation,
 \begin{equation}
 \mathcal L_{\mathrm{Yukawa}} = - y_e \overline\ell_\mathrm{L}\Phi e_\mathrm{R} -
-y_u\overline q_\mathrm{L}\Phi u_\mathrm{R}  - y_d\overline q_\mathrm{L}\tilde\Phi d_\mathrm{R} + (\mathrm{h.c.})~,
+y_\PQu\overline q_\mathrm{L}\Phi u_\mathrm{R}  - y_\PQd\overline q_\mathrm{L}\tilde\Phi d_\mathrm{R} + (\mathrm{h.c.})~,
 \end{equation}
 where the doublet $\tilde\Phi = i\sigma_2\Phi^{\ast}$ with hypercharge $Y=-1/2$ is
 needed to generate masses for the down-type quarks. Then we can
 identify the fermion masses as
 \begin{align}
-m_e &= \frac{y_e v}{2}&m_u &= \frac{y_u
-                                          v}{2}& m_d &= \frac{y_dv}{2}~.
+m_e &= \frac{y_e v}{2}&m_\PQu &= \frac{y_\PQu
+                                          v}{2}& m_\PQd &=
+                                                          \frac{y_\PQd
+                                                          v}{2}~.
 \end{align}
 %Neutrino masses can also be accommodated in the SM by adding similar
 %terms. 
@@ -221,10 +223,10 @@ the large Yukawa coupling of the top quark, which gives the
 top quark its large mass. In an effective field theory approach, where
 momenta of virtual particles are cut off at the scale
 $\Lambda_{\mathrm{UV}}$, we can compute the top quark's contribution in the SM to leading order~\cite{susyprimer},
-\begin{fmffile}{higgs}
+\begin{fmffile}{higgs1}
 \begin{align}
-m^2_{h^0} &= m^2_{h^0\mathrm{(bare)}} +\Delta(m^2_{h^0}) \\
-\Delta(m^2_{h^0}) &= \quad\parbox{20mm}{
+m^2_\PH &= m^2_{h^0\mathrm{(bare)}} +\Delta(m^2_\PH) \\
+\Delta(m^2_\PH) &= \quad\parbox{20mm}{
 \begin{fmfgraph*}(20,20)
 \fmfkeep{fermion}
 \fmfleft{i} 
@@ -238,13 +240,14 @@ m^2_{h^0} &= m^2_{h^0\mathrm{(bare)}} +\Delta(m^2_{h^0}) \\
 &= -\frac{3|y_t|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 + \cdots~,
 \label{eqn:toploop}
 \end{align}
+\end{fmffile}
 The quadratic dependence in Eqn.~\ref{eqn:toploop} on
 $\Lambda_{\mathrm{UV}}$, usually taken to be the Planck scale $10^{19}
 \GeV$, means the Higgs mass is sensitive to new physics in the
 ultraviolet. Taken literally, this sensitivity implies an enormous fine tuning of
 $m^2_{h^0\mathrm{(bare)}}$ to achieve almost perfect
 cancellation\footnote{to $1$ part in $10^{34}$} with
-$\Delta(m^2_{h^0})$ in order to explain how $m_{h^0}$
+$\Delta(m^2_\PH)$ in order to explain how $m_\PH$
 is measured to be so small at $125.09\pm0.24 \GeV$~\cite{Aad:2015zhl}. The conundrum of how a light fundamental
 scalar particle can exist in the presence of (presumably) new physics
 in the ultraviolet is called the \emph{hierarchy problem} or the \emph{naturalness problem} and is one
@@ -328,8 +331,8 @@ $V(x,\theta,\overline\theta)$ and chiral superfields $\Phi_l(x,\theta,\overline\
 \emph{superspace}, an extension of spacetime that includes
 anticommuting Grassmanian variables $\theta$ and
 $\overline\theta$. Tab~\ref{tab:susyreps} shows the particles of the
-MSSM, described by chiral superfields $Q_i, U_i^\mathrm{c}, L_i, E_i^\mathrm{c}, H_u,
-H_d$, and the representations in which they transform under the MSSM gauge group.
+MSSM, described by chiral superfields $Q_i, U_i^\mathrm{c}, L_i, E_i^\mathrm{c}, H_\PQu,
+H_\PQd$, and the representations in which they transform under the MSSM gauge group.
 \begin{table}
 \centering
 \begin{tabular}{c|ccc}\hline\hline
@@ -339,8 +342,8 @@ $U^\mathrm{c}$ & $\mathbf{\overline 3}$ & $\mathbf{1}$ & $-2/3$\\
 $D^\mathrm{c}$ & $\mathbf{\overline 3}$ & $\mathbf{1}$ & $1/3$\\
 $L$ & $\mathbf{1}$ & $\mathbf{2}$ & $-1/2$\\
 $E^\mathrm{c}$ & $\mathbf{1}$ & $\mathbf{1}$ & $1$\\\hline
-$H_u$ & $\mathbf{1}$ & $\mathbf{2}$ & $1/2$\\
-$H_d$ & $\mathbf{1}$ & $\mathbf{2}$ & $-1/2$\\
+$H_\PQu$ & $\mathbf{1}$ & $\mathbf{2}$ & $1/2$\\
+$H_\PQd$ & $\mathbf{1}$ & $\mathbf{2}$ & $-1/2$\\
 \hline\hline
 \end{tabular}
 \caption{\label{tab:susyreps} Table summarizing the
@@ -369,7 +372,7 @@ K(\Phi_l,\Phi_l^{\dagger},V) + \left (\int
 where $\mathcal W_{\alpha}$ is the vector superfield strength\footnote{The vector superfield strength is $\mathcal W_{\alpha} =
   -\frac{1}{4} \overline{\mathcal{D}}^2(e^{-V}\mathcal{D}_{\alpha}
   e^{V})$.} and the index $l$ runs over all the matter superfields
-$\Phi_l = Q_i, U_i^\mathrm{c}, L_i, E_i^\mathrm{c}, H_u, H_d$. The superpotential can be
+$\Phi_l = Q_i, U_i^\mathrm{c}, L_i, E_i^\mathrm{c}, H_\PQu, H_\PQd$. The superpotential can be
 split into two components based on $R$-parity, a discrete $Z_2$
 symmetry often assumed in SUSY model building, defined for each
 particle as 
@@ -381,15 +384,15 @@ of the particle. With this assignment, all SM particles have even
 $R$-parity ($P_R=+1$), while the superpartners have odd $R$-parity
 ($P_R=-1$). The $R$-parity conserving terms in the superpotential are
 \begin{equation}
-W_{\mathrm{RPC}} = - U^\mathrm{c}\mathbf{y_u} Q H_u + D^\mathrm{c}\mathbf{y_d}QH_d  +
-E^\mathrm{c}\mathbf{y_e} L H_d +
-\mu H_uH_d~,
+W_{\mathrm{RPC}} = - U^\mathrm{c}\mathbf{y_\PQu} Q H_\PQu + D^\mathrm{c}\mathbf{y_\PQd}QH_\PQd  +
+E^\mathrm{c}\mathbf{y_e} L H_\PQd +
+\mu H_\PQu H_\PQd~,
 \label{eqn:Wrpc}
 \end{equation}
 and the $R$-parity violating terms are
 \begin{equation}
 W_{\mathrm{RPV}} =\frac{1}{2}\lambda^{ijk}L_iL_jE_k^\mathrm{c} +
-\lambda^{\prime ijk} L_iQ_jD_k^\mathrm{c} + \mu^{\prime i}H_uL_i +
+\lambda^{\prime ijk} L_iQ_jD_k^\mathrm{c} + \mu^{\prime i}H_\PQu L_i +
 \frac{1}{2}\lambda^{\prime\prime ijk}U_i^\mathrm{c}D_j^\mathrm{c}D_k^\mathrm{c}~.
 \label{eqn:Wrpv}
 \end{equation}
@@ -403,16 +406,127 @@ If $R$-parity is conserved, there are three important phenomenological consequen
 \item In collider experiments, superpartners can only be produced in even numbers (usually two).
 \end{itemize}
 
+\begin{figure}[h!]
+\centering
+  \unitlength=0.005\textwidth
+  \vspace{\baselineskip}
+\setkeys{Gin}{width=\ginnatwidth,totalheight=\ginnatheight}
+\begin{fmffile}{gg}
+\begin{fmfgraph*}(60,30)
+        \fmfset{arrow_len}{cm}\fmfset{arrow_ang}{0}
+         \fmfleftn{i}{2}
+         \fmfrightn{o}{2}
+             \fmf{gluon}{v1,i1}
+             \fmf{gluon}{v1,i2}    
+             \fmf{gluon, lab=$\mathrm{g}$,label.side=left}{v1,v2}                    
+           \fmf{gluon}{v2,o2} %upper vertex
+           \fmf{gluon}{v2,o1} %lower vertex 
+           \fmffreeze
+           \fmflabel{$\mathrm{g}$}{i1}
+         \fmflabel{$\mathrm{g}$}{i2}
+           \fmflabel{\sGlu}{o2}
+         \fmflabel{\sGlu}{o1}
+           \fmf{fermion}{v2,o2}
+          \fmf{fermion}{v2,o1}
+      \fmfdot{v1,v2}
+  \end{fmfgraph*}
+\hfill 
+\begin{fmfgraph*}(60,30)
+        \fmfset{arrow_len}{cm}\fmfset{arrow_ang}{0}
+         \fmfleftn{i}{2}
+         \fmfrightn{o}{2}
+         \fmfbottom{i1,d1,o1}
+         \fmftop{i2,d2,o2}
+             \fmf{gluon}{i1,v1}
+             \fmf{gluon}{i2,v2}    
+             \fmf{gluon, lab=\sGlu,label.side=left,tension=0}{v1,v2}                    
+           \fmf{gluon}{v1,o1} %lower vertex
+           \fmf{gluon}{v2,o2} %upper vertex 
+           \fmffreeze
+           \fmflabel{$\mathrm{g}$}{i1}
+         \fmflabel{$\mathrm{g}$}{i2}
+           \fmflabel{\sGlu}{o2}
+         \fmflabel{\sGlu}{o1}
+           \fmf{fermion}{v1,o1}
+          \fmf{fermion}{v2,o2}
+          \fmf{fermion}{v1,v2}
+      \fmfdot{v1,v2}
+  \end{fmfgraph*}\\
+  \vspace{3\baselineskip}
+\begin{fmfgraph*}(60,30)
+        \fmfset{arrow_len}{cm}\fmfset{arrow_ang}{0}
+         \fmfleftn{i}{2}
+         \fmfrightn{o}{2}
+             \fmf{gluon}{v1,i1}
+             \fmf{gluon}{v1,i2}    
+             \fmf{gluon, lab=$\mathrm{g}$,label.side=left}{v1,v2}                    
+           \fmf{dashes}{v2,o2} %upper vertex
+           \fmf{dashes}{v2,o1} %lower vertex 
+           \fmffreeze
+           \fmflabel{$\mathrm{g}$}{i1}
+         \fmflabel{$\mathrm{g}$}{i2}
+           \fmflabel{$\PSq$}{o2}
+         \fmflabel{$\overline\PSq$}{o1}
+      \fmfdot{v1,v2}
+  \end{fmfgraph*}\hfill
+\begin{fmfgraph*}(60,30)
+        \fmfset{arrow_len}{cm}\fmfset{arrow_ang}{0}
+         \fmfleftn{i}{2}
+         \fmfrightn{o}{2}
+         \fmfbottom{i1,d1,o1}
+         \fmftop{i2,d2,o2}
+             \fmf{gluon}{i1,v1}
+             \fmf{gluon}{i2,v2}    
+             \fmf{dashes, lab=$\PSq$,label.side=left,tension=0}{v1,v2}                    
+           \fmf{dashes}{v1,o1} %lower vertex
+           \fmf{dashes}{v2,o2} %upper vertex 
+           \fmffreeze
+           \fmflabel{$\mathrm{g}$}{i1}
+         \fmflabel{$\mathrm{g}$}{i2}
+           \fmflabel{$\PSq$}{o2}
+         \fmflabel{$\overline\PSq$}{o1}
+      \fmfdot{v1,v2}
+  \end{fmfgraph*}\hfill
+\begin{fmfgraph*}(45,30)
+        \fmfset{arrow_len}{cm}\fmfset{arrow_ang}{0}
+         \fmfleftn{i}{2}
+         \fmfrightn{o}{2}
+             \fmf{gluon}{v1,i1}
+             \fmf{gluon}{v1,i2}                
+           \fmf{dashes}{v1,o2} %upper vertex
+           \fmf{dashes}{v1,o1} %lower vertex 
+           \fmffreeze
+           \fmflabel{$\mathrm{g}$}{i1}
+         \fmflabel{$\mathrm{g}$}{i2}
+           \fmflabel{$\PSq$}{o2}
+         \fmflabel{$\overline\PSq$}{o1}
+      \fmfdot{v1}
+  \end{fmfgraph*}
+\end{fmffile}\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \vspace{\baselineskip}
+\caption{Example diagrams for the production of gluinos and squarks from gluon-gluon fusion~\cite{susyprimer}. \label{fig:gg}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{figs/theory/xsections_strong.pdf}\\
+\includegraphics[width=0.7\textwidth]{figs/theory/nlonll_lhc13_col.pdf}
+\caption{The production cross sections of SUSY particles as a function
+  of their masses computed at next-to-leading-order (NLO) with next-to-leading-logarithm (NLL)
+  resummation at the LHC for 8\TeV (top) and 13\TeV (bottom)~\cite{NLONLL1,NLONLL2,NLONLL3,NLONLL4,NLONLL5,NLONLLerr,Borschensky:2014cia}.\label{fig:xsecsusy}}
+\end{figure}
+
+
 \section{Electroweak supersymmetric sector}
 \label{sec:ewksusy}
 In the MSSM, the description of electroweak symmetry breaking involves
-two complex Higgs doublets, $H_u = (H_u^+, H_u^0) $ and $H_d = (H_d^0, H_d^-)$. The neutral
-components of the Higgs doublets, $H^0_u$ and $H_d^0$, both get vacuum
+two complex Higgs doublets, $H_\PQu = (H_\PQu^+, H_\PQu^0) $ and $H_\PQd = (H_\PQd^0, H_\PQd^-)$. The neutral
+components of the Higgs doublets, $H^0_\PQu$ and $H_\PQd^0$, both get vacuum
 expectation values,
 \begin{align}
-v_u &= \langle H_u^0\rangle~,& v_d &= \langle H_d^0\rangle~,
+v_\PQu &= \langle H_\PQu^0\rangle~,& v_\PQd &= \langle H_\PQd^0\rangle~,
 \end{align}
-with their ratio being written as $\tan\beta = v_u/v_d$.
+with their ratio being written as $\tan\beta = v_\PQu/v_\PQd$.
 
 The superpartners of the neutral gauge bosons (neutral gauginos), and
 the fermionic partners of the neutral Higgs bosons (neutral higgsinos),
@@ -459,7 +573,7 @@ TeV, making them accessible at the CERN LHC. To make this statement
 quantitative, we first need to define a measure of
 fine-tuning, such as~\cite{Brust:2011tb,naturalSUSY}:
 \begin{equation}
-\Delta = \frac{\Delta(m^2_{h^0})}{m^2_{h^0}}~.
+\Delta = \frac{\Delta(m^2_\PH)}{m^2_\PH}~.
 \end{equation}
 For a model to be natural, it is traditionally desired that
 $\Delta\lesssim10$, which corresponds to 10\% fine-tuning.
@@ -468,11 +582,11 @@ $\Delta\lesssim10$, which corresponds to 10\% fine-tuning.
 In the decoupling limit of the MSSM at tree-level, the mass of the
 physical Higgs boson satisfies
 \begin{equation}
-m^2_{h^0} = -2(m_{H_u}^2 + |\mu|^2) =  m_Z^2\cos^2(2\beta)  ~.
+m^2_\PH = -2(m_{\PH_\PQu}^2 + |\mu|^2) =  m_Z^2\cos^2(2\beta)  ~.
 \end{equation}
 Due to this tree-level relation between $\mu$, which controls the
-masses of the higgsinos, and $m^2_{h^0}$, we expect both $\mu$ to be
-small and the higgsinos to be light in order to keep $m^2_{h^0}$
+masses of the higgsinos, and $m^2_\PH$, we expect both $\mu$ to be
+small and the higgsinos to be light in order to keep $m^2_\PH$
 small. When $\mu$ is small ($\mu \ll M_1, M_2$), the two lightest
 neutralinos and the lightest chargino are higgsino-like and their
 masses are close together~\cite{PhysRevD.37.2515},
@@ -495,8 +609,9 @@ $m_{\chipm_1}-m_{\chiz_1}$ and $m_{\chiz_2}-m_{\chiz_1}$ as a function of the wi
 There are additional considerations at loop level. In particular the
 top squark has a large radiative correction which partially cancels
 with the contribution from the top quark in Eqn.~\ref{eqn:toploop}:
+\begin{fmffile}{higgs2}
 \begin{align}
-\Delta(m^2_{h^0}) &= \quad\parbox{20mm}{\fmfreuse{fermion}} \quad + \quad
+\Delta(m^2_\PH) &= \quad\parbox{20mm}{\fmfreuse{fermion}} \quad + \quad
 \parbox{20mm}{
 \begin{fmfgraph*}(20,20)
 \fmfkeep{boson}
@@ -545,7 +660,7 @@ Very roughly, naturalness requires $m_{\tilde t_{i}}\lesssim
 %A more complete treatment takes into
 %account top squark mixing~\cite{Kitano:2006gv,naturalSUSY},
 %\begin{equation}
-%\Delta(m^2_{h^0}) = \frac{3|y_t|^2}{4\pi^2}\left ( m_{Q_3}^2 + m_{U_3}^2 + |A_t|^2 \right ) \log\left(
+%\Delta(m^2_\PH) = \frac{3|y_t|^2}{4\pi^2}\left ( m_{Q_3}^2 + m_{U_3}^2 + |A_t|^2 \right ) \log\left(
  % \frac{\Lambda_{\mathrm{mess}}}{m_{\tilde t}} \right)
 %\end{equation}
 
@@ -615,26 +730,27 @@ soft SUSY breaking part of the MSSM Lagrangian can be written~\cite{susyprimer},
                                  + M_2\widetilde W\widetilde W +
                                  M_1\widetilde B\widetilde B +
                                  \mathrm{h.c.}\right)\\
-&-\left(\overline{\widetilde{u}}\boldsymbol{a_u}\widetilde Q H_u -
-  \overline{\widetilde{d}} \boldsymbol{a_d}\widetilde Q H_d -
-  \widetilde{\overline{e}} \boldsymbol{a_e} \widetilde L H_d +
+&-\left(\widetilde{U}^\mathrm{c}\boldsymbol{a_\PQu}\widetilde{Q} H_\PQu -
+  \widetilde{D}^\mathrm{c} \boldsymbol{a_\PQd}\widetilde Q H_\PQd -
+  \widetilde{E}^\mathrm{c} \boldsymbol{a_\Pe} \widetilde L H_\PQd +
   \mathrm{h.c.}\right)\\
-&-\widetilde Q^{\dagger} \boldsymbol{m_Q^2}\widetilde Q - \widetilde
-  L^{\dagger}\boldsymbol{m_L^2} \widetilde L
--\overline{\widetilde u}\boldsymbol{m_{\overline{u}}^2} \overline{\widetilde
-  u}^{\dagger} - \overline{\widetilde d}\boldsymbol{m_{\overline{d}}^2} \overline{\widetilde
-  d}^{\dagger} - \overline{\widetilde e}\boldsymbol{m_{\overline{e}}^2} \overline{\widetilde
-  e}^{\dagger} \\
-&-m_{H_u}^2H^{\ast}_uH_u - m_{H_d}^2H^{\ast}_dH_d - (bH_uH_d + \mathrm{h.c.})~,
+&-\widetilde Q^{\dagger} \boldsymbol{m_{\widetilde{\mathrm{Q}}}^2}\widetilde Q - \widetilde
+  L^{\dagger}\boldsymbol{m_{\widetilde{\mathrm{L}}}^2} \widetilde L
+-\widetilde U^\mathrm{c}\boldsymbol{m_{\widetilde{\mathrm{U}}^\mathrm{c}}^2} \widetilde
+  U^{\mathrm{c}\dagger} - \widetilde D^\mathrm{c}\boldsymbol{m_{\widetilde{\mathrm{D}}^\mathrm{c}}^2} \widetilde
+  D^{\mathrm{c}\dagger} - \widetilde{E}^\mathrm{c}\boldsymbol{m_{\widetilde{\mathrm{E}}^\mathrm{c}}^2} \widetilde
+  E^{\mathrm{c}\dagger} \\
+&-m_{\PH_\PQu}^2H^{\ast}_\PQu H_\PQu - m_{\PH_\PQd}^2H^{\ast}_\PQd H_\PQd -
+  (bH_\PQu H_\PQd + \mathrm{h.c.})~,
 \end{align}
 where $M_3$, $M_2$, and $M_1$ are the gluino, wino, and bino mass
-terms, respectively. Each of $\boldsymbol{a_u} $, $\boldsymbol{a_d}$, $\boldsymbol{a_e}$ is a complex $3\times3$ matrix in generation space,
+terms, respectively. Each of $\boldsymbol{a_\PQu} $, $\boldsymbol{a_\PQd}$, $\boldsymbol{a_\Pe}$ is a complex $3\times3$ matrix in generation space,
 with dimensions of mass. They are in one-to-one correspondence with the Yukawa couplings of the
-superpotential. Each of $\boldsymbol{m_Q^2}$, $\boldsymbol{m_L^2}$,
-$\boldsymbol{m_{\overline{u}}^2}$, $\boldsymbol{m_{\overline{d}}^2}$,
-$\boldsymbol{m_{\overline{e}}^2}$ is a $3\times3$  matrix in
+superpotential. Each of $\boldsymbol{m_{\widetilde{\mathrm{Q}}}^2}$, $\boldsymbol{m_{\widetilde{\mathrm{L}}}^2}$,
+$\boldsymbol{m_{\widetilde{\mathrm{U}}^\mathrm{c}}^2}$, $\boldsymbol{m_{\widetilde{\mathrm{D}}^\mathrm{c}}^2}$,
+$\boldsymbol{m_{\widetilde{\mathrm{E}}^\mathrm{c}}^2}$ is a $3\times3$  matrix in
 generation space that can have complex entries, but must be hermitian
-so that the Lagrangian is real. Finally, $m_{H_u}^2$ and $m_{H_d}^2$
+so that the Lagrangian is real. Finally, $m_{\PH_\PQu}^2$ and $m_{\PH_\PQd}^2$
 are squared-mass terms and $b$ is a cross term in the Higgs potential.
 
 If the largest mass scale associated with the soft SUSY breaking terms is $m_\mathrm{soft}$, then the additional non-supersymmetric corrections to the Higgs
@@ -646,13 +762,13 @@ proportional to $m_\mathrm{soft}^2$. Following a similar line of
 argument, we expect that the coefficients of the soft SUSY
 breaking terms are also proportional to appropriate powers of $m_\mathrm{soft}$:
 \begin{align}
-M_1,M_2,M_3,\boldsymbol{a_u},\boldsymbol{a_d},\boldsymbol{a_e} &\sim m_\mathrm{soft}~,\\
-\boldsymbol{m_Q^2}, \boldsymbol{m_L^2},
-                                                                 \boldsymbol{m_{\overline{u}}^2},
-                                                                 \boldsymbol{m_{\overline{d}}^2},
-                                                                 \boldsymbol{m_{\overline{e}}^2},
-                                                                 m_{H_u}^2,
-                                                                 m_{H_d}^2,
+M_1,M_2,M_3,\boldsymbol{a_\PQu},\boldsymbol{a_\PQd},\boldsymbol{a_\Pe} &\sim m_\mathrm{soft}~,\\
+\boldsymbol{m_{\widetilde{\mathrm{Q}}}^2}, \boldsymbol{m_{\widetilde{\mathrm{L}}}^2},
+                                                                 \boldsymbol{m_{\widetilde{\mathrm{U}}^\mathrm{c}}^2},
+                                                                 \boldsymbol{m_{\widetilde{\mathrm{D}}^\mathrm{c}}^2},
+                                                                 \boldsymbol{m_{\widetilde{\mathrm{E}}^\mathrm{c}}^2},
+                                                                 m_{\PH_\PQu}^2,
+                                                                 m_{\PH_\PQd}^2,
   b&\sim m_\mathrm{soft}^2~.
 \end{align}
 
