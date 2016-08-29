@@ -405,6 +405,31 @@ If $R$-parity is conserved, there are three important phenomenological consequen
   state that contains an odd number of LSPs (usually just one).
 \item In collider experiments, superpartners can only be produced in even numbers (usually two).
 \end{itemize}
+In particular, at a proton-proton collider like the LHC (described in
+Ch.~\ref{ch:lhc}), the SUSY processes with the largest cross
+sections are the pair production of gluinos and squarks through
+gluon-gluon and gluon-quark fusion, which are among the reactions of QCD-level
+strength~\cite{susyprimer}:
+\begin{align}
+\Pg\Pg&\to \sGlu\sGlu, \PSq_i\overline{\PSq}_j~,\label{eqn:gg}\\
+\Pg\Pq&\to \sGlu\PSq_i~,\\
+\Pq\Paq&\to \sGlu\sGlu,\PSq_i\overline{\PSq}_j~,\\
+\Pq\Pq&\to \PSq_i\PSq_j~.
+\end{align}
+Some of the diagrams corresponding to the gluon-gluon fusion reactions in
+Eqn.~\ref{eqn:gg} are depicted in
+Fig.~\ref{fig:gg}~\cite{susyprimer}. Assuming all SUSY particles other than those being pair-produced
+are decoupled from the theory (as is done in the simplified model
+approach, see Sec.~\ref{sec:sms}~\cite{ArkaniHamed:2007fw,Alwall:2008ag,Alwall:2008va,Alves:2011sq,Alves:2011wf,Graesser:2012qy}), the SUSY pair-production cross sections for
+each SUSY particle may be computed at next-to-leading-order (NLO) plus
+next-to-leading-logarithm (NLL)
+accuracy~\cite{NLONLL1,NLONLL2,NLONLL3,NLONLL4,NLONLL5,NLONLLerr,Borschensky:2014cia}. For
+the $\sqrt{s}=8\TeV$ and $13\TeV$ LHC, these SUSY production cross sections are plotted as a function of the
+superpartner mass in Fig.~\ref{fig:xsecsusy}. Due to the hierarchy of SUSY
+cross sections, there is a corresponding hierarchy in terms of
+discovery potential at the LHC, with the largest mass reach for
+gluinos then squarks then top and bottom squarks then electroweak SUSY
+partners (see Sec.\ref{sec:ewksusy}) then, finally, sleptons.
 
 \begin{figure}[h!]
 \centering
@@ -509,8 +534,11 @@ If $R$-parity is conserved, there are three important phenomenological consequen
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\textwidth]{figs/theory/xsections_strong.pdf}\\
-\includegraphics[width=0.7\textwidth]{figs/theory/nlonll_lhc13_col.pdf}
+\includegraphics[width=0.9\textwidth]{figs/theory/xsections_strong.pdf}\\
+%\includegraphics[width=0.7\textwidth]{figs/theory/nlonll_lhc13_col.pdf}
+\includegraphics[width=0.3\textwidth]{figs/theory/xsec_gg_200_3050.pdf}
+\includegraphics[width=0.3\textwidth]{figs/theory/xs_squark_200_2700.pdf}
+\includegraphics[width=0.3\textwidth]{figs/theory/xs_stop_100_2200.pdf}
 \caption{The production cross sections of SUSY particles as a function
   of their masses computed at next-to-leading-order (NLO) with next-to-leading-logarithm (NLL)
   resummation at the LHC for 8\TeV (top) and 13\TeV (bottom)~\cite{NLONLL1,NLONLL2,NLONLL3,NLONLL4,NLONLL5,NLONLLerr,Borschensky:2014cia}.\label{fig:xsecsusy}}
