@@ -55,7 +55,7 @@ into the two LHC rings as counter-rotating beams.
 
 One of the main features influencing the design of the LHC is the re-use of the
 existing 26.7\unit{km} tunnel from the Large Electron Positron collider (LEP), which is
-comprised of eight crossing points (or arcs) and eight straight sections for
+composed of eight crossing points (or arcs) and eight straight sections for
 RF cavities. The tunnel in the arc sections has an internal diameter of 3.7\unit{m}. Due to the limited available space, two completely separate
 proton rings with separate magnet systems would be extremely difficult to install, which makes the twin-bore magnet design proposed by John
 Blewett in 1971~\cite{Blewett:1068131} ideal due to its
@@ -102,7 +102,7 @@ lead-lead collisions for one month each year to the experiments.
 \includegraphics[width=.9\textwidth]{figs/cms/int_lumi_cumulative_pp_2.pdf}
 \caption{Cumulative luminosity versus day delivered to CMS during
   stable beams for $\Pp\Pp$  collisions. This is shown for 2010 (green), 2011
-  (red), 2012 (blue), 2015 (purple) and 2016 (orange)
+  (red), 2012 (blue), 2015 (purple), and 2016 (orange)
   data-taking.\label{fig:IntLumi20102016}}
 \end{figure}
 
@@ -282,7 +282,7 @@ calorimeter with fine granularity.
 \begin{figure}
 \includegraphics[width=.9\textwidth]{figs/cms/calorimeter.pdf}\centering
 \caption{Layout of the CMS ECAL, showing the barrel supermodules, the
-  two endcaps and the preshower detectors. The ECAL barrel coverage is
+  two endcaps, and the preshower detectors. The ECAL barrel coverage is
   up to $\abs{\eta} = 1.48$; the endcaps extend the coverage to $\abs{\eta} = 3.0$; the
   preshower detector fiducial area is approximately $1.65 < \abs{\eta}
   < 2.6$.\label{fig:ecal}}
@@ -696,7 +696,10 @@ from the improved measurement of the momenta of charged hadrons.
 \includegraphics[width=0.45\textwidth]{figs/cms/met_sigma_vs_sumet.pdf}
 \includegraphics[width=0.45\textwidth]{figs/cms/met_response_vs_sumet.pdf}
 \caption{Absolute \MET resolution (left) and \sumET response (right) for a simulated QCD multijet sample.
-In the case of the particle flow estimate, \MET stands for $\MET ({\mathrm{PF}})$ and \sumET for $\sumET ({\mathrm{PF}})$. In the case of the calorimeter-based estimate, they stand for $\MET ({\mathrm{Calo}})$ and $\sumET ({\mathrm{Calo}})$.\label{fig:expected_performance_met}}
+In the case of the particle flow estimate, \MET stands for $\MET
+({\mathrm{PF}})$ and \sumET for $\sumET ({\mathrm{PF}})$. In the case
+of the calorimeter-based estimate, they stand for $\MET
+({\mathrm{Calo}})$ and $\sumET ({\mathrm{Calo}})$, respectively.\label{fig:expected_performance_met}}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -729,7 +732,7 @@ window $60<m_{\mu\mu}<120$\GeV are rejected.
 %interactions, and a second one to correct for an observed $\Phi$
 %asymmetry due to a shift in $\vecMET (\mathrm{PF})$ along the detector
 %$x$ and $y$ axes.
-Figure~\ref{fig:met_distribution} shows the spectrum
+Fig.~\ref{fig:met_distribution} shows the spectrum
 of $\MET ({\mathrm{PF}})$ in the $\cPZ\rightarrow\mu\mu$ event sample. The
 simulation describes the observed distribution over more than five
 orders of magnitude.
@@ -763,7 +766,7 @@ spectra. Their semileptonic decays can be exploited as well.
 
 
 Within the CMS collaboration, these special features of \cPqb-quark
-hadronization are exploited in a set of \cPqb-jet tagging algorithms. A variety of reconstructed objects -- tracks, vertices and identified
+hadronization are exploited in a set of \cPqb-jet tagging algorithms. A variety of reconstructed objects -- tracks, vertices, and identified
 leptons -- can be used to build observables that discriminate between
 \Pqb- and light-parton jets. Several simple and robust algorithms use
 just a single observable, while others combine several of these
@@ -868,7 +871,7 @@ average pileup interactions and a bunch spacing of 25 \unit{ns} are considered.
 % 2 : rinse and repeat 1 with looser seeding conditions.  
 
 
-\section {Level-1 and High-Level Trigger}
+\section {Level-1 and high-level trigger}
 \label{sec:trigger}
 
 The role of the trigger is to reduce the rate of recorded collisions to
@@ -887,12 +890,16 @@ The maximum acceptable rate for data acquisition and storage is of the order of 
 the trigger is designed to reduce the rate to that level, while
 maintaining the largest possible acceptance of interesting physics signal
 events from the collisions and efficiently rejecting the
-non-interesting ones. Figure~\ref{fig:streams}
+non-interesting ones. Fig.~\ref{fig:streams} shows the typical
+data collection event rates corresponding to the different data
+streams, including those for physics analyses, trigger studies, alignment, calibration, and
+luminosity measurements, and data quality monitoring. 
 
 \begin{figure}\centering
 \includegraphics[width=.45\textwidth]{figs/cms/Streams2012.pdf}
 \includegraphics[width=.45\textwidth]{figs/cms/Streams2015.pdf}
-\caption{Data streams during 2012 (left) and 2015 (right)
+\caption{Data streams for physics analyses (red), trigger studies (orange), alignment, calibration, and
+luminosity measurements (green), and data quality monitoring (tan) during 2012 (left) and 2015 (right).  
 \label{fig:streams}}
 \end{figure}
 
@@ -900,7 +907,7 @@ The design chosen for the trigger of the CMS experiment is a two-level system. T
 Level 1 (L1) trigger is based on FPGA and custom ASIC technology and uses information
 from the calorimeters and muon spectrometers of the experiment in order to accept or reject
 an event; it reduces the event rate down to approximately 100 \unit{kHz}, acceptable by the readout
-electronics. The High-Level Trigger (HLT) is implemented in software running on a farm of
+electronics. The high-level trigger (HLT) is implemented in software running on a farm of
 commercial computers which includes approximately 16,000 CPU cores, and reduces the L1 output rate
 to the sustainable level for storage and physics analysis of about 1 \unit{kHz}. The HLT software
 consists of a streamlined version of the offline reconstruction

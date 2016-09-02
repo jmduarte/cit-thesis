@@ -16,7 +16,7 @@ the gauge bosons that act as force carriers:
 \begin{center}
 \begin{tabular}{ccccc}
 $\mathrm{SU(3)}_{\mathrm{C}}$ &$\times$& $\mathrm{SU(2)}_{\mathrm{L}}$
-  &$\times$& $\mathrm{U(1)}_Y$\\
+  &$\times$& $\mathrm{U(1)}_Y$~.\\
  $\downarrow$&&$\downarrow$&&$\downarrow$\\
  $G_{\mu}^{\alpha}$&&$W^a_{\mu}$&&$B_{\mu}$\\
  $\alpha=1,...,8$&&$a=1,2,3$&&
@@ -49,7 +49,7 @@ particles, is given by the Lagrangian density,
 & +\overline q_\mathrm{L}\tilde\sigma^{\mu}iD_{\mu}q_\mathrm{L} +
    \overline u_\mathrm{R}\sigma^{\mu}iD_{\mu}u_\mathrm{R} + \overline d_\mathrm{R}
    \sigma^{\mu}iD_{\mu}d_\mathrm{R} + (\mathrm{h.c.})& \mathrm{(quark~kinetic~and~gauge~terms)}\nonumber\\
-& +\mathcal L_{\mathrm{Higgs}} +\mathcal L_{\mathrm{Yukawa}} &  \mathrm{(Higgs~and~Yukawa~terms)}
+& +\mathcal L_{\mathrm{Higgs}} +\mathcal L_{\mathrm{Yukawa}}~, &  \mathrm{(Higgs~and~Yukawa~terms)}
 \label{eqn:lsm}
 \end{align}
 where $D_{\mu}$ is the gauge-covariant derivative, $q_\mathrm{L} =
@@ -93,23 +93,35 @@ $h$ & $\mathbf{1}$ & $\mathbf{2}$ & $1/2$\\
 
 \section{Electroweak symmetry breaking}
 \label{sec:ewsb}
-A central feature of gauge theories is that the gauge bosons are
+A central feature of nonabelian gauge theories, or \emph{Yang-Mills theories}~\cite{Yang:1954ek}, is that the gauge bosons are
 massless due to the fact that the gauge symmetry forbids explicit mass
-terms in the Lagrangian. In 1964, it was proposed that
-\emph{spontaneous symmetry breaking} could be achieved in gauge
-theories through the introduction of a scalar
-field~\cite{PhysRevLett.13.321,HIGGS1964132,PhysRevLett.13.508,PhysRevLett.13.585,PhysRev.145.1156,PhysRev.155.1554}. Spontaneous
-symmetry breaking means the equations of the dynamics are exactly symmetric, but they
-admit solutions that are not. In the SM, the mechanism of electroweak symmetry breaking
-is a framework to keep the structure of gauge symmetry and
+terms in the Lagrangian. Thus Yang-Mills theory gives rise to massless
+spin-$1$ particles. Concurrently, whenever a continuous
+symmetry is \emph{spontaneously broken}\footnote{Spontaneous symmetry
+  breaking means the equations of the dynamics are exactly symmetric,
+  but they admit solutions that are not.}, \emph{Nambu-Goldstone
+bosons}~\cite{Nambu:1960tm,Goldstone:1961eq} -- one for each generator of the broken symmetry -- appear in the spectrum of possible
+excitations. These additional bosons are massless spin-$0$ particles. 
+
+In the early 1960s, these massless bosons, both from nonabelian gauge
+symmetry and spontaneous symmetry breaking, were seen as inconsistent with
+nature since they were not observed. In 1962, Anderson realized a
+mechanism for incorporating spontaneous symmetry breaking into nonrelativistic gauge
+theories ``without any difficulties involving either zero-mass Yang-Mills gauge
+bosons or zero-mass Goldstone bosons. These two
+types of bosons seem capable of `canceling each other
+out' and leaving finite mass bosons only''~\cite{Anderson:1963pc}. In
+1964, this approach was extended to relativisitic gauge theories
+through the introduction of a scalar field~\cite{PhysRevLett.13.321,HIGGS1964132,PhysRevLett.13.508,PhysRevLett.13.585,PhysRev.145.1156,PhysRev.155.1554}. In
+the SM, the mechanism of electroweak symmetry breaking is a framework to keep the structure of gauge symmetry and
 interactions at high energy, and still generate the observed masses
 of the $\PW^{\pm}$ and $\PZ$ gauge
 bosons~\cite{PhysRevLett.19.1264,GLASHOW1961579,Salam:1968rm}. 
 
-The part of the Lagrangian that accomplishes this is: 
+The part of the SM Lagrangian that accomplishes this is: 
 \begin{align}
 \mathcal L_{\mathrm{Higgs}} &= (D_{\mu}\Phi)^{\dagger}(D^{\mu}\Phi) -
-V(\Phi)~;& V(\Phi) &= -\mu^2\Phi^{\dagger}\Phi +
+V(\Phi)~,& V(\Phi) &= -\mu^2\Phi^{\dagger}\Phi +
 \lambda(\Phi^{\dagger}\Phi)^2~,
 \label{eqn:Lhiggs}
 \end{align}
@@ -124,7 +136,7 @@ invariant. Due to this, $\Phi$ acquires a nonzero vacuum
 expectation value (\emph{vev}), corresponding to the minimum of the potential,
 \begin{align}
 \langle\Phi\rangle_0&\equiv \langle 0|\Phi|0\rangle =
-\frac{1}{\sqrt{2}}U(x)\left(\begin{matrix} 0\\v\end{matrix} \right)~;&v &= \sqrt{\frac{\mu^2}{\lambda}};
+\frac{1}{\sqrt{2}}U(x)\left(\begin{matrix} 0\\v\end{matrix} \right)~,&v &= \sqrt{\frac{\mu^2}{\lambda}}~,
 \end{align}
 where $U(x)$ is a unitary transformation that rotates the field
 to the other degenerate solutions. Since the vev is still symmetric under a $\mathrm{U(1)}$ subgroup of the full
@@ -137,7 +149,7 @@ broken} to $\mathrm{U(1)}_{\mathrm{EM}}$.
 \includegraphics[width=0.7\textwidth]{figs/theory/MexicanHat.pdf}
 \caption{\label{fig:mexicanhat} The shape of the ``Mexican hat''
   potential. The minimum of the potential occurs at
-a field value that is not $0$.}
+a field value that is not $0$~\cite{jmgd}.}
 \end{figure}
 
 This mechanism is responsible for generating the masses of the gauge
@@ -172,8 +184,8 @@ A_{\mu} &= \frac{g_2W_{\mu}^3 + g_1B_{\mu}}{\sqrt{g_1^2+g_2^2}}~,&m_{\gamma} &= 
 The $\PW^{\pm}$ and $\PZ$ bosons have acquired mass, while the photon
 $\Pgg$ remains massless.
 
-Another consequence of this symmetry breaking mechanism is the
-emergence of a physical spin-$0$ boson. If we expand the field around
+An important consequence of this symmetry breaking mechanism is the
+emergence of a physical spin-$0$ boson~\cite{HIGGS1964132,PhysRevLett.13.508}. If we expand the field around
 its potential minimum
 \begin{align}
 \Phi(x)&=
@@ -182,7 +194,7 @@ its potential minimum
 and write out the terms associated to this field, we find
 \begin{equation}
 \mathcal L_{\mathrm{Higgs}} \supset \frac{1}{2}(\partial^{\mu}H)^2 -
-\lambda v^2 H^2 - \lambda v H^3 - \frac{\lambda}{4}H^4~.
+\lambda v^2 H^2 - \lambda v H^3 - \frac{\lambda}{4}H^4~,
 \end{equation}
 which means this scalar boson, called the \emph{Higgs boson}, is self-interacting and has a mass squared of $m^2_\PH =
 2\lambda v^2$ at tree-level.
@@ -194,15 +206,15 @@ mass through interaction with the $\Phi$ field, which has a nonzero
 vev. This is accomplished by adding Yukawa terms to the Lagrangian for
 each generation,
 \begin{equation}
-\mathcal L_{\mathrm{Yukawa}} = - y_e \overline\ell_\mathrm{L}\Phi e_\mathrm{R} -
+\mathcal L_{\mathrm{Yukawa}} = - y_\Pe \overline\ell_\mathrm{L}\Phi e_\mathrm{R} -
 y_\PQu\overline q_\mathrm{L}\Phi u_\mathrm{R}  - y_\PQd\overline q_\mathrm{L}\tilde\Phi d_\mathrm{R} + (\mathrm{h.c.})~,
 \end{equation}
 where the doublet $\tilde\Phi = i\sigma_2\Phi^{\ast}$ with hypercharge $Y=-1/2$ is
 needed to generate masses for the down-type quarks. Then we can
 identify the fermion masses as
 \begin{align}
-m_e &= \frac{y_e v}{2}&m_\PQu &= \frac{y_\PQu
-                                          v}{2}& m_\PQd &=
+m_\Pe &= \frac{y_e v}{2}~,&m_\PQu &= \frac{y_\PQu
+                                          v}{2}~,& m_\PQd &=
                                                           \frac{y_\PQd
                                                           v}{2}~.
 \end{align}
@@ -225,7 +237,7 @@ momenta of virtual particles are cut off at the scale
 $\Lambda_{\mathrm{UV}}$, we can compute the top quark's contribution in the SM to leading order~\cite{susyprimer},
 \begin{fmffile}{higgs1}
 \begin{align}
-m^2_\PH &= m^2_{h^0\mathrm{(bare)}} +\Delta(m^2_\PH) \\
+m^2_\PH &= m^2_{\PH\mathrm{(bare)}} +\Delta(m^2_\PH) \\
 \Delta(m^2_\PH) &= \quad\parbox{20mm}{
 \begin{fmfgraph*}(20,20)
 \fmfkeep{fermion}
@@ -235,9 +247,9 @@ m^2_\PH &= m^2_{h^0\mathrm{(bare)}} +\Delta(m^2_\PH) \\
 \fmf{dashes}{v2,o}
 \fmf{plain,left,tension=.3,label=$t$}{v1,v2}
 \fmf{plain,left,tension=.3}{v2,v1}
-\fmfv{label=$h^0$,label.angle=90}{i}
+\fmfv{label=$\PH$,label.angle=90}{i}
 \end{fmfgraph*}} \quad + \quad\cdots\\
-&= -\frac{3|y_t|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 + \cdots~,
+&= -\frac{3|y_\PQt|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 + \cdots~,
 \label{eqn:toploop}
 \end{align}
 \end{fmffile}
@@ -245,7 +257,7 @@ The quadratic dependence in Eqn.~\ref{eqn:toploop} on
 $\Lambda_{\mathrm{UV}}$, usually taken to be the Planck scale $10^{19}
 \GeV$, means the Higgs mass is sensitive to new physics in the
 ultraviolet. Taken literally, this sensitivity implies an enormous fine tuning of
-$m^2_{h^0\mathrm{(bare)}}$ to achieve almost perfect
+$m^2_{\PH\mathrm{(bare)}}$ to achieve almost perfect
 cancellation\footnote{to $1$ part in $10^{34}$} with
 $\Delta(m^2_\PH)$ in order to explain how $m_\PH$
 is measured to be so small at $125.09\pm0.24 \GeV$~\cite{Aad:2015zhl}. The conundrum of how a light fundamental
@@ -262,14 +274,13 @@ introduces a bosonic (fermionic) partner for every fermion
 many years, such a symmetry was thought to be impossible since in 1967,
 Coleman and Mandula~\cite{PhysRev.159.1251} published their no-go theorem that says
 internal symmetries, those that act on internal degrees of
-freedom like spin, cannot be combined with spacetime symmetries in a
+freedom (like spin) cannot be combined with spacetime symmetries in a
 nontrivial way. SUSY evades this theorem because it is based
 on a \emph{super Lie algebra}, which may include fermionic symmetries
 and anticommutation relations as well as the usual bosonic symmetries
 and commutation relations.
 
-Supersymmetric extensions of the SM are compelling 
-because they 
+Supersymmetric extensions of the SM are compelling mainly because they 
 \begin{enumerate}[(a)]
 \item yield a solution to the hierarchy problem, alleviating
 the fine-tuning of fundamental
@@ -377,7 +388,7 @@ split into two components based on $R$-parity, a discrete $Z_2$
 symmetry often assumed in SUSY model building, defined for each
 particle as 
 \begin{equation}
-P_R = (-1)^{3(\mathrm{B}-\mathrm{L})+2s}
+P_R = (-1)^{3(\mathrm{B}-\mathrm{L})+2s}~,
 \end{equation}
 where $\mathrm{B}$ is the baryon number, $\mathrm{L}$ is the lepton number, and $s$ is the spin
 of the particle. With this assignment, all SM particles have even
@@ -565,7 +576,7 @@ bosons (charged higgsinos), $\psi^{\pm}=(\PSWp,\PSHup,\PSWm, \PSHdm)$ mix to for
 $(\chip_1, \chip_2, \chim_1, \chim_2)$. In this gauge-eigenstate basis, the neutralino
 and chargino mass terms in the Lagrangian are
 \begin{equation}
-\mathcal L_{\mathrm{MSSM}} \supset -\frac{1}{2}\psi^{0T}\mathbf{M}_N \psi^0 -\frac{1}{2}\psi^{\pm T}\mathbf{M}_C \psi^{\pm} + \mathrm{h.c.}
+\mathcal L_{\mathrm{MSSM}} \supset -\frac{1}{2}\psi^{0T}\mathbf{M}_N \psi^0 -\frac{1}{2}\psi^{\pm T}\mathbf{M}_C \psi^{\pm} + \mathrm{h.c.}~,
 \end{equation}
 with the neutralino mass matrix,
 \begin{equation}
@@ -610,7 +621,7 @@ $\Delta\lesssim10$, which corresponds to 10\% fine-tuning.
 In the decoupling limit of the MSSM at tree-level, the mass of the
 physical Higgs boson satisfies
 \begin{equation}
-m^2_\PH = -2(m_{\PH_\PQu}^2 + |\mu|^2) =  m_Z^2\cos^2(2\beta)  ~.
+m^2_\PH = -2(m_{\PH_\PQu}^2 + |\mu|^2) =  m_\PZ^2\cos^2(2\beta)  ~.
 \end{equation}
 Due to this tree-level relation between $\mu$, which controls the
 masses of the higgsinos, and $m^2_\PH$, we expect both $\mu$ to be
@@ -631,7 +642,7 @@ $m_{\chipm_1}-m_{\chiz_1}$ and $m_{\chiz_2}-m_{\chiz_1}$ as a function of the wi
 \includegraphics[width=0.8\textwidth,clip=true,viewport= 0 30 610 450]{figs/theory/neutralinos.pdf}
 \caption{The mass difference between the lightest chargino and the
   lightest neutralino as a function of the wino mass $M_2$
-  assuming $\tan\beta=10$, $\mu=200 \GeV$ and $M_1 = 3 \TeV$.\label{fig:neutralinos}}
+  assuming $\tan\beta=10$, $\mu=200 \GeV$, and $M_1 = 3 \TeV$.\label{fig:neutralinos}}
 \end{figure}
 
 There are additional considerations at loop level. In particular the
@@ -646,9 +657,9 @@ with the contribution from the top quark in Eqn.~\ref{eqn:toploop}:
 \fmfleft{i} 
 \fmfright{o} 
 \fmf{dashes}{i,v}
-\fmf{dashes,right,tension=0.7,label=$\tilde t_{1,,2}$}{v,v}
+\fmf{dashes,right,tension=0.7,label=$\PSQt_{1,,2}$}{v,v}
 \fmf{dashes}{v,o}
-\fmfv{label=$h^0$,label.angle=90}{i}
+\fmfv{label=$\PH$,label.angle=90}{i}
 \end{fmfgraph*}}
  \quad + \quad
 \parbox{20mm}{
@@ -658,45 +669,41 @@ with the contribution from the top quark in Eqn.~\ref{eqn:toploop}:
 \fmfright{o}
 \fmf{dashes}{i,v1}
 \fmf{dashes}{v2,o}
-\fmf{dashes,left,tension=.3,label=$\tilde t_{1,,2}$}{v1,v2}
+\fmf{dashes,left,tension=.3,label=$\PSQt_{1,,2}$}{v1,v2}
 \fmf{dashes,left,tension=.3}{v2,v1}
-\fmfv{label=$h^0$,label.angle=90}{i}
+\fmfv{label=$\PH$,label.angle=90}{i}
 \end{fmfgraph*}} \quad + \quad\cdots\\
- &= -\frac{3|y_t|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 +
-  \sum_{i=1}^{2} \left ( \frac{3|y_t|^2}{16\pi^2}\Lambda_{\mathrm{UV}}^2 - \frac{3|y_t|^2m_{\tilde
-  t_i}^2}{8\pi^2}\log\left (\frac{\Lambda_{\mathrm{UV}}}{m_{\tilde
-   t_i}}\right ) \right )+ \cdots \\
- &= -\sum_{i=1}^{2} \left ( \frac{3|y_t|^2m_{\tilde
-  t_i}^2}{8\pi^2}\log\left (\frac{\Lambda_{\mathrm{UV}}}{m_{\tilde
-   t_i}}\right ) \right )+ \cdots~,
+ &= -\frac{3|y_\PQt|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 +
+  \sum_{i=1}^{2} \left ( \frac{3|y_\PQt|^2}{16\pi^2}\Lambda_{\mathrm{UV}}^2 - \frac{3|y_\PQt|^2m_{\PSQt_i}^2}{8\pi^2}\log\left (\frac{\Lambda_{\mathrm{UV}}}{m_{\PSQt_i}}\right ) \right )+ \cdots \\
+ &= -\sum_{i=1}^{2} \left ( \frac{3|y_\PQt|^2m_{\PSQt_i}^2}{8\pi^2}\log\left (\frac{\Lambda_{\mathrm{UV}}}{m_{\PSQt_i}}\right ) \right )+ \cdots~.
 \label{eqn:stoploop}
 \end{align}
 The cancellation of the term proportional to $\Lambda_{\mathrm{UV}}^2$
 in Eqn.~\ref{eqn:stoploop} is one of the major successes of SUSY as a candidate for physics beyond
 the SM. The sensitivity of the Higgs mass to ultraviolet new
 physics is now logarithmic instead of quadratic. If SUSY were an exact
-symmetry (and $m_t=m_{\tilde t_{1,2}}$) then the cancellation would be
+symmetry (and $m_\PQt=m_{\PSQt_{1,2}}$) then the cancellation would be
 exact and there would be no further hierarchy problem. As it stands, however, we know SUSY is broken, and the
 remaining term may also be large depending on the difference in masses
 between the top quark and top squarks. Therefore, naturalness places constraints on the allowed masses of the top
 squarks given an ``acceptable'' level of fine tuning.
 
-Very roughly, naturalness requires $m_{\tilde t_{i}}\lesssim
+Very roughly, naturalness requires $m_{\PSQt_{i}}\lesssim
 400 \GeV$ if $\Lambda_{\mathrm{UV}}\approx
-10\TeV$ implying a fine tuning of the order of
+10\TeV$, implying a fine tuning of the order of
 10\%~\cite{Brust:2011tb,Craig:2013cxa}. 
 %A more complete treatment takes into
 %account top squark mixing~\cite{Kitano:2006gv,naturalSUSY},
 %\begin{equation}
-%\Delta(m^2_\PH) = \frac{3|y_t|^2}{4\pi^2}\left ( m_{Q_3}^2 + m_{U_3}^2 + |A_t|^2 \right ) \log\left(
- % \frac{\Lambda_{\mathrm{mess}}}{m_{\tilde t}} \right)
+%\Delta(m^2_\PH) = \frac{3|y_\PQt|^2}{4\pi^2}\left ( m_{Q_3}^2 + m_{U_3}^2 + |A_t|^2 \right ) \log\left(
+ % \frac{\Lambda_{\mathrm{mess}}}{m_{\PSQt}} \right)
 %\end{equation}
 
 There is also a two-loop contribution to the Higgs mass parameter from
 the gluino, which is closely related to the one-loop contribution to
-the stop mass from the gluino
+the top squark mass from the gluino:
 \begin{align}
-\Delta(m^2_{\tilde t_i}) &= \quad 
+\Delta(m^2_{\PSQt_i}) &= \quad 
 \parbox{20mm}{
 \begin{fmfgraph*}(20,20)
 \fmfkeep{gluinosunset}
@@ -704,17 +711,17 @@ the stop mass from the gluino
 \fmfright{o}
 \fmf{dashes}{i,v1}
 \fmf{dashes}{v2,o}
-\fmf{gluon,left,tension=.3,label=$\tilde g$}{v1,v2}
-\fmf{plain,left,tension=.3,label=$t$}{v2,v1}
-\fmfv{label=$\tilde t_{i}$,label.angle=90}{i}
+\fmf{gluon,left,tension=.3,label=$\sGlu$}{v1,v2}
+\fmf{plain,left,tension=.3,label=$\PQt$}{v2,v1}
+\fmfv{label=$\PSQt_{i}$,label.angle=90}{i}
 \fmffreeze
 \fmf{plain,left,tension=.3}{v1,v2}
 \end{fmfgraph*}} + \quad \cdots\\
-&= \frac{2g_s^2m_{\tilde g}^2}{3\pi^2}\log \left
-  (\frac{\Lambda_{\mathrm{UV}}}{m_{\tilde g}} \right) + \cdots~,
+&= \frac{2g_\mathrm{s}^2m_{\sGlu}^2}{3\pi^2}\log \left
+  (\frac{\Lambda_{\mathrm{UV}}}{m_{\sGlu} \right) + \cdots~,
 \end{align}
 \end{fmffile}
-With this, we have roughly that $m_{\tilde g} \lesssim 2 m_{\tilde t}$.
+With this, we have roughly that $m_{\sGlu} \lesssim 2 m_{\PSQt}$.
 
 Prior to the work described in this thesis, constraints from collider
 searches, especially those from the LHC at
@@ -729,7 +736,7 @@ SUSY spectrum~\cite{naturalSUSY}:
 \item quasi-degenerate higgsino-like chargino $\chipm_1$ and two
   neutralinos $\chiz_1, \chiz_2$, below
   $200 - 350 \GeV$, 
-\item two stops $\sTop_{1,2}$ and one (left-handed) $\sBot_1$ below
+\item two top squarks $\sTop_{1,2}$ and one (left-handed) $\sBot_1$ below
   $500-700 \GeV$, and
 \item a gluino below $1 - 1.5 \TeV$.
 \end{enumerate}
@@ -745,7 +752,7 @@ dimensionless couplings that create the cancellation of the quadratic
 divergence of the Higgs mass. This means that the effective Lagrangian
 of the MSSM can be written as the sum of two terms,
 \begin{equation}
-\mathcal L_\mathrm{MSSM}+\mathcal L_\mathrm{MSSM}^\mathrm{soft}
+\mathcal L_\mathrm{MSSM}+\mathcal L_\mathrm{MSSM}^\mathrm{soft}~,
 \end{equation}
 where $\mathcal L_\mathrm{MSSM}$ contains all of the gauge and Yukawa
 interactions that preserve SUSY, and $\mathcal
@@ -782,10 +789,10 @@ so that the Lagrangian is real. Finally, $m_{\PH_\PQu}^2$ and $m_{\PH_\PQd}^2$
 are squared-mass terms and $b$ is a cross term in the Higgs potential.
 
 If the largest mass scale associated with the soft SUSY breaking terms is $m_\mathrm{soft}$, then the additional non-supersymmetric corrections to the Higgs
-mass squared must vanish in the $m_\mathrm{soft}\to0$ limit so by dimensional analysis, they cannot cannot be proportional to
+mass squared must vanish in the $m_\mathrm{soft}\to0$ limit, so by dimensional analysis they cannot be proportional to
 $\Lambda_{\mathrm{UV}}^2$. They also cannot be proportional to
 $m_{\mathrm{soft}}\Lambda_{\mathrm{UV}}$ because momentum loop
-integrals do not depend linearly on the cut-off scale. So they must be
+integrals do not depend linearly on the cut-off scale. Thus they must be
 proportional to $m_\mathrm{soft}^2$. Following a similar line of
 argument, we expect that the coefficients of the soft SUSY
 breaking terms are also proportional to appropriate powers of $m_\mathrm{soft}$:
@@ -808,7 +815,7 @@ M_1,M_2,M_3,\boldsymbol{a_\PQu},\boldsymbol{a_\PQd},\boldsymbol{a_\Pe} &\sim m_\
 \centering
 \includegraphics[width=0.85\textwidth]{figs/analysis8TeV/naturalSpectrum.pdf}
 \caption{\label{fig:spectrum} The simplified natural SUSY spectrum
-  considered in this thesis, along with the assumed decay modes.}
+  considered in this thesis, along with the assumed decay modes~\cite{razor8TeV,jmgd}.}
 \end{figure}
 
 Motivated by the discussion of Sec.~\ref{sec:susynaturalness}, we may
@@ -873,7 +880,7 @@ Fig.~\ref{fig:SMSDiagrams}.
 \includegraphics[width=0.45\textwidth]{figs/theory/T2tb.pdf}
 \includegraphics[width=0.45\textwidth]{figs/theory/T2tt.pdf}
 \caption{Diagrams displaying the event topologies of gluino and top-squark pair production
-  considered in this thesis.\label{fig:SMSDiagrams}}
+  considered in this thesis~\cite{razor8TeV,jmgd}.\label{fig:SMSDiagrams}}
 \end{figure*}
 
 \subsection{Technical implementation of chargino decays in \PYTHIA}

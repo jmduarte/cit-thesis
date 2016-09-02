@@ -1,4 +1,4 @@
-\chapter{Fast timing for the High-Luminosity LHC}
+\chapter{Fast timing for the high-luminosity LHC}
 \label{ch:timing}
 
 To significantly extend the discovery reach of colliders to natural
@@ -6,7 +6,7 @@ SUSY, it is necessary to go to higher energies and higher
 luminosities. Studies based on current search strategies~\cite{CMS:2013xfa,CMS-PAS-FTR-13-014},
 project discovery-level sensitivity up to $\sim 2\TeV$ gluinos and $\sim
 1\TeV$ top squarks for an integrated luminosity of $3000\fbinv$ at an
-upgraded high luminosity LHC (HL-LHC) with $\sqrt{s}=14\TeV$. In
+upgraded high-luminosity LHC (HL-LHC) with $\sqrt{s}=14\TeV$. In
 order to produce this enormous dataset, the HL-LHC~\cite{Rossi:1471000} is expected to provide instantaneous luminosities of
 $5\times10^{34}$ cm$^{-2}$s$^{-1}$. The enhanced data rates will
 provide the datasets necessary to perform precision measurements of the Higgs couplings, 
@@ -37,7 +37,7 @@ We focus our studies on measurements of the time of flight using sampling calori
 based on LYSO crystals. Due to its very high light yield 
 ($\sim 30$~\unit{K} photons/\MeV)~\cite{LYSOProperties}, and radiation 
 tolerance~\cite{5402126, 4291695, 5402125, Dissertori:2013rma}, LYSO
-is the active element of one of the options considered for the upgrade of the
+is the active element of one of the options originally considered for the upgrade of the
 CMS detector for the HL-LHC~\cite{Contardo:1605208}. 
 
 In Fig.~\ref{fig:ScintillatorTiming} we present a simplified illustration of
@@ -84,7 +84,7 @@ creation and transit of each particular scintillation photon for a LYSO-based de
 \section{Experimental setup}
 
 A schematic diagram of a typical time of flight measurement setup is shown in 
-Figure~\ref{fig:TypicalSchematicDiagram}. All measurements involve a fast photodetector,  
+Fig.~\ref{fig:TypicalSchematicDiagram}. All measurements involve a fast photodetector,  
 typically a micro-channel-plate photo-multiplier-tube 
 (MCP-PMT) with a time resolution around 20-30\unit{ps}~\cite{MCPFastCaloNIMA}, which measures the reference ($t_{0}$) timestamp, and a photodetector further 
 downstream that detects the signal associated with the electromagnetic shower and provides 
@@ -124,7 +124,7 @@ different detector elements. Different time reconstruction algorithms are used
 for different detector elements, and all involve the assignment of a timestamp
 using specific features of each corresponding signal pulse. The signal pulse for
 the reference time detector is very sharp and symmetric around its maximum
-amplitude, as shown in Figure~\ref{fig:PulseShapes}. Hence for the reference
+amplitude, as shown in Fig.~\ref{fig:PulseShapes}. Thus for the reference
 detector we determine the time position of the pulse peak by fitting a
 Gaussian function to the peak of the pulse, using three sampling points before the pulse
 maximum and four sampling points after. The fitted mean parameter of the
@@ -135,7 +135,7 @@ timestamp $t_{1}$ using a constant fraction of the rising edge. A linear
 function is fit to the sampling points between $10\%$ and $60\%$ of the pulse
 maximum and the timestamp is assigned as the time at which the fitted linear
 function rises to $20\%$ of the pulse maximum. Examples of fits performed to
-assign a time stamp from each pulse are shown in Figure~\ref{fig:PulseFits}. The
+assign a time stamp from each pulse are shown in Fig.~\ref{fig:PulseFits}. The
 impact from the choice of the functional forms is studied by using a set of
 alternative functions in the fits, and choosing the one that results in the best
 time resolution. Among the functions that we tested, the difference between the
@@ -208,7 +208,7 @@ element. The LYSO crystal is wrapped in Tyvek and attached to the Hamamatsu
 R3809 MCP-PMT (HAMB) with optical coupling~\cite{grease}.   A second Hamamatsu 
 MCP-PMT  photodetector (HAMA)  is placed upstream of the calorimeter and is used 
 to measure the reference time. A schematic diagram and a photograph of the experimental setup
-are shown in Figure~\ref{fig:LYSOSamplingCaloSetup}. 
+are shown in Fig.~\ref{fig:LYSOSamplingCaloSetup}. 
 
 \begin{figure}[h] \centering
 \includegraphics[width=0.7\textwidth]{figs/timing/LYSOSamplingCaloSetupSchematic} \\
@@ -243,7 +243,7 @@ as it is close to the shower maximum.
 
 The time of flight measurement is performed using the LYSO sampling calorimeter
 for electron beams with energies varying from $4 \GeV$ to $32 \GeV$. The corresponding 
-measured time of flight distributions are shown in Figure~\ref{fig:LYSOCubeTOF}.
+measured time of flight distributions are shown in Fig.~\ref{fig:LYSOCubeTOF}.
 We achieve the best time resolution of $34$~\unit{ps} for electrons
 with beam energy of $32 \GeV$.
 
@@ -258,7 +258,7 @@ for 4 \GeV (top left), 8 \GeV (top right), 16 \GeV (bottom left), and 32 \GeV (b
 \end{figure}
 
 The time resolution measurement is plotted as a function of the
-beam energy in Figure~\ref{fig:ShashlikSideReadoutTOFResolutionVsEnergy} (left). We fit the result to the sum of a 
+beam energy in Fig.~\ref{fig:ShashlikSideReadoutTOFResolutionVsEnergy} (left). We fit the result to the sum of a 
 $1/\sqrt{E}$ term and a constant term of about $11$~\unit{ps}.   Given that we measure the contribution 
 to the intrinsic time resolution of the photodetector and the DAQ electronics to be about 
 $20$~\unit{ps}~\cite{MCPFastCaloNIMA}, using the results from the 32 GeV electron beam, we infer 
@@ -269,15 +269,15 @@ LYSO cube is about $27$~\unit{ps}.
 \subsection{Timing studies of the LYSO-tungsten shashlik calorimeter}
 \subsubsection{Wavelength shifting fibers readout (WLS Y11 \& DSB1)}
 We study the time resolution of a LYSO-tungsten Shashlik calorimeter, one of the
-proposed choices for the Phase 2 upgrade of the CMS endcap calorimeter
+options originally proposed for the Phase 2 upgrade of the CMS endcap calorimeter
 system~\cite{Contardo:1605208}. We compare the time resolution performance for
 two alternative light propagation schemes. 
 
 In our setup the scintillation light is collected by WLS fibers that
 pass through a set of four holes in the LYSO and tungsten layers. In 
-Figure~\ref{fig:ShashlikDiagram}, a shashlik cell and the light extraction 
+Fig.~\ref{fig:ShashlikDiagram}, a shashlik cell and the light extraction 
 scheme is illustrated. A schematic diagram and a photograph showing this experimental
-setup are shown in Figure~\ref{fig:ShashlikFiberSetup}. Two MCP-PMTs  by 
+setup are shown in Fig.~\ref{fig:ShashlikFiberSetup}. Two MCP-PMTs  by 
 Hamamatsu (R3809) are used to collect the scintillation light, while a Photek 240 
 MCP-PMT is used as a reference time detector. 
 
@@ -306,7 +306,7 @@ experimental setup. }
 %greater detail by 
  We compare the signal pulses obtained using two different
  types of WLS fiber in the same LYSO-tungsten shashlik calorimeter. In
- Figure~\ref{fig:FiberPulseComparison} (a) and (b) and we show the pulse shapes
+ Fig.~\ref{fig:FiberPulseComparison} (a) and (b) and we show the pulse shapes
  averaged over a few hundred events obtained using DSB1 fibers~\cite{Albrecht}
  and Y11 fibers, plotted in blue and red respectively. We find that the rise
  time of the pulse obtained using the DSB1 fibers, about $2.4$~ns, is
@@ -421,10 +421,10 @@ and the limited photostatistics. By placing the photodetectors in direct contact
 of two LYSO layers, we minimize the distance the scintillation light  travels to reach the 
 photodetectors, and reduce the impact of light propagation jitter on the time measurement 
 resolution. However in this setup we have also reduced the available photostatistics, as we collect 
-light from only a small fraction of the shashlik cell. In Figure~\ref{fig:ShashlikSideReadoutTOF},
+light from only a small fraction of the shashlik cell. In Fig.~\ref{fig:ShashlikSideReadoutTOF},
 we show the time of flight distributions for electron beams at various energies,
-fitted to gaussian functions. The width of the best-fit gaussian is plotted as a
-function of the beam energy in Figure~\ref{fig:ShashlikSideReadoutTOFResolutionVsEnergy}. The 
+fitted to Gaussian functions. The width of the best-fit Gaussian is plotted as a
+function of the beam energy in Fig.~\ref{fig:ShashlikSideReadoutTOFResolutionVsEnergy}. The 
 best time resolution that we obtain is about $55$~ps, and fitting the result to the sum of
 a $1/\sqrt{E}$ term and a constant term, we find a constant term of about
 $30$~ps. 
@@ -489,7 +489,7 @@ In comparing results using different light extraction schemes, we find that at a
 given light yield the time resolution depends significantly on the light
 propagation fluctuations. As the light yield increases the dependence on the
 light propagation fluctuations is reduced. The effect can be seen in the summary
-Figure~\ref{fig:ShashlikFiberAndCubeTOF} where we show the dependence of the
+Fig.~\ref{fig:ShashlikFiberAndCubeTOF}, where we show the dependence of the
 time resolution on the average pulse height for the shashlik cell with light
 extracted through the DSB1 fibers and for the sampling calorimeter with the LYSO
 cube. For the same average pulse height of 500 \unit{mV}, the LYSO cube time resolution

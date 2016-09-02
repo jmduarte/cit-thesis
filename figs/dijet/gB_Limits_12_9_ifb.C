@@ -123,6 +123,11 @@
    Graph_CDF1_1_fbinv1->GetZaxis()->SetTitleFont(42);
    graph->SetHistogram(Graph_CDF1_1_fbinv1);
    
+   
+   Graph_CDF1_1_fbinv1->GetXaxis()->SetRangeUser(200,2500);
+   Graph_CDF1_1_fbinv1->SetMaximum(3);
+   Graph_CDF1_1_fbinv1->SetMinimum(0);
+   
    graph->Draw("al");
    
    graph = new TGraph(42);
@@ -1199,7 +1204,8 @@
    
    //TLegend *leg = new TLegend(0.4338677,0.568,0.7775551,0.9268571,NULL,"brNDC");
    
-   TLegend *leg = new TLegend(0.25,0.62,0.6,0.92,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.23,0.62,0.58,0.92,NULL,"brNDC");
+   //TLegend *leg = new TLegend(0.11,0.15,0.46,0.45,NULL,"brNDC");
    leg->SetName("leg");
    leg->SetBorderSize(0);
    leg->SetTextSize(0.022);
@@ -1211,17 +1217,9 @@
    color = new TColor(ci, 1, 1, 1, " ", 0);
    leg->SetFillColor(ci);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("CDF_Run1"," CDF Run I (1990)","L");
-
-   ci = TColor::GetColor("#993333");
-   entry->SetLineColor(ci);
-   entry->SetLineStyle(9);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("UA2"," UA2 (1991-1993)","L");
+   //TLegendEntry *entry=leg->AddEntry("CDF_Run1"," CDF Run I (1990)","L");
+   
+   TLegendEntry *entry=leg->AddEntry("UA2"," UA2 10.9 pb^{-1} (0.63 TeV) (1993)","L");
 
    ci = TColor::GetColor("#000099");
    entry->SetLineColor(ci);
@@ -1231,7 +1229,18 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("CDF1_1_fbinv"," CDF 1.1 fb^{-1} (2009)","L");
+   
+   entry=leg->AddEntry("CDF_Run1"," CDF 106 pb^{-1} (1.8 TeV) (1997)","L");
+
+   ci = TColor::GetColor("#993333");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(9);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("CDF1_1_fbinv"," CDF 1.13 fb^{-1} (1.96 TeV) (2009)","L");
 
    ci = TColor::GetColor("#ff9933");
    entry->SetLineColor(ci);
@@ -1241,7 +1250,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_20_fbinv"," CMS PF Reco. 20 fb^{-1} (8 TeV)","L");
+   entry=leg->AddEntry("CMS_20_fbinv"," CMS PF Reco. 19.7 fb^{-1} (8 TeV) (2015)","L");
 
    ci = TColor::GetColor("#ff00ff");
    entry->SetLineColor(ci);
@@ -1251,7 +1260,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("CMS_19_fbinv"," CMS Data Scouting 18.8 fb^{-1} (8 TeV)","L");
+   entry=leg->AddEntry("CMS_19_fbinv","CMS Scouting 18.8 fb^{-1} (8 TeV) (2015)","L");
 
    ci = TColor::GetColor("#ff0000");
    entry->SetLineColor(ci);
@@ -1261,7 +1270,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("ATLAS_13_fbinv","#splitline{ATLAS 8 #oplus 20.3  fb^{-1} (8 TeV) }{(Gaussian resonance shapes)}","L");
+   entry=leg->AddEntry("ATLAS_13_fbinv","#splitline{ATLAS 8 #oplus 20.3 fb^{-1} (8 TeV) (2015)}{(Gaussian resonance shapes)}","L");
 
    ci = TColor::GetColor("#66ccff");
    entry->SetLineColor(ci);
@@ -1271,7 +1280,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("ATLAS_13_TeV_3_4_fbinv","ATLAS 3.4 fb^{-1} (13 TeV)","L");
+   entry=leg->AddEntry("ATLAS_13_TeV_3_4_fbinv","ATLAS 3.4 fb^{-1} (13 TeV) (2016)","L");
    
    ci = TColor::GetColor("#0000ff");
    entry->SetLineColor(ci);
@@ -1285,6 +1294,7 @@
    leg->Draw();
 
    TLegend *leg2 = new TLegend(0.62,0.785,0.9,0.92,NULL,"brNDC");
+   //TLegend *leg2 = new TLegend(0.58,0.785,0.9,0.92,NULL,"brNDC");
    leg2->SetName("leg2");
    leg2->SetBorderSize(0);
    leg2->SetTextSize(0.022);
@@ -1292,7 +1302,7 @@
    leg2->SetLineStyle(1);
    leg2->SetLineWidth(1);
    
-   leg2->SetHeader("CMS Data Scouting 12.9 fb^{-1} (13 TeV)");
+   leg2->SetHeader("CMS Scouting 12.9 fb^{-1} (13 TeV)");
    
    ci = 932;
    color = new TColor(ci, 1, 1, 1, " ", 0);
@@ -1321,6 +1331,7 @@
    color = new TColor(ci, 0, 1, 0, " ", 0.5);
    entry2->SetFillColor(ci);
    entry2->SetFillStyle(1001);
+   
 
    ci = 928;
    color = new TColor(ci, 0, 1, 0, " ", 0.5);
@@ -1353,6 +1364,7 @@
    leg2->Draw();
 
    TLegend *leg3 = new TLegend(0.65,0.65,0.9,0.785,NULL,"brNDC");
+   //TLegend *leg3 = new TLegend(0.58,0.65,0.9,0.785,NULL,"brNDC");
    leg3->SetName("leg3");
    leg3->SetBorderSize(0);
    leg3->SetTextSize(0.022);
@@ -1391,7 +1403,10 @@
 
    ci = 924;
    color = new TColor(ci, 0, 0.6, 0, " ", 0.35);
-   entry2->SetLineColor(kBlack);
+   
+   ci = TColor::GetColor("#660000");
+   entry2->SetLineColor(ci);
+   //entry2->SetLineColor(kBlack);
    entry2->SetLineStyle(7);
    entry2->SetLineWidth(2);
    entry2->SetMarkerColor(1);
@@ -1438,16 +1453,16 @@ tex->SetNDC();
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.13825,0.9213,"CMS");
+      tex = new TLatex(0.13,0.962,"CMS");
 tex->SetNDC();
-   tex->SetTextAlign(13);
+   tex->SetTextAlign(11);
    tex->SetTextFont(61);
-   tex->SetTextSize(0.0375);
+   tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.13825,0.8763,"Preliminary");
+      tex = new TLatex(0.21,0.962,"Preliminary");
 tex->SetNDC();
-   tex->SetTextAlign(13);
+   tex->SetTextAlign(11);
    tex->SetTextFont(52);
    tex->SetTextSize(0.0285);
    tex->SetLineWidth(2);
