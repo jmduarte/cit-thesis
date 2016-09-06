@@ -229,19 +229,19 @@ observed mass of the Higgs boson through quantum corrections.
 \chapter{The hierarchy problem, naturalness, and supersymmetry}
 \label{ch:naturalness}
 \section{The hierarchy problem and naturalness in the standard model}
-\textbf{Maria: Can you add after this section the beta functions if the self
-coupling and make a small subsection on the problem of the
-metastatibility of the vacuum. it involves again the looks, the top
-mass and the higgs mass (and a_s I guess) and it is an important point
-that Higgs is throwing us a curveball given the higgs mass and the top
-mass -- I think the traditional hierarchy and the problem of the
-metastability are the same problem just before and after the
-measurement of the higgs.
-
-Can point out that with SUSY included the metastability  problem is
-tossed in the garbage in the same way that SUSY is the answer to the
-hierarchy problem}
 \label{sec:higgsnaturalness}
+
+\textbf{Maria: Can you add after this section the beta functions if
+  the self coupling and make a small subsection on the problem of the
+  metastatibility of the vacuum. it involves again the looks, the top
+  mass and the higgs mass (and as I guess) and it is an important
+  point that Higgs is throwing us a curveball given the higgs mass and
+  the top mass -- I think the traditional hierarchy and the problem of
+  the metastability are the same problem just before and after the
+  measurement of the higgs. Can point out that with SUSY included the
+  metastability  problem is tossed in the garbage in the same way that
+  SUSY is the answer to the hierarchy problem.}
+
 The leading quantum correction to the Higgs mass is due to
 the large Yukawa coupling of the top quark, which gives the
 top quark its large mass. In an effective field theory approach, where
@@ -276,6 +276,38 @@ is measured to be so small at $125.09\pm0.24 \GeV$~\cite{Aad:2015zhl}. The conun
 scalar particle can exist in the presence of (presumably) new physics
 in the ultraviolet is called the \emph{hierarchy problem} or the \emph{naturalness problem} and is one
 of the key motivations for new physics at the \TeV scale, especially \emph{supersymmetry}.
+
+
+\section{Renormalization and vacuum instability in the standard model}
+\label{sec:vacuuminstability}
+The beta function $\beta(g)$ encodes the dependence of a coupling $g$
+on the enrgy scale $\mu$ of a given physical process,
+\begin{equation}
+\beta(g) = \frac{\rd g}{\rd \log\mu}~.
+\end{equation}
+They may be computed by considering loop Feynman diagrams up to a
+certain order.
+
+The one-loop beta functions for  $g_1 = (5/3)g^{\prime}$, $g_2 =g$,
+and $g_3 = g_\mathrm{s}$ are
+\begin{align}
+\frac{\rd g_1}{\rd\log\mu} &= \frac{g_1^3}{20\pi^2} \left (\sum_{\textrm{Weyl ferm.}}\frac{1}{2}Y^2+\sum_{\mathbb C\textrm{ scalars}}\frac{1}{4}Y^2\right)\\
+&=\frac{g_1^3}{20\pi^2} \left( \frac{41}{8} \right)\\
+\frac{\rd g_2}{\rd\log\mu} &= \frac{g_2^3}{16\pi^2} \left (-\frac{11}{3} \times 2 + \frac{2}{3}\sum_{\textrm{Weyl ferm.}\in\mathbf{2}}\frac{1}{2}+\frac{2}{3}\sum_{\mathbb C \textrm{ scalars}\in\mathbf 2}\frac{1}{4}\right)\\
+&= \frac{g_2^3}{16\pi^2}\left( -\frac{19}{6} \right)\\
+\frac{\rd g_3}{\rd\log\mu} &=\frac{g_3^3}{16\pi^2} \left (-\frac{11}{3} \times 3 + \frac{2}{3}\sum_{\textrm{Weyl ferm.}\in\mathbf{3}}\frac{1}{2} \right)\\
+&= \frac{g_3^3}{16\pi^2}\left( -7\right)~,
+\end{align}
+where $g_\mathrm{s}$, $g$, and $g^{\prime}$ are the gauge couplings
+for the gauge groups $\mathrm{SU(3)}_{\mathrm{C}}$,
+$\times\mathrm{SU(2)}_{\mathrm{L}}$, and $\times\mathrm{U(1)}_Y$, respectively.
+
+Similaly, the one-loop beta functions for the top-quark Yukawa
+coupling $y_\PQt$ and the Higgs quartic coupling $\lambda$ are:
+\begin{align}
+16\pi^2\frac{\rd y_\PQt}{\rd\log\mu} &= -\frac{17}{20}g_1^2y_\PQt - \frac{9}{4}g_2^2y_\PQt  - 8g_3^2y_\PQt + \frac{9}{2}y_\PQt^3\\
+16\pi^2\frac{\rd \lambda}{\rd\log\mu} &= -\frac{9}{5}g_1^2\lambda - 9g_2^2\lambda + \frac{27}{100}g_1^4 + \frac{9}{10}g_2^2g_1^2 + \frac{9}{4}g_2^4 + 12\lambda^2  +12\lambda y_\PQt^2 - 12y_\PQt^4~.\\
+\end{align}
 
 
 \section{Supersymmetry}
@@ -690,6 +722,7 @@ with the contribution from the top quark in Eqn.~\ref{eqn:toploop}:
  &= -\sum_{i=1}^{2} \left ( \frac{3|y_\PQt|^2m_{\PSQt_i}^2}{8\pi^2}\log\left (\frac{\Lambda_{\mathrm{UV}}}{m_{\PSQt_i}}\right ) \right )+ \cdots~.
 \label{eqn:stoploop}
 \end{align}
+\end{fmffile}
 The cancellation of the term proportional to $\Lambda_{\mathrm{UV}}^2$
 in Eqn.~\ref{eqn:stoploop} is one of the major successes of SUSY as a candidate for physics beyond
 the SM. The sensitivity of the Higgs mass to ultraviolet new
@@ -713,27 +746,24 @@ Very roughly, naturalness requires $m_{\PSQt_{i}}\lesssim
 
 There is also a two-loop contribution to the Higgs mass parameter from
 the gluino, which is closely related to the one-loop contribution to
-the top squark mass from the gluino:
+the top squark mass from the gluino~\cite{Craig:2013cxa}:
+\begin{fmffile}{higgs3}
 \begin{align}
-\Delta(m^2_{\PSQt_i}) &= \quad 
-\parbox{20mm}{
-\begin{fmfgraph*}(20,20)
-\fmfkeep{gluinosunset}
-\fmfleft{i}
-\fmfright{o}
+\Delta (m^2_{\PSQt_{i}}) & = \quad \parbox{20mm}{
+\begin{fmfgraph*}(20,20)\fmfkeep{gluinosunset}
+\fmfleft{i}\fmfright{o}
 \fmf{dashes}{i,v1}
 \fmf{dashes}{v2,o}
 \fmf{gluon,left,tension=.3,label=$\sGlu$}{v1,v2}
 \fmf{plain,left,tension=.3,label=$\PQt$}{v2,v1}
 \fmfv{label=$\PSQt_{i}$,label.angle=90}{i}
-\fmffreeze
-\fmf{plain,left,tension=.3}{v1,v2}
+\fmffreeze\fmf{plain,left,tension=.3}{v1,v2}
 \end{fmfgraph*}} + \quad \cdots\\
-&= \frac{2g_\mathrm{s}^2m_{\sGlu}^2}{3\pi^2}\log \left
-  (\frac{\Lambda_{\mathrm{UV}}}{m_{\sGlu} \right) + \cdots~,
+&= \frac{2g^2_{\mathrm{s}}m_{\sGlu}^2}{3\pi^2}\log\left(\frac{\Lambda_{\mathrm{UV}}}{m_{\sGlu}}\right) + \cdots~,
+\label{eqn:gluinoloop}
 \end{align}
 \end{fmffile}
-With this, we have roughly that $m_{\sGlu} \lesssim 2 m_{\PSQt}$.
+With this, we have roughly that $m_{\sGlu} \lesssim 2 m_{\PSQt_{i}}$.
 
 Prior to the work described in this thesis, constraints from collider
 searches, especially those from the LHC at
