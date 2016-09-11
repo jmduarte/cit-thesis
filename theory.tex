@@ -277,38 +277,84 @@ scalar particle can exist in the presence of (presumably) new physics
 in the ultraviolet is called the \emph{hierarchy problem} or the \emph{naturalness problem} and is one
 of the key motivations for new physics at the \TeV scale, especially \emph{supersymmetry}.
 
-
-\section{Renormalization and vacuum instability in the standard model}
-\label{sec:vacuuminstability}
-The beta function $\beta(g)$ encodes the dependence of a coupling $g$
-on the energy scale $\mu$ of a given physical process,
+\section{Renormalization group running in the standard model}
+\label{sec:rgesm}
+In the renormalization group (RG) approach to quantum field theory,
+the Lagrangian parameters may be thought of as
+``running'' parameters that depend on the energy scale $\mu$ of a
+given physical process. The beta function $\beta(g)$ encodes the dependence of a coupling $g$
+on $\mu$,
 \begin{equation}
 \beta(g) = \frac{\rd g}{\rd \log\mu}~.
 \end{equation}
-In essense, it allows by integrating the beta function, we obtain a
-relationship between the coupling at different energy scales
-They may be computed in the SM by considering loop diagrams up to a
-certain order. The one-loop beta functions for  $g_1 = (5/3)g^{\prime}$, $g_2 =g$,
+By integrating the beta function, we obtain a
+relationship between the couplings evaluated at different energy scales. The beta
+functions for the gauge couplings in the SM may be computed by considering loop diagrams up to a
+certain order. The one-loop beta functions for  $g_1 = \sqrt{5/3}g^{\prime}$, $g_2 =g$,
 and $g_3 = g_\mathrm{s}$ are
 \begin{align}
 \frac{\rd g_1}{\rd\log\mu} &= \frac{g_1^3}{20\pi^2} \left (\sum_{\textrm{Weyl ferm.}}\frac{1}{2}Y^2+\sum_{\mathbb C\textrm{ scalars}}\frac{1}{4}Y^2\right)\\
-&=\frac{g_1^3}{20\pi^2} \left( \frac{41}{8} \right)\\
+&=\frac{g_1^3}{20\pi^2} \left( \frac{41}{8} \right)~,\\
 \frac{\rd g_2}{\rd\log\mu} &= \frac{g_2^3}{16\pi^2} \left (-\frac{11}{3} \times 2 + \frac{2}{3}\sum_{\textrm{Weyl ferm.}\in\mathbf{2}}\frac{1}{2}+\frac{2}{3}\sum_{\mathbb C \textrm{ scalars}\in\mathbf 2}\frac{1}{4}\right)\\
-&= \frac{g_2^3}{16\pi^2}\left( -\frac{19}{6} \right)\\
+&= \frac{g_2^3}{16\pi^2}\left( -\frac{19}{6} \right)~,\\
 \frac{\rd g_3}{\rd\log\mu} &=\frac{g_3^3}{16\pi^2} \left (-\frac{11}{3} \times 3 + \frac{2}{3}\sum_{\textrm{Weyl ferm.}\in\mathbf{3}}\frac{1}{2} \right)\\
 &= \frac{g_3^3}{16\pi^2}\left( -7\right)~,
 \end{align}
 where $g_\mathrm{s}$, $g$, and $g^{\prime}$ are the gauge couplings
 for the gauge groups $\mathrm{SU(3)}_{\mathrm{C}}$,
-$\times\mathrm{SU(2)}_{\mathrm{L}}$, and $\times\mathrm{U(1)}_Y$, respectively.
+$\times\mathrm{SU(2)}_{\mathrm{L}}$, and $\times\mathrm{U(1)}_Y$,
+respectively. The running of these couplings, extrapolated all the way up to
+the Planck scale (assuming there is no new physics) is shown in
+Fig.~\ref{smphase} using with the three-loop RG equations and
+including the two-loop threshold corrections at the weak
+scale~\cite{Buttazzo:2013uya}. Given the particle content of the SM
+and assuming no additional particles, the gauge couplings do
+not appear to unify near the mass scale of $10^{16}\GeV$, an essential feature
+of grand unification theories (GUT)~\cite{Georgi:1974sy,susyprimer}.
 
-Similaly, the one-loop beta functions for the top-quark Yukawa
-coupling $y_\PQt$ and the Higgs quartic coupling $\lambda$ are:
+\subsection{Vacuum instability}
+\label{sec:vacuuminstability}
+The one-loop beta functions for the top-quark Yukawa
+coupling $y_\PQt$ and the Higgs quartic coupling $\lambda$ in the SM
+may be computed similarly:
 \begin{align}
-16\pi^2\frac{\rd y_\PQt}{\rd\log\mu} &= -\frac{17}{20}g_1^2y_\PQt - \frac{9}{4}g_2^2y_\PQt  - 8g_3^2y_\PQt + \frac{9}{2}y_\PQt^3\\
+16\pi^2\frac{\rd y_\PQt}{\rd\log\mu} &= -\frac{17}{20}g_1^2y_\PQt - \frac{9}{4}g_2^2y_\PQt  - 8g_3^2y_\PQt + \frac{9}{2}y_\PQt^3~,\\
 16\pi^2\frac{\rd \lambda}{\rd\log\mu} &= -\frac{9}{5}g_1^2\lambda - 9g_2^2\lambda + \frac{27}{100}g_1^4 + \frac{9}{10}g_2^2g_1^2 + \frac{9}{4}g_2^4 + 12\lambda^2  +12\lambda y_\PQt^2 - 12y_\PQt^4~.\\
 \end{align}
+The running of the $\lambda$ is of particular interest because if it
+runs to $\lambda<0$, in principle 
+From these two Lagrangian parameters, we can visualize the SM phase
+diagram in ($m_\PH$, $m_\PQt$), divided into regions of absolute
+stability ($\lambda>0$ for all $\mu$), metastability ($\lambda<0$ for
+large $\mu$ near the Planck scale), and instability ($\lambda<0$ for
+small $\mu$ near the weak scale). Ref.~\cite{Buttazzo:2013uya}
+computes with three-loop RG equations and two-loop threshold
+corrections at the weak scale as seen in
+Fig.~\ref{fig:smphase}. Curiously, if the SM is valid up to the Planck
+scale, the SM vacuum appears to be metastable and very close to the
+boundary between metastability and absolute stability~\cite{Buttazzo:2013uya}.
 
+\begin{figure}
+\includegraphics[width=0.49\textwidth]{figs/theory/SMRGE.pdf}\\
+%\includegraphics[width=0.49\textwidth]{figs/theory/lambda.pdf}\\
+\includegraphics[width=0.49\textwidth]{figs/theory/SMht.pdf}\\
+%\includegraphics[width=0.49\textwidth]{figs/theory/deadoraliveG2014}\\
+\caption{Renormalization of the SM gauge couplings $g_1 =
+\sqrt{5/3}g^{\prime}$, $g_2$, $g_3$, of the top, bottom and $\tau$
+couplings ($y_\PQt$, $y_\PQb$, $y_\tau$), of the Higgs quartic
+coupling $\lambda$, and of the Higgs mass parameter $m_\PH$ (left) and SM phase diagram in terms of Higgs and top pole masses (right).
+%All parameters are defined in the $\overline{\mathrm{MS}}$ scheme. The
+%two-loop thresholds at the weak scale and three-loop RG equations. The thickness indicates the ±1σ uncertainties in Mt
+%, Mh, α3. 
+The plane is divided into regions of absolute stability, metastability, instability of the SM vacuum, and nonperturbativity
+of the Higgs quartic coupling. The top Yukawa coupling becomes non-perturbative
+for $m_{\PQt} > 230 \GeV$. The dotted contour-lines show the instability scale
+$\Lambda_\mathrm{I}$ assuming $\alpha_3(m_\PZ) = 0.1184$~\cite{Buttazzo:2013uya}.\label{fig:smphase}}
+%Zoom in the region of the preferred experimental range of $m_\PH$ and $m_\PQt$
+%(the grey areas denote the allowed region at $1$, $2$, and $3\sigma$). The three boundary lines correspond
+%to $1-\sigma$ variations of $\alpha_3(m_{\PZ}) = 0.1184\pm 0.0007$, and the grading of the colours indicates the size
+%of the theoretical error~\cite{Buttazzo:2013uya}.}
+\end{figure}
 
 \section{Supersymmetry}
 \label{sec:susy}
@@ -660,7 +706,7 @@ fine-tuning, such as~\cite{Brust:2011tb,naturalSUSY}:
 \end{equation}
 Other measures of fine-tuning are possible, such as the one given by Barbieri and Giudice~\cite{Barbieri:1987fn,Katz:2014mba}:
 \begin{equation}
-\Delta_x = \abs{\frac{\partial \log m^2_\PZ}{\partial \log x}~,
+\Delta_x = \abs{\frac{\partial \log m^2_\PZ}{\partial \log x}}~,
 \end{equation}
 which quantifies the sensitivity of the $\PZ$-boson mass to
 an underlying, high-energy scale parameter $x$. Although no single
@@ -855,6 +901,32 @@ M_1,M_2,M_3,\boldsymbol{a_\PQu},\boldsymbol{a_\PQd},\boldsymbol{a_\Pe} &\sim m_\
   b&\sim m_\mathrm{soft}^2~.
 \end{align}
 
+
+
+\section{Renormalization group in supersymmetry}
+\label{sec:rgemssm}
+The one-loop beta functions in the MSSM are modified with respect to
+the ones in the SM due to the additional particle
+content. Numerically, they become,
+\begin{align}
+\frac{\rd g_1}{\rd\log\mu} &=\frac{g_1^3}{20\pi^2} \left( \frac{33}{4} \right)~,\\
+\frac{\rd g_2}{\rd\log\mu} &= \frac{g_2^3}{16\pi^2}\left( 1 \right)~,\\
+\frac{\rd g_3}{\rd\log\mu} &= \frac{g_3^3}{16\pi^2}\left( -3\right)~.
+\end{align}
+Fig.~\ref{fig:unification}, shows how the gauge couplings, expressed
+as $\alpha^{-1}_{i} = 4\pi/g_i^2$, run in both the SM and the MSSM~\cite{susyprimer}. Unlike the SM, the MSSM includes the right
+particle content to ensure that the gauge couplings can unify at a
+mass scale $\sim2 \times10^{16} \GeV$~\cite{susyprimer}.
+
+\begin{figure}
+\includegraphics[width=0.49\textwidth]{figs/theory/unification.pdf}
+\caption{Two-loop renormalization group evolution of the inverse
+gauge couplings $\alpha^{-1}_i(\mu)$ in the SM (dashed lines) and the
+MSSM (solid lines). In the MSSM case, the sparticle masses are treated
+as a common threshold varied between $500\GeV$ and $1.5\TeV$, and
+$\alpha_3(m_\PZ)$ is varied between $0.117$ and
+$0.121$.~\cite{susyprimer}.\label{fig:unifcation}}
+\end{figure}
 
 \section{Simplified natural supersymmetry models}
 \label{sec:sms}
