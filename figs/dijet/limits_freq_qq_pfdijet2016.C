@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Tue Aug 16 10:17:28 2016) by ROOT version5.34/31
+//=========  (Mon Sep 12 09:52:53 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,800,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -957,22 +957,22 @@
    graph->SetLineStyle(8);
    graph->SetLineWidth(2);
    graph->SetMarkerSize(0);
-   graph->SetPoint(0,500,59.614102);
-   graph->SetPoint(1,1000,4.39442892);
-   graph->SetPoint(2,1500,0.7484672);
-   graph->SetPoint(3,2000,0.180830628);
-   graph->SetPoint(4,2500,0.050762504);
-   graph->SetPoint(5,3000,0.015260852);
-   graph->SetPoint(6,3500,0.004857242);
-   graph->SetPoint(7,4000,0.001624735);
-   graph->SetPoint(8,4500,0.000555587);
-   graph->SetPoint(9,5000,0.000178534);
-   graph->SetPoint(10,5500,6.28742e-05);
-   graph->SetPoint(11,6000,1.84131e-05);
+   graph->SetPoint(0,500,49.67841833);
+   graph->SetPoint(1,1000,3.6620241);
+   graph->SetPoint(2,1500,0.6237226667);
+   graph->SetPoint(3,2000,0.15069219);
+   graph->SetPoint(4,2500,0.04230208667);
+   graph->SetPoint(5,3000,0.01271737667);
+   graph->SetPoint(6,3500,0.004047701667);
+   graph->SetPoint(7,4000,0.001353945833);
+   graph->SetPoint(8,4500,0.0004629891667);
+   graph->SetPoint(9,5000,0.0001487783333);
+   graph->SetPoint(10,5500,5.239516667e-05);
+   graph->SetPoint(11,6000,1.534425e-05);
    
    TH1F *Graph_Graph6 = new TH1F("Graph_Graph6","Graph",100,0,6550);
-   Graph_Graph6->SetMinimum(1.657179e-05);
-   Graph_Graph6->SetMaximum(65.57551);
+   Graph_Graph6->SetMinimum(1.380983e-05);
+   Graph_Graph6->SetMaximum(54.64626);
    Graph_Graph6->SetDirectory(0);
    Graph_Graph6->SetStats(0);
 
@@ -1630,22 +1630,22 @@
    graph->SetLineStyle(8);
    graph->SetLineWidth(2);
    graph->SetMarkerSize(0);
-   graph->SetPoint(0,500,59.614102);
-   graph->SetPoint(1,1000,4.39442892);
-   graph->SetPoint(2,1500,0.7484672);
-   graph->SetPoint(3,2000,0.180830628);
-   graph->SetPoint(4,2500,0.050762504);
-   graph->SetPoint(5,3000,0.015260852);
-   graph->SetPoint(6,3500,0.004857242);
-   graph->SetPoint(7,4000,0.001624735);
-   graph->SetPoint(8,4500,0.000555587);
-   graph->SetPoint(9,5000,0.000178534);
-   graph->SetPoint(10,5500,6.28742e-05);
-   graph->SetPoint(11,6000,1.84131e-05);
+   graph->SetPoint(0,500,49.67841833);
+   graph->SetPoint(1,1000,3.6620241);
+   graph->SetPoint(2,1500,0.6237226667);
+   graph->SetPoint(3,2000,0.15069219);
+   graph->SetPoint(4,2500,0.04230208667);
+   graph->SetPoint(5,3000,0.01271737667);
+   graph->SetPoint(6,3500,0.004047701667);
+   graph->SetPoint(7,4000,0.001353945833);
+   graph->SetPoint(8,4500,0.0004629891667);
+   graph->SetPoint(9,5000,0.0001487783333);
+   graph->SetPoint(10,5500,5.239516667e-05);
+   graph->SetPoint(11,6000,1.534425e-05);
    
    TH1F *Graph_Graph_Graph612 = new TH1F("Graph_Graph_Graph612","Graph",100,0,6550);
-   Graph_Graph_Graph612->SetMinimum(1.657179e-05);
-   Graph_Graph_Graph612->SetMaximum(65.57551);
+   Graph_Graph_Graph612->SetMinimum(1.380983e-05);
+   Graph_Graph_Graph612->SetMaximum(54.64626);
    Graph_Graph_Graph612->SetDirectory(0);
    Graph_Graph_Graph612->SetStats(0);
 
@@ -1763,12 +1763,6 @@
    graph->Draw("lp ");
    TLatex *   tex = new TLatex(0.17,0.92,"CMS");
 tex->SetNDC();
-   tex->SetTextSize(0.045);
-   tex->SetLineWidth(2);
-   tex->Draw();
-      tex = new TLatex(0.28,0.92,"Preliminary");
-tex->SetNDC();
-   tex->SetTextFont(52);
    tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
    tex->Draw();
@@ -2529,22 +2523,22 @@ tex->SetNDC();
    graph->SetLineStyle(8);
    graph->SetLineWidth(2);
    graph->SetMarkerSize(0);
-   graph->SetPoint(0,500,59.614102);
-   graph->SetPoint(1,1000,4.39442892);
-   graph->SetPoint(2,1500,0.7484672);
-   graph->SetPoint(3,2000,0.180830628);
-   graph->SetPoint(4,2500,0.050762504);
-   graph->SetPoint(5,3000,0.015260852);
-   graph->SetPoint(6,3500,0.004857242);
-   graph->SetPoint(7,4000,0.001624735);
-   graph->SetPoint(8,4500,0.000555587);
-   graph->SetPoint(9,5000,0.000178534);
-   graph->SetPoint(10,5500,6.28742e-05);
-   graph->SetPoint(11,6000,1.84131e-05);
+   graph->SetPoint(0,500,49.67841833);
+   graph->SetPoint(1,1000,3.6620241);
+   graph->SetPoint(2,1500,0.6237226667);
+   graph->SetPoint(3,2000,0.15069219);
+   graph->SetPoint(4,2500,0.04230208667);
+   graph->SetPoint(5,3000,0.01271737667);
+   graph->SetPoint(6,3500,0.004047701667);
+   graph->SetPoint(7,4000,0.001353945833);
+   graph->SetPoint(8,4500,0.0004629891667);
+   graph->SetPoint(9,5000,0.0001487783333);
+   graph->SetPoint(10,5500,5.239516667e-05);
+   graph->SetPoint(11,6000,1.534425e-05);
    
    TH1F *Graph_Graph_Graph_Graph61219 = new TH1F("Graph_Graph_Graph_Graph61219","Graph",100,0,6550);
-   Graph_Graph_Graph_Graph61219->SetMinimum(1.657179e-05);
-   Graph_Graph_Graph_Graph61219->SetMaximum(65.57551);
+   Graph_Graph_Graph_Graph61219->SetMinimum(1.380983e-05);
+   Graph_Graph_Graph_Graph61219->SetMaximum(54.64626);
    Graph_Graph_Graph_Graph61219->SetDirectory(0);
    Graph_Graph_Graph_Graph61219->SetStats(0);
 

@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Thu Jul 28 16:12:56 2016) by ROOT version5.34/31
+//=========  (Mon Sep 12 09:52:31 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,800,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -449,12 +449,6 @@ tex->SetNDC();
    tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.28,0.92,"Preliminary");
-tex->SetNDC();
-   tex->SetTextFont(52);
-   tex->SetTextSize(0.045);
-   tex->SetLineWidth(2);
-   tex->Draw();
       tex = new TLatex(0.63,0.92,"12.9 fb^{-1} (13 TeV)");
 tex->SetNDC();
    tex->SetTextFont(42);
@@ -473,7 +467,10 @@ tex->SetNDC();
    leg->SetLineColor(0);
    leg->SetLineStyle(1);
    leg->SetLineWidth(1);
-   leg->SetFillColor(0);
+
+   ci = 1923;
+   color = new TColor(ci, 1, 1, 1, " ", 0);
+   leg->SetFillColor(ci);
    leg->SetFillStyle(1001);
    TLegendEntry *entry=leg->AddEntry("Graph0","Observed","lp");
 

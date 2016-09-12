@@ -1453,7 +1453,7 @@ tex->SetNDC();
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.13,0.962,"CMS");
+      tex = new TLatex(0.1,0.962,"CMS");
 tex->SetNDC();
    tex->SetTextAlign(11);
    tex->SetTextFont(61);
@@ -1466,7 +1466,7 @@ tex->SetNDC();
    tex->SetTextFont(52);
    tex->SetTextSize(0.0285);
    tex->SetLineWidth(2);
-   tex->Draw();
+   //tex->Draw();
    
    TH1F *CDF1_1_fbinv__1 = new TH1F("CDF1_1_fbinv__1","Graph",100,200,2500);
    CDF1_1_fbinv__1->SetMinimum(0);

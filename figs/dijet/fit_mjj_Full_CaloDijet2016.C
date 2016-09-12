@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Fri Jul 29 07:09:49 2016) by ROOT version5.34/31
+//=========  (Mon Sep 12 10:04:15 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,600,700);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -608,15 +608,9 @@ tex->SetNDC();
    tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.2,0.96,"CMS");
+      tex = new TLatex(0.175,0.96,"CMS");
 tex->SetNDC();
    tex->SetTextSize(0.055);
-   tex->SetLineWidth(2);
-   tex->Draw();
-      tex = new TLatex(0.3,0.96,"Preliminary");
-tex->SetNDC();
-   tex->SetTextFont(52);
-   tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
    tex->Draw();
    
