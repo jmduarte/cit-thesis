@@ -379,7 +379,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("VetoLeptonControlRegionlep1PtZInvClone","Z #rightarrow #nu #nu","f");
+   entry=leg->AddEntry("VetoLeptonControlRegionlep1PtZInvClone","Z #rightarrow #nu #bar#nu","f");
 
    ci = TColor::GetColor("#00cccc");
    entry->SetFillColor(ci);
@@ -436,7 +436,7 @@ tex->SetNDC();
    lep1Pt_VetoLeptonControlRegionpad2->SetLogx();
    lep1Pt_VetoLeptonControlRegionpad2->SetGridy();
    lep1Pt_VetoLeptonControlRegionpad2->SetTopMargin(0.04);
-   lep1Pt_VetoLeptonControlRegionpad2->SetBottomMargin(0.25);
+   lep1Pt_VetoLeptonControlRegionpad2->SetBottomMargin(0.30);
    lep1Pt_VetoLeptonControlRegionpad2->SetFrameBorderMode(0);
    lep1Pt_VetoLeptonControlRegionpad2->SetFrameBorderMode(0);
    Double_t xAxis9[8] = {5, 10, 15, 20, 30, 40, 100, 1000}; 
@@ -474,7 +474,7 @@ tex->SetNDC();
    VetoLeptonControlRegionlep1PtOtherClone->GetXaxis()->SetNoExponent();
    VetoLeptonControlRegionlep1PtOtherClone->GetXaxis()->SetLabelFont(42);
    VetoLeptonControlRegionlep1PtOtherClone->GetXaxis()->SetLabelSize(0.12);
-   VetoLeptonControlRegionlep1PtOtherClone->GetXaxis()->SetTitleSize(0.11);
+   VetoLeptonControlRegionlep1PtOtherClone->GetXaxis()->SetTitleSize(0.14);
    VetoLeptonControlRegionlep1PtOtherClone->GetXaxis()->SetTitleOffset(1.0);
    //VetoLeptonControlRegionlep1PtOtherClone->GetXaxis()->SetLabelSize(0.1);
    //VetoLeptonControlRegionlep1PtOtherClone->GetXaxis()->SetTitleSize(0.1);

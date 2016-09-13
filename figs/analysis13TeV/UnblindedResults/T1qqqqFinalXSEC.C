@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: cCONT_/cCONT_
-//=========  (Sat Mar 19 19:10:42 2016) by ROOT version5.34/18
+//=========  (Sat Sep 10 19:24:43 2016) by ROOT version5.34/18
    TCanvas *cCONT_ = new TCanvas("cCONT_", "cCONT_",0,23,600,600);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -3701,7 +3701,7 @@ palette->SetTitleSize(0.06);
    graph->SetHistogram(Graph_Graph_white910);
    
    graph->Draw("l");
-   TLatex *   tex = new TLatex(0.15,0.98,"CMS");
+   TLatex *   tex = new TLatex(0.17,0.98,"CMS");
 tex->SetNDC();
    tex->SetTextAlign(13);
    tex->SetLineWidth(2);

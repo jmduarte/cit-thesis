@@ -57,19 +57,21 @@ if __name__ == '__main__':
                     'Bin Number':'',
                     '0.3686042':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,    
                     '0.3542528':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,   
-                    #'0.4525607':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
-                    '0.4525607':'4./10.*70.*h_th1x_data_%ibtag->GetMaximum()'%btag, # for MultiJet 2-btag fix
+                    '0.4525607':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
+                    #'0.4525607':'4./10.*70.*h_th1x_data_%ibtag->GetMaximum()'%btag, # for MultiJet 2-btag signal injection fix
                     '0.4728708':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
                     '0.3951752':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
                     '0.4075679':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
-                    #'0.2924018':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
-                    '0.2924018':'4./10.*10.*225.', # for MultiJet 3-btag fix
+                    '0.2924018':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
+                    #'0.2924018':'4./10.*10.*225.', # for MultiJet 3-btag signal injection fix
                     '1.01475':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
                     '0.7368996':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
                     '2.30066':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
                     '1.435182':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
                     '0.8665026':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
                     '0.8254818':'4*h_th1x_data_%ibtag->GetMaximum()'%btag,
+                    'Stat.+Sys. n#sigma':'Deviation [#sigma]',
+                    'SetTitleSize(0.16)':'SetTitleSize(0.18)',
                     'TLegend *leg = new TLegend(0.7,0.6,0.9,0.8,NULL,"brNDC");':'TLegend *leg = new TLegend(0.8,0.5,0.94,0.7,NULL,"brNDC");',
                     'TLegend *leg = new TLegend(0.7,0.5,0.9,0.8,NULL,"brNDC");':'TLegend *leg = new TLegend(0.8,0.4,0.94,0.7,NULL,"brNDC");',
                     'tex = new TLatex(0.3,0.77,"m_{#tilde{g}} = 1400 GeV, m_{#tilde{#chi}} = 100 GeV");':'tex = new TLatex(0.5,0.82,"m_{#tilde{g}} = 1400 GeV, m_{#tilde{#chi}_{1}^{0}} = 100 GeV");',
@@ -130,11 +132,12 @@ if __name__ == '__main__':
                     
                 #lines[i]+= 'tex = new TLatex(0.195,0.77,"M_{R}"); tex->SetNDC(); tex->SetTextFont(62); tex->SetTextSize(0.04); tex->Draw();'
                 lines[i]+= 'tex = new TLatex(0.1725,0.77,"M_{R} [GeV]"); tex->SetNDC(); tex->SetTextFont(62); tex->SetTextSize(0.04); tex->Draw();'
-                lines[i]+= 'tex = new TLatex(0.13,0.07,"R^{2}"); tex->SetNDC(); tex->SetTextFont(62); tex->SetTextSize(0.04); tex->Draw();'
+                #lines[i]+= 'tex = new TLatex(0.13,0.07,"R^{2}"); tex->SetNDC(); tex->SetTextFont(62); tex->SetTextSize(0.04); tex->Draw();'
+                # after final reading, wanted bigger R^2
+                lines[i]+= 'tex = new TLatex(0.96,0.07,"R^{2}"); tex->SetNDC(); tex->SetTextFont(42); tex->SetTextSize(0.07); tex->Draw();'
             
             if 'h_th1x_data_%ibtag->Draw("pesame");'%btag in line:
                 lines[i] = 'gClone->Draw("zpsame"); g->Draw("zpsame"); h_th1x_data_%ibtag->Draw("axissame");'%btag
-                    
     lines[-1] = lines[-1].replace('}','c->Print("%s");}'%fileName.replace('.C','.pdf'))
     f.close()
     

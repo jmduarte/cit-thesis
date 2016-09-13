@@ -10,7 +10,7 @@
    GJetsInvControlRegionc->SetFrameBorderMode(0);
   
 // ------------>Primitives in pad: MRRsqGJetsInvControlRegionUnrolledDataMCpad1
-   TPad *MRRsqGJetsInvControlRegionUnrolledDataMCpad1 = new TPad("MRRsqGJetsInvControlRegionUnrolledDataMCpad1", "MRRsqGJetsInvControlRegionUnrolledDataMCpad1",0,0.28,1,1);
+   TPad *MRRsqGJetsInvControlRegionUnrolledDataMCpad1 = new TPad("MRRsqGJetsInvControlRegionUnrolledDataMCpad1", "MRRsqGJetsInvControlRegionUnrolledDataMCpad1",0,0.18,1,1);
    MRRsqGJetsInvControlRegionUnrolledDataMCpad1->Draw();
    MRRsqGJetsInvControlRegionUnrolledDataMCpad1->cd();
    MRRsqGJetsInvControlRegionUnrolledDataMCpad1->Range(-3.5,-5.194933,31.5,6.045542);
@@ -73,7 +73,7 @@
    thstackMC_stack_1->GetYaxis()->SetLabelFont(42);
    thstackMC_stack_1->GetYaxis()->SetLabelSize(0.06);
    thstackMC_stack_1->GetYaxis()->SetTitleSize(0.06);
-   thstackMC_stack_1->GetYaxis()->SetTitleOffset(0.7);
+   thstackMC_stack_1->GetYaxis()->SetTitleOffset(0.75);
    thstackMC_stack_1->GetYaxis()->SetTitleFont(42);
    thstackMC_stack_1->GetZaxis()->SetLabelFont(42);
    thstackMC_stack_1->GetZaxis()->SetLabelSize(0.035);
@@ -715,10 +715,11 @@ tex->SetNDC();
    tex->SetTextSize(0.035);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.06,0.12,"R^{2}");
+      tex = new TLatex(0.93,0.12,"R^{2}");
 tex->SetNDC();
    tex->SetTextAlign(22);
-   tex->SetTextSize(0.035);
+   tex->SetTextSize(0.06);
+   tex->SetTextFont(42);
    tex->SetLineWidth(2);
    tex->Draw();
       tex = new TLatex(0.1714286,0.8,"[400, 500]");
@@ -855,7 +856,7 @@ tex->SetNDC();
    GJetsInvControlRegionc->cd();
   
 // ------------>Primitives in pad: MRRsqGJetsInvControlRegionUnrolledDataMCpad2
-   MRRsqGJetsInvControlRegionUnrolledDataMCpad2 = new TPad("MRRsqGJetsInvControlRegionUnrolledDataMCpad2", "MRRsqGJetsInvControlRegionUnrolledDataMCpad2",0,0,1,0.3);
+   MRRsqGJetsInvControlRegionUnrolledDataMCpad2 = new TPad("MRRsqGJetsInvControlRegionUnrolledDataMCpad2", "MRRsqGJetsInvControlRegionUnrolledDataMCpad2",0,0,1,0.2);
    MRRsqGJetsInvControlRegionUnrolledDataMCpad2->Draw();
    MRRsqGJetsInvControlRegionUnrolledDataMCpad2->cd();
    MRRsqGJetsInvControlRegionUnrolledDataMCpad2->Range(-3.5,-0.2312139,31.5,2.080925);
@@ -972,8 +973,8 @@ tex->SetNDC();
    histMRVsRsq_OtherUnroll->GetYaxis()->SetNdivisions(505);
    histMRVsRsq_OtherUnroll->GetYaxis()->SetLabelFont(42);
    histMRVsRsq_OtherUnroll->GetYaxis()->SetLabelSize(0.1);
-   histMRVsRsq_OtherUnroll->GetYaxis()->SetTitleSize(0.09);
-   histMRVsRsq_OtherUnroll->GetYaxis()->SetTitleOffset(0.35);
+   histMRVsRsq_OtherUnroll->GetYaxis()->SetTitleSize(0.16);
+   histMRVsRsq_OtherUnroll->GetYaxis()->SetTitleOffset(0.16);
    histMRVsRsq_OtherUnroll->GetYaxis()->SetTitleFont(42);
    histMRVsRsq_OtherUnroll->GetZaxis()->SetLabelFont(42);
    histMRVsRsq_OtherUnroll->GetZaxis()->SetLabelSize(0.035);

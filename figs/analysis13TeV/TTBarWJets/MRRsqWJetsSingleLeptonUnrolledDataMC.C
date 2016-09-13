@@ -10,7 +10,7 @@
    WJetsSingleLeptonc->SetFrameBorderMode(0);
   
 // ------------>Primitives in pad: MRRsqWJetsSingleLeptonUnrolledDataMCpad1
-   TPad *MRRsqWJetsSingleLeptonUnrolledDataMCpad1 = new TPad("MRRsqWJetsSingleLeptonUnrolledDataMCpad1", "MRRsqWJetsSingleLeptonUnrolledDataMCpad1",0,0.28,1,1);
+   TPad *MRRsqWJetsSingleLeptonUnrolledDataMCpad1 = new TPad("MRRsqWJetsSingleLeptonUnrolledDataMCpad1", "MRRsqWJetsSingleLeptonUnrolledDataMCpad1",0,0.18,1,1);
    MRRsqWJetsSingleLeptonUnrolledDataMCpad1->Draw();
    MRRsqWJetsSingleLeptonUnrolledDataMCpad1->cd();
    MRRsqWJetsSingleLeptonUnrolledDataMCpad1->Range(-4.75,-5.291687,42.75,6.367263);
@@ -83,7 +83,7 @@
    thstackMC_stack_3->GetYaxis()->SetLabelFont(42);
    thstackMC_stack_3->GetYaxis()->SetLabelSize(0.06);
    thstackMC_stack_3->GetYaxis()->SetTitleSize(0.06);
-   thstackMC_stack_3->GetYaxis()->SetTitleOffset(0.7);
+   thstackMC_stack_3->GetYaxis()->SetTitleOffset(0.75);
    thstackMC_stack_3->GetYaxis()->SetTitleFont(42);
    thstackMC_stack_3->GetZaxis()->SetLabelFont(42);
    thstackMC_stack_3->GetZaxis()->SetLabelSize(0.035);
@@ -854,11 +854,12 @@ tex->SetNDC();
    tex->SetTextSize(0.035);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.06,0.12,"R^{2}");
+      tex = new TLatex(0.93,0.12,"R^{2}");
 tex->SetNDC();
    tex->SetTextAlign(22);
-   tex->SetTextSize(0.035);
+   tex->SetTextSize(0.06);
    tex->SetLineWidth(2);
+   tex->SetTextFont(42);
    tex->Draw();
       tex = new TLatex(0.1736842,0.8,"[300, 400]");
 tex->SetNDC();
@@ -1008,7 +1009,7 @@ tex->SetNDC();
    WJetsSingleLeptonc->cd();
   
 // ------------>Primitives in pad: MRRsqWJetsSingleLeptonUnrolledDataMCpad2
-   MRRsqWJetsSingleLeptonUnrolledDataMCpad2 = new TPad("MRRsqWJetsSingleLeptonUnrolledDataMCpad2", "MRRsqWJetsSingleLeptonUnrolledDataMCpad2",0,0,1,0.3);
+   MRRsqWJetsSingleLeptonUnrolledDataMCpad2 = new TPad("MRRsqWJetsSingleLeptonUnrolledDataMCpad2", "MRRsqWJetsSingleLeptonUnrolledDataMCpad2",0,0,1,0.2);
    MRRsqWJetsSingleLeptonUnrolledDataMCpad2->Draw();
    MRRsqWJetsSingleLeptonUnrolledDataMCpad2->cd();
    MRRsqWJetsSingleLeptonUnrolledDataMCpad2->Range(-4.75,-0.2312139,42.75,2.080925);
@@ -1155,8 +1156,8 @@ tex->SetNDC();
    WJetsSingleLeptonMRRsqOtherUnroll->GetYaxis()->SetNdivisions(505);
    WJetsSingleLeptonMRRsqOtherUnroll->GetYaxis()->SetLabelFont(42);
    WJetsSingleLeptonMRRsqOtherUnroll->GetYaxis()->SetLabelSize(0.1);
-   WJetsSingleLeptonMRRsqOtherUnroll->GetYaxis()->SetTitleSize(0.09);
-   WJetsSingleLeptonMRRsqOtherUnroll->GetYaxis()->SetTitleOffset(0.35);
+   WJetsSingleLeptonMRRsqOtherUnroll->GetYaxis()->SetTitleSize(0.16);
+   WJetsSingleLeptonMRRsqOtherUnroll->GetYaxis()->SetTitleOffset(0.16);
    WJetsSingleLeptonMRRsqOtherUnroll->GetYaxis()->SetTitleFont(42);
    WJetsSingleLeptonMRRsqOtherUnroll->GetZaxis()->SetLabelFont(42);
    WJetsSingleLeptonMRRsqOtherUnroll->GetZaxis()->SetLabelSize(0.035);

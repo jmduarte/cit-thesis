@@ -338,7 +338,7 @@ tex->SetNDC();
    TTJetsSingleLeptonc->cd();
   
 // ------------>Primitives in pad: MR_TTJetsSingleLeptonpad2
-   MR_TTJetsSingleLeptonpad2 = new TPad("MR_TTJetsSingleLeptonpad2", "MR_TTJetsSingleLeptonpad2",0,0,1,0.4);
+   MR_TTJetsSingleLeptonpad2 = new TPad("MR_TTJetsSingleLeptonpad2", "MR_TTJetsSingleLeptonpad2",0,0.0,1,0.4);
    MR_TTJetsSingleLeptonpad2->Draw();
    MR_TTJetsSingleLeptonpad2->cd();
    MR_TTJetsSingleLeptonpad2->Range(2.336504,0.1478873,3.742677,1.556338);
@@ -348,7 +348,7 @@ tex->SetNDC();
    MR_TTJetsSingleLeptonpad2->SetLogx();
    MR_TTJetsSingleLeptonpad2->SetGridy();
    MR_TTJetsSingleLeptonpad2->SetTopMargin(0.04);
-   MR_TTJetsSingleLeptonpad2->SetBottomMargin(0.25);
+   MR_TTJetsSingleLeptonpad2->SetBottomMargin(0.30);
    MR_TTJetsSingleLeptonpad2->SetFrameBorderMode(0);
    MR_TTJetsSingleLeptonpad2->SetFrameBorderMode(0);
    Double_t xAxis39[8] = {300, 400, 500, 600, 700, 900, 1200, 4000}; 
@@ -389,7 +389,7 @@ tex->SetNDC();
    //TTJetsSingleLeptonMROtherClone->GetXaxis()->SetLabelSize(0.1);
    TTJetsSingleLeptonMROtherClone->GetXaxis()->SetTitleSize(0.12);
    //TTJetsSingleLeptonMROtherClone->GetXaxis()->SetTitleSize(0.1);
-   TTJetsSingleLeptonMROtherClone->GetXaxis()->SetTitleOffset(0.9);
+   TTJetsSingleLeptonMROtherClone->GetXaxis()->SetTitleOffset(1.2);
    //TTJetsSingleLeptonMROtherClone->GetXaxis()->SetTitleOffset(1.2);
    TTJetsSingleLeptonMROtherClone->GetXaxis()->SetTitleFont(42);
    TTJetsSingleLeptonMROtherClone->GetYaxis()->SetTitle("Data / pred.");

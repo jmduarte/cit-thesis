@@ -10,7 +10,7 @@
    TTJetsDileptonControlRegionc->SetFrameBorderMode(0);
   
 // ------------>Primitives in pad: MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad1
-   TPad *MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad1 = new TPad("MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad1", "MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad1",0,0.28,1,1);
+   TPad *MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad1 = new TPad("MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad1", "MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad1",0,0.18,1,1);
    MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad1->Draw();
    MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad1->cd();
    MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad1->Range(-1.875,-4.227061,16.875,2.929581);
@@ -60,7 +60,7 @@
    thstackMC_stack_1->GetYaxis()->SetLabelFont(42);
    thstackMC_stack_1->GetYaxis()->SetLabelSize(0.06);
    thstackMC_stack_1->GetYaxis()->SetTitleSize(0.06);
-   thstackMC_stack_1->GetYaxis()->SetTitleOffset(0.7);
+   thstackMC_stack_1->GetYaxis()->SetTitleOffset(0.75);
    thstackMC_stack_1->GetYaxis()->SetTitleFont(42);
    thstackMC_stack_1->GetZaxis()->SetLabelFont(42);
    thstackMC_stack_1->GetZaxis()->SetLabelSize(0.035);
@@ -406,10 +406,11 @@ tex->SetNDC();
    tex->SetTextSize(0.035);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.06,0.12,"R^{2}");
+      tex = new TLatex(0.93,0.12,"R^{2}");
 tex->SetNDC();
    tex->SetTextAlign(22);
-   tex->SetTextSize(0.035);
+   tex->SetTextSize(0.06);
+   tex->SetTextFont(42);
    tex->SetLineWidth(2);
    tex->Draw();
       tex = new TLatex(0.18,0.8,"[300, 400]");
@@ -523,7 +524,7 @@ tex->SetNDC();
    TTJetsDileptonControlRegionc->cd();
   
 // ------------>Primitives in pad: MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad2
-   MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad2 = new TPad("MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad2", "MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad2",0,0,1,0.3);
+   MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad2 = new TPad("MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad2", "MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad2",0,0,1,0.2);
    MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad2->Draw();
    MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad2->cd();
    MRRsqTTJetsDileptonControlRegionUnrolledDataMCpad2->Range(-1.875,-0.2312139,16.875,2.080925);
@@ -601,8 +602,8 @@ tex->SetNDC();
    histMRVsRsq_OtherUnroll->GetYaxis()->SetNdivisions(505);
    histMRVsRsq_OtherUnroll->GetYaxis()->SetLabelFont(42);
    histMRVsRsq_OtherUnroll->GetYaxis()->SetLabelSize(0.1);
-   histMRVsRsq_OtherUnroll->GetYaxis()->SetTitleSize(0.09);
-   histMRVsRsq_OtherUnroll->GetYaxis()->SetTitleOffset(0.35);
+   histMRVsRsq_OtherUnroll->GetYaxis()->SetTitleSize(0.16);
+   histMRVsRsq_OtherUnroll->GetYaxis()->SetTitleOffset(0.16);
    histMRVsRsq_OtherUnroll->GetYaxis()->SetTitleFont(42);
    histMRVsRsq_OtherUnroll->GetZaxis()->SetLabelFont(42);
    histMRVsRsq_OtherUnroll->GetZaxis()->SetLabelSize(0.035);

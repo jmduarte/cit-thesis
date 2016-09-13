@@ -31,7 +31,7 @@ well as their ratio.
 \includegraphics[width=0.45\textwidth]{figs/analysis13TeV/stop13TeV8TeV.pdf}
 \caption{ The NLO$+$NLL pair production cross sections for gluinos (left) and
   top squarks (right) in $\Pp\Pp$ collisions at $\sqrt{s}=8\TeV$ and
-  $13 \TeV$~\cite{NLONLL1,NLONLL2,NLONLL3,NLONLL4,NLONLL5,NLONLLerr,Borschensky:2014cia}. The bottom panel shows the ratio of the cross sections.
+  $13 \TeV$~\cite{NLONLL1,NLONLL2,NLONLL3,NLONLL4,NLONLL5,NLONLLerr,Borschensky:2014cia,jmgd}. The bottom panel shows the ratio of the cross sections.
  }
 \label{fig:gluinostop13TeV8TeV}
 \end{figure}
@@ -72,7 +72,7 @@ signal and background samples is given in
 Sec.~\ref{sec:simulation}. Sec.~\ref{sec:Objects} describes
 physics object reconstruction and event
 selection. Sec.~\ref{sec:StrategySelection} describes the analysis
-strategy and razor variables, and the background estimation techniques
+strategy, and the background estimation techniques
 used in this analysis are described in
 Sec.~\ref{sec:Background}. Sec.~\ref{sec:Systematics} covers the
 systematic uncertainties. Finally, our results and their interpretation
@@ -81,27 +81,28 @@ are presented in Sec.~\ref{sec:Results}, followed by a summary in Sec.~\ref{sec:
 
 \section{Simulated event samples}
 \label{sec:simulation}
+
 Simulated Monte Carlo (MC) samples are used for modeling of the SM backgrounds
-in the search regions and for calculating the selection efficiencies for SUSY signal models.
-Events corresponding to the background processes of $\PW+$jets, $\cPZ+$jets, $\ttbar+$jets, $\cPgg+$jets,
-and Quantum Chromodynamics (QCD) multijets, as well as the signal processes of gluino and top squark
-pair production, are generated with \MADGRAPH v5~\cite{Alwall:2011uj} interfaced with \PYTHIA
+in the search regions and for calculating the selection efficiencies for
+SUSY signal models. The production of $\ttbar+$jets, $\PW+$jets, $\cPZ+$jets, $\cPgg+$jets,
+and QCD multijet events, as well as production of gluino and top squark
+pairs, is simulated with the MC generator \MADGRAPH v5~\cite{Alwall:2011uj}. Single
+top quark events are modeled at next-to-leading order (NLO) with \MATNLO~v2.2~\cite{Alwall:2014hca}
+for the $s$-channel, and with \POWHEG~v2~\cite{Alioli:2009je, Re:2010bp}
+for the $t$-channel and $\PW$-associated production. Contributions from
+$\ttbar\PW$, $\ttbar\cPZ$ are also simulated with
+\MATNLO~v2.2. Simulated events are interfaced with \PYTHIA
 v8.2~\cite{Sjostrand2008852} for fragmentation and parton
-showering, and matched to the matrix element kinematic configuration using the MLM
-algorithm~\cite{Hoche:2006ph}. Other background processes are generated with
-\MATNLO~v2.2~\cite{Alwall:2014hca} ($s$-channel single top quark, $\ttbar\PW$, $\ttbar\cPZ$) and 
-with \POWHEG~v2~\cite{Alioli:2009je, Re:2010bp} ($t$-channel
-single top quark, $\cPqt\PW$), both interfaced with \PYTHIA v8.2. The
-\textsc{NNPDF3.0LO} and \textsc{NNPDF3.0NLO}~\cite{Ball:2014uwa} parton distribution functions (PDF) are
+showering.  The \textsc{NNPDF3.0LO} and \textsc{NNPDF3.0NLO}~\cite{Ball:2014uwa} parton distribution functions (PDF) are
 used, respectively, with \MADGRAPH, and with \POWHEG and \MATNLO. 
 
 The SM background events are simulated using a \GEANTfour-based model~\cite{G4} of the CMS detector.
 The simulation of SUSY signal model events is performed using the CMS fast
 simulation package~\cite{FastSim}. All simulated events include the
-effects of pileup, i.e. multiple $\Pp\Pp$ collisions within the same or
-neighboring bunch crossings (in time), and are processed with the same chain of
-reconstruction programs as used for collision data. Simulated events are weighted to
-reproduce the observed distribution of pileup in the dataset, calculated based on the measured 
+effects of pileup, i.e.~multiple $\Pp\Pp$ collisions within the same or
+neighboring bunch crossings, and are processed with the same chain of
+reconstruction programs as is used for collision data. Simulated events are weighted to
+reproduce the observed distribution of pileup vertices in the data set, calculated based on the measured 
 instantaneous luminosity. 
 
 The SUSY signal production cross sections are calculated to next-to-leading
@@ -137,10 +138,11 @@ $|\eta|<3.0$.
 %candidates in an event. Its magnitude is referred to as the missing
 %transverse energy \ETmiss.
  
+
 Electrons are reconstructed by associating a cluster of
 energy deposited in the ECAL with a reconstructed track~\cite{Khachatryan:2015hwa}, 
-and are required to have $\pt > 5 \GeV$ and $|\eta|<2.5$. A ``tight''
-selection, updated for 13 \TeV, used to identify prompt electrons is based on requirements
+and are required to have $\pt > 5 \GeV$ and $|\eta|<2.5$. A ``tight'' selection
+used to identify prompt electrons is based on requirements
 on the electromagnetic shower shape, the geometric matching of
 the track to the calorimeter cluster, the track quality and impact
 parameter, and isolation. The isolation of electrons and muons is
@@ -148,7 +150,7 @@ defined as the scalar sum of the transverse momenta of all neutral and
 charged PF candidates within a cone $\Delta R = \sqrt{(\Delta\eta)^2+(\Delta\phi)^2}$ along the lepton
 direction. The variable is corrected for the effects of pileup using an
 effective area correction~\cite{CMS-PAS-JME-14-001}, and the cone size
-$\Delta R$ shrinks with increasing lepton $\pt$ according to:
+$\Delta R$ shrinks with increasing lepton $\pt$  according to
 \begin{equation}
  \label{eq:miniIsolation}
  \Delta R= 
@@ -161,8 +163,9 @@ $\Delta R$ shrinks with increasing lepton $\pt$ according to:
 The use of the lepton $\pt$ dependent isolation cone enhances the
 efficiency of identifying leptons in events containing a large amount of hadronic
 energy, such as those with $\ttbar$ production. For tight electrons, the isolation is required to be less than $10\%$ of 
-the electron $\pt$. The selection efficiency for tight electrons increases from $60\%$ for $\pt$ around 20~$\GeV$
-to $70\%$ for $\pt$ around 40~$\GeV$ and to $80\%$ for $\pt$ above 50~$\GeV$. 
+the electron $\pt$. The selection efficiency for tight electrons increases from $60\%$ for $\pt$ around $20\GeV$
+to $70\%$ for $\pt$ around $40\GeV$ and to $80\%$ for $\pt$ above
+$50\GeV$. 
 
 To improve the purity of all-hadronic signals in the zero-lepton event categories, a looser ``veto''
 selection is also defined.  For this selection, electrons are required to have $\pt>5 \GeV$.  The output of a boosted decision tree is used to identify electrons based on shower
@@ -170,50 +173,50 @@ shape and track information~\cite{Khachatryan:2015hwa}.
 For electrons with $\pt>20 \GeV$, the isolation is required to be less than $20\%$ of the 
 electron $\pt$.  For electrons with $\pt$ between $5$ and $20 \GeV$, the value of the 
 absolute isolation, computed by summing the $\pt$'s of all particle flow candidates within a 
-$\Delta R$ cone of $0.3$, is required to be less than $5 \GeV$. For the veto electron selection, the efficiency increases from $60\%$ for $\pt$ around 5~$\GeV$
-to $80\%$ for $\pt$ around 15~$\GeV$ and $90\%$ for $\pt$ above 20~$\GeV$. 
+$\Delta R$ cone of $0.3$, is required to be less than $5 \GeV$. For
+the veto electron selection, the efficiency increases from $60\%$ for
+$\pt$ around $5 \GeV$ to $80\%$ for $\pt$ around $15 \GeV$ and $90\%$ for $\pt$ above $20 \GeV$. 
 
 Muons are reconstructed by combining tracks found in the muon system with 
 corresponding tracks in the silicon detectors~\cite{Chatrchyan:2012xi},
 and are required to have $\pt > 5 \GeV$ and $|\eta|<2.4$. Muons are identified
 based on the quality of the track fit, the number of detector hits used in the 
 tracking algorithm, and the compatibility between track
-segments. Similar to electrons, we define ``tight'' and ``veto'' muon selections. The absolute value of the 3D impact 
+segments. As for electrons, we define ``tight'' and ``veto'' muon selections. The absolute value of the 3D impact 
 parameter significance of the muon track, which is defined as the ratio of the impact
 parameter to its estimated uncertainty, is required to be less than
 4. For both tight and veto muons with 
 $\pt > 20 \GeV$ the isolation is required to be less than $20\%$
 of the muon $\pt$, while for veto muons with $\pt$ between $5$ and $20 \GeV$
-the absolute isolation computed using a $\Delta R$ cone of $0.4$ 
-is required to be less than $10 \GeV$. For tight muons we require that
-$d_0<0.2$~cm, where $d_0$ is the transverse impact parameter of the muon
+the isolation computed using a $\Delta R$ cone of $0.4$ 
+is required to be less than $10 \GeV$. For tight muons we require $d_0<0.2 \unit{cm}$, where $d_0$ is the transverse impact parameter of the muon
 track, while this selection is not applied for veto muons. 
-The selection efficiency for tight muons increases from $65\%$ for $\pt$ around 20~$\GeV$
-to $75\%$ for $\pt$ around 40~$\GeV$ and to $80\%$ for $\pt$ above 50~$\GeV$. 
-For the veto muon selection, the efficiency increases from $85\%$ for $\pt$ around 5~$\GeV$
-to $95\%$ for $\pt$ above 20~$\GeV$. 
+The selection efficiency for tight muons increases from $65\%$ for
+$\pt$ around $20 \GeV$ to $75\%$ for $\pt$ around 40~$\GeV$ and to $80\%$ for $\pt$ above $50 \GeV$. 
+For the veto muon selection, the efficiency increases from $85\%$ for
+$\pt$ around $5 \GeV$ to $95\%$ for $\pt$ above 20~$\GeV$. 
 
 We additionally reconstruct and identify hadronically decaying $\ensuremath{\tau}$ 
 leptons ($\ensuremath{\tau_{\mathrm{h}}}$) to further enhance the all-hadronic purity 
 of the zero-lepton event categories, using the hadron-plus-strips algorithm~\cite{Khachatryan:2015dfa}, which
 identifies $\ensuremath{\tau}$ decay modes
-with one charged hadron and up to two neutral pions or three charged hadrons.
+with one charged hadron and up to two neutral pions, or three charged hadrons.
 The $\ensuremath{\tau_{\mathrm{h}}}$ candidate is required to have
 $\pt>20 \GeV$, and the isolation, defined as the $\pt$ sum of other nearby PF candidates, must be below a certain threshold. 
 The loose cutoff-based selection~\cite{Khachatryan:2015dfa} is used and results in an efficiency
-of about $50\%$ for successfully reconstructed $\ensuremath{\tau_{\mathrm{h}}}$.
+of about $50\%$ for successfully reconstructed $\ensuremath{\tau_{\mathrm{h}}}$ decays.
 
-To identify jets originating from \PB-meson decays, we use the updated
+To identify jets originating from \cPqb-hadron decays, we use the updated
 CSVv2 \cPqb-jet tagger (see Sec.~\ref{sec:btag}), which uses the inclusive
 vertex finder to select \cPqb-jets~\cite{CMS-PAS-BTV-15-001,btag8TeV,btag7TeV}. The ``medium'' 
 working point selection is used to define the event categories for the search signal regions,
-and for jets with $\pt$ between $40$ and $200$~$\GeV$ yields an
+and for jets with $\pt$ between $40$ and $200 \GeV$ yields an
 efficiency of approximately $70\%$ for \cPqb-jets and an average 
 misidentification probability of $1.5\%$ for jets originating from light-flavor 
 quarks or gluons in typical background events relevant for this search.
 
 Photon candidates are reconstructed from clusters of energy deposits
-in ECAL. They are identified using a selection on the hadronic to
+in the ECAL. They are identified using selections on the hadronic to
 electromagnetic energy ratio ($H/E$) and the transverse shower width $\sigma_{\eta\eta}$,
 measured in terms of the energy weighted spread within the $5\times 5$ crystal matrix centered on the crystal with the largest energy deposit in the supercluster~\cite{CMSPhoton},
 \begin{equation}
@@ -225,22 +228,22 @@ Photon isolation, defined as the scalar $\pt$ sum of charged particles within a 
 $\Delta R<0.3$, must be less than $2.5 \GeV$. Finally, photon candidates that share
 the same energy cluster as an identified electron are vetoed. 
 
-\section{Analysis strategy and event selection }
-
+\section{Analysis strategy and event selection}
 \label{sec:StrategySelection}
 
-We employ a similar ``razor box'' approach to that used for the 8\TeV
+We employ an event classification approach similar to the one used in the 8\TeV
 search in Sec.~\ref{sec:box8TeV}. We select events with four or more jets, using search categories
-defined by the number of leptons and \cPqb-tagged jets in the event. Events in the
-zero lepton category, denoted as the Multijet category, are required to have no 
+defined by the number of leptons and \cPqb-tagged jets in the event. 
+Events in the zero lepton category, denoted as the Multijet category, are required to have no 
 electrons or muons passing the tight or veto selection, and no selected $\ensuremath{\tau_{\mathrm{h}}}$. 
+The Multijet category consists of events with no electrons or muons passing the tight or veto selection, and no selected $\ensuremath{\tau_{\mathrm{h}}}$. 
 Events in the one electron (muon) category, denoted as the Electron Multijet (Muon Multijet) category,
 are required to have one and only one electron (muon) passing the tight selection.
 Within these three event classes, we divide the events further into categories depending on
-whether the events have zero, one, two, or more than two\cPqb-tagged jets. 
+whether the events have zero, one, two, or more than two \cPqb-tagged jets. 
 
-Each event in the above categories is treated as a dijet-like event in
-order to compute the razor variables $\MR$  and $\Rtwo$ as defined
+Each event in the above categories is treated as a dijet-like event by grouping selected leptons 
+and jets in the event into two megajets in order to compute the razor variables $\MR$  and $\Rtwo$ defined
 in Sec.~\ref{sec:kinematic}. 
 
 The events of interest are triggered either by the presence of a high-$\pt$ electron or muon, or 
@@ -248,11 +251,10 @@ through dedicated hadronic triggers requiring the presence of at least two highl
 and with loose thresholds on the razor variables $\MR$ and $\Rtwo$. The single-electron (single-muon) triggers require at least one isolated electron 
 (muon) with $\pt>23$ ($20$)~$\GeV$. The isolation requirement is dropped for electrons (muons) with 
 $\pt>105$ ($50$)~$\GeV$. The efficiencies for the single electron (muon) triggers
-are above $70$\% for $\pt$ around $25$ ($20$)~$\GeV$), and reach a
-plateau above $97$\% for $\pt>40 \GeV$. Single electron (muon) trigger
-efficiencies were measured in data and simulation, and are found to be
-in a good agreement.  Corrections for residual difference of trigger
-efficiency  between data and MC are applied to simulated samples.
+are above $70$\% for $\pt$ around $25$ ($20$)~$\GeV$, and reach a
+plateau above $97$\% for $\pt>40 \GeV$. The efficiencies for the single electron trigger were measured in data and simulation and
+found to be in good agreement, as were the corresponding efficiencies for muons. Corrections for residual difference of trigger
+efficiency  between data and MC simulation are applied to simulated samples.
 The hadronic razor trigger requires at least two jets with $\pt > 80 \GeV$ or at least 
 four jets with $\pt > 40 \GeV$. The events are also required to pass selections on the 
 razor variables $\MR>200\GeV$ and $\Rtwo>0.09$ and on the product 
@@ -270,9 +272,9 @@ and \ptvecmiss be larger than $120 \GeV$.
 
 For events in the Multijet category, the search uses a region defined by the 
 selections $\MR > 500 \GeV$ and $\Rtwo > 0.25$ and requires the presence of at least 
-two jets with $\pt >80 \GeV$ within $|\eta|<3.0$, motivated by the requirements 
-of the hadronic razor triggers. For QCD multijet background events, the
-\ETmiss is predominantly due to a mismeasurement on 
+two jets with $\pt >80 \GeV$ within $|\eta|<3.0$, for compatibility with the requirements 
+imposed by the hadronic razor triggers. For QCD multijet background events, the
+\ETmiss arises mainly from mismeasurement of
 the energy of one of the leading jets.  In such cases, the two razor 
 megajets tend to lie in a back-to-back configuration. Therefore, to suppress the QCD multijet 
 background we require that the azimuthal angle $\dPhiR$ between the two razor
@@ -290,7 +292,9 @@ $\PW(\ell\nu)+$jets (with $\ell=\Pe,\Pgm,\ensuremath{\tau}$), $\cPZ(\nu\bar\nu)+
 zero \PQb-tagged jets, the background is primarily composed of the $\PW(\ell\nu)+$jets and $\cPZ(\nu\bar\nu)+$jets
 processes, while for categories with two or more \PQb-tagged jets it is
 dominated by the $\ttbar$ process. There are also very small contributions from
-the diboson, triboson, and $\ttbar\cPV$ production. These
+the production of two ($\cPV\cPV$) or three electroweak bosons
+($\cPV\cPV\cPV$) and from the production of $\ttbar$ in
+association with a $\PW$ or $\cPZ$ boson ($\ttbar\cPV$). These
 contributions are summed and labeled ``Other'' in Fig.~\ref{fig:TTBarWJetsCR_MR}-\ref{fig:Znn_PhotonJets}.
 
 We model the background using two independent methods based on control samples in data with entirely
@@ -313,66 +317,81 @@ to control and correct the accuracy of the MC prediction for each of the
 background processes. Corrections for the jet energy response and lepton momentum response
 are applied to the MC, as are corrections for the trigger 
 efficiency and the selection efficiency of electrons, muons, and \PQb-tagged jets. Any
-disagreement observed in these control regions is interpreted as an inaccuracy of the 
+disagreement observed in these control regions is then interpreted as an inaccuracy of the 
 MC in predicting the hadronic recoil spectrum and jet multiplicity. 
 
 Two alternative formulations of the method are typically used in searches for
-new physics~\cite{SUS12024,MT2at8TeV,Aad:2013wta}. The first formulation projects 
-the data control region yields to search regions through translation factors derived 
-from the simulation, while the second formulation derives simulation to data correction 
-factors in bins of the razor variables $\MR$ and $\Rtwo$ 
-that are then applied to the simulation prediction of the search region yields. 
+new physics~\cite{SUS12024,MT2at8TeV,Aad:2013wta}. 
+In the first formulation, the data control region yields are extrapolated to the search regions
+via translation factors derived from simulation.  In the second formulation, simulation to data 
+correction factors are derived in bins of the razor variables $\MR$ and $\Rtwo$ 
+and are then applied to the simulation prediction of the search region yields. 
 The two formulations are identical and the choice of which formulation is used  
 depends primarily on the convenience of the given data processing sequence. 
 In both cases, the contributions from background processes other than the one
 under study are subtracted using the MC prediction.
-We employ the former formulation of the method for the estimate of the QCD background, 
-while the latter formulation is used for modeling all other major backgrounds. 
-Details of the control regions used for each of the dominant background processes are described in the subsections below.
+We employ the first formulation of the method for the estimate of the QCD background, 
+while the second formulation is used for modeling all other major backgrounds. 
+Details of the control regions used for each of 
+the dominant background processes are described in the subsections below.
 
-Finally, the small contribution from rare background processes such as $\mathrm{t\bar{t}}\cPZ$ are 
-modeled using simulation, and systematic uncertainties from instrumental sources, and in the prediction of its 
-production cross section are propagated to the final result. Details on the systematic uncertainties are further described
-in Section~\ref{sec:Systematics}.
+Finally, the small contribution from rare background processes such as $\ttbar\cPV$ is
+modeled using simulation. Systematic uncertainties on the cross sections of these processes
+are propagated to the final result. 
 
-\subsubsection{$\ttbar$ and $\PW(\ell\nu)+$jets background}
+\subsubsection{The $\ttbar$ and $\PW(\ell\nu)+$jets background}
 \label{sec:TTBarWJetsCR}
 
 The control region to isolate the $\ttbar$ and $\PW(\ell\nu)+$jets processes is defined by requiring 
 at least one tight electron or muon. To suppress QCD multijet
-background, the \ETmiss and the $M_{\mathrm{T}}$  are both required to be larger than $30 \GeV$. To minimize 
+background, the quantities \ETmiss and $M_{\mathrm{T}}$ are both required to be larger than $30 \GeV$. To minimize 
 contamination from potential SUSY processes and to explicitly separate the control region
-from the search regions, we require that the $M_{\mathrm{T}}$ is less than 
-$100 \GeV$. The $\ttbar$ enhanced control region is defined by requiring that there is at 
+from the search regions, we require $M_{\mathrm{T}} < 100 \GeV$. The $\ttbar$ enhanced control region is defined by requiring that there be at 
 least one \PQb-tagged jet, and the $\PW(\ell\nu)+$jets enhanced control region is defined by
 requiring no such \PQb-tagged jets. Other than these  \PQb-tagged jet
-requirements, we have no explicit requirement on the number of jets in
-the event. 
+requirements, we place no explicit requirement on the number of jets in
+the event, in order to benefit from significantly larger control samples. 
 
 We first derive corrections for the $\ttbar$ background, and then measure
-corrections for the $W(\ell\nu)+$jets process applying the corrections already obtained
+corrections for the $W(\ell\nu)+$jets process after first applying the corrections already obtained
 for the $\ttbar$ background in the $W(\ell\nu)+$jets control region.
 As discussed above, the corrections to the MC prediction are derived in two-dimensional bins of the
 ($\MR$,$\Rtwo$) plane. We observe that the $\MR$ spectrum predicted by the simulation
 falls off more steeply than the control region data for both the $\ttbar$ and $\PW(\ell\nu)+$jets
-processes, as shown in Fig.~\ref{fig:TTBarWJetsCR_MR}, which is likely
-due to imperfect parton-shower tuning. In 
-Fig.~\ref{fig:WJets_TTBarDileptonCR_MRRsqUnrolled}, we show the two-dimensional ($\MR$,$\Rtwo$) distributions
+processes, as shown in Fig.~\ref{fig:TTBarWJetsCR_MR}. 
+In Fig.~\ref{fig:WJets_TTBarDileptonCR_MRRsqUnrolled}, we show the two-dimensional ($\MR$,$\Rtwo$) distributions
 for data and simulation in the $\PW(\ell\nu)+$jets control region. The statistical uncertainties in the correction factors
 due to limited event yields in the control region bins are propagated and dominate the total uncertainty 
 of the background prediction. For bins at large $\MR$ (near $1000\GeV$), the statistical uncertainties 
 range between $15\%$ and $50\%$. 
 
-\begin{figure}[!htb] \centering
+\begin{figure}[!ptb] \centering
 \includegraphics[width=0.45\textwidth]{figs/analysis13TeV/TTBarWJets/MR_TTJetsSingleLepton.pdf}
 \includegraphics[width=0.45\textwidth]{figs/analysis13TeV/TTBarWJets/MR_WJetsSingleLepton.pdf}
-\caption{ The $\MR$ distributions for events in the $\ttbar$ (left) and $\PW(\ell\nu)+$jets (right) 
-control regions are shown, comparing data with the MC prediction.  In
-the right-hand plot, the $\ttbar$ MC events have been reweighted
+\caption{ The $\MR$ distributions for events in the $\ttbar$ (left) and $\PW(\ell\nu)$+jets (right) 
+control regions are shown, comparing data with the MC prediction~\cite{CMS-PAS-SUS-15-004}.  
+The ratio of data to the background prediction is shown on the bottom panel,
+with the statistical uncertainty expressed through the data point error bars and the 
+systematic uncertainty of the background prediction represented by the shaded region.
+In the right-hand plot, the $\ttbar$ MC events have been reweighted
 according to the corrections derived in the $\ttbar$-enhanced control
-region. 
+region.
  }
 \label{fig:TTBarWJetsCR_MR}
+\end{figure}
+
+\begin{figure}[!ptb] \centering
+\includegraphics[width=0.95\textwidth]{figs/analysis13TeV/TTBarWJets/MRRsqWJetsSingleLeptonUnrolledDataMC.pdf}
+\includegraphics[width=0.95\textwidth]{figs/analysis13TeV/TTBarWJets/Razor_TTBarDileptonCrossCheckRegion_MRRsqUnrolled_MR300Rsq0p15_all_Logy.pdf}
+\caption{The two-dimensional $\MR$-$\Rtwo$ distribution for the
+  $\PW(\ell\nu)$+jets enhanced (upper) and the $\ttbar$ dilepton (lower)
+  control regions are shown, comparing data with the MC prediction~\cite{CMS-PAS-SUS-15-004}. The $\ttbar$ MC events have been reweighted according to the correction factors
+derived in the $\ttbar$-enhanced control region.  The two-dimensional $\MR$-$\Rtwo$ distribution is shown
+in a one dimensional representation, with each $\MR$ bin marked by the dashed lines and labeled near the top
+, and each $\Rtwo$ bin labeled below. 
+The bottom panel shows the ratio of data to the background prediction, with uncertainties displayed as in Fig.~\ref{fig:TTBarWJetsCR_MR}.
+}
+\label{fig:WJets_TTBarDileptonCR_MRRsqUnrolled}
 \end{figure}
 
 % \begin{figure}[!htb] \centering
@@ -416,26 +435,24 @@ and demonstrate that the MC models describe well the observed data.
 The observed discrepancies in any bin are propagated as systematic uncertainties in the 
 prediction of the $\ttbar$ and $\PW(\ell\nu)+$jets in the Multijet category search region.
 
-\begin{figure}[!htb] \centering
-\subfigure[Veto electrons or muons]{\includegraphics[width=0.49\textwidth]{figs/analysis13TeV/TTBarWJets/lep1Pt_VetoLeptonControlRegion_Density.pdf}}
-\subfigure[Veto $\ensuremath{\tau}_h$ candidates.]{\includegraphics[width=0.49\textwidth]{figs/analysis13TeV/TTBarWJets/lep1Pt_VetoTauControlRegion_Density.pdf}}
+\begin{figure}[!ptb] \centering
+\subfigure{\includegraphics[width=0.49\textwidth]{figs/analysis13TeV/TTBarWJets/lep1Pt_VetoLeptonControlRegion_Density.pdf}}
+\subfigure{\includegraphics[width=0.49\textwidth]{figs/analysis13TeV/TTBarWJets/lep1Pt_VetoTauControlRegion_Density.pdf}}
 \caption{ The $\pt$ distribution of the veto electron or muon (left) and the veto $\ensuremath{\tau_{\mathrm{h}}}$ (right)
-is shown for events in the veto lepton control regions, comparing data with the MC prediction. The $\ttbar$ and 
+is shown for events in the veto lepton control regions, comparing data with the MC prediction~\cite{CMS-PAS-SUS-15-004}. The $\ttbar$ and 
 $\PW(\ell\nu)+$jets MC events have been reweighted according to the correction factors derived
 in the $\ttbar$ enhanced and $\PW(\ell\nu)+$jets enhanced control regions, respectively.  
-The event yields in each bin are normalized by the bin width. The ratio of data to the MC prediction
-is shown in the bottom panels, with the statistical uncertainty
-expressed through the data point error bars and the systematic
-uncertainty of the background prediction represented by the shaded
-region. 
+%The event yields in each bin are normalized by the bin width. 
+The bottom panel shows the ratio of data to the background prediction, with uncertainties displayed as in Fig.~\ref{fig:TTBarWJetsCR_MR}.
 }
 \label{fig:VetoLeptonCR_LepPt}
 \end{figure}
 
 The $\ttbar$ background in the Electron and Muon Multijet categories is primarily from
-the dilepton decay mode, as the $M_{\mathrm{T}}$ requirement highly suppresses the semi-leptonic decay
-mode. Corrections to the MC simulation derived from the $\ttbar$ control region are primarily comprised
-of semi-leptonic decays. We define an additional control region enhanced in dilepton $\ttbar$ decays 
+the dilepton decay mode as the $M_{\mathrm{T}}$ requirement highly suppresses the semi-leptonic decay
+mode. Corrections to the MC simulation derived from the $\ttbar$
+control region primarily arise from semi-leptonic decays. 
+We define an additional control region enhanced in dilepton $\ttbar$ decays 
 to confirm that the MC corrections derived from a region dominated by
 semi-leptonic decays also apply to dilepton decays. We select events with two tight leptons, 
 both with $\pt>30 \GeV$, $\ETmiss>40\GeV$, and 
@@ -443,8 +460,8 @@ dilepton mass larger than $20\GeV$. For events with two leptons of the same flav
 veto events with a dilepton mass between $76$ and $106\GeV$ in order to suppress background from $\cPZ$ boson
 decays. At least one \PQb-tagged jet is required to enhance the purity for the $\ttbar$
 process. Finally, we mimic the phase space region similar to our search region in the Electron and
-Muon Multijet categories by simulating the failed identification of one
-of the leptons and applying the $M_{\mathrm{T}}$ requirement using the other lepton. The correction factors measured in the 
+Muon Multijet categories by treating one lepton as having failed the identification criteria 
+and applying the $M_{\mathrm{T}}$ requirement using the other lepton. The correction factors measured in the 
 $\ttbar$ control region are applied to the MC prediction of the dilepton
 $\ttbar$ cross-check region in bins of $\MR$ and $\Rtwo$.
 In Fig.~\ref{fig:WJets_TTBarDileptonCR_MRRsqUnrolled}
@@ -452,26 +469,11 @@ we show the ($\MR$,$\Rtwo$) distribution for the dilepton $\ttbar$ cross-check r
 in events with four or more jets, and we observe no significant
 mismodeling by the simulation, indicating that the measured corrections are accurate.
 
-\begin{figure}[!htb] \centering
-\includegraphics[width=0.95\textwidth]{figs/analysis13TeV/TTBarWJets/MRRsqWJetsSingleLeptonUnrolledDataMC.pdf}
-\includegraphics[width=0.95\textwidth]{figs/analysis13TeV/TTBarWJets/Razor_TTBarDileptonCrossCheckRegion_MRRsqUnrolled_MR300Rsq0p15_all_Logy.pdf}
-\caption{The two-dimensional ($\MR$,$\Rtwo$) distribution for the
-  $\PW(\ell\nu)+$jets enhanced (upper) and the $\ttbar$ dilepton (lower)
-  control regions are shown, comparing data with the MC prediction. The $\ttbar$ MC events have been reweighted according to the correction factors
-derived in the $\ttbar$-enhanced control region.  The two-dimensional ($\MR$,$\Rtwo$) distribution is shown
-in a one dimensional representation, with each $\MR$ bin marked by the dashed lines and labeled near the top
-, and each $\Rtwo$ bin labeled below. The ratio of data to the
-background prediction is shown on the bottom panel, with
-the statistical uncertainty expressed through the data point error bars and the systematic uncertainty of the
-background prediction represented by the shaded region. 
-}
-\label{fig:WJets_TTBarDileptonCR_MRRsqUnrolled}
-\end{figure}
-
 \clearpage
 
-\subsubsection{$\cPZ\to\nu\bar\nu$ background}
+\subsubsection{The $\cPZ\to\nu\bar\nu$ background}
 \label{sec:ZInvCR}
+
 Three independent control regions are used to predict the $\cPZ(\nu\bar\nu)+$jets background,
 relying on the assumption that the hadronic recoil spectrum and the jet multiplicity distribution
 of the $\cPZ(\nu\bar\nu)+$jets process are similar to those of the $\PW(\ell\nu)+$jets and $\cPgg+$jets 
@@ -505,17 +507,14 @@ cross-checks are performed in bins of the number of b-tagged jets and systematic
 from $4\%$ for events with zero b-tagged jets to $58\%$ for events with three or more b-tagged jets are
 derived.
 
-\begin{figure}[!htb] \centering
+\begin{figure}[!ptb] \centering
 \includegraphics[width=0.9\textwidth]{figs/analysis13TeV/Znunu/Razor_PhotonControlRegion_MR_PhotonCR_Logy.pdf} \\
 \includegraphics[width=0.9\textwidth]{figs/analysis13TeV/Znunu/Razor_PhotonControlRegion_MRRsqUnrolled_PhotonCR_Logy.pdf}
-\caption{The one-dimensional distribution of $\MR$ in the $\cPgg+$jets control region
-  (above) and the two-dimensional ($\MR$,$\Rtwo$) distribution in
-  the $\cPgg+$jets control region (below) are shown. The two-dimensional ($\MR$,$\Rtwo$) distribution is shown
-in a one-dimensional representation, with each $\MR$ bin marked by the dashed lines and labeled near the top,
-and each $\Rtwo$ bin labeled below. The ratio of data to the background
-prediction is shown on the bottom panel, with
-the statistical uncertainty expressed through the data point error bars and the systematic uncertainty of the
-background prediction represented by the shaded region. 
+\caption{The one-dimensional distribution of $\MR$ in the $\cPgg$+jets control region
+  (above) and the two-dimensional $\MR$-$\Rtwo$ distribution in
+  the $\cPgg$+jets control region (below) are shown. The two-dimensional $\MR$-$\Rtwo$ distribution 
+  is shown in a one-dimensional representation as in Fig.~\ref{fig:WJets_TTBarDileptonCR_MRRsqUnrolled}.
+The bottom panel shows the ratio of data to the background prediction, with uncertainties displayed as in Fig.~\ref{fig:TTBarWJetsCR_MR}.
 } 
 \label{fig:Znn_PhotonJets}
 \end{figure}
@@ -537,8 +536,9 @@ $\cPgg+$jet control region to the $\cPZ\to\ell^+\ell^-$ MC prediction and perfor
 in this control region. No significant discrepancy between the data and the prediction is observed.
 
 
-\subsubsection{QCD multijet background}
+\subsubsection{The QCD multijet background}
 \label{sec:QCDCR}
+
 The QCD multijet processes contribute about $10\%$ of the total background in the zero-lepton Multijet
 event category for bins with zero or one \PQb-tagged jets. Such events enter the search regions
 in the tails of the \MET distribution when the energy of 
@@ -546,21 +546,21 @@ one of the jets in the event is significantly under- or over-measured.
 In most such situations, the \ptvecmiss points either toward
 or away from the leading jets and therefore the two megajets tend to
 be in a back-to-back configuration. The search region is defined by requiring that
-the azimuthal angle between the two megajets $\Delta\phi_R$ is less than
+the azimuthal angle between the two megajets $\Delta\phi_R$ be less than
 $2.8$, which was found to be an optimal selection based on studies
 of QCD multijet and signal simulated samples. We define the control region for the QCD background process to be events
 with $\dPhiR>2.8$, keeping all other selection requirements identical to those for
 the search region. The purity of the QCD multijet process in the control region
-is more than $70\%$. After subtracting the non-QCD background,
+is more than $70\%$. 
+
+After subtracting the non-QCD background,
 we project the observed data yield in the control region to the search region using
 the translation factor $\zeta$:
-
 \begin{equation}
-\zeta = \frac{N(|\dPhiR|>2.8)}{N(|\dPhiR|<2.8)},
+\zeta = \frac{N(|\dPhiR|<2.8)}{N(|\dPhiR|>2.8)},
 \end{equation}
-
 where the numerator and denominator are the number of events
-passing and failing the selection on $|\dPhiR|>2.8$, respectively. We
+passing and failing the selection on $|\dPhiR|<2.8$, respectively. We
 find that the translation factor calculated from the MC simulation
 decreases as a function of $\MR$ and is, to a large degree, constant as a function of $\Rtwo$.
 Using data events in the low $\Rtwo$ region ($0.15$ to $0.25$), dominated
@@ -572,14 +572,14 @@ A systematic uncertainty of $87\%$ is propagated, covering both the
 spread around the fitted model as a function of $\MR$ and $\Rtwo$ in
 simulation, and the difference between the values measured in simulation
 and data. The function used
-for the $\zeta$ and the values measured in data and simulation are
+for $\zeta$ and the values measured in data and simulation are
 shown in Fig.~\ref{fig:QCDTranslationFactor}. 
 
-\begin{figure}[!htb]
+\begin{figure}[!ptb]
 \begin{center}
 \includegraphics[width=0.75\textwidth]{figs/analysis13TeV/npf_vs_mr_razor_fit.pdf}
 \caption{\label{fig:QCDTranslationFactor} 
-The translation factor $\zeta$ is shown as a function of $\MR$. The curve shows the 
+The translation factor $\zeta$ is shown as a function of $\MR$~\cite{CMS-PAS-SUS-15-004}. The curve shows the 
 functional form used to model the $\MR$ dependence, and the open circle
 and black dot data points are  the values of $\zeta$ measured in the low-$\Rtwo$ data
 control region and the QCD MC simulation, respectively. The hashed region indicates the size of the systematic uncertainty in
@@ -617,13 +617,13 @@ and $\Rtwo > 0.2$, plus the region $\MR > 400 \GeV$ and
 $0.15 < \Rtwo < 0.2$. The updated sideband regions for the 13 \TeV
 search are shown in Fig.~\ref{fig:regions13TeV}.
 
-\begin{figure}[ht!]
+\begin{figure}[tpb!]
 \centering
 \includegraphics[width=0.9\textwidth]{figs/analysis13TeV/SidebandL_MultiJet.pdf}\\
 \includegraphics[width=0.9\textwidth]{figs/analysis13TeV/SidebandL_Mu.pdf}
 \caption{\label{fig:regions13TeV} Updated definition of the sideband and the
  signal-sensitive regions used in the analysis, for (top) the Multijet
- category and (bottom) the other categories for the 13 \TeV search.}
+ category and (bottom) the other categories for the 13 \TeV search~\cite{jmgd}.}
 \end{figure}
 
 For each event category, we fit the two-dimensional distribution of 
@@ -634,7 +634,6 @@ independently varied in the fit. Due to the lack of data events in the category
 with three or more \PQb-tagged jets, we constrain
 the shape in this category to be related to the shape for events with two
 \PQb-tagged jets as follows:
-
 \begin{equation}
   f^{\geq 3\cPqb}_{\mathrm{SM}}(\MR, \Rtwo)  = (1+m_{\MR}(\MR - M^{\mathrm{offset}}_R))f^{2\cPqb}_{\mathrm{SM}}(\MR, \Rtwo),
 \label{eq:3btagFunction}
@@ -652,7 +651,7 @@ model in adequately describing the underlying distributions. To
 demonstrate that the background model gives an accurate description of the 
 background distributions, we construct a representative
 data set using MC samples, and perform the background fit using
-the form given by Eq.~(\ref{eq:razFun}). Goodness of fit is
+the form given by Eqn.~(\ref{eq:razFun}). Goodness of fit is
 evaluated by comparing the background prediction from the fit with the
 prediction from the simulation. This procedure is performed
 separately for each of the search categories and we find
@@ -705,12 +704,12 @@ prediction to cover this average difference.
 %additional systematic uncertainty to the sideband fit background
 %prediction to cover these average differences.
 
-\begin{figure}[!htb] \centering
-\subfigure[2 \PQb-tag data]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_2btag_MultiJet.pdf}}\\
-\subfigure[$\geq 3$ \PQb-tag data]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_3btag_MultiJet.pdf}}
+\begin{figure}[!ptb] \centering
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_2btag_MultiJet.pdf}}\\
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_3btag_MultiJet.pdf}}
 \caption{Comparison of the sideband fit background prediction with the observed data
   in bins of $\MR$ and $\Rtwo$ variables in the Multijet category for
-  the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins. Vertical dashed lines denote the 
+  the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins~\cite{CMS-PAS-SUS-15-004,jmgd}. Vertical dashed lines denote the 
   boundaries of different $\MR$ bins. On the
   upper panels, the colored bands represent the 
   systematic uncertainties in the background prediction, and the uncertainty bands for the 
@@ -721,15 +720,15 @@ prediction to cover this average difference.
   and yellow horizontal bands show the boundaries of 1 and 2 $\sigma$. }
 \label{fig:results_Multijet2btag3btag}
 \end{figure}
-\begin{figure}[!htb] \centering
-\subfigure[2 \PQb-tag simulation]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/signalInjectionTests/T1bbbb_1400_100/h_th1x_ns_2btag_MultiJet.pdf}}\\
-\subfigure[$\geq 3$ \PQb-tag simulation]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/signalInjectionTests/T1bbbb_1400_100/h_th1x_ns_3btag_MultiJet.pdf}}
+\begin{figure}[!ptb] \centering
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/signalInjectionTests/T1bbbb_1400_100/h_th1x_ns_2btag_MultiJet.pdf}}\\
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/signalInjectionTests/T1bbbb_1400_100/h_th1x_ns_3btag_MultiJet.pdf}}
 \caption{The result of the background-only fit performed in the
   sideband of the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins of the
-  Multijet category on a signal-plus-background pseudo-data set assuming a gluino pair production simplified
+  Multijet category on a signal-plus-background pseudodata set assuming a gluino pair production simplified
 model signal, where gluinos decay with a 100\% branching fraction to a $\bbbar$ pair and the
- LSP, with $m_{\sGlu} = 1400 \GeV$ and  $m_{\chiz_1}=100 \GeV$, at
- nominal signal strength. A detailed explanation of the figure format is given in the caption of
+ LSP, with $m_{\sGlu} = 1.4 \TeV$ and  $m_{\chiz_1}=100 \GeV$, at
+ nominal signal strength~\cite{CMS-PAS-SUS-15-004,jmgd}. A detailed explanation of the figure format is given in the caption of
   Fig.~\ref{fig:results_Multijet2btag3btag}.}
 \label{fig:signal_Multijet2btag3btag}
 \end{figure}
@@ -757,7 +756,7 @@ signal, we perform a signal injection test. We sample a signal-plus-background
 pseudo-data set and perform a background-only fit in the sideband. We show one illustrative 
 example of such a test in Fig.~\ref{fig:signal_Multijet2btag3btag}, where we inject a signal 
 corresponding to gluino pair production, in which each gluino decays to a neutralino and 
-a $\bbbar$ pair with $m_{\sGlu} = 1400 \GeV$ and $m_{\chiz_1}=100 \GeV$. The
+a $\bbbar$ pair with $m_{\sGlu} = 1.4 \TeV$ and $m_{\chiz_1}=100 \GeV$. The
 deviations with respect to the fit predictions are shown for the 2
 \PQb-tag and $\geq 3$ \PQb-tag Multijet categories. We observe characteristic patterns 
 of excesses in two adjacent groups of bins neighboring in $\MR$. 
@@ -771,52 +770,52 @@ the four \PQb-tag bins of the Electron Multijet
 category. No statistically significant deviations from the expected
 background predictions are observed in these categories in data.
 
-\begin{figure}[!htb] \centering
-\subfigure[0 \PQb-tag data]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_0btag_MultiJet.pdf}}\\
-\subfigure[1 \PQb-tag data]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_1btag_MultiJet.pdf}}
+\begin{figure}[!ptb] \centering
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_0btag_MultiJet.pdf}}\\
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_1btag_MultiJet.pdf}}
 \caption{Comparison of the predicted background with the observed data
   in bins of $\MR$ and $\Rtwo$ variables in the Multijet category for
-  the 0 \PQb-tag (upper) and 1 \PQb-tag (lower) bins. A detailed explanation of the plots is given in the caption of
+  the 0 \PQb-tag (upper) and 1 \PQb-tag (lower) bins~\cite{CMS-PAS-SUS-15-004,jmgd}. A detailed explanation of the plots is given in the caption of
   Fig.~\ref{fig:results_Multijet2btag3btag}. }
 \label{fig:results_Multijet0btag1btag}
 \end{figure}
 
-\begin{figure}[!htb] \centering
-\subfigure[0 \PQb-tag data]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_0btag_MuMultiJet.pdf}} \\
-\subfigure[1 \PQb-tag data]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_1btag_MuMultiJet.pdf}} \\
+\begin{figure}[!ptb] \centering
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_0btag_MuMultiJet.pdf}} \\
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_1btag_MuMultiJet.pdf}} \\
 \caption{Comparison of the predicted background with the observed data
   in bins of $\MR$ and $\Rtwo$ variables in the Muon Multijet
-  category for the 0 \PQb-tag (upper) and 1 \PQb-tag (lower) bins. A detailed explanation of the plots is given in the caption of
+  category for the 0 \PQb-tag (upper) and 1 \PQb-tag (lower) bins~\cite{CMS-PAS-SUS-15-004,jmgd}. A detailed explanation of the plots is given in the caption of
   Fig.~\ref{fig:results_Multijet2btag3btag}. }
 \label{fig:results_MuMultijet0btag1btag}
 \end{figure}
 
-\begin{figure}[!htb] \centering
-\subfigure[2 \PQb-tag data]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_2btag_MuMultiJet.pdf}} \\
-\subfigure[$\geq 3$ \PQb-tag data]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_3btag_MuMultiJet.pdf}}
+\begin{figure}[!ptb] \centering
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_2btag_MuMultiJet.pdf}} \\
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_3btag_MuMultiJet.pdf}}
 \caption{Comparison of the predicted background with the observed data
   in bins of $\MR$ and $\Rtwo$ variables in the Muon Multijet
-  category for the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins. A detailed explanation of the plots is given in the caption of
+  category for the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins~\cite{CMS-PAS-SUS-15-004,jmgd}. A detailed explanation of the plots is given in the caption of
   Fig.~\ref{fig:results_Multijet2btag3btag}. }
 \label{fig:results_MuMultijet2btag3btag}
 \end{figure}
 
-\begin{figure}[!htb] \centering
-\subfigure[0 \PQb-tag data]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_0btag_EleMultiJet.pdf}} \\
-\subfigure[1 \PQb-tag data]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_1btag_EleMultiJet.pdf}} 
+\begin{figure}[!ptb] \centering
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_0btag_EleMultiJet.pdf}} \\
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_1btag_EleMultiJet.pdf}} 
 \caption{Comparison of the predicted background with the observed data
   in bins of $\MR$ and $\Rtwo$ variables in the Electron Multijet
-  category for the 0 \PQb-tag (upper) and 1 \PQb-tag (lower) bins. A detailed explanation of the plots is given in the caption of
+  category for the 0 \PQb-tag (upper) and 1 \PQb-tag (lower) bins~\cite{CMS-PAS-SUS-15-004,jmgd}. A detailed explanation of the plots is given in the caption of
   Fig.~\ref{fig:results_Multijet2btag3btag}. }
 \label{fig:results_EleMultijet0btag1btag}
 \end{figure}
 
-\begin{figure}[!htb] \centering
-\subfigure[2 \PQb-tag data]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_2btag_EleMultiJet.pdf}} \\
-\subfigure[$\geq 3$ \PQb-tag data]{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_3btag_EleMultiJet.pdf}}
+\begin{figure}[!ptb] \centering
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_2btag_EleMultiJet.pdf}} \\
+\subfigure{\includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/h_th1x_ns_3btag_EleMultiJet.pdf}}
 \caption{Comparison of the predicted background with the observed data
   in bins of $\MR$ and $\Rtwo$ variables in the Electron Multijet
-  category for the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins. A detailed explanation of the plots is given in the caption of
+  category for the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins~\cite{CMS-PAS-SUS-15-004,jmgd}. A detailed explanation of the plots is given in the caption of
   Fig.~\ref{fig:results_Multijet2btag3btag}. }
 \label{fig:results_EleMultijet2btag3btag}
 \end{figure}
@@ -829,7 +828,7 @@ The background predictions obtained from methods A and B are systematically comp
 in all of the search region categories. For method B, the model-independent 
 fit to the sideband is used for this comparison. In Fig.~\ref{fig:FitVsMADD},
 we show the comparison of the two background predictions for two example event categories.
-The predictions from the two methods agree to within the uncertainties of each method.
+The predictions from the two methods agree within the uncertainties of each method.
 The uncertainty from the fit-based method tends to be slightly larger at high
 $\MR$ and $\Rtwo$ due to the additional uncertainty in the exact shape of 
 the tail of the distribution, as the $n$ and $b$ parameters are not strongly 
@@ -840,9 +839,9 @@ constrained by the sideband data.
 \includegraphics[width=0.9\textwidth]{figs/analysis13TeV/results/MRRsqMuMultiJet2BTagMCTotalUnrolledMCFit.pdf}
 \caption{Comparisons of the two alternative background predictions for the ($\MR$,$\Rtwo$) distribution 
 for the 0 \PQb-tag bin of the Multijet category (upper) and the 2 \PQb-tag bin of the Muon Multijet
-category (lower). The two-dimensional ($\MR$,$\Rtwo$) distribution is shown
+category (lower)~\cite{CMS-PAS-SUS-15-004}. The two-dimensional ($\MR$,$\Rtwo$) distribution is shown
 in a one-dimensional representation, with each $\MR$ bin marked by the dashed lines and labeled near the top
-and each $\Rtwo$ bin labeled below. The ratios of the method B to the method A predictions are shown
+and each $\Rtwo$ bin labeled below. The ratios of the method B fit-based predictions to the method A simulation-assisted predictions are shown
 on the bottom panels. The method B uncertainty is represented by the error bars on the data points and the
 method A uncertainty is represented by the shaded region. 
 } 
@@ -862,6 +861,7 @@ also validates the respective assumptions.
 
 \section{Systematic uncertainties}
 \label{sec:Systematics}
+
 Various systematic uncertainties are considered in the evaluation of the
 signal and background predictions. Different types of systematic
 uncertainties are considered for the two different background models.
@@ -872,10 +872,10 @@ in the correction factors result from statistical uncertainties due to
 the limited size of the control region event sample. We also propagate systematic
 uncertainties in the theoretical cross-section for the small residual backgrounds 
 present in the control regions, and they contribute $2-5\%$ to the 
-correction factor uncertainty. A validation or ``cross-check'' procedure is implemented that tests the accuracy of the MC corrections as a function of 
-($\MR$, $\Rtwo$), and the number of \PQb-tagged jets in events with
-four or more jets. We derive additional systematic uncertainties based
-on this procedure if there is disagreement in the validation regions.
+correction factor uncertainty. 
+Additional systematic uncertainties are computed from the procedure that
+tests that the accuracy of the MC corrections as a function of 
+($\MR$, $\Rtwo$), and the number of \PQb-tagged jets in events with four or more jets. 
 The total uncertainty from this procedure ranges from $10\%$ for the most populated bins to
 $50\%$ and $100\%$ for the least populated bins. For the $\cPZ\rightarrow\nu\bar\nu$ process, we 
 also propagate the difference in the correction factors measured in the three alternative 
@@ -883,7 +883,7 @@ control regions as a systematic uncertainty, intended to estimate the possible d
 the simulation mismodeling of the hadronic recoil for the $\cPgg+$jets process and 
 the $\cPZ(\nu\bar\nu)+$jets process. These systematic uncertainties 
 range from $10$ to $40\%$. For the QCD background prediction the statistical uncertainty 
-due to limited event counts in the $\dPhiR> 2.8$ control regions and the systematic
+due to limited event counts in the $\dPhiR>2.8$ control regions and the systematic
 uncertainty of $87\%$ in the translation factor $\zeta$ are propagated.
 
 For method B, the systematic uncertainties in the background are propagated as part of 
@@ -899,27 +899,28 @@ Multijet categories, the systematic uncertainties range from
 about 60\% at low $\MR$ and $\Rtwo$ to more than 200\% at high $\MR$ and $\Rtwo$.
 
 \begin{table}[!htb]\centering
-\caption{Summary of the main instrumental and theoretical systematic uncertainties.}
+\caption{Summary of the main instrumental and theoretical systematic
+  uncertainties. The systematic uncertainty associated to the modeling
+  of the initial-state radition is only applied for events with recoil above $400\GeV$.}
 \label{tab:BackgroundSystematics}
 \resizebox{\textwidth}{!}{
 \begin{tabular}{ccc}
 \hline\hline
-Source      & On signal and/or bkg   & Typical values \\ 
-\hline 
-Jet energy scale                   & Both                   & $2-15\%$ \\ 
-Electron energy scale              & Both                   & $7-9\%$ \\
-Muon momentum scale                & Both                   & $7-9\%$ \\
-Muon efficiency                    & Both                   & $7-8\%$ \\ 
-Electron efficiency                & Both                   & $7-8\%$ \\
-Trigger efficiency                 & Both                   & $3\%$ \\ 
-\PQb-tagging  efficiency           & Both                   & $6-15\%$ \\ 
-\PQb mistagging  efficiency        & Both                   & $4-7\%$ \\ 
-Missing higher orders            & Both                   & $10-25\%$ \\
-Integrated luminosity                         & Both                   & $2.7\%$ \\
-%Pileup                            & Both                   & $1\%$ \\ 
-%Monte Carlo Statistics            & Both                   & $1/\sqrt{N_{MC}}$ \\
-Fast simulation corrections        & Signal only            & $0-10\%$ \\ 
-Initial-state radiation            & Signal only            & $15 - 30\%$ only for recoil above $400$~GeV \\\hline\hline
+Source      & On signal and/or bkg   & Typical values [\%] \\ \hline
+Jet energy scale                   & Both                   & $2-15$ \\ \hline
+Electron energy scale              & Both                   & $7-9$ \\ \hline
+Muon momentum scale                & Both                   & $7-9$ \\ \hline
+Muon efficiency                    & Both                   & $7-8$ \\ \hline
+Electron efficiency                & Both                   & $7-8$ \\ \hline
+Trigger efficiency                 & Both                   & $3$ \\ \hline
+\PQb-tagging  efficiency           & Both                   & $6-15$ \\ \hline
+\PQb mistagging  efficiency        & Both                   & $4-7$ \\ \hline
+Missing higher orders            & Both                   & $10-25$ \\\hline
+Integrated luminosity                         & Both                   & $2.7$ \\\hline
+%Pileup                            & Both                   & $1\%$ \\ \hline
+%Monte Carlo Statistics            & Both                   & $1/\sqrt{N_{MC}}$ \\\hline
+Fast simulation corrections        & Signal only            & $0-10$ \\ \hline
+Initial-state radiation            & Signal only            & $15-30$ \\\hline\hline
 \end{tabular}}
 \end{table}
 
@@ -945,23 +946,22 @@ predictions are summarized in Table~\ref{tab:BackgroundSystematics}.
 \section{Interpretation}
 \label{sec:Results}
 
-We present the results of the interpretation using method A as it
-provides slightly better sensitivity. Consistent results are found
-with method B. The two-dimensional ($\MR$,$\Rtwo$) distributions for the search regions in the 
+We present results of the search using method A as it provides
+slightly better sensitivity. The two-dimensional ($\MR$,$\Rtwo$) distributions for the search regions in the 
 Multijet, Electron Multijet, and Muon Multijet categories observed in data are shown in 
 Figures~\ref{fig:ResultsMultiJet0btag1btag}-\ref{fig:ResultsEleMultiJet2btag3btag},
 along with the background prediction from method A. 
-We observed no statistically significant discrepancies and interpret the null search
+We observe no statistically significant discrepancies and interpret the null search
 result using method A by determining the 95\%
 confidence level (CL) upper limits on the production cross sections of
 the SUSY models presented in Sec.~\ref{sec:sms} using a global likelihood determined by combining the
 likelihoods of the different search boxes and sidebands. Following the LHC $\CLs$
 procedure~\cite{LHCCLs} precisely defined in Sec.~\ref{sec:limit8TeV}, we use the profile likelihood ratio test statistic and the asymptotic
 formula to evaluate the 95\% CL observed and expected limits on the SUSY
-cross section. 
+cross section $\sigma_\mathrm{NLO+NLL}$. 
 Systematic uncertainties are taken into account by
-incorporating nuisance parameters, representing different sources of
-systematic uncertainty, into the likelihood. 
+incorporating nuisance parameters $\boldsymbol{\theta}$, representing different sources of
+systematic uncertainty, into the likelihood function $\mathcal L(\mathrm{data}|\mu,\boldsymbol{\theta})$. 
 For each signal model the simulated SUSY events are used to estimate the effect of possible signal
 contamination in the analysis control regions, and the method A background prediction is corrected 
 accordingly. 
@@ -973,19 +973,20 @@ the SUSY signal cross section, $L$ is the integrated luminosity
 corresponding to the size of the data set, and
 $\epsilon^{\text{box}}_{\PQb\text{-tag}}$ is the signal selection
 efficiency for a given category and \PQb-tagged jet multiplicity.
-To determine a confidence interval for the SUSY signal strength $\mu$, we construct the profile likelihood ratio curve as a function of 
+To determine a confidence interval for $\mu$, we construct the profile likelihood ratio test
+statistic $\tilde q_{\mu}$ of Eqn.~\ref{eqn:LHCteststat} as a function of 
 $\mu$. Then for example, a 68\% confidence interval for $\mu$
-can be taken as the region for which the profile likelihood ratio curve is less than 1. By
-allowing each nuisance parameter to vary, the profile likelihood ratio
+can be taken as the region for which the test statistic is less than 1. By
+allowing each nuisance parameter to vary, the test statistic
 curve is wider, reflecting the systematic uncertainty arising from
 each source, and resulting in a larger confidence interval for $\mu$. 
 
-\begin{figure}[!htb] \centering
-\subfigure[0 \PQb-tag data]{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMultiJet0BTagUnrolledDataMC.pdf}}\\
-\subfigure[1 \PQb-tag data]{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMultiJet1BTagUnrolledDataMC.pdf}}
+\begin{figure}[!ptb] \centering
+\subfigure{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMultiJet0BTagUnrolledDataMC.pdf}}\\
+\subfigure{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMultiJet1BTagUnrolledDataMC.pdf}}
 \caption{ The ($\MR$,$\Rtwo$) distribution observed in data is shown along with the background prediction
 obtained from method A for the Multijet event category in the 0
-\PQb-tag (upper) and 1 \PQb-tag (lower) bins. The two-dimensional ($\MR$,$\Rtwo$) distribution is shown
+\PQb-tag (upper) and 1 \PQb-tag (lower) bins~\cite{CMS-PAS-SUS-15-004}. The two-dimensional ($\MR$,$\Rtwo$) distribution is shown
 in a one-dimensional representation, with each $\MR$ bin marked by the dashed lines and labeled near the top,
 and each $\Rtwo$ bin labeled below. The ratio of data to the background
 prediction is shown on the bottom panels, with
@@ -995,32 +996,32 @@ background prediction represented by the shaded region.
 \label{fig:ResultsMultiJet0btag1btag}
 \end{figure}
 
-\begin{figure}[!htb] \centering
-\subfigure[2 \PQb-tag data]{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMultiJet2BTagUnrolledDataMC.pdf}}\\
-\subfigure[$\geq$ 3 \PQb-tag data]{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMultiJet3BTagUnrolledDataMC.pdf}}
+\begin{figure}[!ptb] \centering
+\subfigure{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMultiJet2BTagUnrolledDataMC.pdf}}\\
+\subfigure{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMultiJet3BTagUnrolledDataMC.pdf}}
 \caption{ The ($\MR$,$\Rtwo$) distribution observed in data is shown along with the background prediction
-obtained from method A for the Multijet event category in the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins. 
+obtained from method A for the Multijet event category in the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins~\cite{CMS-PAS-SUS-15-004}. 
 A detailed explanation of the plots is given in the caption of   Fig.~\ref{fig:ResultsMultiJet0btag1btag}.
 }
 \label{fig:ResultsMultiJet2btag3btag}
 \end{figure}
 
 \begin{figure}[!htb] \centering
-\subfigure[0 \PQb-tag data]{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMuMultiJet0BTagUnrolledDataMC.pdf}}\\
-\subfigure[1 \PQb-tag data]{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMuMultiJet1BTagUnrolledDataMC.pdf}}
+\subfigure{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMuMultiJet0BTagUnrolledDataMC.pdf}}\\
+\subfigure{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMuMultiJet1BTagUnrolledDataMC.pdf}}
 \caption{ The ($\MR$,$\Rtwo$) distribution observed in data is shown along with the background prediction
-obtained from method A for the Muon Multijet event category in the 0 \PQb-tag (upper) and 1 \PQb-tag (lower) bins. 
+obtained from method A for the Muon Multijet event category in the 0 \PQb-tag (upper) and 1 \PQb-tag (lower) bins~\cite{CMS-PAS-SUS-15-004}. 
 A detailed explanation of the plots is given in the caption of
   Fig.~\ref{fig:ResultsMultiJet0btag1btag}.
 }
 \label{fig:ResultsMuMultiJet0btag1btag}
 \end{figure}
 
-\begin{figure}[!htb] \centering
-\subfigure[2 \PQb-tag data]{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMuMultiJet2BTagUnrolledDataMC.pdf}}\\
-\subfigure[$\geq$ 3 \PQb-tag data]{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMuMultiJet3BTagUnrolledDataMC.pdf}}
+\begin{figure}[!ptb] \centering
+\subfigure{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMuMultiJet2BTagUnrolledDataMC.pdf}}\\
+\subfigure{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqMuMultiJet3BTagUnrolledDataMC.pdf}}
 \caption{ The ($\MR$,$\Rtwo$) distribution observed in data is shown along with the background prediction
-obtained from method A for the Muon Multijet event category in the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins. 
+obtained from method A for the Muon Multijet event category in the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins~\cite{CMS-PAS-SUS-15-004}. 
 A detailed explanation of the plots is given in the caption of
   Fig.~\ref{fig:ResultsMultiJet0btag1btag}.
 }
@@ -1028,8 +1029,8 @@ A detailed explanation of the plots is given in the caption of
 \end{figure}
 
 \begin{figure}[!htb] \centering
-\subfigure[0 \PQb-tag data]{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqEleMultiJet0BTagUnrolledDataMC.pdf}}\\
-\subfigure[1 \PQb-tag data]{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqEleMultiJet1BTagUnrolledDataMC.pdf}}
+\subfigure{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqEleMultiJet0BTagUnrolledDataMC.pdf}}\\
+\subfigure{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqEleMultiJet1BTagUnrolledDataMC.pdf}}
 \caption{ The ($\MR$,$\Rtwo$) distribution observed in data is shown along with the background prediction
 obtained from method A for the Electron Multijet event category in
 the 0 \PQb-tag (upper) and 1 \PQb-tag (lower) bins. A detailed explanation of the plots is given in the caption of
@@ -1039,10 +1040,10 @@ the 0 \PQb-tag (upper) and 1 \PQb-tag (lower) bins. A detailed explanation of th
 \end{figure}
 
 \begin{figure}[!htb] \centering
-\subfigure[2 \PQb-tag data]{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqEleMultiJet2BTagUnrolledDataMC.pdf}}\\
-\subfigure[$\geq$ 3 \PQb-tag data]{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqEleMultiJet3BTagUnrolledDataMC.pdf}}
+\subfigure{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqEleMultiJet2BTagUnrolledDataMC.pdf}}\\
+\subfigure{\includegraphics[width=0.8\textwidth]{figs/analysis13TeV/results/MRRsqEleMultiJet3BTagUnrolledDataMC.pdf}}
 \caption{ The ($\MR$,$\Rtwo$) distribution observed in data is shown along with the background prediction
-obtained from method A for the Electron Multijet event category in the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins. 
+obtained from method A for the Electron Multijet event category in the 2 \PQb-tag (upper) and $\geq 3$ \PQb-tag (lower) bins~\cite{CMS-PAS-SUS-15-004}. 
 A detailed explanation of the plots is given in the caption of Fig.~\ref{fig:ResultsMultiJet0btag1btag}.
 }
 \label{fig:ResultsEleMultiJet2btag3btag}
@@ -1051,22 +1052,24 @@ A detailed explanation of the plots is given in the caption of Fig.~\ref{fig:Res
 \clearpage
 
 First, we consider the scenario of gluino pair production
-decaying to third-generation quarks.
-% Gluino decays to the third-generation
-%are enhanced if the masses of the third-generation squarks are
-%lighter than those of the first two generations, a scenario that is both theoretically and 
-%experimentally favored. 
-Motivated by the natural SUSY scenario outlined in Sec.~\ref{sec:sms}, we consider the three decay
-modes for $\abs{m_{\sGlu}-m_{\chiz_1}} \geq 225 \GeV$:
+decaying to third-generation quarks. Gluino decays to the third-generation
+are enhanced if the masses of the third-generation squarks are significantly
+lighter than those of the first two generations, a scenario that is
+strongly motivated in natural SUSY
+models~\cite{naturalSUSY,Agashe:2014kda,DINE1990250,Cohen:1996vb} discussed in Sec.~\ref{sec:sms}. Prompted by this, we consider the three decay
+modes: 
 \begin{itemize}
 \item $\PSg\rightarrow\bbbar\PSGcz$~;
 \item $\PSg\rightarrow\ttbar\PSGcz$~; 
-\item $\PSg\rightarrow\cPqb\cPaqt\chip_1\rightarrow\cPqb\cPaqt \PW^{\ast
-    +}\PSGcz_1$~or~$\PSg\rightarrow\cPaqb\cPqt\chim_1\rightarrow\cPaqb\cPqt \PW^{\ast
-    -}\PSGcz_1$~.
+%\item $\PSg\rightarrow\cPqb\cPaqt\chip_1\rightarrow\cPqb\cPaqt \PW^{\ast+}\PSGcz_1$~or~$\PSg\rightarrow\cPaqb\cPqt\chim_1\rightarrow\cPaqb\cPqt \PW^{\ast-}\PSGcz_1$~. 
+\item
+  $\PSg\rightarrow\cPqb\cPaqt\chip_1\rightarrow\cPqb\cPaqt\PW^{\ast+}\PSGcz_1$~or
+  charge conjugate,
 \end{itemize}
-For $\abs{m_{\sGlu}-m_{\chiz_1}} < 225 \GeV$, we only consider the
-$\PSg\rightarrow\bbbar\PSGcz$ decay mode. 
+where $\PW^{\ast}$ denotes a virtual $\PW$ boson. Due to a
+technical limitation inherent in the event generator, we consider these
+three decay modes for $\abs{m_{\sGlu}-m_{\chiz_1}} \geq 225 \GeV$. For
+$\abs{m_{\sGlu}-m_{\chiz_1}} < 225 \GeV$, we only consider the $\PSg\rightarrow\bbbar\PSGcz$ decay mode. 
 
 We perform a scan over all possible branching fractions to these three decay modes 
 and compute limits on the production cross section under each such scenario. The production cross section
@@ -1080,23 +1083,29 @@ $\chipm_1\to\PW^{\ast \pm}\PSGcz_1$ and small values of $m_{\chiz_1}$ the sensit
 is reduced because the LSP carries very little momentum in both the
 NLSP rest frame and the laboratory frame, resulting in small values of
 $\ETmiss$ and $\Rtwo$. By considering the most conservative limit obtained for all scanned branching fractions, we
-calculate an exclusion limit independent of any assumption of the branching
+calculate an exclusion limit valid for any assumption on the branching
 fractions, presented on the right of Fig.~\ref{fig:GluinoToThirdGenLimits}. For
 an LSP with mass of a few hundred $\GeV$, we exclude pair production of gluinos decaying 
-to third-generation quarks for mass below about $1600 \GeV$. This result 
+to third-generation quarks for mass below about $1.6 \TeV$. This result 
 is a unique attempt at deriving a branching fraction independent limit on
-gluino pair production at the LHC.
+gluino pair production at the LHC for the scenario in which gluino decays are dominated by 
+three-body decays to third-generation quarks and a neutralino LSP.
 
 
-\begin{figure}[!htb] \centering
+\begin{figure}[!ptb] \centering
 \includegraphics[width=0.49\textwidth]{figs/analysis13TeV/UnblindedResults/T1AsymptoticMADD.pdf}
 \includegraphics[width=0.49\textwidth]{figs/analysis13TeV/UnblindedResults/T1briFinalXSEC.pdf}
-\caption{ (Left) the expected and observed 95\% confidence level (CL) upper limits on the production 
+\caption{(Left) the expected and observed 95\% confidence level (CL) upper limits on the production 
 cross section for gluino pair production decaying to third-generation quarks under various 
-assumptions of the branching fractions. For $\abs{m_{\sGlu}-m_{\chiz_1}} < 225 \GeV$, we only consider the
-$\sGlu\rightarrow\bbbar\chiz_1$ decay mode. (Right) the analogous upper limits on 
-the gluino pair production cross section independent of the gluino
-decay branching fractions.
+assumptions of the branching fractions. The two gray dashed diagonal
+lines correspond to $\abs{m_{\sGlu}-m_{\chiz_1}} = 25 \GeV$, which is
+where the scan ends for the $\sGlu\rightarrow\bbbar\chiz_1$ decay
+mode, and $\abs{m_{\sGlu}-m_{\chiz_1}} = 225 \GeV$, which is where the scan
+ends for the remaining modes due to a technical limitation inherent
+in the event generator. For $\abs{m_{\sGlu}-m_{\chiz_1}} < 225 \GeV$,
+we only consider the $\sGlu\rightarrow\bbbar\chiz_1$ decay mode. (Right) the analogous upper limits on 
+the gluino pair production cross section valid for any values of the gluino
+decay branching fractions~\cite{CMS-PAS-SUS-15-004}.
 }
 \label{fig:GluinoToThirdGenLimits}
 \end{figure}
@@ -1121,7 +1130,7 @@ $\abs{m_{\sTop}-m_{\PQt}-m_{\chiz_1}} < 25 \GeV$, where the signal
 efficiency is a strong function of $m_{\sTop}-m_{\chiz_1}$, and as a 
 result the precise determination of the cross section upper limit is uncertain
 because of the finite granularity of the available MC samples 
-in this region of the ($m_{\sTop}$, $m_{\chiz_1}$)  plane.
+in this region of the ($m_{\sTop}$, $m_{\chiz_1}$)  plane~\cite{CMS-PAS-SUS-15-004}.
 }
 \label{fig:limitT1qqqqT2tt}
 \end{figure}
@@ -1135,36 +1144,46 @@ with no more than one lepton, a large multiplicity of energetic jets, and
 missing transverse energy. The search is sensitive to a broad
 range of SUSY scenarios including pair production of gluinos and top
 squarks, and the event categorization in the number of leptons and 
-the number of \PQb-tagged jets enhances signal to background ratio and
-the search sensitivity simultaneously for a variety of different SUSY signal scenarios. 
-Two alternative background estimation methods with very different 
-systematic assumptions are presented: one relying on the applicability
-of the simulation corrections derived in the control regions to the
-search regions, and the other relying on the  accuracy of an assumed functional form dependence 
-for the shape of background distribution in the $\MR$ and $\Rtwo$ variables.
-It is demonstrated that the two predictions agree to within their uncertainties, 
-thereby significantly enhancing the robustness of the background modeling. 
+the number of \PQb-tagged jets enhances the search sensitivity for a variety of different SUSY signal scenarios. 
+Two alternative background estimation methods are presented, both
+based on transfer factors between data control regions and the search
+regions, but having very different systematic assumptions:
+%Two alternative background estimation methods with very different 
+%systematic assumptions are presented: 
+one relying on the simulation and associated corrections derived in
+the control regions, and the other relying on the accuracy of an
+assumed functional form for the shape of background distribution in the $\MR$ and $\Rtwo$ variables.
+The two predictions agree within their uncertainties, thereby
+demonstrating the robustness of the background modeling. 
 
 No significant deviations from the predicted standard model background are
 observed in any of the search regions, and this result is interpreted
 in the context of simplified models of gluino or top
-squark pair production. By scanning over all possible branching fractions
-for gluino decays to third generation quarks, exclusion
-limits are derived on gluino pair production that are independent of the gluino
-decay branching fractions, representing a more generic constraint on 
-gluino production than previously reported at the LHC. 
-For an LSP with mass in the range between $200$ and $600$\GeV, we exclude gluinos
-with mass below $1.55$ to $1.6$\TeV, independent of their decays.
-For an LSP with a mass of $100$\GeV, we exclude top squarks below $750 \GeV$. 
+squark pair production. For decays to a top quark and an LSP with a mass of $100\GeV$, we
+exclude top squarks with masses below $750\GeV$. Considering
+separately the decays to bottom quarks and the LSP or first- and
+second-generation quarks and the LSP, gluino masses up to
+$1.65\TeV$ or $1.4\TeV$ are excluded, respectively.
+Furthermore, this search goes beyond the existing simplified model paradigm by
+interpreting results in a broader context inspired by natural SUSY,
+with multiple gluino decay modes considered simultaneously.
+By scanning over all possible branching fractions
+for three-body gluino decays to third generation quarks, exclusion
+limits are derived on gluino pair production that are valid for any
+values of the gluino decay branching fractions.
+For a chargino NLSP nearly degenerate in mass with the LSP and LSP
+masses in the range between $200$ and $600\GeV$, we exclude gluinos
+with mass below $1.55$ to $1.6\TeV$, regardless of their decays. This
+result is a more generic constraint on gluino production than
+previously reported at the LHC. 
 
 \section{LHC coverage of natural supersymmetry}
 \label{sec:Coverage}
 Although the results of the
 Ch.~\ref{ch:analysis8TeV}~and~\ref{ch:analysis13TeV} represent the
 most generic constaints on the gluino and top squark from the LHC in
-terms of allowing multiple decay modes, more stringent
-constraints for particular decay modes have been
-presented at ICHEP 2016. Fig.~\ref{fig:ICHEP2016Summary} shows the most
+terms of constraining multiple decay modes simultaneously, more stringent
+constraints for particular decay modes have been derived. Fig.~\ref{fig:ICHEP2016Summary} shows the most
 stringent limits on the gluino and top squark from ATLAS and CMS using
 13\TeV data collected in 2016.
 
