@@ -170,15 +170,15 @@ on the vacuum Higgs field. In this case, the kinetic term is:
                                        \left(\begin{matrix}0\\v\end{matrix}\right)\right |^2 \nonumber\\
 & = \frac{1}{8} \left ( g_2^2v^2|W_{\mu}^1+iW^2_{\mu}|^2 +
   v^2|g_2W^3_{\mu}-g_1B_{\mu}|^2 \right ) \nonumber\\
-& = m_W^2W_{\mu}^+W^{-\mu} +
-\frac{1}{2}m_Z^2Z_{\mu}Z^{\mu}~ + \frac{1}{2}m_{\gamma}^2A_{\mu}A^{\mu},
+& = m_\PW^2W_{\mu}^+W^{-\mu} +
+\frac{1}{2}m_\PZ^2Z_{\mu}Z^{\mu}~ + \frac{1}{2}m_{\gamma}^2A_{\mu}A^{\mu},
 \end{align}
 where we can identify three field combinations, $W_{\mu}^{\pm}$ and
 $Z_{\mu}$, which have bilinear mass terms, and a fourth $A_{\mu}$,
 which does not:
 \begin{align}
-W_{\mu}^{\pm} &= \frac{1}{\sqrt{2}}(W_{\mu}^1\mp iW^2_{\mu})~, &m_W &= \frac{1}{2}vg_2~,\\
-Z_{\mu} &= \frac{g_2W_{\mu}^3 - g_1B_{\mu}}{\sqrt{g_1^2+g_2^2}}~,&m_Z &= \frac{1}{2}v\sqrt{g_1^2+g_1^2}~,\\
+W_{\mu}^{\pm} &= \frac{1}{\sqrt{2}}(W_{\mu}^1\mp iW^2_{\mu})~, &m_\PW &= \frac{1}{2}vg_2~,\\
+Z_{\mu} &= \frac{g_2W_{\mu}^3 - g_1B_{\mu}}{\sqrt{g_1^2+g_2^2}}~,&m_\PZ &= \frac{1}{2}v\sqrt{g_1^2+g_1^2}~,\\
 A_{\mu} &= \frac{g_2W_{\mu}^3 + g_1B_{\mu}}{\sqrt{g_1^2+g_2^2}}~,&m_{\gamma} &= 0.
 \end{align}
 The $\PW^{\pm}$ and $\PZ$ bosons have acquired mass, while the photon
@@ -231,16 +231,16 @@ observed mass of the Higgs boson through quantum corrections.
 \section{The hierarchy problem and naturalness in the standard model}
 \label{sec:higgsnaturalness}
 
-\textbf{Maria: Can you add after this section the beta functions if
-  the self coupling and make a small subsection on the problem of the
-  metastatibility of the vacuum. it involves again the looks, the top
-  mass and the higgs mass (and as I guess) and it is an important
-  point that Higgs is throwing us a curveball given the higgs mass and
-  the top mass -- I think the traditional hierarchy and the problem of
-  the metastability are the same problem just before and after the
-  measurement of the higgs. Can point out that with SUSY included the
-  metastability  problem is tossed in the garbage in the same way that
-  SUSY is the answer to the hierarchy problem.}
+% \textbf{Maria: Can you add after this section the beta functions if
+%   the self coupling and make a small subsection on the problem of the
+%   metastatibility of the vacuum. it involves again the looks, the top
+%   mass and the higgs mass (and as I guess) and it is an important
+%   point that Higgs is throwing us a curveball given the higgs mass and
+%   the top mass -- I think the traditional hierarchy and the problem of
+%   the metastability are the same problem just before and after the
+%   measurement of the higgs. Can point out that with SUSY included the
+%   metastability  problem is tossed in the garbage in the same way that
+%   SUSY is the answer to the hierarchy problem.}
 
 The leading quantum correction to the Higgs mass is due to
 the large Yukawa coupling of the top quark, which gives the
@@ -309,8 +309,12 @@ Fig.~\ref{fig:smphase} using with the three-loop RG equations and
 including the two-loop threshold corrections at the weak
 scale~\cite{Buttazzo:2013uya}. Given the particle content of the SM
 and assuming no additional particles, the gauge couplings do
-not appear to unify near the mass scale of $10^{16}\GeV$, an essential feature
-of grand unification theories (GUT)~\cite{Georgi:1974sy,susyprimer}.
+not appear to intersect near the mass scale of $10^{16}\GeV$, an essential feature
+of grand unification theories
+(GUTs)~\cite{Georgi:1974sy,susyprimer}. Instead, if there are new
+particles that interact via the SM forces, they will modify the running of
+the coupling constants leaving open the possibility
+of grand unification.
 
 \subsection{Vacuum instability}
 \label{sec:vacuuminstability}
@@ -321,9 +325,10 @@ may be computed similarly:
 16\pi^2\frac{\rd y_\PQt}{\rd\log\mu} &= -\frac{17}{20}g_1^2y_\PQt - \frac{9}{4}g_2^2y_\PQt  - 8g_3^2y_\PQt + \frac{9}{2}y_\PQt^3~,\\
 16\pi^2\frac{\rd \lambda}{\rd\log\mu} &= -\frac{9}{5}g_1^2\lambda - 9g_2^2\lambda + \frac{27}{100}g_1^4 + \frac{9}{10}g_2^2g_1^2 + \frac{9}{4}g_2^4 + 12\lambda^2  +12\lambda y_\PQt^2 - 12y_\PQt^4~.
 \end{align}
-The running of the $\lambda$ is of particular interest because if it
-runs to $\lambda<0$, in principle 
-From these two Lagrangian parameters, we can visualize the SM phase
+The running of $\lambda$ is of particular interest because if it
+runs to $\lambda<0$, the present electroweak vacuum of the SM
+may correspond to a local minimum, or metastable ``false vacuum.'' Based on the
+running of these two Lagrangian parameters, we can visualize the SM phase
 diagram in ($m_\PH$, $m_\PQt$), divided into regions of absolute
 stability ($\lambda>0$ for all $\mu$), metastability ($\lambda<0$ for
 large $\mu$ near the Planck scale), and instability ($\lambda<0$ for
@@ -331,8 +336,8 @@ small $\mu$ near the weak scale). Ref.~\cite{Buttazzo:2013uya}
 computes with three-loop RG equations and two-loop threshold
 corrections at the weak scale as seen in
 Fig.~\ref{fig:smphase}. Curiously, if the SM is valid up to the Planck
-scale, the SM vacuum appears to be metastable and very close to the
-boundary between metastability and absolute stability~\cite{Buttazzo:2013uya}.
+scale without any new physics, the SM vacuum appears to be
+teetering on the edge between metastability and absolute stability~\cite{Buttazzo:2013uya}. 
 
 \begin{figure}
 \centering
@@ -673,13 +678,13 @@ and chargino mass terms in the Lagrangian are
 with the neutralino mass matrix,
 \begin{equation}
 \mathbf{M}_N =\left (  \begin{matrix}
-M_1 & 0 & -m_\PZ s_Wc_{\beta} & m_\PZ s_\PW s_{\beta} \\
-0& M_2 & -m_\PZ c_Wc_{\beta} & -m_\PZ c_\PW s_{\beta} \\
+M_1 & 0 & -m_\PZ s_\PW c_{\beta} & m_\PZ s_\PW s_{\beta} \\
+0& M_2 & -m_\PZ c_\PW c_{\beta} & -m_\PZ c_\PW s_{\beta} \\
 -m_\PZ s_\PW c_{\beta}& m_\PZ c_\PW c_{\beta} & 0 & -\mu\\
 m_\PZ s_\PW s_{\beta}& -m_\PZ c_\PW s_{\beta} & \mu & 0
 \end{matrix}\right)~,
 \end{equation}
-where $s_\PW = \sin\theta_\PW$, $c_W=\cos\theta_\PW$, $\theta_W$ is the
+where $s_\PW = \sin\theta_\PW$, $c_\PW =\cos\theta_\PW$, $\theta_\PW$ is the
 weak mixing angle, $s_{\beta} = \sin\beta$, $c_{\beta} =
 \cos\beta$, and $M_2$ and $M_1$ are the wino and bino masses, respectively.
 Likewise, the chargino mass matrix is
@@ -688,8 +693,8 @@ Likewise, the chargino mass matrix is
 0 & \mathbf{X}^T \\
  \mathbf{X}& 0
 \end{matrix}\right), ~\mathrm{where} ~ \mathbf{X} = \left (  \begin{matrix}
-M_2 & \sqrt{2}m_Ws_{\beta}\\
- \sqrt{2}m_Wc_{\beta}& \mu
+M_2 & \sqrt{2}m_\PW s_{\beta}\\
+ \sqrt{2}m_\PW c_{\beta}& \mu
 \end{matrix}\right)~.
 \end{equation}
 The eigenvalues of these matrices are the masses of the
@@ -704,11 +709,11 @@ TeV, making them accessible at the CERN LHC. To make this statement
 quantitative, we first need to define a measure of
 fine-tuning, such as~\cite{Brust:2011tb,naturalSUSY}:
 \begin{equation}
-\Delta = \frac{\Delta(m^2_\PH)}{m^2_\PH}~.
+\Delta = \left|\frac{\Delta(m^2_\PH)}{m^2_\PH}\right|~.
 \end{equation}
 Other measures of fine-tuning are possible, such as the one given by Barbieri and Giudice~\cite{Barbieri:1987fn,Katz:2014mba}:
 \begin{equation}
-\Delta_x = \abs{\frac{\partial \log m^2_\PZ}{\partial \log x}}~,
+\Delta_x = \left|\frac{\partial \log m^2_\PZ}{\partial \log x}\right|~,
 \end{equation}
 which quantifies the sensitivity of the $\PZ$-boson mass to
 an underlying, high-energy scale parameter $x$. Although no single
@@ -728,9 +733,9 @@ small. When $\mu$ is small ($\mu \ll M_1, M_2$), the two lightest
 neutralinos and the lightest chargino are higgsino-like and their
 masses are close together~\cite{PhysRevD.37.2515},
 \begin{align}
-m_{\chiz_1} &= |\mu| + \frac{m_Z^2(1+s_{\beta})(\mu - M_1c_W^2-M_2s_W^2)}{2(\mu-M_1)(\mu-M_2)} + \cdots\\
-m_{\chiz_2} &= |\mu| + \frac{m_Z^2(1-s_{\beta})(\mu + M_1c_W^2+M_2s_W^2)}{2(\mu+M_1)(\mu+M_2)} + \cdots\\
-m_{\chipm_1} &= |\mu| - \frac{m_W^2(\mu + M_2\sin 2\beta)}{M_2^2-\mu^2} + \cdots~.
+m_{\chiz_1} &= |\mu| + \frac{m_\PZ^2(1+s_{\beta})(\mu - M_1c_\PW^2-M_2s_\PW^2)}{2(\mu-M_1)(\mu-M_2)} + \cdots\\
+m_{\chiz_2} &= |\mu| + \frac{m_\PZ^2(1-s_{\beta})(\mu + M_1c_\PW^2+M_2s_\PW^2)}{2(\mu+M_1)(\mu+M_2)} + \cdots\\
+m_{\chipm_1} &= |\mu| - \frac{m_\PW^2(\mu + M_2\sin 2\beta)}{M_2^2-\mu^2} + \cdots~.
 \end{align}
 Fig.~\ref{fig:neutralinos} shows the mass differences
 $m_{\chipm_1}-m_{\chiz_1}$ and $m_{\chiz_2}-m_{\chiz_1}$ as a function of the wino mass $M_2$.
@@ -907,26 +912,27 @@ M_1,M_2,M_3,\boldsymbol{a_\PQu},\boldsymbol{a_\PQd},\boldsymbol{a_\Pe} &\sim m_\
 \label{sec:rgemssm}
 The one-loop beta functions in the MSSM are modified with respect to
 the ones in the SM due to the additional particle
-content. Numerically, they become,
+content. Numerically, they become
 \begin{align}
 \frac{\rd g_1}{\rd\log\mu} &=\frac{g_1^3}{20\pi^2} \left( \frac{33}{4} \right)~,\\
 \frac{\rd g_2}{\rd\log\mu} &= \frac{g_2^3}{16\pi^2}\left( 1 \right)~,\\
 \frac{\rd g_3}{\rd\log\mu} &= \frac{g_3^3}{16\pi^2}\left( -3\right)~.
 \end{align}
 Fig.~\ref{fig:unification}, shows how the gauge couplings, expressed
-as $\alpha^{-1}_{i} = 4\pi/g_i^2$, run in both the SM and the MSSM~\cite{susyprimer}. Unlike the SM, the MSSM includes the right
+as $\alpha^{-1}_{i} = 4\pi/g_i^2$, run in both the SM and the
+MSSM~\cite{susyprimer}. Unlike the SM, the MSSM includes the right
 particle content to ensure that the gauge couplings can unify at a
-mass scale $\sim2 \times10^{16} \GeV$~\cite{susyprimer}.
+mass scale of $\sim2 \times10^{16} \GeV$ near the GUT scale~\cite{susyprimer}. 
 
 \begin{figure}
 \centering
-\includegraphics[width=0.49\textwidth]{figs/theory/unification.pdf}
+\includegraphics[width=0.9\textwidth]{figs/theory/unification.pdf}
 \caption{Two-loop renormalization group evolution of the inverse
 gauge couplings $\alpha^{-1}_i(\mu)$ in the SM (dashed lines) and the
 MSSM (solid lines). In the MSSM case, the sparticle masses are treated
 as a common threshold varied between $500\GeV$ and $1.5\TeV$, and
 $\alpha_3(m_\PZ)$ is varied between $0.117$ and
-$0.121$.~\cite{susyprimer}.\label{fig:unification}}
+$0.121$~\cite{susyprimer}.\label{fig:unification}}
 \end{figure}
 
 \section{Simplified natural supersymmetry models}
