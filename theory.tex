@@ -257,9 +257,10 @@ m^2_\PH &= m^2_{\PH\mathrm{(bare)}} +\Delta(m^2_\PH) \\
 \fmfright{o} 
 \fmf{dashes}{i,v1}
 \fmf{dashes}{v2,o}
-\fmf{plain,left,tension=.3,label=$t$}{v1,v2}
+\fmf{plain,left,tension=.3,label=$\PQt$}{v1,v2}
 \fmf{plain,left,tension=.3}{v2,v1}
 \fmfv{label=$\PH$,label.angle=90}{i}
+\fmfdot{v1,v2}
 \end{fmfgraph*}} \quad + \quad\cdots\\
 &= -\frac{3|y_\PQt|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 + \cdots~,
 \label{eqn:toploop}
@@ -320,11 +321,71 @@ of grand unification.
 \label{sec:vacuuminstability}
 The one-loop beta functions for the top-quark Yukawa
 coupling $y_\PQt$ and the Higgs quartic coupling $\lambda$ in the SM
-may be computed similarly:
+may be computed from one-loop diagrams such as those
+shown in Fig~\ref{fig:lambda}:
 \begin{align}
 16\pi^2\frac{\rd y_\PQt}{\rd\log\mu} &= -\frac{17}{20}g_1^2y_\PQt - \frac{9}{4}g_2^2y_\PQt  - 8g_3^2y_\PQt + \frac{9}{2}y_\PQt^3~,\\
 16\pi^2\frac{\rd \lambda}{\rd\log\mu} &= -\frac{9}{5}g_1^2\lambda - 9g_2^2\lambda + \frac{27}{100}g_1^4 + \frac{9}{10}g_2^2g_1^2 + \frac{9}{4}g_2^4 + 12\lambda^2  +12\lambda y_\PQt^2 - 12y_\PQt^4~.
 \end{align}
+\begin{figure}[tpb]
+\centering
+  \unitlength=0.005\textwidth
+  \vspace{\baselineskip}
+\setkeys{Gin}{width=\ginnatwidth,totalheight=\ginnatheight}
+\begin{fmffile}{lambda}
+\begin{fmfgraph*}(50,40)
+        \fmfset{arrow_len}{cm}\fmfset{arrow_ang}{0}
+\fmftop{t1}
+\fmfbottom{b1,b2}
+\fmflabel{$\PH$}{t1}
+\fmflabel{$\PQt$}{b1}
+\fmflabel{$\PQt$}{b2}
+\fmf{dashes}{t1,v1}
+\fmf{fermion}{b1,v2}
+\fmf{fermion}{b2,v3}
+\fmf{fermion,tension=0.3,label=$\PQt$,label.side=right}{v1,v2}
+\fmf{dashes,tension=0.3,label=$\PH$,label.side=right}{v2,v3}
+\fmf{fermion,tension=0.3,label=$\PQt$,label.side=right}{v3,v1}
+\fmfdot{v1,v2,v3}
+  \end{fmfgraph*}\hfill
+\begin{fmfgraph*}(50,40)
+        \fmfset{arrow_len}{cm}\fmfset{arrow_ang}{0}
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$\PH$}{i1}
+\fmflabel{$\PH$}{i2}
+\fmflabel{$\PH$}{o1}
+\fmflabel{$\PH$}{o2}
+\fmf{dashes}{i1,v1}
+\fmf{fermion,tension=0.5,label=$\PQt$,label.side=right}{v1,v2}
+\fmf{dashes}{v2,o1}
+\fmf{dashes}{o2,v4}
+\fmf{fermion,tension=0.5,label=$\PQt$,label.side=right}{v4,v3}
+\fmf{dashes}{v3,i2}
+\fmf{fermion,tension=0.5,label=$\PQt$,label.side=left}{v1,v3}
+\fmf{fermion,tension=0.5,label=$\PQt$,label.side=right}{v2,v4}
+\fmfdot{v1,v2,v3,v4}
+  \end{fmfgraph*}\hfill
+\begin{fmfgraph*}(50,40)
+        \fmfset{arrow_len}{cm}\fmfset{arrow_ang}{0}
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$\PH$}{i1}
+\fmflabel{$\PH$}{i2}
+\fmflabel{$\PH$}{o1}
+\fmflabel{$\PH$}{o2}
+\fmf{dashes}{i1,v1,o1}
+\fmf{dashes}{o2,v2,i2}
+\fmf{dashes,label=$\PH$,left,tension=0.5}{v1,v2}
+\fmf{dashes,label=$\PH$,left,tension=0.5}{v2,v1}
+\fmfdot{v1,v2}
+  \end{fmfgraph*}
+\end{fmffile}\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \vspace{\baselineskip}
+\caption{Example one-loop diagrams contributing to the running of
+  $y_\PQt$ and $\lambda$~\cite{jmgd}. \label{fig:lambda}}
+\end{figure}
+
 The running of $\lambda$ is of particular interest because if it
 runs to $\lambda<0$, the present electroweak vacuum of the SM
 may correspond to a local minimum, or metastable ``false vacuum,'' which
@@ -332,8 +393,8 @@ will eventually decay~\cite{PhysRevD.15.2929,PhysRevD.16.1762}. Based on the
 running of these two Lagrangian parameters, we can visualize the SM phase
 diagram in ($m_\PH$, $m_\PQt$), divided into regions of absolute
 stability ($\lambda>0$ for all $\mu$), metastability ($\lambda<0$ for
-large $\mu$ near the Planck scale), and instability ($\lambda<0$ for
-small $\mu$ near the weak scale). Ref.~\cite{Buttazzo:2013uya}
+some $\mu$ but with a long lifetime), and instability ($\lambda<0$ for
+some $\mu$ and a short lifetime). Ref.~\cite{Buttazzo:2013uya}
 computes with three-loop RG equations and two-loop threshold
 corrections at the weak scale as seen in
 Fig.~\ref{fig:smphase}. Curiously, if the SM is valid up to the Planck
@@ -763,6 +824,7 @@ with the contribution from the top quark in Eqn.~\ref{eqn:toploop}:
 \fmf{dashes}{i,v}
 \fmf{dashes,right,tension=0.7,label=$\PSQt_{1,,2}$}{v,v}
 \fmf{dashes}{v,o}
+\fmfdot{v}
 \fmfv{label=$\PH$,label.angle=90}{i}
 \end{fmfgraph*}}
  \quad + \quad
@@ -775,6 +837,7 @@ with the contribution from the top quark in Eqn.~\ref{eqn:toploop}:
 \fmf{dashes}{v2,o}
 \fmf{dashes,left,tension=.3,label=$\PSQt_{1,,2}$}{v1,v2}
 \fmf{dashes,left,tension=.3}{v2,v1}
+\fmfdot{v1,v2}
 \fmfv{label=$\PH$,label.angle=90}{i}
 \end{fmfgraph*}} \quad + \quad\cdots\\
  &= -\frac{3|y_\PQt|^2}{8\pi^2}\Lambda_{\mathrm{UV}}^2 +
@@ -817,6 +880,7 @@ the top squark mass from the gluino~\cite{Craig:2013cxa}:
 \fmf{gluon,left,tension=.3,label=$\sGlu$}{v1,v2}
 \fmf{plain,left,tension=.3,label=$\PQt$}{v2,v1}
 \fmfv{label=$\PSQt_{i}$,label.angle=90}{i}
+\fmfdot{v1,v2}
 \fmffreeze\fmf{plain,left,tension=.3}{v1,v2}
 \end{fmfgraph*}} + \quad \cdots\\
 &= \frac{2g^2_{\mathrm{s}}m_{\sGlu}^2}{3\pi^2}\log\left(\frac{\Lambda_{\mathrm{UV}}}{m_{\sGlu}}\right) + \cdots~,
