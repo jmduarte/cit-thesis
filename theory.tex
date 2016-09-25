@@ -128,7 +128,7 @@ V(\Phi)~,& V(\Phi) &= -\mu^2\Phi^{\dagger}\Phi +
 where the field $\Phi$ is a complex, spin-$0$, self-interacting
 $\mathrm{SU(2)}_{\mathrm{L}}$ doublet with weak hypercharge $Y=1/2$:
 \begin{equation}
-\Phi = \left(\begin{matrix} \phi^{+}\\\phi^0\end{matrix} \right)~.
+\Phi = \begin{pmatrix} \phi^{+}\\\phi^0\end{pmatrix} ~.
 \end{equation}
 If $\mu^2>0$, then the potential will have a ``Mexican hat'' shape, illustrated in
 \ref{fig:mexicanhat}, and the minimum of the potential will occur at a value of the field that is not $\mathrm{SU(2)}_{\mathrm{L}}\times\mathrm{U(1)}_Y$
@@ -136,7 +136,7 @@ invariant. Due to this, $\Phi$ acquires a nonzero vacuum
 expectation value (\emph{vev}), corresponding to the minimum of the potential,
 \begin{align}
 \langle\Phi\rangle_0&\equiv \langle 0|\Phi|0\rangle =
-\frac{1}{\sqrt{2}}U(x)\left(\begin{matrix} 0\\v\end{matrix} \right)~,&v &= \sqrt{\frac{\mu^2}{\lambda}}~,
+\frac{1}{\sqrt{2}}U(x)\begin{pmatrix} 0\\v\end{pmatrix} ~,&v &= \sqrt{\frac{\mu^2}{\lambda}}~,
 \end{align}
 where $U(x)$ is a unitary transformation that rotates the field
 to the other degenerate solutions. Since the vev is still symmetric under a $\mathrm{U(1)}$ subgroup of the full
@@ -161,13 +161,12 @@ ig_1\frac{1}{2}B_{\mu})\Phi ~,
 \end{equation}
 on the vacuum Higgs field. In this case, the kinetic term is:
 \begin{align}
-|D_{\mu}\Phi|^2 &= \frac{1}{2} \left|\left (\begin{matrix}\partial_{\mu}
+|D_{\mu}\Phi|^2 &= \frac{1}{2} \left|\begin{pmatrix}\partial_{\mu}
     -\frac{i}{2}(g_2W_{\mu}^3 + g_1B_{\mu})&
     -\frac{ig_2}{2}(W_{\mu}^1-iW_{\mu}^2)\\ 
 -\frac{ig_2}{2}(W_{\mu}^1+iW^2_{\mu})&\partial_{\mu}
     +\frac{i}{2}(g_2W_{\mu}^3 - g_1B_{\mu})
-  \end{matrix}\right)
-                                       \left(\begin{matrix}0\\v\end{matrix}\right)\right |^2 \nonumber\\
+  \end{pmatrix}\begin{pmatrix}0\\v\end{pmatrix}\right |^2 \nonumber\\
 & = \frac{1}{8} \left ( g_2^2v^2|W_{\mu}^1+iW^2_{\mu}|^2 +
   v^2|g_2W^3_{\mu}-g_1B_{\mu}|^2 \right ) \nonumber\\
 & = m_\PW^2W_{\mu}^+W^{-\mu} +
@@ -189,7 +188,7 @@ emergence of a physical spin-$0$ boson~\cite{HIGGS1964132,PhysRevLett.13.508}. I
 its potential minimum
 \begin{align}
 \Phi(x)&=
-\frac{1}{\sqrt{2}}U(x)\left(\begin{matrix} 0\\v+H(x)\end{matrix} \right)
+\frac{1}{\sqrt{2}}U(x)\begin{pmatrix} 0\\v+H(x)\end{pmatrix} 
 \end{align}
 and write out the terms associated to this field, we find
 \begin{equation}
@@ -739,25 +738,25 @@ and chargino mass terms in the Lagrangian are
 \end{equation}
 with the neutralino mass matrix,
 \begin{equation}
-\mathbf{M}_N =\left (  \begin{matrix}
+\mathbf{M}_N =\begin{pmatrix}
 M_1 & 0 & -m_\PZ s_\PW c_{\beta} & m_\PZ s_\PW s_{\beta} \\
 0& M_2 & -m_\PZ c_\PW c_{\beta} & -m_\PZ c_\PW s_{\beta} \\
 -m_\PZ s_\PW c_{\beta}& m_\PZ c_\PW c_{\beta} & 0 & -\mu\\
 m_\PZ s_\PW s_{\beta}& -m_\PZ c_\PW s_{\beta} & \mu & 0
-\end{matrix}\right)~,
+\end{pmatrix}~,
 \end{equation}
 where $s_\PW = \sin\theta_\PW$, $c_\PW =\cos\theta_\PW$, $\theta_\PW$ is the
 weak mixing angle, $s_{\beta} = \sin\beta$, $c_{\beta} =
 \cos\beta$, and $M_2$ and $M_1$ are the wino and bino masses, respectively.
 Likewise, the chargino mass matrix is
 \begin{equation}
-\mathbf{M}_C =\left (  \begin{matrix}
+\mathbf{M}_C =\begin{pmatrix}
 0 & \mathbf{X}^T \\
  \mathbf{X}& 0
-\end{matrix}\right), ~\mathrm{where} ~ \mathbf{X} = \left (  \begin{matrix}
+\end{pmatrix}, ~\mathrm{where} ~ \mathbf{X} =  \begin{pmatrix}
 M_2 & \sqrt{2}m_\PW s_{\beta}\\
  \sqrt{2}m_\PW c_{\beta}& \mu
-\end{matrix}\right)~.
+\end{pmatrix}
 \end{equation}
 The eigenvalues of these matrices are the masses of the
 neutralinos and charginos.
