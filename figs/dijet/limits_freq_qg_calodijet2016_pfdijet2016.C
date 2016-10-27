@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Mon Sep 12 09:53:00 2016) by ROOT version5.34/31
+//=========  (Thu Oct 27 10:25:27 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,800,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -23,7 +23,7 @@
    
    TMultiGraph *multigraph = new TMultiGraph();
    multigraph->SetName("");
-   multigraph->SetTitle(" ;Resonance Mass [GeV]; #sigma B A [pb]");
+   multigraph->SetTitle(" ;Resonance mass [GeV]; #sigma B A [pb]");
    
    TGraphAsymmErrors *grae = new TGraphAsymmErrors(21);
    grae->SetName("Graph");
@@ -895,7 +895,7 @@
    
    multigraph->Add(graph,"");
    multigraph->Draw("a3");
-   multigraph->GetXaxis()->SetTitle("Resonance Mass [TeV]");
+   multigraph->GetXaxis()->SetTitle("Resonance mass [TeV]");
    multigraph->GetXaxis()->SetLabelFont(42);
    multigraph->GetXaxis()->SetLabelOffset(1000);
    multigraph->GetXaxis()->SetLabelSize(0.05);
@@ -2678,7 +2678,7 @@ tex->SetNDC();
    tex->SetTextSize(0.022);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(1550,15000,"Low Mass");
+      tex = new TLatex(1550,15000,"Low mass");
    tex->SetTextAlign(31);
 
    ci = TColor::GetColor("#999999");
@@ -2695,7 +2695,7 @@ tex->SetNDC();
    tex->SetTextSize(0.022);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(1650,15000,"High Mass");
+      tex = new TLatex(1650,15000,"High mass");
 
    ci = TColor::GetColor("#999999");
    tex->SetTextColor(ci);
@@ -2713,7 +2713,7 @@ tex->SetNDC();
    ci = TColor::GetColor("#000099");
    __1->SetLineColor(ci);
    __1->SetMarkerStyle(8);
-   __1->GetXaxis()->SetTitle("Resonance Mass [TeV]");
+   __1->GetXaxis()->SetTitle("Resonance mass [TeV]");
    __1->GetXaxis()->SetLabelFont(42);
    __1->GetXaxis()->SetLabelOffset(1000);
    __1->GetXaxis()->SetLabelSize(0.05);

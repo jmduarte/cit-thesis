@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Mon Sep 12 10:04:15 2016) by ROOT version5.34/31
+//=========  (Thu Oct 27 10:18:36 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,600,700);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -45,7 +45,7 @@
    data_obs_density->GetXaxis()->SetLabelSize(0.035);
    data_obs_density->GetXaxis()->SetTitleSize(0.035);
    data_obs_density->GetXaxis()->SetTitleFont(42);
-   data_obs_density->GetYaxis()->SetTitle("d#sigma / dm_{jj} [pb / GeV]");
+   data_obs_density->GetYaxis()->SetTitle("d#sigma/dm_{jj} [pb/GeV]");
    data_obs_density->GetYaxis()->SetLabelFont(42);
    data_obs_density->GetYaxis()->SetLabelSize(0.05);
    data_obs_density->GetYaxis()->SetTitleSize(0.07);
@@ -969,7 +969,7 @@ tex->SetNDC();
 
    ci = TColor::GetColor("#ff0000");
    h_fit_residual_vs_mass->SetFillColor(ci);
-   h_fit_residual_vs_mass->GetXaxis()->SetTitle("Dijet Mass [GeV]");
+   h_fit_residual_vs_mass->GetXaxis()->SetTitle("Dijet mass [GeV]");
    h_fit_residual_vs_mass->GetXaxis()->SetRange(1,26);
    h_fit_residual_vs_mass->GetXaxis()->SetLabelFont(42);
    h_fit_residual_vs_mass->GetXaxis()->SetLabelSize(0.1);

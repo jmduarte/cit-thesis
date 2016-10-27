@@ -109,10 +109,10 @@ The SUSY signal production cross sections are calculated to next-to-leading
 order (NLO) plus next-to-leading-logarithm (NLL)
 accuracy~\cite{NLONLL1,NLONLL2,NLONLL3,NLONLL4,NLONLL5,NLONLLerr,Borschensky:2014cia}, assuming all
 SUSY particles other than those in the relevant diagram to be too
-heavy to participate in the interaction. The NLO$+$NLL cross section and
-its associated uncertainty~\cite{Borschensky:2014cia} are used to derive 
+heavy to participate in the interaction. The NLO$+$NLL cross sections and
+their associated uncertainties~\cite{Borschensky:2014cia} are used to derive 
 the exclusion limit on the masses of the SUSY
-particles. The hard scattering was generated with \MADGRAPH up to
+particles. The hard scattering is generated with \MADGRAPH up to
 two extra partons to model initial-state radiation at the matrix element level, and
 simulated events were interfaced to  \PYTHIA for the showering,
 fragmentation and hadronization steps. 
@@ -182,10 +182,11 @@ corresponding tracks in the silicon detectors~\cite{Chatrchyan:2012xi},
 and are required to have $\pt > 5 \GeV$ and $|\eta|<2.4$. Muons are identified
 based on the quality of the track fit, the number of detector hits used in the 
 tracking algorithm, and the compatibility between track
-segments. As for electrons, we define ``tight'' and ``veto'' muon selections. The absolute value of the 3D impact 
+segments. The absolute value of the 3D impact 
 parameter significance of the muon track, which is defined as the ratio of the impact
 parameter to its estimated uncertainty, is required to be less than
-4. For both tight and veto muons with 
+4. As for electrons, we define a ``tight'' selection for muons with $\pt > 20 \GeV$
+and a ``veto'' selection for muons with $\pt > 5 \GeV$. For both tight and veto muons with 
 $\pt > 20 \GeV$ the isolation is required to be less than $20\%$
 of the muon $\pt$, while for veto muons with $\pt$ between $5$ and $20 \GeV$
 the isolation computed using a $\Delta R$ cone of $0.4$ 
@@ -208,12 +209,12 @@ of about $50\%$ for successfully reconstructed $\ensuremath{\tau_{\mathrm{h}}}$ 
 
 To identify jets originating from \cPqb-hadron decays, we use the updated
 CSVv2 \cPqb-jet tagger (see Sec.~\ref{sec:btag}), which uses the inclusive
-vertex finder to select \cPqb-jets~\cite{CMS-PAS-BTV-15-001,btag8TeV,btag7TeV}. The ``medium'' 
-working point selection is used to define the event categories for the search signal regions,
-and for jets with $\pt$ between $40$ and $200 \GeV$ yields an
-efficiency of approximately $70\%$ for \cPqb-jets and an average 
-misidentification probability of $1.5\%$ for jets originating from light-flavor 
-quarks or gluons in typical background events relevant for this search.
+vertex finder to select
+\cPqb-jets~\cite{CMS-PAS-BTV-15-001,btag8TeV,btag7TeV}. The ``medium'' 
+working point is used to define the event categories for the search signal regions.
+For jets with $\pt$ between $40$ and $200 \GeV$ the \PQb~jet tagging efficiency 
+is approximately $70\%$ and the probability of misidentifying a light-flavor quark or gluon as
+a \PQb~jet is $1.5\%$ in typical background events relevant for this search.
 
 Photon candidates are reconstructed from clusters of energy deposits
 in the ECAL. They are identified using selections on the hadronic to
@@ -419,17 +420,19 @@ control regions for events with four or more jets. For bins which show statistic
 the size of the disagreement is propagated as a systematic uncertainty. The typical range of these additional 
 systematic uncertainties is between $10\%$ and $30\%$.
 
-The $\ttbar$ and $\PW(\ell\nu)+$jets backgrounds in the zero-lepton Multijet event category are 
-composed of events with at least one lepton in the final state, which is either out of 
-acceptance or fails the veto electron, muon, or $\ensuremath{\tau_{\mathrm{h}}}$ selection. 
-Two additional control regions are defined in order to control the accuracy of the modeling of the 
-acceptance and efficiency for selecting electrons or muons, and $\ensuremath{\tau_{\mathrm{h}}}$. 
-We require events in the veto lepton ($\ensuremath{\tau_{\mathrm{h}}}$ candidate) control region to have at least one veto electron or muon
+The $\ttbar$ and $\PW(\ell\nu)$+jets backgrounds in the zero-lepton Multijet event category are 
+composed of \emph{lost lepton events} with at least one lepton in the final state, which is either out of 
+acceptance or fails the veto electron, veto muon, or
+$\ensuremath{\tau_{\mathrm{h}}}$ selection. To ensure a good
+understanding of the rate of lost lepton events in data and the MC simulation, two
+additional control regions are defined to evaluate  accuracy of the
+modeling of the acceptance and efficiency for selecting veto
+electrons, veto muons, and $\ensuremath{\tau_{\mathrm{h}}}$. We require events in the veto lepton ($\ensuremath{\tau_{\mathrm{h}}}$ candidate) control region to have at least one veto electron or muon
 ($\ensuremath{\tau_{\mathrm{h}}}$ candidate) selected. The $M_{\mathrm{T}}$ is required to be between $30$ and $100\GeV$ in order to 
 suppress QCD multijet background and contamination from potential new physics processes. At least two jets
-with $\pt>80$~GeV and at least four jets with $\pt>40\GeV$ are required,
+with $\pt>80\GeV$ and at least four jets with $\pt>40\GeV$ are required,
 consistent with the search region requirements. Finally, we consider events with 
-$\MR > 400$~GeV and $\Rtwo>0.25$. The distribution of the veto lepton $\pt$ for events in the veto 
+$\MR > 400\GeV$ and $\Rtwo>0.25$. The distribution of the veto lepton $\pt$ for events in the veto 
 lepton and veto $\ensuremath{\tau_{\mathrm{h}}}$ control regions are shown in Fig.~\ref{fig:VetoLeptonCR_LepPt},
 and demonstrate that the MC models describe well the observed data.
 The observed discrepancies in any bin are propagated as systematic uncertainties in the 
@@ -475,9 +478,9 @@ mismodeling by the simulation, indicating that the measured corrections are accu
 \label{sec:ZInvCR}
 
 Three independent control regions are used to predict the $\cPZ(\nu\bar\nu)+$jets background,
-relying on the assumption that the hadronic recoil spectrum and the jet multiplicity distribution
-of the $\cPZ(\nu\bar\nu)+$jets process are similar to those of the $\PW(\ell\nu)+$jets and $\cPgg+$jets 
-processes. The primary and most populated control region is the $\cPgg+$jets control region, 
+relying on the assumption that Monte Carlo simulation mismodeling of the hadronic recoil spectrum and the 
+jet multiplicity distribution of the $\cPZ(\nu\bar\nu)$+jets process are similar to those 
+of the $\PW(\ell\nu)+$jets and $\cPgg+$jets processes. The primary and most populated control region is the $\cPgg+$jets control region, 
 defined by selecting events with at least one photon passing loose identification and
 isolation requirements. The events are triggered using single-photon triggers, and 
 the photon is required to have $\pt>50\GeV$. The momentum of the photon candidate
@@ -523,9 +526,10 @@ The bottom panel shows the ratio of data to the background prediction, with unce
 The second control region, enhanced in the $\PW(\ell\nu)+$jets, is defined
 identically to the $\PW(\ell\nu)+$jets control region described in Section~\ref{sec:TTBarWJetsCR}, except that the lepton is treated as invisible
 by adding its momentum vectorially to $\ptvecmiss$, and the $\MR$ and $\Rtwo$
-variables are computed accordingly. Correction factors are computed using events from this control region,
-and the difference between these correction factors and those computed from the $\cPgg+$jets control region
-is propagated as a systematic uncertainty.  These uncertainties range between $10\%$ and $40\%$ depending on the ($\MR$,$\Rtwo$) bin. 
+variables are computed accordingly. Correction factors computed using events from this control region
+are compared to those computed from the $\cPgg$+jets control region and exhibit differences ranging
+between $10\%$ and $40\%$ depending on the $\MR$-$\Rtwo$ bin. These differences are 
+propagated as a systematic uncertainty.
 
 The third control region, enhanced in $\cPZ\to\ell^+\ell^-$ decays, 
 is defined by selecting events with two tight electrons or two tight muons, and requiring that the dilepton mass is
@@ -594,8 +598,8 @@ and the second cross-check is performed on a dijet control region enhanced in QC
 In both cases, the events at large $\Rtwo$ result from cases similar to our search region
 where the energy of a leading jet is severely mismeasured. We compare the values of
 $\zeta$ measured in these data control regions to the values predicted
-by the simulation and observe an agreement at the $20\%$ level, well within the 
-systematic uncertainty of $87\%$ assigned to the QCD background estimate. 
+by the simulation and observe agreement within $20\%$, well within the 
+systematic uncertainty of $87\%$ assigned to the QCD background estimate.
 
 
 \subsection{Method B: fit-based background prediction}
@@ -656,7 +660,7 @@ separately for each of the search categories and we find
 that the fit function yields an accurate representation of the
 background predicted by the simulation.
 
-We also observe that the fit model is insensitive to variations of the background
+We also observe that the accuracy of the fit model is insensitive to variations of the background
 composition predicted by the simulation in each event category by altering
 relative contributions of the dominant backgrounds, performing a
 new fit with the alternative background composition, and comparing
@@ -880,7 +884,7 @@ also propagate the difference in the correction factors measured in the three al
 control regions as a systematic uncertainty, intended to estimate the possible differences in 
 the simulation mismodeling of the hadronic recoil for the $\cPgg+$jets process and 
 the $\cPZ(\nu\bar\nu)+$jets process. These systematic uncertainties 
-range from $10$ to $40\%$. For the QCD background prediction the statistical uncertainty 
+range from $10$ to $40\%$. For the QCD multijet background prediction the statistical uncertainty 
 due to limited event counts in the $\dPhiR>2.8$ control regions and the systematic
 uncertainty of $87\%$ in the translation factor $\zeta$ are propagated.
 
@@ -888,8 +892,8 @@ For method B, the systematic uncertainties in the background are propagated as p
 the maximum likelihood fit procedure. For each event category, the background shape in 
 $\MR$ and $\Rtwo$ is described by four independent parameters: two 
 that control the exponential fall off and two that control the behavior of the
-nonexponential tail. Systematic uncertainties in the background are propagated 
-through the profiling of these unconstrained shape parameters. For more populated bins, such as 
+nonexponential tail. Systematic uncertainties in the background are propagated
+through the freedom of these unconstrained shape parameters in the fit model. For more populated bins, such as 
 the 0 \PQb-tag and 1 \PQb-tag bins in the Multijet category, the systematic uncertainties range from
 about 30\% at low $\MR$ and $\Rtwo$ to about 70\% at high $\MR$ and $\Rtwo$.
 For sparsely populated bins such as the 3-or-more \PQb-tag bin in the Muon Multijet or Electron

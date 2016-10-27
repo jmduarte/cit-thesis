@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Mon Sep 12 09:52:59 2016) by ROOT version5.34/31
+//=========  (Thu Oct 27 10:22:31 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,800,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -23,7 +23,7 @@
    
    TMultiGraph *multigraph = new TMultiGraph();
    multigraph->SetName("");
-   multigraph->SetTitle(" ;Resonance Mass [GeV]; #sigma B A [pb]");
+   multigraph->SetTitle(" ;Resonance mass [GeV]; #sigma B A [pb]");
    
    TGraph *graph = new TGraph(21);
    graph->SetName("Graph");
@@ -8306,7 +8306,7 @@ tex->SetNDC();
    tex->SetLineWidth(2);
    tex->Draw();
    
-   TLegend *leg = new TLegend(0.55,0.68,0.92,0.87,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.19,0.17,0.57,0.35,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(0);
    leg->SetLineStyle(1);
@@ -8362,16 +8362,16 @@ tex->SetNDC();
    entry->SetTextFont(42);
    leg->Draw();
    
-   leg = new TLegend(0.2,0.17,0.55,0.45,NULL,"brNDC");
+   leg = new TLegend(0.45,0.7,0.9,0.92,NULL,"brNDC");
    leg->SetBorderSize(1);
 
-   ci = 1925;
+   ci = 1927;
    color = new TColor(ci, 1, 1, 1, " ", 0);
    leg->SetLineColor(ci);
    leg->SetLineStyle(1);
    leg->SetLineWidth(1);
 
-   ci = 1924;
+   ci = 1926;
    color = new TColor(ci, 1, 1, 1, " ", 0);
    leg->SetFillColor(ci);
    leg->SetFillStyle(1001);
@@ -8431,6 +8431,21 @@ tex->SetNDC();
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
+   leg->Draw();
+   
+   leg = new TLegend(0.55,0.54,0.9,0.7,NULL,"brNDC");
+   leg->SetBorderSize(1);
+
+   ci = 1925;
+   color = new TColor(ci, 1, 1, 1, " ", 0);
+   leg->SetLineColor(ci);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+
+   ci = 1924;
+   color = new TColor(ci, 1, 1, 1, " ", 0);
+   leg->SetFillColor(ci);
+   leg->SetFillStyle(1001);
    entry=leg->AddEntry("Graph5","W'","l");
 
    ci = TColor::GetColor("#cc0000");
@@ -8451,7 +8466,7 @@ tex->SetNDC();
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("Graph7","DM Mediator","l");
+   entry=leg->AddEntry("Graph7","DM mediator","l");
 
    ci = TColor::GetColor("#cc00ff");
    entry->SetLineColor(ci);
@@ -15258,7 +15273,7 @@ tex->SetNDC();
    tex->SetTextSize(0.022);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(1550,15000,"Low Mass");
+      tex = new TLatex(1550,15000,"Low mass");
    tex->SetTextAlign(31);
 
    ci = TColor::GetColor("#999999");
@@ -15275,7 +15290,7 @@ tex->SetNDC();
    tex->SetTextSize(0.022);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(1650,15000,"High Mass");
+      tex = new TLatex(1650,15000,"High mass");
 
    ci = TColor::GetColor("#999999");
    tex->SetTextColor(ci);

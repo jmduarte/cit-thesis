@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Mon Sep 12 09:52:36 2016) by ROOT version5.34/31
+//=========  (Thu Oct 27 10:26:08 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,800,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -23,7 +23,7 @@
    
    TMultiGraph *multigraph = new TMultiGraph();
    multigraph->SetName("");
-   multigraph->SetTitle(" ;Resonance Mass [GeV];Local Significance n#sigma");
+   multigraph->SetTitle(" ;Resonance mass [GeV];Local significance n#sigma");
    
    TGraphAsymmErrors *grae = new TGraphAsymmErrors(21);
    grae->SetName("Graph");
@@ -822,13 +822,13 @@
    
    multigraph->Add(graph,"");
    multigraph->Draw("a3");
-   multigraph->GetXaxis()->SetTitle("Resonance Mass [GeV]");
+   multigraph->GetXaxis()->SetTitle("Resonance mass [GeV]");
    multigraph->GetXaxis()->SetNdivisions(408);
    multigraph->GetXaxis()->SetLabelFont(42);
    multigraph->GetXaxis()->SetLabelSize(0.05);
    multigraph->GetXaxis()->SetTitleSize(0.06);
    multigraph->GetXaxis()->SetTitleFont(42);
-   multigraph->GetYaxis()->SetTitle("Local Significance n#sigma");
+   multigraph->GetYaxis()->SetTitle("Local significance n#sigma");
    multigraph->GetYaxis()->SetNdivisions(405);
    multigraph->GetYaxis()->SetLabelFont(42);
    multigraph->GetYaxis()->SetLabelSize(0.05);
@@ -1006,13 +1006,13 @@ tex->SetNDC();
    ci = TColor::GetColor("#000099");
    __1->SetLineColor(ci);
    __1->SetMarkerStyle(8);
-   __1->GetXaxis()->SetTitle("Resonance Mass [GeV]");
+   __1->GetXaxis()->SetTitle("Resonance mass [GeV]");
    __1->GetXaxis()->SetNdivisions(408);
    __1->GetXaxis()->SetLabelFont(42);
    __1->GetXaxis()->SetLabelSize(0.05);
    __1->GetXaxis()->SetTitleSize(0.06);
    __1->GetXaxis()->SetTitleFont(42);
-   __1->GetYaxis()->SetTitle("Local Significance n#sigma");
+   __1->GetYaxis()->SetTitle("Local significance n#sigma");
    __1->GetYaxis()->SetNdivisions(405);
    __1->GetYaxis()->SetLabelFont(42);
    __1->GetYaxis()->SetLabelSize(0.05);

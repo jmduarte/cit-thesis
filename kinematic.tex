@@ -103,6 +103,7 @@ where
 E_{\Pq_i}^{\prime} = \gamma_{\mathrm L}E_{\Pq_i} - \vec\beta_{\mathrm
   L}\cdot \vec p^{\,\Pq_i} ~.
 \end{equation}
+Here, primed quantities refer to the approximate CM frame.
 
 To complete the ``razor picture'' of approximate rest frames, we can
 construct another boost $\vec\beta_{\mathrm R}$, an estimator of $\vec\beta^{\mathrm{decay}}$, intended to be
@@ -119,18 +120,25 @@ constraint on $\vec\beta_{\mathrm R}$:
 &\Rightarrow& \vec\beta_{\mathrm R}\cdot(\vec p^{\,\Pq_1\prime} + \vec
   p^{\,\Pq_2\prime}) &= E^{\Pq_1\prime}- E^{\Pq_2\prime}~.
 \end{align}
+Here, double primed quantities refer to the approximate decay frames.
 %where
 %\begin{align}
 %E_{\Pq_1}^{\prime\prime} &= \gamma_{\mathrm R}E_{\Pq_1}^{\prime} - \vec\beta_{\mathrm R}\cdot \vec p^{\,\Pq_1\prime} \\
 %E_{\Pq_2}^{\prime\prime} &= \gamma_{\mathrm R}E_{\Pq_2}^{\prime} + \vec\beta_{\mathrm R}\cdot \vec p^{\,\Pq_2\prime} ~.
 %\end{align}
-Using this symmetry, and the extremal condition $\partial (
-E_{\Pq_1}^{\prime\prime} + E_{\Pq_2}^{\prime\prime} )/ \partial
-\vec\beta_{\mathrm R} = 0$\footnote{This extremal condition is one possible
-  choice that does not necessarily produce the true boost
-  event-by-event. This contributes to an increase in the $\MR$ resolution. On
-  average, however, this boost choice produces an $\MR$ variable that estimates (i.e. peaks at) the correct
-  mass scale $M_{\Delta}$.}, we can uniquely specify the boost,
+Using this symmetry and one additional constraint, we can uniquely
+specify the boost $\vec\beta_\mathrm{R}$. One possible choice of this
+additional constraint is the extremal condition,
+\begin{equation}
+\frac{\partial (E_{\Pq_1}^{\prime\prime} + E_{\Pq_2}^{\prime\prime} )}{\partial\vec\beta_{\mathrm R}} = 0~.
+\label{eqn:extremal}
+\end{equation}
+This choice does not necessarily produce the true boost
+event-by-event. As such, this contributes to an increase in the $\MR$
+resolution. On average, however, this choice produces an $\MR$
+variable that estimates (i.e. peaks at) the correct mass scale
+$M_{\Delta}$. The resulting boost that satisifies the extremal
+condition of Eqn.~\ref{eqn:extremal} is
 \begin{equation}
 \vec\beta_{\mathrm{R}} = 
 \frac{\vec p^{\Pq_1\prime} - \vec p^{\Pq_2\prime}}{E^{\Pq_1\prime}+ E^{\Pq_2\prime}}~.
