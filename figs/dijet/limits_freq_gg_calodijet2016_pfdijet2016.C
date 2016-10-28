@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Thu Oct 27 10:25:28 2016) by ROOT version5.34/31
+//=========  (Thu Oct 27 22:14:57 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,800,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -1275,7 +1275,7 @@ tex->SetNDC();
    entry->SetTextFont(42);
    leg->Draw();
    
-   leg = new TLegend(0.2,0.17,0.6,0.4,NULL,"brNDC");
+   leg = new TLegend(0.2,0.17,0.7,0.4,NULL,"brNDC");
    leg->SetBorderSize(1);
 
    ci = 1925;
@@ -1288,6 +1288,14 @@ tex->SetNDC();
    color = new TColor(ci, 1, 1, 1, " ", 0);
    leg->SetFillColor(ci);
    leg->SetFillStyle(1001);
+   entry=leg->AddEntry("NULL","","");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
    entry=leg->AddEntry("Graph1","Color-octet scalar (k_{s}^{2} = 1/2)","l");
 
    ci = TColor::GetColor("#ff00ff");

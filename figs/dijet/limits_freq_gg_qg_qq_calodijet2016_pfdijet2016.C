@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Thu Oct 27 10:22:31 2016) by ROOT version5.34/31
+//=========  (Thu Oct 27 22:11:22 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,800,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -1547,7 +1547,7 @@
    
    multigraph->Add(graph,"");
    multigraph->Draw("a3");
-   multigraph->GetXaxis()->SetTitle("Resonance Mass [TeV]");
+   multigraph->GetXaxis()->SetTitle("Resonance mass [TeV]");
    multigraph->GetXaxis()->SetLabelFont(42);
    multigraph->GetXaxis()->SetLabelOffset(1000);
    multigraph->GetXaxis()->SetLabelSize(0.05);
@@ -15308,7 +15308,7 @@ tex->SetNDC();
    ci = TColor::GetColor("#000099");
    __1->SetLineColor(ci);
    __1->SetMarkerStyle(8);
-   __1->GetXaxis()->SetTitle("Resonance Mass [TeV]");
+   __1->GetXaxis()->SetTitle("Resonance mass [TeV]");
    __1->GetXaxis()->SetLabelFont(42);
    __1->GetXaxis()->SetLabelOffset(1000);
    __1->GetXaxis()->SetLabelSize(0.05);
