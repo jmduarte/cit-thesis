@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Thu Oct 27 10:33:33 2016) by ROOT version5.34/31
+//=========  (Sat Oct 29 11:10:36 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,800,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -28,7 +28,11 @@
    TGraphAsymmErrors *grae = new TGraphAsymmErrors(21);
    grae->SetName("Graph");
    grae->SetTitle("Graph");
-   grae->SetFillColor(5);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#ffcc00");
+   grae->SetFillColor(ci);
    grae->SetLineStyle(2);
    grae->SetLineWidth(3);
    grae->SetMarkerStyle(8);
@@ -81,8 +85,6 @@
    Graph_Graph1->SetDirectory(0);
    Graph_Graph1->SetStats(0);
 
-   Int_t ci;      // for color index setting
-   TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
    Graph_Graph1->SetLineColor(ci);
    Graph_Graph1->SetMarkerStyle(8);
@@ -107,7 +109,7 @@
    grae->SetName("Graph");
    grae->SetTitle("Graph");
 
-   ci = TColor::GetColor("#66ff66");
+   ci = TColor::GetColor("#00cc00");
    grae->SetFillColor(ci);
    grae->SetLineStyle(2);
    grae->SetLineWidth(3);

@@ -17,11 +17,11 @@ resonances, using data collected with the CMS detector in $\Pp\Pp$
 collisions at $\sqrt{s}=13$\TeV with an integrated luminosity of \RunLumi.
 First, a \textit{low-mass} search, for resonances with mass between 0.6 and 1.6\TeV, is performed 
 using dijets that are reconstructed in the high-level trigger in 
-a process called \textit{data scouting}. Data scouting was previously used for a low-mass search by CMS 
+a process called \textit{data scouting}~\cite{AndersonScouting}. Data scouting was previously used for a low-mass search by CMS 
 at $\sqrt{s}=8$\TeV~\cite{Khachatryan:2016ecr}, and a similar trigger-level search was recently reported by ATLAS 
 at $\sqrt{s}=13$\TeV~\cite{ATLAS-CONF-2016-030}. 
 Second, a \textit{high-mass} search, for resonances with mass above 1.6 TeV, is performed using dijets from the normal reconstruction chain. 
-Similar high mass searches were published many times by CMS and ATLAS at $\sqrt{s}=13$\TeV~\cite{Khachatryan:2015dcf,ATLAS:2015nsi},
+Similar high-mass searches were published many times by CMS and ATLAS at $\sqrt{s}=13$\TeV~\cite{Khachatryan:2015dcf,ATLAS:2015nsi},
 8\TeV~\cite{Khachatryan:2015sja,Aad:2014aqa,Chatrchyan:2013qhXX} and
 7\TeV~\cite{CMS:2012yf,Aad201237,ATLAS:2012pu,Chatrchyan2011123,Aad:2011aj,Khachatryan:2010jd,ATLAS2010} using
 strategies reviewed in Ref.~\cite{Harris:2011bh}. 
@@ -65,7 +65,7 @@ particles in an event and to identify them as muons, electrons, photons, and eit
 hadrons. 
 
 Jets are reconstructed from either particles, giving PF jets, or from calorimeter towers, giving
-Calo jets. To reconstruct both types of jets we use the anti-$k_t$ algorithm~\cite{antikt} with a distance 
+Calo jets. To reconstruct both types of jets we use the anti-$\kt$ algorithm~\cite{antikt} with a distance 
 parameter of 0.4, implemented in the \textsc{FastJet} package~\cite{Cacciari:2005hq}.
 For PF jets, charged PF candidates not originating from the primary vertex
 are removed prior to the jet finding. For both types of jets, an event-by-event jet-area-based
@@ -82,7 +82,7 @@ For the high-mass search we select events with $\mjj>\RECOminMjjCut$ for which t
 and HLT are found to be fully efficient.
 For the low-mass search, when an event passes the HLT trigger the jets 
 reconstructed at the HLT are directly saved, along with a few other necessary objects reconstructed at HLT. The shorter 
-time for event reconstruction and the reduced event size saved at HLT allows a reduced $H_T$ threshold compared
+time for event reconstruction and the reduced event size saved at HLT allows a reduced $H_\mathrm{T}$ threshold compared
 to the high-mass search. For the low-mass search Calo jets are used to compute $H_\mathrm{T}$, the threshold is 
 $H_\mathrm{T}>250$\GeV, and we select events with $\mjj>\CALOminMjjCut$ for which the trigger 
 is fully efficient.
@@ -101,8 +101,8 @@ required to have $\pt>30$\GeV and $\abs{\eta}<2.5$.  The two jets with largest
 \pt are defined as the leading jets.
 Jet identification (ID) criteria are
 applied to remove spurious jets associated with calorimeter
-noise. The Jet ID for PF jets is described in Ref.~\cite{JME-10-003-PAS}.
-The Jet ID for Calo jets requires that the fraction of jet energy deposited within
+noise. The jet ID for PF jets is described in Ref.~\cite{JME-10-003-PAS}.
+The jet ID for Calo jets requires that the fraction of jet energy deposited within
 the electromagnetic calorimeter be between 5\% and 95\% of the
 total jet energy. An event is rejected if either of the two leading jets does not satisfy
 the jet ID criteria.
@@ -276,7 +276,7 @@ and the effect decreases as the resonance mass increases. %The affect of systema
 %Signal injection and extraction tests with pseudo-data confirmed that the chosen
 %background function does not bias the extraction of a potential signal.
 %Alternate background functions were tried, and Eq.~\ref{eqBackgroundParam} was the 
-%only function with four our fewer parameters that fit our measured data in the low mass search.  
+%only function with four our fewer parameters that fit our measured data in the low-mass search.  
 
 %We performed signal injection and extraction tests with two background parameterization choices.
 %First we generated pseudo-data for signals, with the background from Eq.~\ref{eqBackgroundParam}, and verified 
@@ -349,7 +349,7 @@ was found to be negligible.
     \includegraphics[width=0.9\textwidth]{figs/dijet/limits_freq_gg_qg_qq_calodijet2016_pfdijet2016.pdf}
     \caption{Limits from both the low-mass and high-mass search~\cite{CMS-PAS-EXO-16-032,jmgd}. The observed 95\% \CL upper limits on the product of the cross section, branching fraction, and acceptance for
     quark-quark, quark-gluon, and gluon-gluon type dijet resonances.
-    The observed limits (solid) are presented from the low mass search, for resonance masses between \minMassLow and \minMassHigh, and from the high mass search 
+    The observed limits (solid) are presented from the low-mass search, for resonance masses between \minMassLow and \minMassHigh, and from the high-mass search 
     for resonance masses greater than or equal to \minMassHigh. Limits are compared 
     to the predicted cross sections of string resonances~\cite{Anchordoqui:2008di,Cullen:2000ef},  
     excited quarks~\cite{ref_qstar,Baur:1989kv},
@@ -526,6 +526,24 @@ the most important diagrams for monojet and dijet searches.
 \centering
   \unitlength=0.005\textwidth
   \vspace{\baselineskip}
+  % \begin{feynmandiagram}[modelVddParameters]
+  %   \fmfleft{i1,i2}
+  %   \fmfright{o1,o2}
+  %   \fmftop{isr}
+  %   \fmfbottom{pisr}
+  %   \fmf{wiggly,tension=0.6,label.side=right,label={ $\PZpr_\mathrm{B}(\mMed)$}}{v1,v2}
+  %   \fmf{fermion}{o2,v2,o1}
+  %   \fmf{fermion}{i2,v1}
+  %   \fmf{plain}{v1,i1}
+  %   \fmf{fermion,tension=0}{v1,i1}
+  %   \fmfdot{v1,v2}
+  %   \fmflabel{ ${\gDM}$}{v1}
+  %   \fmflabel{ ${\gDM}$}{v2}
+  %   \fmflabel{ ${\Pq}$}{i1}
+  %   \fmflabel{ ${\chiDM(\mDM)}$}{i2}
+  %   \fmflabel{ ${\chiDM(\mDM)}$}{o1}
+  %   \fmflabel{ $\Pq$}{o2}
+  % \end{feynmandiagram}
   \begin{feynmandiagram}[modelVmonojetParameters]
     \fmfleft{i1,i2}
     \fmfright{o1,o2}
@@ -648,6 +666,20 @@ mass. The expected mediator mass exclusion limit increases with
 $m_{\mathrm{DM}}$ and goes as high as 2.7 \TeV for heavy DM particles
 as the branching ratio to $\Pq\Paq$ dominates. The exclusion
 limits are similar for the V and AV models, as expected. 
+If $m_{\mathrm{DM}}>m_{\mathrm{med}}/2$, the mediator cannot decay to
+DM particles, and the dijet cross section from the mediator models
+becomes identical to that in the leptophobic $\PZpr$ model used in
+Fig.~\ref{fig:gBvsMZ} with a coupling $g_{\Pq}^{\prime} =g_{\Pq}=0.25$. Therefore for these values
+of $m_{\mathrm{DM}}$, the limits on the mediator mass in
+Fig.~\ref{fig:DMsummary} are identical to the limits on the $\PZpr$
+mass at $g_{\Pq}^{\prime}=0.25$ in Fig.~\ref{fig:gBvsMZ}. Similarly,
+if $m_{\mathrm{DM}}=0$, the limits on the mediator mass in
+Fig.~\ref{fig:DMsummary} are identical to the limits on the $\PZpr$
+mass at  $\gq^{\prime}=g_{\Pq}/\sqrt{1+16/(3N_\mathrm{f})}\approx
+0.182$ in Fig.~\ref{fig:gBvsMZ}, where $N_\mathrm{f}$ is the effective
+number of quark flavors contributing  to the width of the resonance.
+
+
 
 The search results presented in Fig.~\ref{fig:DMsummary} can also be compared with results
 from dark matter direct detection (DD) and indirect detection (ID) experiments~\cite{Boveia:2016mrp}. As input for this
