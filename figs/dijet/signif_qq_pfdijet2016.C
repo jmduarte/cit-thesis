@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Sat Oct 29 11:10:55 2016) by ROOT version5.34/31
+//=========  (Tue Nov  8 11:03:12 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,800,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -1116,7 +1116,7 @@
    graph->SetHistogram(Graph_Graph_Graph17);
    
    graph->Draw("lp ");
-   TLatex *   tex = new TLatex(0.17,0.92,"CMS");
+   TLatex *   tex = new TLatex(0.2,0.835,"CMS");
 tex->SetNDC();
    tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
@@ -1127,7 +1127,7 @@ tex->SetNDC();
    tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.3,0.835,"quark-quark");
+      tex = new TLatex(0.3,0.77,"quark-quark");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.045);

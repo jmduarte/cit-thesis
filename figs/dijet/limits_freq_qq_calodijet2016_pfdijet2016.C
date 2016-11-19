@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c/c
-//=========  (Sat Oct 29 11:10:59 2016) by ROOT version5.34/31
+//=========  (Tue Nov  8 11:03:16 2016) by ROOT version5.34/31
    TCanvas *c = new TCanvas("c", "c",0,0,800,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -23,7 +23,7 @@
    
    TMultiGraph *multigraph = new TMultiGraph();
    multigraph->SetName("");
-   multigraph->SetTitle(" ;Resonance mass [GeV]; #sigma B A [pb]");
+   multigraph->SetTitle(" ;Resonance mass [GeV]; #sigma #times #bf{#it{#Beta}} #times #bf{#it{#Alpha}} [pb]");
    
    TGraphAsymmErrors *grae = new TGraphAsymmErrors(21);
    grae->SetName("Graph");
@@ -1214,7 +1214,7 @@
    multigraph->GetXaxis()->SetLabelSize(0.05);
    multigraph->GetXaxis()->SetTitleSize(0.06);
    multigraph->GetXaxis()->SetTitleFont(42);
-   multigraph->GetYaxis()->SetTitle(" #sigma B A [pb]");
+   multigraph->GetYaxis()->SetTitle(" #sigma #times #bf{#it{#Beta}} #times #bf{#it{#Alpha}} [pb]");
    multigraph->GetYaxis()->SetLabelFont(42);
    multigraph->GetYaxis()->SetLabelSize(0.05);
    multigraph->GetYaxis()->SetTitleSize(0.052);
@@ -2648,7 +2648,7 @@
    graph->SetHistogram(Graph_Graph_Graph221);
    
    graph->Draw("lp ");
-   TLatex *   tex = new TLatex(0.17,0.92,"CMS");
+   TLatex *   tex = new TLatex(0.41,0.835,"CMS");
 tex->SetNDC();
    tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
@@ -2659,7 +2659,7 @@ tex->SetNDC();
    tex->SetTextSize(0.045);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.3,0.79,"quark-quark");
+      tex = new TLatex(0.3,0.77,"quark-quark");
 tex->SetNDC();
    tex->SetTextFont(42);
    tex->SetTextSize(0.045);
@@ -2676,7 +2676,7 @@ tex->SetNDC();
    color = new TColor(ci, 1, 1, 1, " ", 0);
    leg->SetFillColor(ci);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("NULL","95% CL limits","");
+   TLegendEntry *entry=leg->AddEntry("NULL","95% CL limits","h");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -2739,7 +2739,7 @@ tex->SetNDC();
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("Graph1","Axiguon/coloron","l");
+   entry=leg->AddEntry("Graph1","Axiguon/coloron      ","l");
 
    ci = TColor::GetColor("#0000cc");
    entry->SetLineColor(ci);
@@ -4260,38 +4260,58 @@ tex->SetNDC();
    line->SetLineStyle(2);
    line->SetLineWidth(2);
    line->Draw();
-      tex = new TLatex(1590,30000,"#leftarrow");
-   tex->SetTextAlign(31);
+      tex = new TLatex(1590,60000,"#leftarrow");
+   tex->SetTextAlign(33);
 
    ci = TColor::GetColor("#999999");
    tex->SetTextColor(ci);
    tex->SetTextFont(42);
-   tex->SetTextSize(0.022);
+   tex->SetTextSize(0.035);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(1550,15000,"Low mass");
-   tex->SetTextAlign(31);
+      tex = new TLatex(1610,60000,"#rightarrow");
+   tex->SetTextAlign(13);
 
    ci = TColor::GetColor("#999999");
    tex->SetTextColor(ci);
    tex->SetTextFont(42);
-   tex->SetTextSize(0.022);
+   tex->SetTextSize(0.035);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(1610,30000,"#rightarrow");
+      tex = new TLatex(1200,35000,"Low");
+   tex->SetTextAlign(23);
 
    ci = TColor::GetColor("#999999");
    tex->SetTextColor(ci);
    tex->SetTextFont(42);
-   tex->SetTextSize(0.022);
+   tex->SetTextSize(0.035);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(1650,15000,"High mass");
+      tex = new TLatex(1200,12000,"mass");
+   tex->SetTextAlign(23);
 
    ci = TColor::GetColor("#999999");
    tex->SetTextColor(ci);
    tex->SetTextFont(42);
-   tex->SetTextSize(0.022);
+   tex->SetTextSize(0.035);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(2000,35000,"High");
+   tex->SetTextAlign(23);
+
+   ci = TColor::GetColor("#999999");
+   tex->SetTextColor(ci);
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.035);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(2000,12000,"mass");
+   tex->SetTextAlign(23);
+
+   ci = TColor::GetColor("#999999");
+   tex->SetTextColor(ci);
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.035);
    tex->SetLineWidth(2);
    tex->Draw();
    
@@ -4310,7 +4330,7 @@ tex->SetNDC();
    __1->GetXaxis()->SetLabelSize(0.05);
    __1->GetXaxis()->SetTitleSize(0.06);
    __1->GetXaxis()->SetTitleFont(42);
-   __1->GetYaxis()->SetTitle(" #sigma B A [pb]");
+   __1->GetYaxis()->SetTitle(" #sigma #times #bf{#it{#Beta}} #times #bf{#it{#Alpha}} [pb]");
    __1->GetYaxis()->SetLabelFont(42);
    __1->GetYaxis()->SetLabelSize(0.05);
    __1->GetYaxis()->SetTitleSize(0.052);
