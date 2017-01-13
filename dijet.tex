@@ -12,7 +12,7 @@ couples to standard model particles through a DM mediator that is also a dijet r
 resonances, those with natural widths that are small compared to the
 experimental resolution (up to $\sim10\%$ of the resonance mass).
 
-This chapter presents the results of two searches for dijet
+This appendix presents the results of two searches for dijet
 resonances, using data collected with the CMS detector in $\Pp\Pp$
 collisions at $\sqrt{s}=13$\TeV with an integrated luminosity of \RunLumi.
 First, a \textit{low-mass} search, for resonances with mass between 0.6 and 1.6\TeV, is performed 
@@ -43,7 +43,7 @@ We present model-independent searches and, in addition, consider the following m
 $s$-channel dijet resonances: string resonances~\cite{Anchordoqui:2008di,Cullen:2000ef}, scalar diquarks~\cite{ref_diquark},  axigluons~\cite{ref_axi,Chivukula:2013xla},
 colorons~\cite{ref_coloron,Chivukula:2013xla}, excited quarks
 (\Qstar)~\cite{ref_qstar,Baur:1989kv}, color-octet scalars~\cite{Han:2010rf},
-new gauge bosons ($\PWpr$ and $\PZpr$)~\cite{ref_gauge}, and Randall--Sundrum (RS) gravitons
+new gauge bosons ($\PWpr$ and $\PZpr$) with SM-like or leptophobic couplings~\cite{ref_gauge}, and Randall--Sundrum (RS) gravitons
 (G)~\cite{ref_rsg}. 
 We note that the anomalous coupling of the color-octet scalar model used is $k_s^2=1/2$~\cite{Chivukula:2014pma}, 
 reducing the width and cross section of this model by a factor of 1/2
@@ -56,7 +56,7 @@ axial-vector mediator that couples to DM particles and
 quarks~\cite{Boveia:2016mrp,Dobrescu:2013coa,Abercrombie:2015wmb}. This
 is the first DM-centric interpretation of a dijet search performed by CMS.
 
-\section{Measurement of the invariant mass spectrum}
+\section{Measurement of the invariant mass spectra}
 
 \subsection{Reconstruction and trigger}
 
@@ -104,37 +104,38 @@ applied to remove spurious jets associated with calorimeter
 noise. The jet ID for PF jets is described in Ref.~\cite{JME-10-003-PAS}.
 The jet ID for Calo jets requires that the fraction of jet energy deposited within
 the electromagnetic calorimeter be between 5\% and 95\% of the
-total jet energy. An event is rejected if either of the two leading jets does not satisfy
-the jet ID criteria.
+total jet energy. An event is rejected if either of the two leading
+jets fails the jet ID criteria.
 
 \subsection{Wide jet reconstruction and event selection}
 
 Geometrically close jets are combined into ``wide jets'' and
-used to determine the dijet mass, as in previous
+used to determine the dijet mass, as in the previous CMS
 searches~\cite{Chatrchyan2011123,CMS:2012yf,Chatrchyan:2013qhXX,Khachatryan:2015sja}.  The wide-jet algorithm, designed 
 for dijet resonance event reconstruction, reduces the analysis sensitivity to gluon radiation from the
-final state partons.  The two leading jets are used as seeds and the four-vectors of all other jets, if within $\Delta R=\sqrt{\smash[b]{(\Delta\eta)^2 +
+final-state partons.  The two leading jets are used as seeds and the four-vectors of all other jets, if within $\Delta R=\sqrt{\smash[b]{(\Delta\eta)^2 +
   (\Delta\phi)^2}}<1.1$, are added to the
 nearest leading jet to obtain two wide jets, which then form
-the dijet system. The background from $t$-channel dijet events is
+the dijet system. The background from $t$-channel dijet events peaks at large values of $\detajj$ and is
 suppressed by requiring the pseudorapidity separation of the two wide
 jets to satisfy $\detajj<1.3$.
 The above requirements maximize the search sensitivity for
 isotropic decays of dijet resonances in the presence of QCD dijet background.
-For the low-mass search, after wide jet reconstruction and event selection, we use a correction derived from a smaller sample 
-of \textit{in situ} dijet data to calibrate the wide jets
-reconstructed from Calo jet at HLT to have the same response as the wide jets
-reconstructed from PF jets.
+For the low-mass search, after wide jet reconstruction and event selection, we use a correction derived from a smaller sample
+of dijet data to calibrate the wide jets reconstructed from Calo jets at HLT. With this correction, based on a 
+dijet balance tag-and-probe method similar to that discussed in
+Ref.~\cite{Khachatryan:2016kdb}, the wide jets from Calo jets have 
+the same response as those reconstructed from PF jets.
 %roughly a 1\% correction.
 
-\subsection{Dijet mass spectrum}
+\subsection{Dijet mass spectra and fits}
 
 \begin{figure}[hbtp]
   \begin{center}
     \includegraphics[width=0.48\textwidth]{figs/dijet/fit_mjj_Full_CaloDijet2016.pdf}
     \includegraphics[width=0.48\textwidth]{figs/dijet/fit_mjj_Full_PFDijet2016.pdf}
    \caption{
-    Dijet mass spectrum (points) compared to a fitted
+    Dijet mass spectra (points) compared to a fitted
   parameterization of the background (solid curve) for the low-mass search (left) and 
   the high-mass search (right).
   The lower panel in each plot shows the difference between the data and the
@@ -263,7 +264,7 @@ resolution, and log normal distributions are used to model uncertainties in the 
 parameters within a constraint placed on the likelihood. For this methodology, the 
 systematic uncertainty on the background is automatically evaluated via profiling, effectively 
 refitting for the optimal values of the background parameters for each value of resonance cross section.
-The procedure gave the same limits as the Bayesian procedure used previously for dijet resonance
+The procedure gives the same limits as the Bayesian procedure used previously for dijet resonance
 searches at CMS~\cite{Khachatryan:2015sja}. For both the Bayesian and modified frequentist statistical procedures 
 we find that the background systematic uncertainty has the largest effect on the limit. The amount the
 background uncertainty affects the limit depends significantly on the signal shape and the resonance mass, with the largest effect for
@@ -331,7 +332,7 @@ was found to be negligible as illustrated in Fig.~\ref{fig:bias}.
     excited quarks~\cite{ref_qstar,Baur:1989kv},
     axigluons~\cite{ref_axi}, colorons~\cite{ref_coloron}, scalar
     diquarks~\cite{ref_diquark}, new gauge bosons $\PWpr$ and
-    $\PZpr$~\cite{ref_gauge}, a dark matter mediator for
+    $\PZpr$ with SM-like couplings~\cite{ref_gauge}, a dark matter mediator for
     $m_{\mathrm{DM}}=1\GeV$~\cite{Boveia:2016mrp,Abdallah:2015ter},
     and RS gravitons~\cite{ref_rsg}.}
     \label{figLimitLow}
@@ -353,7 +354,7 @@ was found to be negligible as illustrated in Fig.~\ref{fig:bias}.
     axigluons~\cite{ref_axi}, colorons~\cite{ref_coloron},  scalar
     diquarks~\cite{ref_diquark}, color-octet
     scalars~\cite{Han:2010rf}, new gauge bosons $\PWpr$ and
-    $\PZpr$~\cite{ref_gauge}, a dark matter mediator for
+    $\PZpr$ with SM-like or leptophobic couplings~\cite{ref_gauge}, a dark matter mediator for
     $m_{\mathrm{DM}}=1\GeV$~\cite{Boveia:2016mrp,Abdallah:2015ter}, and RS gravitons~\cite{ref_rsg}.}
     \label{figLimitHigh}
 \end{figure*}
@@ -370,7 +371,7 @@ was found to be negligible as illustrated in Fig.~\ref{fig:bias}.
     axigluons~\cite{ref_axi}, colorons~\cite{ref_coloron}, scalar
     diquarks~\cite{ref_diquark}, color-octet
     scalars~\cite{Han:2010rf}, new gauge bosons $\PWpr$ and
-    $\PZpr$~\cite{ref_gauge}, a dark matter mediator for
+    $\PZpr$ with SM-like or leptophobic couplings~\cite{ref_gauge}, a dark matter mediator for
     $m_{\mathrm{DM}}=1\GeV$~\cite{Boveia:2016mrp,Abdallah:2015ter}, and RS gravitons~\cite{ref_rsg}.}
     \label{figLimitAll}
 \end{figure*}
@@ -407,14 +408,14 @@ for narrow resonances.
 In Fig.~\ref{figLimitLow}, for comparison purposes only, limits are also shown from Gaussian shapes with 
 an RMS width equal to 10\% of the mass.
 The acceptance of the minimum dijet mass requirement in each search has been taken into account
-by correcting the limits, and therefore does not appear in the acceptance $A$.
+by correcting the limits. The acceptance of the minimum dijet mass requirement in each search has been evaluated separately for 
+$\PQq\PQq$, $\PQq\Pg$, and $\Pg\Pg$ resonances, and has been taken into account by correcting the limits, and therefore does not appear in the acceptance $A$.
+The corrections are independent of the spin and coupling of the narrow resonance at the one percent level. 
 Figures~\ref{figLimitLow}-\ref{figLimitAll} also show the expected limits on the cross section and their bands of uncertainty.
-The generated mass spectra are fit with a signal-plus-background model to extract expected upper limits.
-The difference in the limits for $\PQq\PQq$, $\PQq\Pg$, $\Pg\Pg$ and Gaussian resonances at the same resonance mass
+The difference in the limits for $\PQq\PQq$, $\PQq\Pg$, and $\Pg\Pg$, and Gaussian resonances at the same resonance mass
 originates from the difference in their lineshapes. We note that the limits from Gaussian resonances are smaller
 than can be expected from any physical model, as they do not have any tails due to radiation, and consequently they are narrower 
-and located closer to the resonance pole than any combination of two
-partons can produce. 
+and located closer to the resonance pole than any combination of two partons can produce. 
 
 %We present limits with Gaussian shapes of 10\% width in order to compare the sensitivity of this search to
 %the tails of the signal shape, and the sensitivity
@@ -795,22 +796,23 @@ for the $\bbbar$ annihilation channel~\cite{Choi:2015ara}. It should be noted th
 
 \section{Summary}
 
-In summary, two searches for narrow resonances decaying into a pair of jets have been performed using
-pp collisions at $\sqrt{s}=13$\TeV corresponding to an integrated luminosity of \RunLumi. A low-mass search using data scouting from the high-level trigger 
-with calorimeter jets and a high-mass search using particle-flow jets. The dijet mass spectra have been measured to be smoothly falling
+This appendix presents two searches for narrow resonances decaying into a pair of jets, performed using
+proton-proton collisions at $\sqrt{s}=13$\TeV corresponding to an
+integrated luminosity of 12.9\fbinv. The first is a low-mass search
+based on calorimeter jets, reconstructed by the high level trigger and recorded in compact form (data scouting),
+and the second is a high-mass search based on particle-flow jets. The dijet mass spectra are observed to be smoothly falling
 distributions. In the analyzed data samples, there is no evidence for resonant particle production.
-We present generic upper limits on the product $\sigma\times B\times A$ for narrow quark-quark, quark-gluon and gluon-gluon
+Generic upper limits are presented on the product of the cross section, the branching fraction, and the acceptance for narrow quark-quark, quark-gluon, and gluon-gluon
 resonances that are applicable to any model of narrow dijet resonance production.
-We set mass limits at 95\% CL on models of string resonances, scalar diquarks, excited quarks, axigluons, colorons, color octet scalars, 
-$\PWpr$ bosons, $\PZpr$ bosons, and RS gravitons, which
-extend previously published limits in the dijet channel. We also set
-limits on the coupling of a leptophobic $\PZpr_\mathrm{B}$ boson as a
-function of its mass. Finally, mass exclusions on a dark matter
-mediator are presented as a function of dark matter mass, and are
-translated into exclusions on the dark matter-nucleon interaction
-cross section that are more sensitive than the exclusions of direct
-detection experiments for spin-dependent cross sections.  
-
+String resonances with masses below 7.4\TeV are excluded at 95\% confidence level, as are scalar diquarks below 6.9\TeV,
+axigluons and colorons below 5.5\TeV, excited quarks below 5.4\TeV, color-octet
+scalars below 3.0\TeV, $\PWpr$ bosons below 2.7\TeV, $\PZpr$ bosons with SM-like couplings below 2.1\TeV and between 2.3 and 2.6\TeV,
+and Randall--Sundrum gravitons below 1.9\TeV. This extends previously
+published limits in the dijet channel. Finally, the first CMS limits are set on a simplified model of dark matter mediators using the dijet channel, excluding vector and axial-vector mediators
+below 2.0\TeV for a universal quark coupling $\gq = 0.25$ and a dark matter coupling $\gDM=1.0$. Limits on the mass of a dark matter mediator are presented as a function of dark matter
+mass, and are translated into upper limits on the cross section for dark matter particles scattering on nucleons
+that are more sensitive than those of direct detection experiments for
+spin-dependent cross sections.
 
 \clearpage
 \begin{table*}[h!]
