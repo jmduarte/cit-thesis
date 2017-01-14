@@ -196,7 +196,7 @@
      \@address\par
      \authorskip
      \@copyyear\\
-     {\normalsize Defended \@defenddate\par}
+     {\normalsize (Defended \@defenddate)\par}
    \end{center}
    \vspace*{.5in}
  \end{titlingpage}

@@ -153,6 +153,9 @@
     style=numeric,sorting=none
 ]{biblatex}
 
+%%% --- The following two lines are what needs to be added --- %%%
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
 % Name of your .bib file(s)
 \addbibresource{duarte_thesis.bib}
 
@@ -178,6 +181,15 @@
 \include{dedication}
 \include{acknowledgments}
 \include{abstract}
+
+%% Uncomment the `iknowwhattodo option to dismiss the instruction in the PDF.
+\begin{publishedcontent}[iknowwhattodo]
+% List your publications and contributions here.
+\nocite{razor8TeV}
+\nocite{CMS-PAS-SUS-15-004}
+\nocite{NIMA}
+\nocite{Khachatryan:2016reg}
+\end{publishedcontent}
 
 \tableofcontents
 \listoffigures
